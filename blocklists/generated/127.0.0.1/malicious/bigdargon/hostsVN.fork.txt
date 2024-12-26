@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 23 Dec 2024 22:57 UTC+7
-# Version: 2412232257
-# Blocked: 21.034 domains
+# Last modified: 26 Dec 2024 22:56 UTC+7
+# Version: 2412262256
+# Blocked: 21.053 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -218,6 +218,11 @@
 #[beacons*.gvt3.com]
 127.0.0.1 beacons5.gvt3.com
 127.0.0.1 beacons6.gvt3.com
+#[adtrafficquality.google]
+127.0.0.1 adtrafficquality.google
+127.0.0.1 ep1.adtrafficquality.google
+127.0.0.1 ep2.adtrafficquality.google
+127.0.0.1 ep3.adtrafficquality.google
 #[microsoft.com]
 127.0.0.1 target.microsoft.com
 #[telemetry.microsoft.com]
@@ -576,11 +581,11 @@
 #[spotify]
 127.0.0.1 adeventtracker.spotify.com
 127.0.0.1 adeventtrackermonitoring.spotify.com
-127.0.0.1 analytics.spotify.com
 127.0.0.1 log.spotify.com
 127.0.0.1 log2.spotify.com
 127.0.0.1 pixel-static.spotify.com
 127.0.0.1 pixel.spotify.com
+127.0.0.1 pixels.spotify.com
 #[viber]
 127.0.0.1 ads.viber.com
 127.0.0.1 ads-d.viber.com
@@ -11898,6 +11903,16 @@
 #[ad-m.asia]
 127.0.0.1 ad-m.asia
 127.0.0.1 sync-dsp.ad-m.asia
+#[reddit.com]
+127.0.0.1 ads.reddit.com
+127.0.0.1 alb.reddit.com
+127.0.0.1 d.reddit.com
+127.0.0.1 error-tracking.reddit.com
+127.0.0.1 events.reddit.com
+127.0.0.1 pixel-config.reddit.com
+127.0.0.1 pixel.reddit.com
+127.0.0.1 w3-reporting-nel.reddit.com
+127.0.0.1 w3-reporting.reddit.com
 # --- GroupVN block ---
 #[adtimaserver]
 127.0.0.1 adtimaserver.vn
@@ -14626,7 +14641,6 @@
 127.0.0.1 ads.quoka.de
 127.0.0.1 ads.rcs.it
 127.0.0.1 ads.recoletos.es
-127.0.0.1 ads.reddit.com
 127.0.0.1 ads.rediff.com
 127.0.0.1 ads.redlightcenter.com
 127.0.0.1 ads.rekmob.com
@@ -14911,6 +14925,7 @@
 127.0.0.1 adx-asia.aarki.net
 127.0.0.1 adx.aarki.net
 127.0.0.1 adx.cda.pl
+127.0.0.1 adx.trackrsad.com
 127.0.0.1 adxbid.info
 127.0.0.1 adxpansion.com
 127.0.0.1 adxpartner.com
@@ -15047,7 +15062,6 @@
 127.0.0.1 alacrityprepayprecursor.com
 127.0.0.1 alas4kanmfa6a4mubte.com
 127.0.0.1 alaskan4kleeskai.com
-127.0.0.1 alb.reddit.com
 127.0.0.1 alclick.com
 127.0.0.1 aldimsallow.life
 127.0.0.1 alebrinkfed.com
@@ -18238,6 +18252,7 @@
 127.0.0.1 liquidad.narrowcastmedia.com
 127.0.0.1 lirateblister.com
 127.0.0.1 lispaircraftcraziness.com
+127.0.0.1 litaudrootsa.net
 127.0.0.1 literalcorpulent.com
 127.0.0.1 litterago.com
 127.0.0.1 littlecdn.com
@@ -18946,6 +18961,7 @@
 127.0.0.1 obvious-lesson.pro
 127.0.0.1 obvkimura.store
 127.0.0.1 occdmioqlo.com
+127.0.0.1 oceanicdreamcove.com
 127.0.0.1 ocio.leadzu.com
 127.0.0.1 oclasrv.com
 127.0.0.1 ocqpavrrix.com
@@ -19143,6 +19159,7 @@
 127.0.0.1 ortdasctuji.com
 127.0.0.1 orthitepetrous.com
 127.0.0.1 ortshk.tapas.net
+127.0.0.1 orywrjsf.com
 127.0.0.1 osfajqzcybu.com
 127.0.0.1 osfkfaacqx.com
 127.0.0.1 oshfzaatts.com
@@ -19195,6 +19212,7 @@
 127.0.0.1 ovlliiwtxgjlz.com
 127.0.0.1 ovmhwiccikr.com
 127.0.0.1 ovmodnlmypf.com
+127.0.0.1 ovrcuncunxp.com
 127.0.0.1 ovsrhikuma.com
 127.0.0.1 ovvxzagmem.com
 127.0.0.1 ovxhhurafpi.com
@@ -19242,6 +19260,7 @@
 127.0.0.1 p23hxejm1.com
 127.0.0.1 p4r24.eu
 127.0.0.1 pacekami.com
+127.0.0.1 paddlemoscowsplit.com
 127.0.0.1 padp5arja8dgsd9cha.com
 127.0.0.1 padsims.com
 127.0.0.1 padstm.com
@@ -19424,7 +19443,6 @@
 127.0.0.1 pixel.leadzu.com
 127.0.0.1 pixel.mediaiqdigital.com
 127.0.0.1 pixel.personagraph.com
-127.0.0.1 pixel.reddit.com
 127.0.0.1 pixel.watch
 127.0.0.1 piximedia.com
 127.0.0.1 pk910324e.com
@@ -21311,6 +21329,7 @@
 127.0.0.1 vuwmxjusucnh.com
 127.0.0.1 vxcaphujhns.com
 127.0.0.1 vyfrxuytzn.com
+127.0.0.1 vzecinazg.com
 127.0.0.1 vzizatjihca.com
 127.0.0.1 vzoarcomvorz.com
 127.0.0.1 w3i.com
@@ -21387,6 +21406,7 @@
 127.0.0.1 wedgierbirsit.com
 127.0.0.1 wedxuaksargvlf.com
 127.0.0.1 weeecool.com
+127.0.0.1 weesatoothoamu.net
 127.0.0.1 wegcash.com
 127.0.0.1 welcomeneat.pro
 127.0.0.1 wellmadefrog.com
@@ -22531,6 +22551,7 @@
 127.0.0.1 track.notsy.io
 127.0.0.1 track.omg543.com
 127.0.0.1 track.pricespider.com
+127.0.0.1 track.rentracksw.com
 127.0.0.1 track.saygames.io
 127.0.0.1 track.securedvisit.com
 127.0.0.1 track.sohu.com

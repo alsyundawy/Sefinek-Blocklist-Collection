@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 23 Dec 2024 22:57 UTC+7
-# Version: 2412232257
-# Blocked: 21.034 domains
+# Last modified: 26 Dec 2024 22:56 UTC+7
+# Version: 2412262256
+# Blocked: 21.053 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -218,6 +218,11 @@ server=/beacons5.gvt2.com/
 #[beacons*.gvt3.com]
 server=/beacons5.gvt3.com/
 server=/beacons6.gvt3.com/
+#[adtrafficquality.google]
+server=/adtrafficquality.google/
+server=/ep1.adtrafficquality.google/
+server=/ep2.adtrafficquality.google/
+server=/ep3.adtrafficquality.google/
 #[microsoft.com]
 server=/target.microsoft.com/
 #[telemetry.microsoft.com]
@@ -576,11 +581,11 @@ server=/static.ads-twitter.com/
 #[spotify]
 server=/adeventtracker.spotify.com/
 server=/adeventtrackermonitoring.spotify.com/
-server=/analytics.spotify.com/
 server=/log.spotify.com/
 server=/log2.spotify.com/
 server=/pixel-static.spotify.com/
 server=/pixel.spotify.com/
+server=/pixels.spotify.com/
 #[viber]
 server=/ads.viber.com/
 server=/ads-d.viber.com/
@@ -11898,6 +11903,16 @@ server=/tracking.bodis.com/
 #[ad-m.asia]
 server=/ad-m.asia/
 server=/sync-dsp.ad-m.asia/
+#[reddit.com]
+server=/ads.reddit.com/
+server=/alb.reddit.com/
+server=/d.reddit.com/
+server=/error-tracking.reddit.com/
+server=/events.reddit.com/
+server=/pixel-config.reddit.com/
+server=/pixel.reddit.com/
+server=/w3-reporting-nel.reddit.com/
+server=/w3-reporting.reddit.com/
 # --- GroupVN block ---
 #[adtimaserver]
 server=/adtimaserver.vn/
@@ -14626,7 +14641,6 @@ server=/ads.quasaraffiliates.com/
 server=/ads.quoka.de/
 server=/ads.rcs.it/
 server=/ads.recoletos.es/
-server=/ads.reddit.com/
 server=/ads.rediff.com/
 server=/ads.redlightcenter.com/
 server=/ads.rekmob.com/
@@ -14911,6 +14925,7 @@ server=/adwx6vcj.com/
 server=/adx-asia.aarki.net/
 server=/adx.aarki.net/
 server=/adx.cda.pl/
+server=/adx.trackrsad.com/
 server=/adxbid.info/
 server=/adxpansion.com/
 server=/adxpartner.com/
@@ -15047,7 +15062,6 @@ server=/akunamapro.com/
 server=/alacrityprepayprecursor.com/
 server=/alas4kanmfa6a4mubte.com/
 server=/alaskan4kleeskai.com/
-server=/alb.reddit.com/
 server=/alclick.com/
 server=/aldimsallow.life/
 server=/alebrinkfed.com/
@@ -18238,6 +18252,7 @@ server=/lionelimburse.com/
 server=/liquidad.narrowcastmedia.com/
 server=/lirateblister.com/
 server=/lispaircraftcraziness.com/
+server=/litaudrootsa.net/
 server=/literalcorpulent.com/
 server=/litterago.com/
 server=/littlecdn.com/
@@ -18946,6 +18961,7 @@ server=/obsoletepaddlevehicular.com/
 server=/obvious-lesson.pro/
 server=/obvkimura.store/
 server=/occdmioqlo.com/
+server=/oceanicdreamcove.com/
 server=/ocio.leadzu.com/
 server=/oclasrv.com/
 server=/ocqpavrrix.com/
@@ -19143,6 +19159,7 @@ server=/orrtweqfaa.com/
 server=/ortdasctuji.com/
 server=/orthitepetrous.com/
 server=/ortshk.tapas.net/
+server=/orywrjsf.com/
 server=/osfajqzcybu.com/
 server=/osfkfaacqx.com/
 server=/oshfzaatts.com/
@@ -19195,6 +19212,7 @@ server=/ovkmciabcpa.com/
 server=/ovlliiwtxgjlz.com/
 server=/ovmhwiccikr.com/
 server=/ovmodnlmypf.com/
+server=/ovrcuncunxp.com/
 server=/ovsrhikuma.com/
 server=/ovvxzagmem.com/
 server=/ovxhhurafpi.com/
@@ -19242,6 +19260,7 @@ server=/p.hogmc.net/
 server=/p23hxejm1.com/
 server=/p4r24.eu/
 server=/pacekami.com/
+server=/paddlemoscowsplit.com/
 server=/padp5arja8dgsd9cha.com/
 server=/padsims.com/
 server=/padstm.com/
@@ -19424,7 +19443,6 @@ server=/pitypericu.com/
 server=/pixel.leadzu.com/
 server=/pixel.mediaiqdigital.com/
 server=/pixel.personagraph.com/
-server=/pixel.reddit.com/
 server=/pixel.watch/
 server=/piximedia.com/
 server=/pk910324e.com/
@@ -21311,6 +21329,7 @@ server=/vuvcroguwtuk.com/
 server=/vuwmxjusucnh.com/
 server=/vxcaphujhns.com/
 server=/vyfrxuytzn.com/
+server=/vzecinazg.com/
 server=/vzizatjihca.com/
 server=/vzoarcomvorz.com/
 server=/w3i.com/
@@ -21387,6 +21406,7 @@ server=/webtrendslive.com/
 server=/wedgierbirsit.com/
 server=/wedxuaksargvlf.com/
 server=/weeecool.com/
+server=/weesatoothoamu.net/
 server=/wegcash.com/
 server=/welcomeneat.pro/
 server=/wellmadefrog.com/
@@ -22531,6 +22551,7 @@ server=/track.mp4.center/
 server=/track.notsy.io/
 server=/track.omg543.com/
 server=/track.pricespider.com/
+server=/track.rentracksw.com/
 server=/track.saygames.io/
 server=/track.securedvisit.com/
 server=/track.sohu.com/

@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2024122301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2024122601 43200 3600 259200 300
   NS  localhost.
 api-adservices.apple.com CNAME .
 *.api-adservices.apple.com CNAME .
@@ -357,6 +357,14 @@ beacons5.gvt3.com CNAME .
 *.beacons5.gvt3.com CNAME .
 beacons6.gvt3.com CNAME .
 *.beacons6.gvt3.com CNAME .
+adtrafficquality.google CNAME .
+*.adtrafficquality.google CNAME .
+ep1.adtrafficquality.google CNAME .
+*.ep1.adtrafficquality.google CNAME .
+ep2.adtrafficquality.google CNAME .
+*.ep2.adtrafficquality.google CNAME .
+ep3.adtrafficquality.google CNAME .
+*.ep3.adtrafficquality.google CNAME .
 target.microsoft.com CNAME .
 *.target.microsoft.com CNAME .
 oca.telemetry.microsoft.com CNAME .
@@ -967,8 +975,6 @@ adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
 adeventtrackermonitoring.spotify.com CNAME .
 *.adeventtrackermonitoring.spotify.com CNAME .
-analytics.spotify.com CNAME .
-*.analytics.spotify.com CNAME .
 log.spotify.com CNAME .
 *.log.spotify.com CNAME .
 log2.spotify.com CNAME .
@@ -977,6 +983,8 @@ pixel-static.spotify.com CNAME .
 *.pixel-static.spotify.com CNAME .
 pixel.spotify.com CNAME .
 *.pixel.spotify.com CNAME .
+pixels.spotify.com CNAME .
+*.pixels.spotify.com CNAME .
 ads.viber.com CNAME .
 *.ads.viber.com CNAME .
 ads-d.viber.com CNAME .
@@ -19969,6 +19977,24 @@ ad-m.asia CNAME .
 *.ad-m.asia CNAME .
 sync-dsp.ad-m.asia CNAME .
 *.sync-dsp.ad-m.asia CNAME .
+ads.reddit.com CNAME .
+*.ads.reddit.com CNAME .
+alb.reddit.com CNAME .
+*.alb.reddit.com CNAME .
+d.reddit.com CNAME .
+*.d.reddit.com CNAME .
+error-tracking.reddit.com CNAME .
+*.error-tracking.reddit.com CNAME .
+events.reddit.com CNAME .
+*.events.reddit.com CNAME .
+pixel-config.reddit.com CNAME .
+*.pixel-config.reddit.com CNAME .
+pixel.reddit.com CNAME .
+*.pixel.reddit.com CNAME .
+w3-reporting-nel.reddit.com CNAME .
+*.w3-reporting-nel.reddit.com CNAME .
+w3-reporting.reddit.com CNAME .
+*.w3-reporting.reddit.com CNAME .
 adtimaserver.vn CNAME .
 *.adtimaserver.vn CNAME .
 api.adtimaserver.vn CNAME .
@@ -24857,8 +24883,6 @@ ads.rcs.it CNAME .
 *.ads.rcs.it CNAME .
 ads.recoletos.es CNAME .
 *.ads.recoletos.es CNAME .
-ads.reddit.com CNAME .
-*.ads.reddit.com CNAME .
 ads.rediff.com CNAME .
 *.ads.rediff.com CNAME .
 ads.redlightcenter.com CNAME .
@@ -25427,6 +25451,8 @@ adx.aarki.net CNAME .
 *.adx.aarki.net CNAME .
 adx.cda.pl CNAME .
 *.adx.cda.pl CNAME .
+adx.trackrsad.com CNAME .
+*.adx.trackrsad.com CNAME .
 adxbid.info CNAME .
 *.adxbid.info CNAME .
 adxpansion.com CNAME .
@@ -25699,8 +25725,6 @@ alas4kanmfa6a4mubte.com CNAME .
 *.alas4kanmfa6a4mubte.com CNAME .
 alaskan4kleeskai.com CNAME .
 *.alaskan4kleeskai.com CNAME .
-alb.reddit.com CNAME .
-*.alb.reddit.com CNAME .
 alclick.com CNAME .
 *.alclick.com CNAME .
 aldimsallow.life CNAME .
@@ -32081,6 +32105,8 @@ lirateblister.com CNAME .
 *.lirateblister.com CNAME .
 lispaircraftcraziness.com CNAME .
 *.lispaircraftcraziness.com CNAME .
+litaudrootsa.net CNAME .
+*.litaudrootsa.net CNAME .
 literalcorpulent.com CNAME .
 *.literalcorpulent.com CNAME .
 litterago.com CNAME .
@@ -33497,6 +33523,8 @@ obvkimura.store CNAME .
 *.obvkimura.store CNAME .
 occdmioqlo.com CNAME .
 *.occdmioqlo.com CNAME .
+oceanicdreamcove.com CNAME .
+*.oceanicdreamcove.com CNAME .
 ocio.leadzu.com CNAME .
 *.ocio.leadzu.com CNAME .
 oclasrv.com CNAME .
@@ -33891,6 +33919,8 @@ orthitepetrous.com CNAME .
 *.orthitepetrous.com CNAME .
 ortshk.tapas.net CNAME .
 *.ortshk.tapas.net CNAME .
+orywrjsf.com CNAME .
+*.orywrjsf.com CNAME .
 osfajqzcybu.com CNAME .
 *.osfajqzcybu.com CNAME .
 osfkfaacqx.com CNAME .
@@ -33995,6 +34025,8 @@ ovmhwiccikr.com CNAME .
 *.ovmhwiccikr.com CNAME .
 ovmodnlmypf.com CNAME .
 *.ovmodnlmypf.com CNAME .
+ovrcuncunxp.com CNAME .
+*.ovrcuncunxp.com CNAME .
 ovsrhikuma.com CNAME .
 *.ovsrhikuma.com CNAME .
 ovvxzagmem.com CNAME .
@@ -34089,6 +34121,8 @@ p4r24.eu CNAME .
 *.p4r24.eu CNAME .
 pacekami.com CNAME .
 *.pacekami.com CNAME .
+paddlemoscowsplit.com CNAME .
+*.paddlemoscowsplit.com CNAME .
 padp5arja8dgsd9cha.com CNAME .
 *.padp5arja8dgsd9cha.com CNAME .
 padsims.com CNAME .
@@ -34453,8 +34487,6 @@ pixel.mediaiqdigital.com CNAME .
 *.pixel.mediaiqdigital.com CNAME .
 pixel.personagraph.com CNAME .
 *.pixel.personagraph.com CNAME .
-pixel.reddit.com CNAME .
-*.pixel.reddit.com CNAME .
 pixel.watch CNAME .
 *.pixel.watch CNAME .
 piximedia.com CNAME .
@@ -38227,6 +38259,8 @@ vxcaphujhns.com CNAME .
 *.vxcaphujhns.com CNAME .
 vyfrxuytzn.com CNAME .
 *.vyfrxuytzn.com CNAME .
+vzecinazg.com CNAME .
+*.vzecinazg.com CNAME .
 vzizatjihca.com CNAME .
 *.vzizatjihca.com CNAME .
 vzoarcomvorz.com CNAME .
@@ -38379,6 +38413,8 @@ wedxuaksargvlf.com CNAME .
 *.wedxuaksargvlf.com CNAME .
 weeecool.com CNAME .
 *.weeecool.com CNAME .
+weesatoothoamu.net CNAME .
+*.weesatoothoamu.net CNAME .
 wegcash.com CNAME .
 *.wegcash.com CNAME .
 welcomeneat.pro CNAME .
@@ -40491,6 +40527,8 @@ track.omg543.com CNAME .
 *.track.omg543.com CNAME .
 track.pricespider.com CNAME .
 *.track.pricespider.com CNAME .
+track.rentracksw.com CNAME .
+*.track.rentracksw.com CNAME .
 track.saygames.io CNAME .
 *.track.saygames.io CNAME .
 track.securedvisit.com CNAME .
