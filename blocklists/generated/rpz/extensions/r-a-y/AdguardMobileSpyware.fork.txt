@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2024121601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2024122701 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -209,6 +209,14 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+events.watchtower.imdbtv.amazon.dev CNAME .
+*.events.watchtower.imdbtv.amazon.dev CNAME .
+mobile-production.content-square.net CNAME .
+*.mobile-production.content-square.net CNAME .
+sf16-static.i18n-pglstatp.com CNAME .
+*.sf16-static.i18n-pglstatp.com CNAME .
+log.pullcenter.live CNAME .
+*.log.pullcenter.live CNAME .
 log.documentmanagerpdfdocxlssale.live CNAME .
 *.log.documentmanagerpdfdocxlssale.live CNAME .
 stats.samsungpass.com CNAME .
