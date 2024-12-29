@@ -20,6 +20,5 @@ module.exports = (title, description, count) => {
 #
 # This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 # If you encounter any false positives, please report them at: https://blocklist.sefinek.net/false-positives
-#
 # -------------------------------------------------------------------------------------------------------------------------------------------------------`;
 };
