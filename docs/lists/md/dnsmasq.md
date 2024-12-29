@@ -2,7 +2,7 @@
     <h1>📝 Default blocklist collection (Dnsmasq)</h1>
     <p>
         📄 » <b>Format: server=/domain.tld/</b><br>
-        📥 » <b>Last update: 11.12.2024 / DD.MM.YYYY</b><br>
+        📥 » <b>Last update: 29.12.2024 / DD.MM.YYYY</b><br>
         ⭐ » <b>Mark this repository with a star if you find it useful.</b>
     </p>
 </div>
@@ -128,6 +128,7 @@ https://blocklist.sefinek.net/generated/v1/dnsmasq/tracking-and-telemetry/MajkiI
 https://blocklist.sefinek.net/generated/v1/dnsmasq/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/tracking-and-telemetry/neodevpro/host.fork.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/tracking-and-telemetry/quidsup/trackers-hosts.fork.txt
+https://blocklist.sefinek.net/generated/v1/dnsmasq/tracking-and-telemetry/sefinek.hosts.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/useless-websites/jarelllama/parked-domains.fork.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/useless-websites/sefinek.hosts.txt
 ```

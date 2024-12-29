@@ -2,7 +2,7 @@
     <h1>📝 Default blocklist collection for Unbound</h1>
     <p>
         📄 » <b>Format: local-zone: "domain.tld." always_nxdomain</b><br>
-        📥 » <b>Last update: 11.12.2024 / DD.MM.YYYY</b><br>
+        📥 » <b>Last update: 29.12.2024 / DD.MM.YYYY</b><br>
         ⭐ » <b>Mark this repository with a star if you find it useful.</b>
     </p>
 </div>
@@ -130,6 +130,7 @@ https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/MajkiI
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/neodevpro/host.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/quidsup/trackers-hosts.fork.conf
+https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/sefinek.hosts.conf
 https://blocklist.sefinek.net/generated/v1/unbound/useless-websites/jarelllama/parked-domains.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/useless-websites/sefinek.hosts.conf
 ```
