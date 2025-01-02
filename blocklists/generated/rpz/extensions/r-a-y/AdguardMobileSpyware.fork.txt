@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2024122901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025010201 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -43,8 +43,6 @@ tracking.miui.com CNAME .
 *.tracking.miui.com CNAME .
 data.mistat.intl.xiaomi.com CNAME .
 *.data.mistat.intl.xiaomi.com CNAME .
-register.xmpush.xiaomi.com CNAME .
-*.register.xmpush.xiaomi.com CNAME .
 storeconfig.mistat.intl.xiaomi.com CNAME .
 *.storeconfig.mistat.intl.xiaomi.com CNAME .
 api.ad.intl.xiaomi.com CNAME .
