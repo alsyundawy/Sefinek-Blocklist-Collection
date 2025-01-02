@@ -1,14 +1,15 @@
-# Version: 202501020809
+# Version: 202501020909
 # Title: oisd big
 # Description: Block. Don't break.
 # Syntax: Domains (wildcards) without *.
 # Entries: 123,461
-# Last modified: 2025-01-02T08:09:15+0000
+# Last modified: 2025-01-02T09:09:19+0000
 # Expires: 1 hours
 # License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 # Maintainer: Stephan van Ruth
 # Homepage: https://oisd.nl
 # Contact: contact@oisd.nl
+0.0.0.0
 # All domains and their subdomains should be blocked
 # Entry: "example.com" should block access to "example.com" and "subdomain.example.com" but not "thiseexample.com"
 0.0.0.0 0--foodwarez.da.ru
@@ -49410,7 +49411,6 @@ ads.localhost.net.ar
 0.0.0.0 geoip.pennlive.com
 0.0.0.0 geoip.silive.com
 0.0.0.0 geoip.syracuse.com
-0.0.0.0 geolantis.fr
 0.0.0.0 geolocation.outreach.com
 0.0.0.0 geoma.com.br
 0.0.0.0 geometra-bologna.it
@@ -59903,6 +59903,7 @@ ads.localhost.net.ar
 0.0.0.0 izzylogz.nn.r.appspot.com
 0.0.0.0 j-0-09g-9bh-h-ggf-1324992141.cos.ap-bangkok.myqcloud.com
 0.0.0.0 j-cta.org
+0.0.0.0 j-mxponyz.love
 0.0.0.0 j-natural.com
 0.0.0.0 j-toputvoutfitters.com
 0.0.0.0 j.baminw.cn
