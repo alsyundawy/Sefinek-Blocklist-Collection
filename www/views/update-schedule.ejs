@@ -19,9 +19,17 @@
 </div>
 
 <main>
+    <div class="header-text">
+        <h2>Information</h2>
+        <div>
+            This subpage displays upcoming cron tasks for updating blocklist repositories based on your time zone.<br>
+            You can use it as a reference to set up your own cron job for automatic blocklist updates.
+        </div>
+    </div>
+
     <div class="container-box">
         <div class="container-text">
-            <div style="padding-bottom:10px">
+            <div style="margin-bottom:10px">
                 <b>Your timezone:</b> <span id="user-timezone"></span>
             </div>
 
@@ -33,17 +41,8 @@
     </div>
 
     <div class="header-text">
-        <h2>Information</h2>
-        <div style="padding-bottom:20px">
-            This subpage shows the upcoming task for updating blocklist repositories based on the specified time zone.<br>
-            You can use it to configure a cron job for automatically updating the blocklist.
-        </div>
-
-        <h2>IMPORTANT!</h2>
-        <div>
-            Do not download the lists too often. Downloading them too frequently may result in a permanent IP address block.<br>
-            The blocklists are <a href="/logs/v1">synchronized daily</a> on the main server (blocklist.sefinek.net) at 1:00 AM (this usually takes less than 1 minute), so downloading them every hour is not necessary.
-        </div>
+        - Lists should not be downloaded too frequently, as this may result in a permanent ban on the IP address.<br>
+        - Synchronization occurs daily at 01:00 and 06:00 (24-hour clock, Poland time zone: GMT+01:00). Cron expression: <u>0 1,6 * * *</u> (at minute 0, past hours 1 and 6). More <a href="https://github.com/sefinek/Sefinek-Blocklist-Collection?tab=readme-ov-file#-update-schedule" target="_blank">here</a>.
     </div>
 </main>
 
