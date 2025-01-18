@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025011501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025011801 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -1649,6 +1649,8 @@ event.webcollage.net CNAME .
 *.event.webcollage.net CNAME .
 eventapi.libring.com CNAME .
 *.eventapi.libring.com CNAME .
+eventcollector.mcf-prod.a.intuit.com CNAME .
+*.eventcollector.mcf-prod.a.intuit.com CNAME .
 eventgateway.soundcloud.com CNAME .
 *.eventgateway.soundcloud.com CNAME .
 eventlog.chatlead.com CNAME .
@@ -19835,10 +19837,6 @@ same.zkb.co.uk CNAME .
 *.same.zkb.co.uk CNAME .
 sametrics.finn.no CNAME .
 *.sametrics.finn.no CNAME .
-sams.11freunde.de CNAME .
-*.sams.11freunde.de CNAME .
-sams.spiegel.de CNAME .
-*.sams.spiegel.de CNAME .
 samt.frankly.ch CNAME .
 *.samt.frankly.ch CNAME .
 samt.swisscanto.com CNAME .
@@ -30353,8 +30351,6 @@ tt.ulsterbank.ie CNAME .
 *.tt.ulsterbank.ie CNAME .
 ttarget.eastwestbank.com CNAME .
 *.ttarget.eastwestbank.com CNAME .
-ttmetrics.faz.net CNAME .
-*.ttmetrics.faz.net CNAME .
 ttmetrics.jcpenney.com CNAME .
 *.ttmetrics.jcpenney.com CNAME .
 ucmetrics.hypovereinsbank.de CNAME .
