@@ -1,0 +1,64 @@
+<%- include('./includes/header.ejs', {
+    title: 'Update schedule - Sefinek Blocklists',
+    meta: {
+        desc: 'This subpage displays the update time of repositories containing the list of blocklists for your time zone. You can refer to it to set up a suitable cron job for updating the blocklist on your instance, such as Pi-hole.',
+        tags: 'update, frequency, schedule, pi-hole, cron, time, timezone, date, sefinek, blocklist, collection',
+        siteName: 'Made by Sefinek♥',
+        color: '#000103'
+    },
+    canonical: '/update-schedule',
+    subpage: 'update-schedule',
+    libs: 'luxon',
+    style: 'update-schedule'
+}) %>
+
+<div class="cover">
+    <header class="cover-text">
+        <h1>Update schedule ⏰</h1>
+    </header>
+</div>
+
+<main>
+    <div class="header-text">
+        <h2>Information</h2>
+        <div>
+            This subpage displays upcoming cron tasks for updating blocklist repositories based on your time zone.<br>
+            You can use it as a reference to set up your own cron job for automatic blocklist updates.
+        </div>
+    </div>
+
+    <div class="container-box">
+        <div class="container-text">
+            <div style="margin-bottom:10px">
+                <b>Your timezone:</b> <span id="user-timezone"></span>
+            </div>
+
+            <div>
+                <b>Local (blocklist.sefinek.net):</b> <span id="remote"></span><br>
+                <b>Remote (GitHub):</b> <span id="github"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-text">
+        - Lists should not be downloaded too frequently, as this may result in a permanent ban on the IP address.<br>
+        - Synchronization occurs daily at 01:00 and 06:00 (24-hour clock, Poland time zone: GMT+01:00). Cron expression: <u>0 1,6 * * *</u> (at minute 0, past hours 1 and 6). More <a href="https://github.com/sefinek/Sefinek-Blocklist-Collection?tab=readme-ov-file#-update-schedule" target="_blank">here</a>.
+    </div>
+</main>
+
+<script>
+    const showCronInfo = () => {
+        const userTimezone = luxon.DateTime.local().zoneName;
+        document.getElementById('user-timezone').textContent = userTimezone;
+
+        const github = luxon.DateTime.fromISO('<%= cron.github %>').setZone(userTimezone);
+        const remote = luxon.DateTime.fromISO('<%= cron.remote %>').setZone(userTimezone);
+
+        document.getElementById('github').textContent = github.toLocaleString(luxon.DateTime.DATETIME_MED);
+        document.getElementById('remote').textContent = remote.toLocaleString(luxon.DateTime.DATETIME_MED);
+    }
+
+    document.addEventListener('DOMContentLoaded', showCronInfo);
+</script>
+
+<%- include('./includes/footer.ejs') %>
