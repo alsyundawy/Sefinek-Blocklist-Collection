@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025012301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025012401 43200 3600 259200 300
   NS  localhost.
 1-1ads.com CNAME .
 *.1-1ads.com CNAME .
@@ -147,6 +147,8 @@ actuallysheep.com CNAME .
 *.actuallysheep.com CNAME .
 actuallysnake.com CNAME .
 *.actuallysnake.com CNAME .
+actuallything.com CNAME .
+*.actuallything.com CNAME .
 acuityads.com CNAME .
 *.acuityads.com CNAME .
 acuityplatform.com CNAME .
@@ -345,8 +347,6 @@ adap.tv CNAME .
 *.adap.tv CNAME .
 adapt.tv CNAME .
 *.adapt.tv CNAME .
-adaranth.com CNAME .
-*.adaranth.com CNAME .
 adbilty.me CNAME .
 *.adbilty.me CNAME .
 adblade.com CNAME .
@@ -661,8 +661,6 @@ ads-backend.chaincliq.com CNAME .
 *.ads-backend.chaincliq.com CNAME .
 ads-bilek.com CNAME .
 *.ads-bilek.com CNAME .
-ads-click.com CNAME .
-*.ads-click.com CNAME .
 ads-dev.pinterest.com CNAME .
 *.ads-dev.pinterest.com CNAME .
 ads-game-187f4.firebaseapp.com CNAME .
@@ -1177,8 +1175,6 @@ ads.tso.dennisnet.co.uk CNAME .
 *.ads.tso.dennisnet.co.uk CNAME .
 ads.twitter.com CNAME .
 *.ads.twitter.com CNAME .
-ads.twojatv.info CNAME .
-*.ads.twojatv.info CNAME .
 ads.ultimate-guitar.com CNAME .
 *.ads.ultimate-guitar.com CNAME .
 ads.uncrate.com CNAME .
@@ -2593,8 +2589,6 @@ click.nvgaming.nvidia.com CNAME .
 *.click.nvgaming.nvidia.com CNAME .
 click.redditmail.com CNAME .
 *.click.redditmail.com CNAME .
-click.twcwigs.com CNAME .
-*.click.twcwigs.com CNAME .
 click.v.visionlab.es CNAME .
 *.click.v.visionlab.es CNAME .
 click2freemoney.com CNAME .
