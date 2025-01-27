@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025012601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025012701 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -2555,8 +2555,6 @@ statt-collect.herokuapp.com CNAME .
 *.statt-collect.herokuapp.com CNAME .
 stg-data-collector.playbuzz.com CNAME .
 *.stg-data-collector.playbuzz.com CNAME .
-stk.px-cloud.net CNAME .
-*.stk.px-cloud.net CNAME .
 stream-log.dditscdn.com CNAME .
 *.stream-log.dditscdn.com CNAME .
 streams.cablecar.sph.com.sg CNAME .
@@ -5427,6 +5425,8 @@ rt.newswire.ca CNAME .
 *.rt.newswire.ca CNAME .
 rt.prnewswire.com CNAME .
 *.rt.prnewswire.com CNAME .
+rt.whitebridge.ai CNAME .
+*.rt.whitebridge.ai CNAME .
 rta.dailymail.co.uk CNAME .
 *.rta.dailymail.co.uk CNAME .
 rta2.inews.co.uk CNAME .
