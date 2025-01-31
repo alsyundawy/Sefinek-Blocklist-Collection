@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025013001 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025013101 43200 3600 259200 300
   NS  localhost.
 0nlinemeds.com CNAME .
 *.0nlinemeds.com CNAME .
@@ -4735,8 +4735,6 @@ go.jc.fm CNAME .
 *.go.jc.fm CNAME .
 go.link CNAME .
 *.go.link CNAME .
-go.microsoft.com CNAME .
-*.go.microsoft.com CNAME .
 go.nextiva.com CNAME .
 *.go.nextiva.com CNAME .
 go.nordlocker.net CNAME .
