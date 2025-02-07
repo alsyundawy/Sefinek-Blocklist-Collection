@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025020501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025020701 43200 3600 259200 300
   NS  localhost.
 023hysj.com CNAME .
 *.023hysj.com CNAME .
@@ -421,6 +421,10 @@ adx-dre.op.hicloud.com CNAME .
 *.adx-dre.op.hicloud.com CNAME .
 adx-open-service.youku.com CNAME .
 *.adx-open-service.youku.com CNAME .
+adx-os.bridgeoos.com CNAME .
+*.adx-os.bridgeoos.com CNAME .
+adx-sg-req.bridgeoos.com CNAME .
+*.adx-sg-req.bridgeoos.com CNAME .
 adx-tk.rayjump.com CNAME .
 *.adx-tk.rayjump.com CNAME .
 adxcorp.kr CNAME .
@@ -481,24 +485,34 @@ api.applovefrom.com CNAME .
 *.api.applovefrom.com CNAME .
 api.appnxt.net CNAME .
 *.api.appnxt.net CNAME .
+api.bridgeoos.com CNAME .
+*.api.bridgeoos.com CNAME .
 api.brs.intl.miui.com CNAME .
 *.api.brs.intl.miui.com CNAME .
 api.fusepowered.com CNAME .
 *.api.fusepowered.com CNAME .
 api.itpub.cloud CNAME .
 *.api.itpub.cloud CNAME .
+api.kickoffo.site CNAME .
+*.api.kickoffo.site CNAME .
 api.mediation.amberweather.com CNAME .
 *.api.mediation.amberweather.com CNAME .
 api.mobula.ds.duapps.com CNAME .
 *.api.mobula.ds.duapps.com CNAME .
 api.mobula.sdk.duapps.com CNAME .
 *.api.mobula.sdk.duapps.com CNAME .
+api.myadsget.com CNAME .
+*.api.myadsget.com CNAME .
 api.newsfeed.intl.miui.com CNAME .
 *.api.newsfeed.intl.miui.com CNAME .
 api.pingstart.com CNAME .
 *.api.pingstart.com CNAME .
+api.sve.cc CNAME .
+*.api.sve.cc CNAME .
 api.usebutton.com CNAME .
 *.api.usebutton.com CNAME .
+api.youngle.tech CNAME .
+*.api.youngle.tech CNAME .
 apis.appnxt.net CNAME .
 *.apis.appnxt.net CNAME .
 app.adjust.net.in CNAME .
