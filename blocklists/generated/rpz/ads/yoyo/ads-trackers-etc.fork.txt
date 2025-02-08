@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025020701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025020801 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -2885,6 +2885,8 @@ customad.cnn.com CNAME .
 *.customad.cnn.com CNAME .
 customads.co CNAME .
 *.customads.co CNAME .
+customeriomail.com CNAME .
+*.customeriomail.com CNAME .
 customers.kameleoon.com CNAME .
 *.customers.kameleoon.com CNAME .
 cutechin.com CNAME .
