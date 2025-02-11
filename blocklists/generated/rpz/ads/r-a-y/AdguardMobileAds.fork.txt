@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025020301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025021101 43200 3600 259200 300
   NS  localhost.
 adx-open-service.youku.com CNAME .
 *.adx-open-service.youku.com CNAME .
@@ -167,6 +167,22 @@ startup.mobile.webvisor.com CNAME .
 *.startup.mobile.webvisor.com CNAME .
 startup-mobile.ap.yandex-net.ru CNAME .
 *.startup-mobile.ap.yandex-net.ru CNAME .
+san.myadssupport.com CNAME .
+*.san.myadssupport.com CNAME .
+api.youngle.tech CNAME .
+*.api.youngle.tech CNAME .
+api.myadsget.com CNAME .
+*.api.myadsget.com CNAME .
+api.sve.cc CNAME .
+*.api.sve.cc CNAME .
+adx-sg-req.bridgeoos.com CNAME .
+*.adx-sg-req.bridgeoos.com CNAME .
+adx-os.bridgeoos.com CNAME .
+*.adx-os.bridgeoos.com CNAME .
+api.kickoffo.site CNAME .
+*.api.kickoffo.site CNAME .
+api.bridgeoos.com CNAME .
+*.api.bridgeoos.com CNAME .
 r0.mail.ru CNAME .
 *.r0.mail.ru CNAME .
 r0.mradx.net CNAME .
@@ -427,8 +443,6 @@ mxaserver.mxplay.com CNAME .
 *.mxaserver.mxplay.com CNAME .
 contextualadv.com CNAME .
 *.contextualadv.com CNAME .
-prebid-cache.ifunny.co CNAME .
-*.prebid-cache.ifunny.co CNAME .
 tk0x1.com CNAME .
 *.tk0x1.com CNAME .
 itdsmr.com CNAME .
