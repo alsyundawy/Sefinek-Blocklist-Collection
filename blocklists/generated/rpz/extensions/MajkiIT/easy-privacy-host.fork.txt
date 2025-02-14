@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025021201 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025021401 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -30179,6 +30179,8 @@ in.brilliant.org CNAME .
 *.in.brilliant.org CNAME .
 in.invitd.us CNAME .
 *.in.invitd.us CNAME .
+in.treasuredata.com CNAME .
+*.in.treasuredata.com CNAME .
 in.upipr.co CNAME .
 *.in.upipr.co CNAME .
 inbound-analytics.pixlee.co CNAME .
@@ -74423,8 +74425,6 @@ visit.oakstreethealth.com CNAME .
 *.visit.oakstreethealth.com CNAME .
 visit.sendheirloom.com CNAME .
 *.visit.sendheirloom.com CNAME .
-visit.tafensw.edu.au CNAME .
-*.visit.tafensw.edu.au CNAME .
 visit.tenplay.com.au CNAME .
 *.visit.tenplay.com.au CNAME .
 visit.xchina.pics CNAME .
