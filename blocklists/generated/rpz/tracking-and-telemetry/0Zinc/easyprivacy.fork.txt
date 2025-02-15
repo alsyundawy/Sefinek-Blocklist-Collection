@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025021401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025021501 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -2251,6 +2251,8 @@ prod.fennec.atp.fox CNAME .
 *.prod.fennec.atp.fox CNAME .
 prodregistryv2.org CNAME .
 *.prodregistryv2.org CNAME .
+propsid.b-cdn.net CNAME .
+*.propsid.b-cdn.net CNAME .
 proxy.dzeio.com CNAME .
 *.proxy.dzeio.com CNAME .
 proxy.trysavvy.com CNAME .
@@ -70223,8 +70225,6 @@ app.talksport.com CNAME .
 *.app.talksport.com CNAME .
 app.task.io CNAME .
 *.app.task.io CNAME .
-app.teachfx.com CNAME .
-*.app.teachfx.com CNAME .
 app.test.elly.com CNAME .
 *.app.test.elly.com CNAME .
 app.th3rdwave.coffee CNAME .
