@@ -1,5 +1,5 @@
 const Marked = require('marked');
-const { parseExpression } = require('cron-parser');
+const { CronExpressionParser } = require('cron-parser');
 const { version } = require('../../package.json');
 const formatTime = require('../utils/time.js');
 const RequestStats = require('../database/models/RequestStats');
@@ -16,9 +16,9 @@ exports.falsePositives = (req, res) => {
 };
 
 exports.updateSchedule = (req, res) => {
-	const tz = { tz: 'Europe/Warsaw', currentDate: Date.now() };
-	const github = parseExpression('0 */3 * * *', tz);
-	const remote = parseExpression('0 1,6 * * *', tz);
+	const tzOptions = { tz: 'Europe/Warsaw', currentDate: Date.now() };
+	const github = CronExpressionParser.parse('0 */3 * * *', tzOptions);
+	const remote = CronExpressionParser.parse('0 1,6 * * *', tzOptions);
 
 	res.render('update-schedule.ejs', { cron: { github: github.next().toISOString(), remote: remote.next().toISOString() }, version });
 };
