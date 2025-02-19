@@ -2,7 +2,7 @@
     <h1>📝 Default blocklist collection for Unbound</h1>
     <p>
         📄 » <b>Format: local-zone: "domain.tld." always_nxdomain</b><br>
-        📥 » <b>Last update: 29.12.2024 / DD.MM.YYYY</b><br>
+        📥 » <b>Last update: 19.02.2025 / DD.MM.YYYY</b><br>
         ⭐ » <b>Mark this repository with a star if you find it useful.</b>
     </p>
 </div>
@@ -38,7 +38,6 @@ https://blocklist.sefinek.net/generated/v1/unbound/amp/ente-dev/google-amp-hosts
 https://blocklist.sefinek.net/generated/v1/unbound/crypto/cryptojacking/firebog/Prigent/Crypto.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/crypto/cryptojacking/hoshsadiq/adblock-nocoin-list.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/crypto/cryptojacking/Snota418/Crypto-streams.fork.conf
-https://blocklist.sefinek.net/generated/v1/unbound/crypto/cryptojacking/zerodot1/CoinBlockerLists-hosts.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/dating-services/developerdan/extended.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/dating-services/sefinek.hosts.conf
 https://blocklist.sefinek.net/generated/v1/unbound/dead-domains/jarelllama/dead-domains.fork.conf

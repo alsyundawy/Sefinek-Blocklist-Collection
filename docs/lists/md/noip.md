@@ -2,7 +2,7 @@
     <h1>📝 Default blocklist collection (hosts)</h1>
     <p>
         📄 » <b>Format: domain.tld</b><br>
-        📥 » <b>Last update: 29.12.2024 / DD.MM.YYYY</b><br>
+        📥 » <b>Last update: 19.02.2025 / DD.MM.YYYY</b><br>
         ⭐ » <b>Mark this repository with a star if you find it useful.</b>
     </p>
 </div>
@@ -37,7 +37,6 @@ https://blocklist.sefinek.net/generated/v1/noip/amp/ente-dev/google-amp-hosts.fo
 https://blocklist.sefinek.net/generated/v1/noip/crypto/cryptojacking/firebog/Prigent/Crypto.fork.txt
 https://blocklist.sefinek.net/generated/v1/noip/crypto/cryptojacking/hoshsadiq/adblock-nocoin-list.fork.txt
 https://blocklist.sefinek.net/generated/v1/noip/crypto/cryptojacking/Snota418/Crypto-streams.fork.txt
-https://blocklist.sefinek.net/generated/v1/noip/crypto/cryptojacking/zerodot1/CoinBlockerLists-hosts.fork.txt
 https://blocklist.sefinek.net/generated/v1/noip/dating-services/developerdan/extended.fork.txt
 https://blocklist.sefinek.net/generated/v1/noip/dating-services/sefinek.hosts.txt
 https://blocklist.sefinek.net/generated/v1/noip/dead-domains/jarelllama/dead-domains.fork.txt

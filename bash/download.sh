@@ -36,7 +36,6 @@ urls=(
   "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt crypto/cryptojacking/hoshsadiq/adblock-nocoin-list.fork.txt"
   "https://raw.githubusercontent.com/Snota418/Youtube-spam-host-list/main/Crypto%20streams crypto/cryptojacking/Snota418/Crypto-streams.fork.txt"
   "https://v.firebog.net/hosts/Prigent-Crypto.txt crypto/cryptojacking/firebog/Prigent/Crypto.fork.txt"
-  "https://zerodot1.gitlab.io/CoinBlockerLists/hosts crypto/cryptojacking/zerodot1/CoinBlockerLists-hosts.fork.txt"
 
   ## Dating services
   "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Dating dating-services/ShadowWhisperer/dating.fork.txt"

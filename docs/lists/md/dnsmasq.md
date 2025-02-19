@@ -2,7 +2,7 @@
     <h1>📝 Default blocklist collection (Dnsmasq)</h1>
     <p>
         📄 » <b>Format: server=/domain.tld/</b><br>
-        📥 » <b>Last update: 29.12.2024 / DD.MM.YYYY</b><br>
+        📥 » <b>Last update: 19.02.2025 / DD.MM.YYYY</b><br>
         ⭐ » <b>Mark this repository with a star if you find it useful.</b>
     </p>
 </div>
@@ -37,7 +37,6 @@ https://blocklist.sefinek.net/generated/v1/dnsmasq/amp/ente-dev/google-amp-hosts
 https://blocklist.sefinek.net/generated/v1/dnsmasq/crypto/cryptojacking/firebog/Prigent/Crypto.fork.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/crypto/cryptojacking/hoshsadiq/adblock-nocoin-list.fork.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/crypto/cryptojacking/Snota418/Crypto-streams.fork.txt
-https://blocklist.sefinek.net/generated/v1/dnsmasq/crypto/cryptojacking/zerodot1/CoinBlockerLists-hosts.fork.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/dating-services/developerdan/extended.fork.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/dating-services/sefinek.hosts.txt
 https://blocklist.sefinek.net/generated/v1/dnsmasq/dead-domains/jarelllama/dead-domains.fork.txt
