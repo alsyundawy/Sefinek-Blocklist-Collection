@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025021901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025022101 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -17699,6 +17699,8 @@ content.czarnowski.com CNAME .
 *.content.czarnowski.com CNAME .
 content.demand-on.com CNAME .
 *.content.demand-on.com CNAME .
+content.discover.com CNAME .
+*.content.discover.com CNAME .
 content.distium.com CNAME .
 *.content.distium.com CNAME .
 content.e-office.com CNAME .
