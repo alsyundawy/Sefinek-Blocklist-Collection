@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025022101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025022201 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -5703,6 +5703,8 @@ top.wn.com CNAME .
 *.top.wn.com CNAME .
 touch.myntra.com CNAME .
 *.touch.myntra.com CNAME .
+tr.api.fanbyte.com CNAME .
+*.tr.api.fanbyte.com CNAME .
 tr.clickstay.com CNAME .
 *.tr.clickstay.com CNAME .
 tr.www.cloudflare.com CNAME .
