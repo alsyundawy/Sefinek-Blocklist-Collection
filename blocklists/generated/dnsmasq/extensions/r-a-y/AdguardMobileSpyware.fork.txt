@@ -1,7 +1,7 @@
 # AdguardMobileSpyware
 #
 # Converted from - https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt
-# Last converted - Tue, 18 Feb 2025 15:06:45 +0000
+# Last converted - Tue, 25 Feb 2025 08:00:54 +0000
 #
 0.0.0.0
 server=/adeventtracker.spotify.com/
@@ -49,6 +49,7 @@ server=/analytics.qoqa.ninja/
 server=/analytics-sprint.qoqa.com/
 server=/analytics.qoqa.ch/
 server=/analytics.qoqa.com/
+server=/privacy-sandbox.appsflyersdk.com/
 server=/register.appsflyersdk.com/
 server=/conversions.appsflyersdk.com/
 server=/gcdsdk.appsflyersdk.com/
@@ -107,6 +108,15 @@ server=/int.vaicore.xyz/
 server=/int.vlancaa.site/
 server=/int.vlancaa.fun/
 server=/tok.vaicore.xyz/
+server=/insights.alibaba.com/
+server=/mssdk-boot.cpacutapi.com/
+server=/collect.ureca-lab.com/
+server=/api.abcsinsights.com/
+server=/tracking.carbonatixaudio.com/
+server=/adashx.ut.alibaba.com/
+server=/h-adashx.ut.alibaba.com/
+server=/stats.calldorado.com/
+server=/traffic.calldorado.com/
 server=/track.aieic.com/
 server=/tracker.str-nrg.com/
 server=/ced-ns.sascdn.com/
@@ -485,7 +495,6 @@ server=/collector.vhx.tv/
 server=/analytics-server.gimbal.com/
 server=/log-tb.sgsnssdk.com/
 server=/xlog.byteoversea.com/
-server=/gecko-sg.byteoversea.com/
 server=/ug-sg.byteoversea.com/
 server=/tracking.aldi-international.com/
 server=/direct-collect.dy-api.com/

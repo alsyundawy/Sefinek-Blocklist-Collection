@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025021901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025022501 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -91,6 +91,8 @@ analytics.qoqa.ch CNAME .
 *.analytics.qoqa.ch CNAME .
 analytics.qoqa.com CNAME .
 *.analytics.qoqa.com CNAME .
+privacy-sandbox.appsflyersdk.com CNAME .
+*.privacy-sandbox.appsflyersdk.com CNAME .
 register.appsflyersdk.com CNAME .
 *.register.appsflyersdk.com CNAME .
 conversions.appsflyersdk.com CNAME .
@@ -207,6 +209,24 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+insights.alibaba.com CNAME .
+*.insights.alibaba.com CNAME .
+mssdk-boot.cpacutapi.com CNAME .
+*.mssdk-boot.cpacutapi.com CNAME .
+collect.ureca-lab.com CNAME .
+*.collect.ureca-lab.com CNAME .
+api.abcsinsights.com CNAME .
+*.api.abcsinsights.com CNAME .
+tracking.carbonatixaudio.com CNAME .
+*.tracking.carbonatixaudio.com CNAME .
+adashx.ut.alibaba.com CNAME .
+*.adashx.ut.alibaba.com CNAME .
+h-adashx.ut.alibaba.com CNAME .
+*.h-adashx.ut.alibaba.com CNAME .
+stats.calldorado.com CNAME .
+*.stats.calldorado.com CNAME .
+traffic.calldorado.com CNAME .
+*.traffic.calldorado.com CNAME .
 track.aieic.com CNAME .
 *.track.aieic.com CNAME .
 tracker.str-nrg.com CNAME .
@@ -963,8 +983,6 @@ log-tb.sgsnssdk.com CNAME .
 *.log-tb.sgsnssdk.com CNAME .
 xlog.byteoversea.com CNAME .
 *.xlog.byteoversea.com CNAME .
-gecko-sg.byteoversea.com CNAME .
-*.gecko-sg.byteoversea.com CNAME .
 ug-sg.byteoversea.com CNAME .
 *.ug-sg.byteoversea.com CNAME .
 tracking.aldi-international.com CNAME .
