@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 02 Mar 2025 10:40 UTC+7
-# Version: 2503021040
-# Blocked: 18.195 domains
+# Last modified: 03 Mar 2025 09:44 UTC+7
+# Version: 2503030944
+# Blocked: 18.213 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -212,12 +212,14 @@
 127.0.0.1 app-measurement.com
 127.0.0.1 region1.app-measurement.com
 #[gvt2.com]
+127.0.0.1 beacons-handoff.gcp.gvt2.com
 127.0.0.1 beacons.gcp.gvt2.com
 127.0.0.1 beacons.gvt2.com
 127.0.0.1 beacons2.gvt2.com
 127.0.0.1 beacons3.gvt2.com
 127.0.0.1 beacons4.gvt2.com
 127.0.0.1 beacons5.gvt2.com
+127.0.0.1 beacons6.gvt2.com
 #[beacons*.gvt3.com]
 127.0.0.1 beacons5.gvt3.com
 127.0.0.1 beacons6.gvt3.com
@@ -7087,6 +7089,25 @@
 127.0.0.1 h-adashx.ut.taobao.com
 127.0.0.1 h-adashx4ae.ut.taobao.com
 127.0.0.1 h-adashx4sg.ut.taobao.com
+#[alibaba.com]
+127.0.0.1 abtest.alibaba.com
+127.0.0.1 cmap.alibaba.com
+127.0.0.1 dmtracking.alibaba.com
+127.0.0.1 dmtracking2.alibaba.com
+127.0.0.1 fourier.alibaba.com
+127.0.0.1 hydra.alibaba.com
+127.0.0.1 stat.alibaba.com
+#[ut.alibaba.com]
+127.0.0.1 adashx.ut.alibaba.com
+127.0.0.1 h-adashx.ut.alibaba.com
+#[aliexpress.com]
+127.0.0.1 adservice.aliexpress.com
+127.0.0.1 fourier.aliexpress.com
+127.0.0.1 moduleanalysis.aliexpress.com
+127.0.0.1 pcookie.aliexpress.com
+#[click.aliexpress.com]
+127.0.0.1 click.aliexpress.com
+127.0.0.1 s.click.aliexpress.com
 #[instant.page]
 127.0.0.1 assets.instant.page
 127.0.0.1 instant.page
@@ -13982,7 +14003,6 @@
 127.0.0.1 ads.advance.net
 127.0.0.1 ads.adverline.com
 127.0.0.1 ads.affiliates.match.com
-127.0.0.1 ads.alibaba.com
 127.0.0.1 ads.allizom.org
 127.0.0.1 ads.alt.com
 127.0.0.1 ads.amdmb.com
@@ -15606,8 +15626,6 @@
 127.0.0.1 dlrioxg1637dk.cloudfront.net
 127.0.0.1 dmp.starbolt.io
 127.0.0.1 dmtracker.com
-127.0.0.1 dmtracking.alibaba.com
-127.0.0.1 dmtracking2.alibaba.com
 127.0.0.1 dmxleo.dailymotion.com
 127.0.0.1 dn0qt3r0xannq.cloudfront.net
 127.0.0.1 dnemkhkbsdbl.com
@@ -15958,6 +15976,7 @@
 127.0.0.1 fwilmdact.com
 127.0.0.1 fxclix.com
 127.0.0.1 fxstyle.net
+127.0.0.1 fyljifajkqe.com
 127.0.0.1 fziwzaalp.com
 127.0.0.1 g0push.com
 127.0.0.1 ga-ads.com
@@ -16018,6 +16037,7 @@
 127.0.0.1 glizauvo.net
 127.0.0.1 gloalrie.com
 127.0.0.1 gloaphoo.net
+127.0.0.1 gloarteegnu.com
 127.0.0.1 globalismedia.com
 127.0.0.1 globaltakeoff.net
 127.0.0.1 globaltrack.com
@@ -16243,7 +16263,6 @@
 127.0.0.1 hxgqqxopf.com
 127.0.0.1 hxpohplms.com
 127.0.0.1 hybrid.ai
-127.0.0.1 hydra.alibaba.com
 127.0.0.1 hydramedia.com
 127.0.0.1 hydraulzonure.com
 127.0.0.1 hypelab.com
@@ -16520,6 +16539,7 @@
 127.0.0.1 ku42hjr2e.com
 127.0.0.1 kueezrtb.com
 127.0.0.1 kuglcibhyhuj.com
+127.0.0.1 kugmisawqo.com
 127.0.0.1 kuno-gae.com
 127.0.0.1 kupona.de
 127.0.0.1 kuqfudazkn.com
@@ -17844,6 +17864,7 @@
 127.0.0.1 safestgatetocontent.com
 127.0.0.1 sageanalyst.net
 127.0.0.1 saggrowledetc.com
+127.0.0.1 saigopooramee.net
 127.0.0.1 sailif.com
 127.0.0.1 saimifoa.net
 127.0.0.1 saipsoan.net
@@ -18957,6 +18978,7 @@
 127.0.0.1 yieldoptimizer.com
 127.0.0.1 yieldtraffic.com
 127.0.0.1 yiopse.com
+127.0.0.1 ykqcsawnlnvsgo.com
 127.0.0.1 ylcziaipyztvv.com
 127.0.0.1 yldbt.com
 127.0.0.1 yllaris.com

@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 02 Mar 2025 10:40 UTC+7
-# Version: 2503021040
-# Blocked: 18.195 domains
+# Last modified: 03 Mar 2025 09:44 UTC+7
+# Version: 2503030944
+# Blocked: 18.213 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -212,12 +212,14 @@ server=/googlevads-cn.com/
 server=/app-measurement.com/
 server=/region1.app-measurement.com/
 #[gvt2.com]
+server=/beacons-handoff.gcp.gvt2.com/
 server=/beacons.gcp.gvt2.com/
 server=/beacons.gvt2.com/
 server=/beacons2.gvt2.com/
 server=/beacons3.gvt2.com/
 server=/beacons4.gvt2.com/
 server=/beacons5.gvt2.com/
+server=/beacons6.gvt2.com/
 #[beacons*.gvt3.com]
 server=/beacons5.gvt3.com/
 server=/beacons6.gvt3.com/
@@ -7087,6 +7089,25 @@ server=/adashxgc.ut.taobao.com/
 server=/h-adashx.ut.taobao.com/
 server=/h-adashx4ae.ut.taobao.com/
 server=/h-adashx4sg.ut.taobao.com/
+#[alibaba.com]
+server=/abtest.alibaba.com/
+server=/cmap.alibaba.com/
+server=/dmtracking.alibaba.com/
+server=/dmtracking2.alibaba.com/
+server=/fourier.alibaba.com/
+server=/hydra.alibaba.com/
+server=/stat.alibaba.com/
+#[ut.alibaba.com]
+server=/adashx.ut.alibaba.com/
+server=/h-adashx.ut.alibaba.com/
+#[aliexpress.com]
+server=/adservice.aliexpress.com/
+server=/fourier.aliexpress.com/
+server=/moduleanalysis.aliexpress.com/
+server=/pcookie.aliexpress.com/
+#[click.aliexpress.com]
+server=/click.aliexpress.com/
+server=/s.click.aliexpress.com/
 #[instant.page]
 server=/assets.instant.page/
 server=/instant.page/
@@ -13982,7 +14003,6 @@ server=/ads.adultfriendfinder.com/
 server=/ads.advance.net/
 server=/ads.adverline.com/
 server=/ads.affiliates.match.com/
-server=/ads.alibaba.com/
 server=/ads.allizom.org/
 server=/ads.alt.com/
 server=/ads.amdmb.com/
@@ -15606,8 +15626,6 @@ server=/dkre4lyk6a9bt.cloudfront.net/
 server=/dlrioxg1637dk.cloudfront.net/
 server=/dmp.starbolt.io/
 server=/dmtracker.com/
-server=/dmtracking.alibaba.com/
-server=/dmtracking2.alibaba.com/
 server=/dmxleo.dailymotion.com/
 server=/dn0qt3r0xannq.cloudfront.net/
 server=/dnemkhkbsdbl.com/
@@ -15958,6 +15976,7 @@ server=/fuwalrnce.com/
 server=/fwilmdact.com/
 server=/fxclix.com/
 server=/fxstyle.net/
+server=/fyljifajkqe.com/
 server=/fziwzaalp.com/
 server=/g0push.com/
 server=/ga-ads.com/
@@ -16018,6 +16037,7 @@ server=/glimtors.net/
 server=/glizauvo.net/
 server=/gloalrie.com/
 server=/gloaphoo.net/
+server=/gloarteegnu.com/
 server=/globalismedia.com/
 server=/globaltakeoff.net/
 server=/globaltrack.com/
@@ -16243,7 +16263,6 @@ server=/hwpnocpctu.com/
 server=/hxgqqxopf.com/
 server=/hxpohplms.com/
 server=/hybrid.ai/
-server=/hydra.alibaba.com/
 server=/hydramedia.com/
 server=/hydraulzonure.com/
 server=/hypelab.com/
@@ -16520,6 +16539,7 @@ server=/ku2d3a7pa8mdi.com/
 server=/ku42hjr2e.com/
 server=/kueezrtb.com/
 server=/kuglcibhyhuj.com/
+server=/kugmisawqo.com/
 server=/kuno-gae.com/
 server=/kupona.de/
 server=/kuqfudazkn.com/
@@ -17844,6 +17864,7 @@ server=/safebrowsdv.com/
 server=/safestgatetocontent.com/
 server=/sageanalyst.net/
 server=/saggrowledetc.com/
+server=/saigopooramee.net/
 server=/sailif.com/
 server=/saimifoa.net/
 server=/saipsoan.net/
@@ -18957,6 +18978,7 @@ server=/yieldmo.com/
 server=/yieldoptimizer.com/
 server=/yieldtraffic.com/
 server=/yiopse.com/
+server=/ykqcsawnlnvsgo.com/
 server=/ylcziaipyztvv.com/
 server=/yldbt.com/
 server=/yllaris.com/
