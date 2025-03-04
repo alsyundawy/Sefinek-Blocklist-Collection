@@ -2,7 +2,7 @@
     <h1>📝 Default blocklist collection (RPZ)</h1>
     <p>
         📄 » <b>Format: domain.tld CNAME .</b><br>
-        📥 » <b>Last update: 19.02.2025 / DD.MM.YYYY</b><br>
+        📥 » <b>Last update: 04.03.2025 / DD.MM.YYYY</b><br>
         ⭐ » <b>Mark this repository with a star if you find it useful.</b>
     </p>
 </div>
@@ -33,7 +33,6 @@ https://blocklist.sefinek.net/generated/v1/rpz/ads/sefinek.hosts.txt
 https://blocklist.sefinek.net/generated/v1/rpz/ads/ShadowWhisperer/Ads.fork.txt
 https://blocklist.sefinek.net/generated/v1/rpz/ads/yoyo/ads-trackers-etc.fork.txt
 https://blocklist.sefinek.net/generated/v1/rpz/amp/developerdan/amp-hosts-extended.fork.txt
-https://blocklist.sefinek.net/generated/v1/rpz/amp/ente-dev/google-amp-hosts.fork.txt
 https://blocklist.sefinek.net/generated/v1/rpz/crypto/cryptojacking/firebog/Prigent/Crypto.fork.txt
 https://blocklist.sefinek.net/generated/v1/rpz/crypto/cryptojacking/hoshsadiq/adblock-nocoin-list.fork.txt
 https://blocklist.sefinek.net/generated/v1/rpz/crypto/cryptojacking/Snota418/Crypto-streams.fork.txt
