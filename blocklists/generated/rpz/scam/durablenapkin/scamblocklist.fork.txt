@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025030301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025030401 43200 3600 259200 300
   NS  localhost.
 1000fapvids.online CNAME .
 *.1000fapvids.online CNAME .
@@ -79,6 +79,8 @@ account.ws-reward.com CNAME .
 *.account.ws-reward.com CNAME .
 store.account.ws-reward.com CNAME .
 *.store.account.ws-reward.com CNAME .
+adflowtube.com CNAME .
+*.adflowtube.com CNAME .
 adidasko.com CNAME .
 *.adidasko.com CNAME .
 adminicesm.life CNAME .
@@ -195,8 +197,6 @@ store.alohazing.com CNAME .
 *.store.alohazing.com CNAME .
 alphatowercompany.in CNAME .
 *.alphatowercompany.in CNAME .
-store.alphatowercompany.in CNAME .
-*.store.alphatowercompany.in CNAME .
 altruetech.com CNAME .
 *.altruetech.com CNAME .
 altwi-zgs.com CNAME .
@@ -217,10 +217,6 @@ store.amznshirts.com CNAME .
 *.store.amznshirts.com CNAME .
 an1.is CNAME .
 *.an1.is CNAME .
-animeshoppers.com CNAME .
-*.animeshoppers.com CNAME .
-store.animeshoppers.com CNAME .
-*.store.animeshoppers.com CNAME .
 anydebrid.com CNAME .
 *.anydebrid.com CNAME .
 app-uniswap.icu CNAME .
@@ -251,6 +247,10 @@ arnoldgloverruss58.myshopify.com CNAME .
 *.arnoldgloverruss58.myshopify.com CNAME .
 store.arnoldgloverruss58.myshopify.com CNAME .
 *.store.arnoldgloverruss58.myshopify.com CNAME .
+artdecorhome.store CNAME .
+*.artdecorhome.store CNAME .
+store.artdecorhome.store CNAME .
+*.store.artdecorhome.store CNAME .
 arthoodie.com CNAME .
 *.arthoodie.com CNAME .
 arvetellefsen.no CNAME .
@@ -829,6 +829,8 @@ easyshoppingus.com CNAME .
 *.easyshoppingus.com CNAME .
 ebuy8.shop CNAME .
 *.ebuy8.shop CNAME .
+ecomicrolab.com CNAME .
+*.ecomicrolab.com CNAME .
 ecs-online.ffm.to CNAME .
 *.ecs-online.ffm.to CNAME .
 store.ecs-online.ffm.to CNAME .
@@ -957,6 +959,10 @@ fashionshawaii.com CNAME .
 *.fashionshawaii.com CNAME .
 store.fashionshawaii.com CNAME .
 *.store.fashionshawaii.com CNAME .
+faunugraipt.com CNAME .
+*.faunugraipt.com CNAME .
+store.faunugraipt.com CNAME .
+*.store.faunugraipt.com CNAME .
 favoritehardware.com CNAME .
 *.favoritehardware.com CNAME .
 store.favoritehardware.com CNAME .
@@ -991,6 +997,8 @@ store.fazpowerdenet.tumblr.com CNAME .
 *.store.fazpowerdenet.tumblr.com CNAME .
 fdrc-gov.org CNAME .
 *.fdrc-gov.org CNAME .
+feevefouhe.net CNAME .
+*.feevefouhe.net CNAME .
 felara.com.do CNAME .
 *.felara.com.do CNAME .
 femalecozy.com CNAME .
@@ -1045,14 +1053,14 @@ store.freedom-ca-5g.com CNAME .
 *.store.freedom-ca-5g.com CNAME .
 freedom.service-update3.com CNAME .
 *.freedom.service-update3.com CNAME .
+freegiftscards.shop CNAME .
+*.freegiftscards.shop CNAME .
 frest.info CNAME .
 *.frest.info CNAME .
 store.frest.info CNAME .
 *.store.frest.info CNAME .
 friday89.com CNAME .
 *.friday89.com CNAME .
-store.fridaylocalmanager.duckdns.org CNAME .
-*.store.fridaylocalmanager.duckdns.org CNAME .
 frostgoddess.com CNAME .
 *.frostgoddess.com CNAME .
 store.frostgoddess.com CNAME .
@@ -1285,16 +1293,12 @@ i-grade.online CNAME .
 *.i-grade.online CNAME .
 i-visaindia.com CNAME .
 *.i-visaindia.com CNAME .
-iagadvanced.com CNAME .
-*.iagadvanced.com CNAME .
 iaqorwr.com CNAME .
 *.iaqorwr.com CNAME .
 icelandclothing.myshopify.com CNAME .
 *.icelandclothing.myshopify.com CNAME .
 store.icelandclothing.myshopify.com CNAME .
 *.store.icelandclothing.myshopify.com CNAME .
-igloaptopto.net CNAME .
-*.igloaptopto.net CNAME .
 ikiha.com CNAME .
 *.ikiha.com CNAME .
 store.ikiha.com CNAME .
@@ -1407,6 +1411,8 @@ informationpolicy.cloud CNAME .
 *.informationpolicy.cloud CNAME .
 informed.updateicybd.top CNAME .
 *.informed.updateicybd.top CNAME .
+infosystemsllc.com CNAME .
+*.infosystemsllc.com CNAME .
 injustice.site CNAME .
 *.injustice.site CNAME .
 store.injustice.site CNAME .
@@ -1849,8 +1855,8 @@ navi39.ru CNAME .
 *.navi39.ru CNAME .
 navi4.com CNAME .
 *.navi4.com CNAME .
-navi42.ru CNAME .
-*.navi42.ru CNAME .
+store.navi4.com CNAME .
+*.store.navi4.com CNAME .
 navi45.ru CNAME .
 *.navi45.ru CNAME .
 store.navi45.ru CNAME .
@@ -2135,8 +2141,6 @@ store.pateim.com CNAME .
 *.store.pateim.com CNAME .
 path2zillion.com CNAME .
 *.path2zillion.com CNAME .
-pay.iagadvanced.com CNAME .
-*.pay.iagadvanced.com CNAME .
 peaveymartca.com CNAME .
 *.peaveymartca.com CNAME .
 pekanbaru.one CNAME .
@@ -2159,6 +2163,8 @@ phgliders.com CNAME .
 *.phgliders.com CNAME .
 philsshorthairorientalkittens.com CNAME .
 *.philsshorthairorientalkittens.com CNAME .
+phirussacmush.net CNAME .
+*.phirussacmush.net CNAME .
 phototan-cdirect.info CNAME .
 *.phototan-cdirect.info CNAME .
 store.phototan-cdirect.info CNAME .
@@ -2251,6 +2257,8 @@ primeleech.com CNAME .
 *.primeleech.com CNAME .
 printkay.com CNAME .
 *.printkay.com CNAME .
+printteestore.com CNAME .
+*.printteestore.com CNAME .
 produktretter.at CNAME .
 *.produktretter.at CNAME .
 produktretter.com CNAME .
@@ -2687,6 +2695,8 @@ store.telegramweb.vercel.app CNAME .
 *.store.telegramweb.vercel.app CNAME .
 telemarktalk.com CNAME .
 *.telemarktalk.com CNAME .
+tencheckit.org CNAME .
+*.tencheckit.org CNAME .
 teneta.add-group.site CNAME .
 *.teneta.add-group.site CNAME .
 tesla-online.net CNAME .
@@ -2813,6 +2823,8 @@ tromselementbygg.no CNAME .
 *.tromselementbygg.no CNAME .
 trump-drop.org CNAME .
 *.trump-drop.org CNAME .
+trumpsupport.help CNAME .
+*.trumpsupport.help CNAME .
 tsla-stock.com CNAME .
 *.tsla-stock.com CNAME .
 twiiiter.com CNAME .
@@ -3447,8 +3459,6 @@ zerorolex.com CNAME .
 *.zerorolex.com CNAME .
 zerowasteinitiative.com CNAME .
 *.zerowasteinitiative.com CNAME .
-store.zerowasteinitiative.com CNAME .
-*.store.zerowasteinitiative.com CNAME .
 zillify.cfd CNAME .
 *.zillify.cfd CNAME .
 zlibrary.to CNAME .
