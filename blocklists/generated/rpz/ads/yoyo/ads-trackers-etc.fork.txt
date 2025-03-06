@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025030201 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025030601 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -4059,6 +4059,8 @@ link.go.chase CNAME .
 *.link.go.chase CNAME .
 link.sbstck.com CNAME .
 *.link.sbstck.com CNAME .
+link.team.hyperoptic.com CNAME .
+*.link.team.hyperoptic.com CNAME .
 link.theatlantic.com CNAME .
 *.link.theatlantic.com CNAME .
 link.uk.expediamail.com CNAME .
