@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025030701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025030901 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -1259,8 +1259,6 @@ bat.bing.com CNAME .
 *.bat.bing.com CNAME .
 bat.bing.net CNAME .
 *.bat.bing.net CNAME .
-baxter.olx.org CNAME .
-*.baxter.olx.org CNAME .
 bc.marfeelcache.com CNAME .
 *.bc.marfeelcache.com CNAME .
 beacon.adelphic.com CNAME .
@@ -2715,6 +2713,8 @@ telemetry.soundcloud.com CNAME .
 *.telemetry.soundcloud.com CNAME .
 telemetry.tableausoftware.com CNAME .
 *.telemetry.tableausoftware.com CNAME .
+telemetry.transcend.io CNAME .
+*.telemetry.transcend.io CNAME .
 telemetry.vtex.com CNAME .
 *.telemetry.vtex.com CNAME .
 test.takedwn.ws CNAME .
@@ -2875,8 +2875,6 @@ tracker.nitropay.com CNAME .
 *.tracker.nitropay.com CNAME .
 tracker.nocodelytics.com CNAME .
 *.tracker.nocodelytics.com CNAME .
-tracker.novage.com.ua CNAME .
-*.tracker.novage.com.ua CNAME .
 tracker.prod.ams3.k8s.hyperia.sk CNAME .
 *.tracker.prod.ams3.k8s.hyperia.sk CNAME .
 tracker.services.vaix.ai CNAME .
