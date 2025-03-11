@@ -36,7 +36,6 @@ router.get('/generated/0.0.0.0/forks/0Zinc.easyprivacy.txt', (req, res) => res.s
 router.get('/generated/0.0.0.0/forks/ente-dev.tv.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/tracking-and-telemetry/ente-dev/tv.fork.txt`));
 router.get('/generated/0.0.0.0/forks/frogeye.firstparty-trackers-hosts.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/tracking-and-telemetry/frogeye/firstparty-trackers-hosts.txt`));
 router.get('/generated/0.0.0.0/forks/MajkiIT.adguard_mobile_host.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/tracking-and-telemetry/MajkiIT/adguard-mobile-host.fork.txt`));
-router.get('/generated/0.0.0.0/forks/mitchellkrogza.Stop.Google.Analytics.Ghost.Spam-INACTIVE.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.txt`));
 router.get('/generated/0.0.0.0/forks/neodevpro.neodevhost.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/tracking-and-telemetry/neodevpro/host.fork.txt`));
 
 // AMP Hosts
@@ -221,7 +220,6 @@ router.get('/generated/127.0.0.1/forks/0Zinc.easyprivacy.txt', (req, res) => res
 router.get('/generated/127.0.0.1/forks/ente-dev.tv.txt', (req, res) => res.sendFile(`${localhost}/tracking-and-telemetry/ente-dev/tv.fork.txt`));
 router.get('/generated/127.0.0.1/forks/frogeye.firstparty-trackers-hosts.txt', (req, res) => res.sendFile(`${localhost}/tracking-and-telemetry/frogeye/firstparty-trackers-hosts.txt`));
 router.get('/generated/127.0.0.1/forks/MajkiIT.adguard_mobile_host.txt', (req, res) => res.sendFile(`${localhost}/tracking-and-telemetry/MajkiIT/adguard-mobile-host.fork.txt`));
-router.get('/generated/127.0.0.1/forks/mitchellkrogza.Stop.Google.Analytics.Ghost.Spam-INACTIVE.txt', (req, res) => res.sendFile(`${localhost}/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.txt`));
 router.get('/generated/127.0.0.1/forks/neodevpro.neodevhost.txt', (req, res) => res.sendFile(`${localhost}/tracking-and-telemetry/neodevpro/host.fork.txt`));
 
 // AMP Hosts
@@ -405,7 +403,6 @@ router.get('/generated/noip/forks/0Zinc.easyprivacy.txt', (req, res) => res.send
 router.get('/generated/noip/forks/ente-dev.tv.txt', (req, res) => res.sendFile(`${noIp}/tracking-and-telemetry/ente-dev/tv.fork.txt`));
 router.get('/generated/noip/forks/frogeye.firstparty-trackers-hosts.txt', (req, res) => res.sendFile(`${noIp}/tracking-and-telemetry/frogeye/firstparty-trackers-hosts.txt`));
 router.get('/generated/noip/forks/MajkiIT.adguard_mobile_host.txt', (req, res) => res.sendFile(`${noIp}/tracking-and-telemetry/MajkiIT/adguard-mobile-host.fork.txt`));
-router.get('/generated/noip/forks/mitchellkrogza.Stop.Google.Analytics.Ghost.Spam-INACTIVE.txt', (req, res) => res.sendFile(`${noIp}/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.txt`));
 router.get('/generated/noip/forks/neodevpro.neodevhost.txt', (req, res) => res.sendFile(`${noIp}/tracking-and-telemetry/neodevpro/host.fork.txt`));
 
 // AMP Hosts
@@ -589,7 +586,6 @@ router.get('/generated/adguard/forks/0Zinc.easyprivacy.txt', (req, res) => res.s
 router.get('/generated/adguard/forks/ente-dev.tv.txt', (req, res) => res.sendFile(`${adguard}/tracking-and-telemetry/ente-dev/tv.fork.txt`));
 router.get('/generated/adguard/forks/frogeye.firstparty-trackers-hosts.txt', (req, res) => res.sendFile(`${adguard}/tracking-and-telemetry/frogeye/firstparty-trackers-hosts.txt`));
 router.get('/generated/adguard/forks/MajkiIT.adguard_mobile_host.txt', (req, res) => res.sendFile(`${adguard}/tracking-and-telemetry/MajkiIT/adguard-mobile-host.fork.txt`));
-router.get('/generated/adguard/forks/mitchellkrogza.Stop.Google.Analytics.Ghost.Spam-INACTIVE.txt', (req, res) => res.sendFile(`${adguard}/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.txt`));
 router.get('/generated/adguard/forks/neodevpro.neodevhost.txt', (req, res) => res.sendFile(`${adguard}/tracking-and-telemetry/neodevpro/host.fork.txt`));
 
 // AMP Hosts
@@ -773,7 +769,6 @@ router.get('/generated/dnsmasq/forks/0Zinc.easyprivacy.txt', (req, res) => res.s
 router.get('/generated/dnsmasq/forks/ente-dev.tv.txt', (req, res) => res.sendFile(`${dnsmasq}/tracking-and-telemetry/ente-dev/tv.fork.txt`));
 router.get('/generated/dnsmasq/forks/frogeye.firstparty-trackers-hosts.txt', (req, res) => res.sendFile(`${dnsmasq}/tracking-and-telemetry/frogeye/firstparty-trackers-hosts.txt`));
 router.get('/generated/dnsmasq/forks/MajkiIT.adguard_mobile_host.txt', (req, res) => res.sendFile(`${dnsmasq}/tracking-and-telemetry/MajkiIT/adguard-mobile-host.fork.txt`));
-router.get('/generated/dnsmasq/forks/mitchellkrogza.Stop.Google.Analytics.Ghost.Spam-INACTIVE.txt', (req, res) => res.sendFile(`${dnsmasq}/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.txt`));
 router.get('/generated/dnsmasq/forks/neodevpro.neodevhost.txt', (req, res) => res.sendFile(`${dnsmasq}/tracking-and-telemetry/neodevpro/host.fork.txt`));
 
 // AMP Hosts

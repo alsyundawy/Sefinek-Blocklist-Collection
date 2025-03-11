@@ -2,7 +2,7 @@
     <h1>📝 Default blocklist collection (hosts)</h1>
     <p>
         📄 » <b>Format: domain.tld</b><br>
-        📥 » <b>Last update: 04.03.2025 / DD.MM.YYYY</b><br>
+        📥 » <b>Last update: 11.03.2025 / DD.MM.YYYY</b><br>
         ⭐ » <b>Mark this repository with a star if you find it useful.</b>
     </p>
 </div>
@@ -123,7 +123,6 @@ https://blocklist.sefinek.net/generated/v1/noip/test.txt
 https://blocklist.sefinek.net/generated/v1/noip/tracking-and-telemetry/0Zinc/easyprivacy.fork.txt
 https://blocklist.sefinek.net/generated/v1/noip/tracking-and-telemetry/frogeye/firstparty-trackers-hosts.txt
 https://blocklist.sefinek.net/generated/v1/noip/tracking-and-telemetry/MajkiIT/adguard-mobile-host.fork.txt
-https://blocklist.sefinek.net/generated/v1/noip/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.txt
 https://blocklist.sefinek.net/generated/v1/noip/tracking-and-telemetry/neodevpro/host.fork.txt
 https://blocklist.sefinek.net/generated/v1/noip/tracking-and-telemetry/quidsup/trackers-hosts.fork.txt
 https://blocklist.sefinek.net/generated/v1/noip/tracking-and-telemetry/sefinek.hosts.txt
