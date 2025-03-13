@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025030901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025031301 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -1197,6 +1197,8 @@ analytics.yola.net CNAME .
 *.analytics.yola.net CNAME .
 analytics.yolacdn.net CNAME .
 *.analytics.yolacdn.net CNAME .
+analytics.yollamedia.com CNAME .
+*.analytics.yollamedia.com CNAME .
 analytics.ziftsolutions.com CNAME .
 *.analytics.ziftsolutions.com CNAME .
 analytics1.vdo.ai CNAME .
@@ -2391,8 +2393,6 @@ smart-data-systems.com CNAME .
 *.smart-data-systems.com CNAME .
 smrt.as CNAME .
 *.smrt.as CNAME .
-snowplow.swm.digital CNAME .
-*.snowplow.swm.digital CNAME .
 snowplowjs.darwin.cx CNAME .
 *.snowplowjs.darwin.cx CNAME .
 solutions.invocacdn.com CNAME .
