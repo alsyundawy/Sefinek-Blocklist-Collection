@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025031301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025031501 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -2033,6 +2033,8 @@ metrics.kmsmep.com CNAME .
 *.metrics.kmsmep.com CNAME .
 metrics.mdstrm.com CNAME .
 *.metrics.mdstrm.com CNAME .
+metrics.nsureapi.com CNAME .
+*.metrics.nsureapi.com CNAME .
 metrics.onshape.com CNAME .
 *.metrics.onshape.com CNAME .
 metrics.pico.tools CNAME .
