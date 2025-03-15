@@ -1,7 +1,7 @@
 ! AdguardMobileSpyware
 !
 ! Converted from - https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt
-! Last converted - Fri, 14 Mar 2025 01:57:44 +0000
+! Last converted - Sat, 15 Mar 2025 01:56:24 +0000
 !
 0.0.0.0
 ||adeventtracker.spotify.com^
@@ -108,6 +108,9 @@
 ||int.vlancaa.site^
 ||int.vlancaa.fun^
 ||tok.vaicore.xyz^
+||nr.bidderstack.com^
+||stbid.ru^
+||stat.nsc-lab.io^
 ||cnlogs.umengcloud.com^
 ||logservice.dbankcloud.cn^
 ||logs.nebulahoroscope.com^
@@ -176,7 +179,6 @@
 ||tracking.ws.eurosport.com^
 ||analysis.polarisoffice.com^
 ||fraudmetrix.cn^
-||plbslog.umeng.com^
 ||analysys.cn^
 ||logs.supersonic.com^
 ||mssdk-va.byteoversea.com^
@@ -440,7 +442,6 @@
 ||psi.lbesecapi.com^
 ||report-ps.meettech.net^
 ||msg.umengcloud.com^
-||ulogs.umeng.com^
 ||ulogs.umengcloud.com^
 ||analytics.liveact-vault.com^
 ||dex50.deteql.net^
@@ -449,7 +450,6 @@
 ||tobapplog.ctobsnssdk.com^
 ||t.castle.io^
 ||bs.nakanohito.jp^
-||alogsus.umeng.com^
 ||log1.happymod.com^
 ||log.pvpgang.com^
 ||crs-event.line.me^
@@ -522,8 +522,6 @@
 ||tracking-service.glority.com^
 ||analytics-ingestion.production-public.tubi.io^
 ||pingtas.qq.com^
-||alogus.umeng.com^
-||errlogos.umeng.com^
 ||tenant-content.apm.appfolio-analytics.com^
 ||log.avlyun.com^
 ||api-analytics.prod.birdapp.com^
@@ -705,7 +703,6 @@
 ||api.uca.cloud.unity3d.com^
 ||resolver.gslb.mi-idc.com^
 ||geoip.ifunny.co^
-||alogs.umeng.com^
 ||alogs.umengcloud.com^
 ||4seeresults.com^
 ||adash.m.taobao.com^
@@ -713,7 +710,6 @@
 ||adserver.snapads.com^
 ||adsunflower.com^
 ||advmob.cn^
-||alog.umeng.com^
 ||alog.umengcloud.com^
 ||amp-error-reporting.appspot.com^
 ||analytics.ad.daum.net^
@@ -733,7 +729,6 @@
 ||api.gimbal.com^
 ||appmetrica.yandex.net^
 ||appmetrica.yandex.com^
-||ar.umeng.com^
 ||beacon.carfax.com^
 ||beacon.qq.com^
 ||beacon.shazam.com^
@@ -774,7 +769,6 @@
 ||nativesdks.mparticle.com^
 ||nlog.droid4x.cn^
 ||nrc.tapas.net^
-||oc.umeng.com^
 ||online-metrix.net^
 ||openstat.net^
 ||pingma.qq.com^
