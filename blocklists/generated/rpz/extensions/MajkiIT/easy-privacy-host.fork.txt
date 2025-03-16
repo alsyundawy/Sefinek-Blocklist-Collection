@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025031401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025031601 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -10963,6 +10963,8 @@ analytics.virginmobileusa.com CNAME .
 *.analytics.virginmobileusa.com CNAME .
 analytics.visible.com CNAME .
 *.analytics.visible.com CNAME .
+analytics.viture.dev CNAME .
+*.analytics.viture.dev CNAME .
 analytics.vixcloud.co CNAME .
 *.analytics.vixcloud.co CNAME .
 analytics.vortexscans.com CNAME .
@@ -42539,6 +42541,8 @@ metrics.nowtv.com CNAME .
 *.metrics.nowtv.com CNAME .
 metrics.nrma.com.au CNAME .
 *.metrics.nrma.com.au CNAME .
+metrics.nsureapi.com CNAME .
+*.metrics.nsureapi.com CNAME .
 metrics.ntnews.com.au CNAME .
 *.metrics.ntnews.com.au CNAME .
 metrics.nu.nl CNAME .
