@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025031601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025031701 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -11299,6 +11299,8 @@ api-hotmart-tracking-manager.hotmart.com CNAME .
 *.api-hotmart-tracking-manager.hotmart.com CNAME .
 api-js.mixpanel.com CNAME .
 *.api-js.mixpanel.com CNAME .
+api-visitor-analytics.intercom.com CNAME .
+*.api-visitor-analytics.intercom.com CNAME .
 api-websystems.landing.ni.com CNAME .
 *.api-websystems.landing.ni.com CNAME .
 api.apiok.net.iberostar.com CNAME .
@@ -45391,6 +45393,8 @@ o68c.sfr.fr CNAME .
 *.o68c.sfr.fr CNAME .
 o8.hyatt.com CNAME .
 *.o8.hyatt.com CNAME .
+o9tt6h08li.execute-api.eu-west-1.amazonaws.com CNAME .
+*.o9tt6h08li.execute-api.eu-west-1.amazonaws.com CNAME .
 oabnmx.jewelryexchange.com CNAME .
 *.oabnmx.jewelryexchange.com CNAME .
 oae6.carrefour-banque.fr CNAME .
