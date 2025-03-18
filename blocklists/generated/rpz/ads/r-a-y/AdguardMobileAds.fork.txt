@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025031301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025031801 43200 3600 259200 300
   NS  localhost.
 adx-open-service.youku.com CNAME .
 *.adx-open-service.youku.com CNAME .
@@ -171,8 +171,6 @@ global-staticplat.cdn.bcebos.com CNAME .
 *.global-staticplat.cdn.bcebos.com CNAME .
 datk.bridgeoos.com CNAME .
 *.datk.bridgeoos.com CNAME .
-tapi.pureapk.com CNAME .
-*.tapi.pureapk.com CNAME .
 ads.appbundledownload.com CNAME .
 *.ads.appbundledownload.com CNAME .
 san.myadssupport.com CNAME .
