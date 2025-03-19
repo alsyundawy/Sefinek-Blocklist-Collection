@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025031501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025031901 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -317,8 +317,6 @@ analytics.google.com CNAME .
 *.analytics.google.com CNAME .
 log.pdfviewerscannerstore.live CNAME .
 *.log.pdfviewerscannerstore.live CNAME .
-mon-boot.capcutapi.com CNAME .
-*.mon-boot.capcutapi.com CNAME .
 mon-va-us-looki.capcutapi.com CNAME .
 *.mon-va-us-looki.capcutapi.com CNAME .
 metrics-prod.suno.com CNAME .
