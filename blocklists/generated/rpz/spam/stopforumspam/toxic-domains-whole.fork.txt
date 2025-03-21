@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025032001 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025032101 43200 3600 259200 300
   NS  localhost.
 00-tv.com CNAME .
 *.00-tv.com CNAME .
@@ -91201,6 +91201,8 @@ suggest.makeablunder.click CNAME .
 *.suggest.makeablunder.click CNAME .
 suggest.thegambol.click CNAME .
 *.suggest.thegambol.click CNAME .
+suggest.tourlabs.click CNAME .
+*.suggest.tourlabs.click CNAME .
 suggest.triggerly.click CNAME .
 *.suggest.triggerly.click CNAME .
 suggest.usehike.click CNAME .
