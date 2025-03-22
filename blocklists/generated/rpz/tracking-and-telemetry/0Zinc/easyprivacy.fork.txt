@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025032101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025032201 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -3145,6 +3145,8 @@ x.weather.com CNAME .
 *.x.weather.com CNAME .
 xp2023-pix.s3.amazonaws.com CNAME .
 *.xp2023-pix.s3.amazonaws.com CNAME .
+yotrack.cdn.ybn.io CNAME .
+*.yotrack.cdn.ybn.io CNAME .
 adsdk.yandex.ru CNAME .
 *.adsdk.yandex.ru CNAME .
 analytics-api.samsunghealthcn.com CNAME .
