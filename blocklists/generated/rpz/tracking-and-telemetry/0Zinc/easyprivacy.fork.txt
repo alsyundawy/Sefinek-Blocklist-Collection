@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025032401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025032501 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -5165,6 +5165,8 @@ jumbo.zomato.com CNAME .
 *.jumbo.zomato.com CNAME .
 k.qwant.com CNAME .
 *.k.qwant.com CNAME .
+kape.dataplane.rudderstack.com CNAME .
+*.kape.dataplane.rudderstack.com CNAME .
 kinesis.us-east-1.analytics.edmentum.com CNAME .
 *.kinesis.us-east-1.analytics.edmentum.com CNAME .
 librato-collector.genius.com CNAME .
