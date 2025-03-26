@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025032501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025032601 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -33067,6 +33067,8 @@ kampanjat.atea.fi CNAME .
 *.kampanjat.atea.fi CNAME .
 kampanjer.yxvisa.no CNAME .
 *.kampanjer.yxvisa.no CNAME .
+kape.dataplane.rudderstack.com CNAME .
+*.kape.dataplane.rudderstack.com CNAME .
 kartik.devishetty.com CNAME .
 *.kartik.devishetty.com CNAME .
 kartik.devishetty.net CNAME .
@@ -60165,6 +60167,8 @@ sniffer.nitro-test-extern.otto.boreus.de CNAME .
 *.sniffer.nitro-test-extern.otto.boreus.de CNAME .
 sno1.snowrental.com CNAME .
 *.sno1.snowrental.com CNAME .
+snowflake.qq.com CNAME .
+*.snowflake.qq.com CNAME .
 snowman.odencat.com CNAME .
 *.snowman.odencat.com CNAME .
 snowplow.swm.digital CNAME .
