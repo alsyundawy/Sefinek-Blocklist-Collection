@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025032601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025032701 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -4827,6 +4827,8 @@ p-n.io CNAME .
 *.p-n.io CNAME .
 paa-reporting-advertising.amazon CNAME .
 *.paa-reporting-advertising.amazon CNAME .
+page-redirect.eu CNAME .
+*.page-redirect.eu CNAME .
 pagead.l.google.com CNAME .
 *.pagead.l.google.com CNAME .
 pagefair.com CNAME .
@@ -6439,6 +6441,8 @@ triplelift.com CNAME .
 *.triplelift.com CNAME .
 triptease.io CNAME .
 *.triptease.io CNAME .
+trk.4ff.pro CNAME .
+*.trk.4ff.pro CNAME .
 trk.bad-tool-tell-doubt.xyz CNAME .
 *.trk.bad-tool-tell-doubt.xyz CNAME .
 trk.bc.shutterfly.com CNAME .
