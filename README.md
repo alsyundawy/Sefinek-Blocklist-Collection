@@ -112,7 +112,7 @@ Join our [Discord server](https://discord.gg/53DBjTuzgZ) or open a new [Issue](h
 
 
 ## 🌠 Other Repositories
-1. [Cloudflare-WAF-Expressions](https://github.com/sefinek/Cloudflare-WAF-Expressions)
+1. [Cloudflare-WAF-Expressions](https://github.com/sefinek/Cloudflare-WAF-Rules)
 2. [Malicious-IP-Addresses](https://github.com/sefinek/Malicious-IP-Addresses)
 3. [Blacklisted-Emails](https://github.com/sefinek/Blacklisted-Emails)
 
