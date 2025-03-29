@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025032801 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025032901 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -91,6 +91,8 @@ analytics.qoqa.ch CNAME .
 *.analytics.qoqa.ch CNAME .
 analytics.qoqa.com CNAME .
 *.analytics.qoqa.com CNAME .
+dynamic-report-api.appsflyersdk.com CNAME .
+*.dynamic-report-api.appsflyersdk.com CNAME .
 privacy-sandbox.appsflyersdk.com CNAME .
 *.privacy-sandbox.appsflyersdk.com CNAME .
 register.appsflyersdk.com CNAME .
