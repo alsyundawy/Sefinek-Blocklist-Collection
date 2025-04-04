@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025033001 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025040401 43200 3600 259200 300
   NS  localhost.
 12d60.appspot.com CNAME .
 *.12d60.appspot.com CNAME .
@@ -1695,6 +1695,8 @@ users.awosoft.com CNAME .
 *.users.awosoft.com CNAME .
 users.easemon.com CNAME .
 *.users.easemon.com CNAME .
+users.thephonem.com CNAME .
+*.users.thephonem.com CNAME .
 v4vw4ytvo4.execute-api.us-east-2.amazonaws.com CNAME .
 *.v4vw4ytvo4.execute-api.us-east-2.amazonaws.com CNAME .
 video-recorder-c0419.firebaseio.com CNAME .
