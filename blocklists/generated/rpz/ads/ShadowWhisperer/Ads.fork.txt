@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025040901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025041001 43200 3600 259200 300
   NS  localhost.
 0063450bb8e5e3369ef8c167a463d15c01527283b79bd266bb19b23e.com CNAME .
 *.0063450bb8e5e3369ef8c167a463d15c01527283b79bd266bb19b23e.com CNAME .
@@ -6423,6 +6423,8 @@ ads.dkelseymedia.com CNAME .
 *.ads.dkelseymedia.com CNAME .
 adsdk.menaapp.net CNAME .
 *.adsdk.menaapp.net CNAME .
+adsdkprod.azureedge.net CNAME .
+*.adsdkprod.azureedge.net CNAME .
 ads.dlf.org.uk CNAME .
 *.ads.dlf.org.uk CNAME .
 adsdms.mk CNAME .
@@ -32805,6 +32807,8 @@ pushvault.com CNAME .
 *.pushvault.com CNAME .
 push.webandname.com CNAME .
 *.push.webandname.com CNAME .
+push-webapi.site CNAME .
+*.push-webapi.site CNAME .
 pushwizard.com CNAME .
 *.pushwizard.com CNAME .
 pushwoosh.com CNAME .
