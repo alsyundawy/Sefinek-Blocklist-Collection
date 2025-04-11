@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025040701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025041101 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -2881,6 +2881,8 @@ tracker.nitropay.com CNAME .
 *.tracker.nitropay.com CNAME .
 tracker.nocodelytics.com CNAME .
 *.tracker.nocodelytics.com CNAME .
+tracker.personizely.net CNAME .
+*.tracker.personizely.net CNAME .
 tracker.prod.ams3.k8s.hyperia.sk CNAME .
 *.tracker.prod.ams3.k8s.hyperia.sk CNAME .
 tracker.services.vaix.ai CNAME .
@@ -4521,6 +4523,8 @@ statistics.daktilo.com CNAME .
 *.statistics.daktilo.com CNAME .
 stats.vidyome.com CNAME .
 *.stats.vidyome.com CNAME .
+track.livasoft.com.tr CNAME .
+*.track.livasoft.com.tr CNAME .
 traffic.wdc.center CNAME .
 *.traffic.wdc.center CNAME .
 informers.sinoptik.ua CNAME .
@@ -11773,8 +11777,6 @@ access.hikaritv.net CNAME .
 *.access.hikaritv.net CNAME .
 acemetrics.aaa.com CNAME .
 *.acemetrics.aaa.com CNAME .
-acs.woolworths.com.au CNAME .
-*.acs.woolworths.com.au CNAME .
 activity.newlook.com CNAME .
 *.activity.newlook.com CNAME .
 adb-analytics.live-now.com CNAME .
