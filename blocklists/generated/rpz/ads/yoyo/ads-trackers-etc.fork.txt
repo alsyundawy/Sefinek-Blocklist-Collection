@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025041101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025041401 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -3057,6 +3057,8 @@ email-open.adtidy.net CNAME .
 *.email-open.adtidy.net CNAME .
 email-open.adtidy.org CNAME .
 *.email-open.adtidy.org CNAME .
+email-trk.ihg-businessedge.com CNAME .
+*.email-trk.ihg-businessedge.com CNAME .
 email.mg1.substack.com CNAME .
 *.email.mg1.substack.com CNAME .
 emailer.stockbit.com CNAME .
