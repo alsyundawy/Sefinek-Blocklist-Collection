@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025041601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025041801 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -211,6 +211,12 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+ads-privacy-api.prd.mz.internal.unity3d.com CNAME .
+*.ads-privacy-api.prd.mz.internal.unity3d.com CNAME .
+eventsv2balanced.malpagames.com CNAME .
+*.eventsv2balanced.malpagames.com CNAME .
+pls.prd.mz.internal.unity3d.com CNAME .
+*.pls.prd.mz.internal.unity3d.com CNAME .
 apishowstats.babybus.com CNAME .
 *.apishowstats.babybus.com CNAME .
 tjinit-event.babybus.com CNAME .
