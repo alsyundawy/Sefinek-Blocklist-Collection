@@ -98,10 +98,7 @@ exports.fileUrls = [
 	{ url: 'https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/30-day/domains-only/nrd-30day_part2.txt', name: 'xRuffKez_nrd-30day-part2.txt' },
 
 	// whoisds
-	{ url: 'https://whoisds.com/whois-database/newly-registered-domains/MjAyNC0wOC0xMi56aXA=/nrd', name: 'whoisds1.zip' },
-	{ url: 'https://whoisds.com/whois-database/newly-registered-domains/MjAyNC0wOC0xMS56aXA=/nrd', name: 'whoisds2.zip' },
-	{ url: 'https://whoisds.com/whois-database/newly-registered-domains/MjAyNC0wOC0xMC56aXA=/nrd', name: 'whoisds3.zip' },
-	{ url: 'https://whoisds.com/whois-database/newly-registered-domains/MjAyNC0wOC0wOS56aXA=/nrd', name: 'whoisds4.zip' },
+	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMC56aXA=/nrd', name: 'whoisds1.zip' },
 
 	// tb0hdan
 	{ url: 'https://github.com/tb0hdan/domains/raw/master/data/generic_lgbt/domain2multi-lgbt00.txt.xz', name: 'tb0hdan_generic-lgbt.xz' },
