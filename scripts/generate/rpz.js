@@ -40,7 +40,10 @@ const convert = async (folderPath = path.join(__dirname, '../../blocklists/templ
 			.replace(/#(?: ?127\.0\.0\.1| ?0\.0\.0\.0) |:: /gm, '; ')
 			.replace(/#/gm, ';')
 			.replace('<Release>', 'RPZ')
-			.replace('<LastUpdate>', `${date.full} | ${date.now}`);
+			.replace('<LastUpdate>', `${date.full} | ${date.now}`)
+			.split('\n')
+			.filter(line => !(/^0\.0\.0\.0\s*$/).test(line.trim()))
+			.join('\n');
 
 		const fullNewFile = path.join(generatedPath, file.name);
 		const header = `$TTL 300\n@ SOA localhost. root.localhost. ${date.serialNumber} 43200 3600 259200 300\n  NS  localhost.\n`;

@@ -30,7 +30,10 @@ const convert = async (folderPath = path.join(__dirname, '../../blocklists/templ
 			.replace(/0\.0\.0\.0 (.*?)$/gm, '||$1^')
 			.replace(/::|#/gm, '!')
 			.replace('<Release>', 'AdGuard [adguard.com]')
-			.replace('<LastUpdate>', `${date.full} | ${date.now}`);
+			.replace('<LastUpdate>', `${date.full} | ${date.now}`)
+			.split('\n')
+			.filter(line => !(/^0\.0\.0\.0\s*$/).test(line.trim()))
+			.join('\n');
 
 		const fullNewFile = path.join(generatedPath, file.name);
 		await fs.writeFile(fullNewFile, replacedFile);
