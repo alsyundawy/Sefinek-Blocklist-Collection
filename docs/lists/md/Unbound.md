@@ -125,7 +125,6 @@ https://blocklist.sefinek.net/generated/v1/unbound/test.conf
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/0Zinc/easyprivacy.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/frogeye/firstparty-trackers-hosts.conf
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/MajkiIT/adguard-mobile-host.fork.conf
-https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/mitchellkrogza/INACTIVE.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/neodevpro/host.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/quidsup/trackers-hosts.fork.conf
 https://blocklist.sefinek.net/generated/v1/unbound/tracking-and-telemetry/sefinek.hosts.conf
