@@ -94,8 +94,8 @@ exports.fileUrls = [
 	{ url: 'https://github.com/spaze/domains/raw/main/tld-cz.txt', name: 'spaze_tld-cz.txt' },
 
 	// xRuffKez
-	{ url: 'https://raw.githubusercontent.com/xRuffKez/NRD/main/nrd-30day_part1.txt', name: 'xRuffKez_nrd-30day-part1.txt' },
-	{ url: 'https://raw.githubusercontent.com/xRuffKez/NRD/main/nrd-30day_part2.txt', name: 'xRuffKez_nrd-30day-part2.txt' },
+	{ url: 'https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/30-day/domains-only/nrd-30day_part1.txt', name: 'xRuffKez_nrd-30day-part1.txt' },
+	{ url: 'https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/30-day/domains-only/nrd-30day_part2.txt', name: 'xRuffKez_nrd-30day-part2.txt' },
 
 	// whoisds
 	{ url: 'https://whoisds.com/whois-database/newly-registered-domains/MjAyNC0wOC0xMi56aXA=/nrd', name: 'whoisds1.zip' },

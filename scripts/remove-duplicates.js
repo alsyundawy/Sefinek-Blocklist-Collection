@@ -1,6 +1,5 @@
 const { mkdir, readdir, readFile, writeFile } = require('node:fs/promises');
 const { join } = require('node:path');
-const isPrivateIP = require('./utils/isPrivateIP.js');
 const local = require('./utils/local.js');
 
 const processLine = (line, existingDomains) => {
@@ -8,11 +7,12 @@ const processLine = (line, existingDomains) => {
 	if (line.startsWith('# [')) return { shouldKeep: false, reason: 'uselessComment' };
 	if (line.startsWith('##') || line.startsWith('#') || line.startsWith('!') || local.test(line) || line === '0.0.0.0 0.0.0.0') return { shouldKeep: true };
 
-	const [ip, domain] = line.split(/\s+/);
-	if (ip && !isPrivateIP(ip)) return { shouldKeep: true };
-	if (existingDomains.has(domain)) return { shouldKeep: false, reason: 'duplicate' };
+	const [, domain] = line.split(/\s+/);
+	if (!domain) return { shouldKeep: true };
 
+	if (existingDomains.has(domain)) return { shouldKeep: false, reason: 'duplicate' };
 	existingDomains.add(domain);
+
 	return { shouldKeep: true };
 };
 

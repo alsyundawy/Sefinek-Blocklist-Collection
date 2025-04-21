@@ -9,19 +9,19 @@ const { pipeline } = require('node:stream/promises');
 const { fileUrls } = require('./scripts/data.js');
 
 const downloadFile = async (url, outputPath) => {
-	console.log(`Downloading from ${url}...`);
+	console.log(`Downloading: ${url}`);
 
 	try {
 		const res = await axios.get(url, { responseType: 'stream' });
 		await pipeline(res.data, createWriteStream(outputPath));
 	} catch (err) {
-		console.error(`Download failed: ${err.message}`);
+		console.error('Download failed:', err.message);
 		throw err;
 	}
 };
 
 const extractZipFile = async (zipFilePath, extractToDir) => {
-	console.log(`Extracting ZIP archive ${zipFilePath}...`);
+	console.log('Extracting ZIP:', zipFilePath);
 
 	try {
 		await mkdir(extractToDir, { recursive: true });
@@ -37,14 +37,14 @@ const extractZipFile = async (zipFilePath, extractToDir) => {
 
 const extractXzFile = async (xzFilePath, extractToDir) => {
 	const decompressedPath = join(extractToDir, basename(xzFilePath, '.xz'));
-	console.log('Extracting XZ archive:', xzFilePath);
+	console.log('Extracting XZ:', xzFilePath);
 
 	try {
 		await mkdir(extractToDir, { recursive: true });
 		await pipeline(createReadStream(xzFilePath), lzma.createDecompressor(), createWriteStream(decompressedPath));
 		return decompressedPath;
 	} catch (err) {
-		console.error(`Failed to extract XZ archive: ${err.message}`);
+		console.error('Failed to extract XZ archive:', err.message);
 		throw err;
 	}
 };
@@ -127,7 +127,7 @@ const main = async () => {
 
 			console.log(`Finished processing ${fileName}`);
 		} catch (err) {
-			console.error(`Error processing file ${fileName}: ${err.message}`);
+			console.error(`Error processing file ${fileName}:`, err.message);
 		} finally {
 			writeStream.end();
 		}
