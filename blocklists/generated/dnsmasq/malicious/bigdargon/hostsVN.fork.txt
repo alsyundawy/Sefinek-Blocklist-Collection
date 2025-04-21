@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 21 Apr 2025 09:22 UTC+7
-# Version: 2504210922
-# Blocked: 18.438 domains
+# Last modified: 21 Apr 2025 15:48 UTC+7
+# Version: 2504211548
+# Blocked: 18.439 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -11653,6 +11653,9 @@ server=/daly2024.com/
 server=/media.daly2024.com/
 server=/srv.daly2024.com/
 server=/track.daly2024.com/
+#[mozilla.org]
+server=/ads.mozilla.org/
+server=/incoming.telemetry.mozilla.org/
 # --- GroupVN block ---
 #[adtimaserver]
 server=/adtimaserver.vn/
@@ -19586,7 +19589,6 @@ server=/img3.usefathom.com/
 server=/imp.pvnsolutions.com/
 server=/in.treasuredata.com/
 server=/incoming-telemetry.thunderbird.net/
-server=/incoming.telemetry.mozilla.org/
 server=/inside-graph.com/
 server=/invitejs.trustpilot.com/
 server=/invoca.net/
