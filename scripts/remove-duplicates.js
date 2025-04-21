@@ -1,11 +1,10 @@
 const { mkdir, readdir, readFile, writeFile } = require('node:fs/promises');
 const { join } = require('node:path');
-const local = require('./utils/local.js');
 
 const processLine = (line, existingDomains) => {
 	if (line === '') return { shouldKeep: false, reason: 'emptyLine' };
 	if (line.startsWith('# [')) return { shouldKeep: false, reason: 'uselessComment' };
-	if (line.startsWith('##') || line.startsWith('#') || line.startsWith('!') || local.test(line) || line === '0.0.0.0 0.0.0.0') return { shouldKeep: true };
+	if (line.startsWith('##') || line.startsWith('#') || line.startsWith('!') || line === '0.0.0.0 0.0.0.0') return { shouldKeep: true };
 
 	const [, domain] = line.split(/\s+/);
 	if (!domain) return { shouldKeep: true };
