@@ -95,7 +95,11 @@ const processDirectory = async dirPath => {
 					const words = line.split(/\s+/);
 					if (words.length > 2) {
 						const ipAddress = words.shift();
-						line = words.map(d => `${ipAddress} ${d.toLowerCase()}`).join('\n').trim();
+						line = words
+							.filter(Boolean)
+							.map(d => `${ipAddress} ${d.toLowerCase()}`)
+							.join('\n')
+							.trim();
 						modifiedLines++;
 					}
 				}

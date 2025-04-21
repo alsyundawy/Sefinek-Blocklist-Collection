@@ -24,7 +24,10 @@ const convert = async (folderPath = path.join(__dirname, '../../blocklists/templ
 			.replace(/(?:127\.0\.0\.1|0\.0\.0\.0) /gm, '127.0.0.1 ')
 			.replace(/#(?: ?127\.0\.0\.1| ?0\.0\.0\.0) |:: /gm, '# 127.0.0.1 ')
 			.replace('<Release>', '127.0.0.1 before each domain')
-			.replace('<LastUpdate>', `${date.full} | ${date.now}`);
+			.replace('<LastUpdate>', `${date.full} | ${date.now}`)
+			.split('\n')
+			.filter(line => !(/^127\.0\.0\.1\s*$/).test(line.trim()))
+			.join('\n');
 
 		const fullNewFile = path.join(generatedPath, file.name);
 		await fs.writeFile(fullNewFile, replacedFile);
