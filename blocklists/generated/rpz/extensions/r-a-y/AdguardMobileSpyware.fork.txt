@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025042101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025042201 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -227,8 +227,6 @@ metrics-us.cometchat.io CNAME .
 *.metrics-us.cometchat.io CNAME .
 clog.weverse.io CNAME .
 *.clog.weverse.io CNAME .
-collection.weverse.io CNAME .
-*.collection.weverse.io CNAME .
 report-edge.agora.io CNAME .
 *.report-edge.agora.io CNAME .
 pangolin-sdk-toutiao-b.com CNAME .
@@ -1381,8 +1379,6 @@ d.applvn.com CNAME .
 *.d.applvn.com CNAME .
 rt.applvn.com CNAME .
 *.rt.applvn.com CNAME .
-moengage.com CNAME .
-*.moengage.com CNAME .
 rt.applovin.com CNAME .
 *.rt.applovin.com CNAME .
 track.uc.cn CNAME .
