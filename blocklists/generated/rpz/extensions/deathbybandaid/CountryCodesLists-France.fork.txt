@@ -1,3 +1,7 @@
 $TTL 300
 @ SOA localhost. root.localhost. 2025042301 43200 3600 259200 300
   NS  localhost.
+omererul_altran.fr CNAME .
+*.omererul_altran.fr CNAME .
+wwwwestern_live.fr CNAME .
+*.wwwwestern_live.fr CNAME .

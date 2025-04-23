@@ -1,3 +1,17 @@
 $TTL 300
 @ SOA localhost. root.localhost. 2025042301 43200 3600 259200 300
   NS  localhost.
+_analytics.synonym.to CNAME .
+*._analytics.synonym.to CNAME .
+sw4_us-west-2_web.prd.api.a.intuit.com CNAME .
+*.sw4_us-west-2_web.prd.api.a.intuit.com CNAME .
+telemetry_ads.msn.com CNAME .
+*.telemetry_ads.msn.com CNAME .
+telemetry_preview.msn.com CNAME .
+*.telemetry_preview.msn.com CNAME .
+telemetry_rad.msn.com CNAME .
+*.telemetry_rad.msn.com CNAME .
+telemetry_ssw.live.com CNAME .
+*.telemetry_ssw.live.com CNAME .
+telemetry_watson.live.com CNAME .
+*.telemetry_watson.live.com CNAME .
