@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const { Router } = require('express');
+const router = Router();
 const path = require('node:path');
 
 const ZeroZeroZeroZero = path.join(__dirname, '..', '..', '..', 'blocklists', 'generated', '0.0.0.0');

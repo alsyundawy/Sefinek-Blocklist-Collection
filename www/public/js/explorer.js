@@ -1,12 +1,8 @@
 /* Time formatting */
 document.querySelectorAll('.time').forEach(el => {
-	const timestamp = el.getAttribute('data-timestamp');
-	if (timestamp) {
-		const date = new Date(parseInt(timestamp));
-		el.textContent = date.toLocaleString();
-	}
+	const timestamp = Number(el.dataset.timestamp);
+	if (!isNaN(timestamp)) el.textContent = new Date(timestamp).toLocaleString();
 });
-
 
 const table = document.getElementById('table');
 
