@@ -51,7 +51,7 @@ This will help you schedule the cron job for optimal timing.
 
 ## 🌍 Links
 - [Blocklist generator (for Pi-hole, AdGuard, etc.)](https://sefinek.net/blocklist-generator)
-- [Homepage of blocklist.sefinek.net (stats, update schedule, API for devs, etc.)](https://blocklist.sefinek.net)
+- [Homepage of blocklist.sefinek.net (stats, update schedule, etc.)](https://blocklist.sefinek.net)
 - [File explorer (Index of /generated/v1)](https://blocklist.sefinek.net/generated/v1)
 - [Git pull logs (Synchronization)](https://blocklist.sefinek.net/logs/v1): `Remote` [github.com] → `Local` [blocklist.sefinek.net]
 
