@@ -61,10 +61,18 @@ const processDirectory = async dirPath => {
 					continue;
 				}
 
-				// 127.0.0.1 or 195.187.6.33-35 → 0.0.0.0
-				if ((/^(127\.0\.0\.1|195\.187\.6\.3[3-5])\s+/).test(line)) {
-					line = line.replace(/^(\d{1,3}\.){3}\d{1,3}/, '0.0.0.0');
+				// 127.0.0.1 → 0.0.0.0
+				if ((/^127\.0\.0\.1\s+/).test(line)) {
+					line = line.replace(/^127\.0\.0\.1\s+/, '0.0.0.0 ');
 					stats.ipsReplaced++;
+					stats.modifiedLines++;
+				}
+
+				// 195.187.6.33-35 → 0.0.0.0
+				if ((/^195\.187\.6\.3[3-5]\s+/).test(line)) {
+					line = line.replace(/^195\.187\.6\.3[3-5]\s+/, '0.0.0.0 ');
+					stats.ipsReplaced++;
+					stats.modifiedLines++;
 				}
 
 				// ||domain.tld^ → 0.0.0.0 domain.tld
@@ -80,14 +88,14 @@ const processDirectory = async dirPath => {
 					stats.modifiedLines++;
 				}
 
-				// example.com → 0.0.0.0 example.com
+				// example.tld → 0.0.0.0 example.tld
 				if (!line.startsWith('0.0.0.0 ')) {
 					line = `0.0.0.0 ${line.toLowerCase()}`;
 					stats.modifiedLines++;
 					stats.fqdnConverted++;
 				}
 
-				// 0.0.0.0example.com → 0.0.0.0 example.com
+				// 0.0.0.0example.tld → 0.0.0.0 example.tld
 				const match = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
 				if (match) {
 					line = `0.0.0.0 ${match[1].toLowerCase()}${match[2] || ''}`;
@@ -101,6 +109,7 @@ const processDirectory = async dirPath => {
 					const domain = words[1];
 					if ((/[A-Z]/).test(domain)) {
 						line = `${words[0]} ${domain.toLowerCase()} ${words.slice(2).join(' ')}`.trim();
+						stats.modifiedLines++;
 						stats.convertedDomains++;
 						stats.domainToLower++;
 					}
