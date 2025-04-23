@@ -34,7 +34,7 @@ const processDirectory = async dirPath => {
 	}
 };
 
-const run = async () => {
+const job = async () => {
 	try {
 		await processDirectory(join(__dirname, '..', 'blocklists', 'templates'));
 	} catch (error) {
@@ -42,6 +42,6 @@ const run = async () => {
 	}
 };
 
-(async () => await run())();
+(async () => await job())();
 
-module.exports = run;
+module.exports = job;

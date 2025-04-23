@@ -69,7 +69,7 @@ const processDirectory = async (dirPath, whitelist, basePath) => {
 	}
 };
 
-const run = async () => {
+const job = async () => {
 	try {
 		const basePath = join(__dirname, '..', 'blocklists');
 		const whitelistPath = join(__dirname, '..', 'whitelists', 'main.txt');
@@ -81,6 +81,6 @@ const run = async () => {
 	}
 };
 
-(async () => await run())();
+(async () => await job())();
 
-module.exports = run;
+module.exports = job;

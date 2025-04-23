@@ -179,7 +179,7 @@ const processDirectory = async dirPath => {
 	}
 };
 
-const run = async () => {
+const job = async () => {
 	try {
 		console.log('🔍 Analyzing the `templates` folder...');
 
@@ -191,6 +191,6 @@ const run = async () => {
 	}
 };
 
-(async () => await run())();
+(async () => await job())();
 
-module.exports = () => run;
+module.exports = () => job;
