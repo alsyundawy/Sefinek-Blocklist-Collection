@@ -41,7 +41,8 @@ Within 96 hours, I will add the domain to the [whitelist](whitelists/main.txt). 
 - **This repository:**  
   The blocklists in this repository are updated every `3 hours` by [GitHub Actions](.github/workflows/download-blocklists.yml).
 - **Remote ([blocklist.sefinek.net](https://blocklist.sefinek.net)):**  
-  Synchronization occurs daily at `01:00` and `06:00` (24-hour clock, Poland time zone: `GMT+01:00`). Cron expression: `0 1,6 * * *` (at minute 0, past hours 1 and 6).
+  Synchronization occurs daily at `01:00` and `06:00` (24-hour clock, Poland time zone: `GMT+01:00`).
+  Cron expression: `0 1,6 * * *` (at minute 0, past hours 1 and 6).
 
 > [!IMPORTANT]  
 Visit [this page](https://blocklist.sefinek.net/update-schedule) to check the timing of the next repository synchronization in your time zone.  
