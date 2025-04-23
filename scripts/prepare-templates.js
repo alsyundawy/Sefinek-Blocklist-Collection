@@ -4,9 +4,10 @@ const validator = require('validator');
 const local = require('./utils/local.js');
 
 const isSuspiciousDomain = domain => {
-	if (!domain) return true;
+	if (typeof domain !== 'string') return true;
 	if (domain.length > 255) return true;
 	if ((domain.match(/\./g) || []).length > 32) return true;
+	if (domain.includes(':')) return true;
 	return !(/^[a-z0-9._-]+$/i).test(domain);
 };
 
