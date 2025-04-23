@@ -2,9 +2,7 @@ require('dotenv').config();
 
 const cluster = require('node:cluster');
 const numCPUs = require('node:os').availableParallelism();
-const path = require('node:path');
 const WebSocket = require('ws');
-const createDir = require('./scripts/utils/createDir.js');
 const connectToDatabase = require('./www/database/mongoose.js');
 const mergeUpdates = require('./www/cluster/mergeUpdates.js');
 const RequestStats = require('./www/database/models/RequestStats');
@@ -20,8 +18,6 @@ if (!process.env.MONGODB_URL) {
 if (!process.env.SEFINEK_API) {
 	throw new Error('Specify the `SEFINEK_API` environment variable, e.g., https://api.sefinek.net/api/v2');
 }
-
-createDir(path.join(__dirname, 'www', 'public', 'logs'));
 
 (async () => {
 	if (process.env.NODE_ENV === 'development') {

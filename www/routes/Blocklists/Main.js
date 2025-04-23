@@ -37,31 +37,36 @@ const getDirectorySize = async dirPath => {
 	return sizes.reduce((sum, size) => sum + size, 0);
 };
 
-const getCachedFiles = async dirPath => {
+const getCachedFiles = async (dirPath, validExtensions = []) => {
 	const now = Date.now();
 	const cached = FILE_CACHE.get(dirPath);
 	if (cached && now - cached.timestamp < CACHE_EXPIRATION_TIME) return cached.data;
 
 	const entries = await fs.readdir(dirPath, { withFileTypes: true });
-	const fileList = await Promise.all(entries.map(async entry => {
-		const fullPath = path.join(dirPath, entry.name);
-		const stats = await fs.stat(fullPath);
-		const isDir = entry.isDirectory();
-		const size = isDir ? await getDirectorySize(fullPath) : stats.size;
+	const fileList = await Promise.all(
+		entries
+			.filter(entry => {
+				const name = entry.name?.trim();
+				if (!name || name.startsWith('.')) return false;
+				if (!entry.isDirectory()) {
+					const ext = path.extname(name).toLowerCase();
+					if (!ext || !validExtensions.includes(ext)) return false;
+				}
+				return true;
+			})
+			.map(async entry => {
+				const name = entry.name;
+				const fullPath = path.join(dirPath, name);
+				const stats = await fs.stat(fullPath);
+				const isDir = entry.isDirectory();
+				const size = isDir ? await getDirectorySize(fullPath) : stats.size;
 
-		return {
-			name: entry.name,
-			isDirectory: isDir,
-			size,
-			lastModified: stats.mtime.getTime(),
-			icon: getFileIcon(entry.name, isDir),
-			formattedSize: formatFileSize(size),
-		};
-	}));
+				return { name, isDirectory: isDir, size, lastModified: stats.mtime.getTime(), icon: getFileIcon(name, isDir), formattedSize: formatFileSize(size) };
+			})
+	);
 
 	fileList.sort((a, b) => a.isDirectory === b.isDirectory ? a.name.localeCompare(b.name) : a.isDirectory ? -1 : 1);
 	FILE_CACHE.set(dirPath, { data: fileList, timestamp: now });
-
 	return fileList;
 };
 
@@ -83,7 +88,7 @@ const handleRequest = async (req, res, baseDir, basePath, validExtensions, templ
 		if (fileStats.isFile() && validExtensions.includes(path.extname(filePath))) return res.sendFile(filePath);
 
 		if (fileStats.isDirectory()) {
-			const files = await getCachedFiles(filePath);
+			const files = await getCachedFiles(filePath, validExtensions);
 			const currentPath = path.join(basePath, relative).replace(/\\/g, '/');
 			return res.render(template, { files, currentPath });
 		}
