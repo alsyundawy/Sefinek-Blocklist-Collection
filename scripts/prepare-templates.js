@@ -61,6 +61,12 @@ const processDirectory = async dirPath => {
 					continue;
 				}
 
+				// 127.0.0.1 or 195.187.6.33-35 → 0.0.0.0
+				if ((/^(127\.0\.0\.1|195\.187\.6\.3[3-5])\s+/).test(line)) {
+					line = line.replace(/^(\d{1,3}\.){3}\d{1,3}/, '0.0.0.0');
+					stats.ipsReplaced++;
+				}
+
 				// ||domain.tld^ → 0.0.0.0 domain.tld
 				if (line.startsWith('||') && line.endsWith('^')) {
 					line = `0.0.0.0 ${line.replace(/^(\|\|)/, '').replace(/\^$/, '')}`;
@@ -98,12 +104,6 @@ const processDirectory = async dirPath => {
 						stats.convertedDomains++;
 						stats.domainToLower++;
 					}
-				}
-
-				// 127.0.0.1 or 195.187.6.33-35 → 0.0.0.0
-				if ((/^(127\.0\.0\.1|195\.187\.6\.3[3-5])\s+/).test(line)) {
-					line = line.replace(/^(\d{1,3}\.){3}\d{1,3}/, '0.0.0.0');
-					stats.ipsReplaced++;
 				}
 
 				// 0.0.0.0\t... or 0.0.0.0  ... → 0.0.0.0 ...
