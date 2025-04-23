@@ -65,7 +65,7 @@ const processDirectory = async dirPath => {
 				if (line.startsWith('||') && line.endsWith('^')) {
 					line = `0.0.0.0 ${line.replace(/^(\|\|)/, '').replace(/\^$/, '')}`;
 					stats.modifiedLines++;
-					stats.convertedAdguard++;
+					stats.convertedAdGuard++;
 				}
 
 				// example.tld/ → example.tld
@@ -113,16 +113,22 @@ const processDirectory = async dirPath => {
 					stats.normalizedSpacing++;
 				}
 
-				// 0.0.0.0 a.com b.com → split into multiple lines
-				if ((line.startsWith('0.0.0.0') || line.startsWith('127.0.0.1')) && !line.includes('#')) {
-					const words = line.split(/\s+/);
+				// Split multi-domain line and preserve comment if any
+				if (line.startsWith('0.0.0.0')) {
+					const [mainPart, commentPart] = line.split('#', 2);
+					const words = mainPart.trim().split(/\s+/);
 					if (words.length > 2) {
 						const ipAddress = words.shift();
-						line = words
+						const newLines = words
 							.filter(Boolean)
-							.map(d => `${ipAddress} ${d.toLowerCase()}`)
-							.join('\n')
-							.trim();
+							.map((d, i, arr) => {
+								let l = `${ipAddress} ${d.toLowerCase()}`;
+								if (commentPart && i === arr.length - 1) {
+									l += ` #${commentPart.trim()}`;
+								}
+								return l;
+							});
+						line = newLines.join('\n');
 						stats.modifiedLines++;
 						stats.splitMultiDomain++;
 					}
@@ -130,17 +136,13 @@ const processDirectory = async dirPath => {
 
 				// ! comment → # comment
 				if (line.startsWith('!')) {
-					line = line.replace('!', '#');
-					if (line === '# Syntax: Adblock Plus Filter List') {
-						line = '# Syntax: 0.0.0.0 domain.tld'; // Adblock header → custom format
-						stats.modifiedLines++;
-						stats.commentsConverted++;
-					}
+					line = line.replace(/^!+/, '#');
+					if (line === '# Syntax: Adblock Plus Filter List') line = '# Syntax: 0.0.0.0 domain.tld';
 					stats.modifiedLines++;
 					stats.commentsConverted++;
 				}
 
-				// Validate and remove invalid or suspicious host entries
+				// Validate suspicious/invalid domains
 				if (line.startsWith('0.0.0.0')) {
 					const words = line.split(/\s+/);
 					const raw = words[1];
