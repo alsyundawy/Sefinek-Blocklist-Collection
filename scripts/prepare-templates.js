@@ -75,11 +75,9 @@ const processDirectory = async dirPath => {
 
 				// example.com → 0.0.0.0 example.com
 				if (!line.startsWith('0.0.0.0 ')) {
-					if (validator.isFQDN(line, { allow_underscores: true })) {
-						line = `0.0.0.0 ${line.toLowerCase()}`;
-						stats.modifiedLines++;
-						stats.fqdnConverted++;
-					}
+					line = `0.0.0.0 ${line.toLowerCase()}`;
+					stats.modifiedLines++;
+					stats.fqdnConverted++;
 				}
 
 				// 0.0.0.0example.com → 0.0.0.0 example.com
