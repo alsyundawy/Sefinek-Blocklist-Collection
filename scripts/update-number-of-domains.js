@@ -1,23 +1,22 @@
 const { writeFile } = require('node:fs/promises');
 const { createReadStream } = require('node:fs');
-const { red, blue, green } = require('kleur');
+const { resolve } = require('node:path');
 const readline = require('readline');
-const { join } = require('node:path');
 const getAllTxtFiles = require('./utils/getAllTxtFiles.js');
+
+const formatCount = count => count.toLocaleString('en-US', { minimumIntegerDigits: 8, useGrouping: true }).replace(/,/g, ' ');
 
 const createUpdatedContents = (lines, domainCount) => {
 	const countText = domainCount?.toLocaleString('en-US') || 'Unknown';
-	return lines.join('\n')
-		.replace(
-			/^(#\s*)(Domains|Count|Entries|Number of entries|Number of unique domains|Total number of network filters)(:\s*)(\d*[\d,]*)$/im,
-			(_, prefix, key, separator) => `${prefix}${key}${separator}${countText}`
-		);
-	// .replace(/^# last updated:.*GMT.*$/im, (match) => match + ` (Sefinek lists: ${new Date().toUTCString()})`);
+	return lines.join('\n').replace(
+		/^(#\s*)(Domains|Count|Entries|Number of entries|Number of unique domains|Total number of network filters)(:\s*)(\d*[\d,]*)$/im,
+		(_, prefix, key, separator) => `${prefix}${key}${separator}${countText}`
+	);
 };
 
-const processFile = async file => {
-	let domainCount = 0;
+const countDomains = async file => {
 	const lines = [];
+	let domainCount = 0;
 
 	const rl = readline.createInterface({ input: createReadStream(file, 'utf8'), crlfDelay: Infinity });
 	for await (const line of rl) {
@@ -25,21 +24,28 @@ const processFile = async file => {
 		lines.push(line);
 	}
 
-	const updatedFileContents = createUpdatedContents(lines, domainCount);
-	await writeFile(file, updatedFileContents, 'utf8');
-	console.log(green('[INFO]:'), `${domainCount.toLocaleString('en-US', { minimumIntegerDigits: 8, useGrouping: true }).replace(/,/g, ' ')} domains: ${file}`);
+	return { lines, domainCount };
+};
+
+const processFile = async file => {
+	try {
+		const { lines, domainCount } = await countDomains(file);
+		const updatedContent = createUpdatedContents(lines, domainCount);
+		await writeFile(file, updatedContent, 'utf8');
+
+		console.log(`${formatCount(domainCount)} domains → ${file}`);
+	} catch (err) {
+		console.error(`Failed to process ${file}:`, err.message);
+	}
 };
 
 (async () => {
-	const blockListDir = join(__dirname, '..', 'blocklists', 'templates');
-	console.log(blue('[INFO]:'), blockListDir);
+	const blockListDir = resolve(__dirname, '..', 'blocklists', 'templates');
 
 	try {
 		const files = await getAllTxtFiles(blockListDir);
-		console.log(blue('[INFO]:'), `Processing ${files.length} txt files...`);
-
 		await Promise.all(files.map(processFile));
 	} catch (err) {
-		console.error(red('[FAIL]:'), err.message);
+		console.error(err);
 	}
 })();

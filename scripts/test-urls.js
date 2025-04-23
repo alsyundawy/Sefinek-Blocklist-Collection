@@ -1,7 +1,6 @@
 require('dotenv').config({ path: './.env' });
 const fs = require('fs').promises;
 const axios = require('axios');
-const kleur = require('kleur');
 const { version } = require('../package.json');
 
 const markdownFiles = [
@@ -36,7 +35,7 @@ const extractLinks = content => {
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const testLinks = async () => {
-	console.log(kleur.white('=== Testing URLs collection ===\n'));
+	console.log('=== Testing URLs collection ===\n');
 	const links = [];
 
 	for (const markdownFile of markdownFiles) {
@@ -44,7 +43,7 @@ const testLinks = async () => {
 			const fileContent = await fs.readFile(markdownFile, 'utf-8');
 			links.push(...extractLinks(fileContent));
 		} catch {
-			console.error(kleur.red('Error reading file:'), markdownFile);
+			console.error('Error reading file:', markdownFile);
 			invalidFiles++;
 		}
 	}
@@ -58,26 +57,26 @@ const testLinks = async () => {
 			continue;
 		}
 		try {
-			console.log(kleur.blue('>'), processedLink);
+			console.log(processedLink);
 			const response = await axios.head(processedLink, headers);
-			console.log(`${kleur.bgGreen(response.status)} ${kleur.green(`Status: ${response.statusText}`)}`);
+			console.log(`${response.status}: Status: ${response.statusText}`);
 			successfulLinks++;
 		} catch {
 			retriesFails++;
 			let retries = 0, success = false;
 			while (retries < MAX_RETRIES) {
 				if (retriesFails >= MAX_RETRIES * 4) process.exit(1);
-				console.log(kleur.blue(`> Waiting ${RETRY_DELAY_MS / 1000} seconds...`));
+				console.log(`> Waiting ${RETRY_DELAY_MS / 1000} seconds...`);
 				await sleep(RETRY_DELAY_MS);
 
 				try {
 					const response = await axios.head(processedLink, headers);
-					console.log(`${kleur.bgGreen(response.status)} ${kleur.green(`Status: ${response.statusText}`)}`);
+					console.log(`${response.status}: Status: ${response.statusText}`);
 					successfulLinks++;
 					success = true;
 					break;
 				} catch (err) {
-					console.warn(`${kleur.bgRed(err.response?.status || err.message.toUpperCase())} (${err.response?.statusText || 'Unknown status'})`);
+					console.warn(`${err.response?.status || err.message.toUpperCase()} (${err.response?.statusText || 'Unknown status'})`);
 					retries++;
 					retriesFails++;
 				}
@@ -86,21 +85,21 @@ const testLinks = async () => {
 		}
 	}
 
-	console.log(kleur.white('\n=== Test Summary ==='));
-	console.log(kleur.blue(`Total links: ${totalLinks}`));
-	console.log(kleur.green(`Successful links: ${successfulLinks}/${totalLinks}`));
-	console.log(kleur.red(`Failed links: ${failedLinks}/${totalLinks}`));
-	console.log(kleur.magenta(`Failed retries: ${retriesFails}`));
-	console.log(kleur.yellow(`Invalid files: ${invalidFiles}`));
-	console.log(kleur.yellow(`Invalid links: ${invalidLinks.length}`));
-	console.log(kleur.yellow('Invalid links list:'), invalidLinks);
+	console.log('\n=== Test Summary ===');
+	console.log(`Total links: ${totalLinks}`);
+	console.log(`Successful links: ${successfulLinks}/${totalLinks}`);
+	console.log(`Failed links: ${failedLinks}/${totalLinks}`);
+	console.log(`Failed retries: ${retriesFails}`);
+	console.log(`Invalid files: ${invalidFiles}`);
+	console.log(`Invalid links: ${invalidLinks.length}`);
+	console.log('Invalid links list:', invalidLinks);
 };
 
 (async () => {
 	try {
 		await testLinks();
 	} catch (err) {
-		console.error(kleur.red(`An error occurred while testing links: ${err.stack}`));
+		console.error('An error occurred while testing links:', err);
 		process.exit(1);
 	}
 })();
