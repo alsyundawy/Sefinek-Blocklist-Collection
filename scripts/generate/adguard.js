@@ -2,7 +2,7 @@ const { promises: fs } = require('node:fs');
 const path = require('node:path');
 const splitFile = require('./file-processor/split.js');
 const getDate = require('../utils/date.js');
-const sha256 = require('../utils/sha512.js');
+const sha256 = require('../utils/sha256.js');
 const txtFilter = require('../utils/txtFilter.js');
 const process = require('../utils/process.js');
 
@@ -13,7 +13,7 @@ const convert = async (folderPath = path.join(__dirname, '../../blocklists/templ
 		const thisFileName = path.join(folderPath, file.name);
 
 		// Cache
-		const { cacheHash, stop } = await sha256(thisFileName, format, file);
+		const { stop } = await sha256(thisFileName, format, file);
 		if (stop) return;
 
 		// Content
@@ -30,16 +30,12 @@ const convert = async (folderPath = path.join(__dirname, '../../blocklists/templ
 			.replace(/0\.0\.0\.0 (.*?)$/gm, '||$1^')
 			.replace(/::|#/gm, '!')
 			.replace('<Release>', 'AdGuard [adguard.com]')
-			.replace('<LastUpdate>', `${date.full} | ${date.now}`)
-			.split('\n')
-			.filter(line => !(/^0\.0\.0\.0\s*$/).test(line.trim()))
-			.join('\n');
+			.replace('<LastUpdate>', `${date.full} | ${date.now}`);
 
 		const fullNewFile = path.join(generatedPath, file.name);
 		await fs.writeFile(fullNewFile, replacedFile);
 
-		const isSplit = await splitFile(fullNewFile, replacedFile, '!');
-		if (!isSplit) console.log(`✔️ ${cacheHash || file.name} ++ ${fullNewFile}`);
+		 await splitFile(fullNewFile, replacedFile, '!');
 	}));
 
 	await process(convert, allFiles, path, relativePath, folderPath);

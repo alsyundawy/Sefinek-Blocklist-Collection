@@ -2,7 +2,7 @@ const { promises: fs } = require('node:fs');
 const path = require('node:path');
 const splitFile = require('./file-processor/split.js');
 const getDate = require('../utils/date.js');
-const sha256 = require('../utils/sha512.js');
+const sha256 = require('../utils/sha256.js');
 const txtFilter = require('../utils/txtFilter.js');
 const process = require('../utils/process.js');
 
@@ -13,7 +13,7 @@ const convert = async (folderPath = path.join(__dirname, '../../blocklists/templ
 		const thisFileName = path.join(folderPath, file.name);
 
 		// Cache
-		const { cacheHash, stop } = await sha256(thisFileName, format, file);
+		const { stop } = await sha256(thisFileName, format, file);
 		if (stop) return;
 
 		// Content
@@ -40,17 +40,13 @@ const convert = async (folderPath = path.join(__dirname, '../../blocklists/templ
 			.replace(/#(?: ?127\.0\.0\.1| ?0\.0\.0\.0) |:: /gm, '; ')
 			.replace(/#/gm, ';')
 			.replace('<Release>', 'RPZ')
-			.replace('<LastUpdate>', `${date.full} | ${date.now}`)
-			.split('\n')
-			.filter(line => !(/^0\.0\.0\.0\s*$/).test(line.trim()))
-			.join('\n');
+			.replace('<LastUpdate>', `${date.full} | ${date.now}`);
 
 		const fullNewFile = path.join(generatedPath, file.name);
 		const header = `$TTL 300\n@ SOA localhost. root.localhost. ${date.serialNumber} 43200 3600 259200 300\n  NS  localhost.\n`;
 		await fs.writeFile(fullNewFile, header + replacedFile);
 
-		const isSplit = await splitFile(fullNewFile, replacedFile, ';', header);
-		if (!isSplit) console.log(`✔️ ${cacheHash || file.name} ++ ${fullNewFile}`);
+		await splitFile(fullNewFile, replacedFile, ';', header);
 	}));
 
 	await process(convert, allFiles, path, relativePath, folderPath);
