@@ -3,8 +3,6 @@ const { join } = require('node:path');
 const validator = require('validator');
 const local = require('./utils/local.js');
 
-const ipsToReplace = /0\.0\.0\.0 local|broadcasthost|localhost|ff0(?:0::0|2::[1-3])|::1/;
-
 const processDirectory = async dirPath => {
 	try {
 		await mkdir(dirPath, { recursive: true });
@@ -31,10 +29,10 @@ const processDirectory = async dirPath => {
 					continue;
 				}
 
-				// Replace localhost entries with 0.0.0.0
-				if (line.includes('127.0.0.1 localhost')) line = '0.0.0.0 localhost';
-				if (line.includes('127.0.0.1 localhost.localdomain')) line = '0.0.0.0 localhost.localdomain';
-				if (line.includes('127.0.0.1 local')) line = '0.0.0.0 local';
+				// Replace 127.0.0.1 localhost entries with 0.0.0.0
+				if ((/127\.0\.0\.1\s+(localhost(\.localdomain)?|local)/).test(line)) {
+					line = line.replace('127.0.0.1', '0.0.0.0');
+				}
 
 				// Skip entries matched by local test
 				if (local.test(line)) {
@@ -49,7 +47,7 @@ const processDirectory = async dirPath => {
 				}
 
 				// Normalize case in domains
-				if (line.match(/^(0\.0\.0\.0|127\.0\.0\.1)\s+/)) {
+				if ((/^(0\.0\.0\.0|127\.0\.0\.1)\s+/).test(line)) {
 					const words = line.split(/\s+/);
 					const domain = words[1];
 					if ((/[A-Z]/).test(domain)) {
@@ -59,8 +57,8 @@ const processDirectory = async dirPath => {
 				}
 
 				// Replace specific IPs with 0.0.0.0
-				if (line.startsWith('127.0.0.1') || line.startsWith('195.187.6.33') || line.startsWith('195.187.6.34') || line.startsWith('195.187.6.35')) {
-					line = line.replace(ipsToReplace, '0.0.0.0');
+				if ((/^(127\.0\.0\.1|195\.187\.6\.3[3-5])\s+/).test(line)) {
+					line = line.replace(/^(\d{1,3}\.){3}\d{1,3}/, '0.0.0.0');
 					ipsReplaced++;
 				}
 
@@ -114,7 +112,7 @@ const processDirectory = async dirPath => {
 				}
 
 				// Remove invalid domain lines
-				if (line.match(/^(0\.0\.0\.0|127\.0\.0\.1)\s+/)) {
+				if ((/^(0\.0\.0\.0|127\.0\.0\.1)\s+/).test(line)) {
 					const words = line.split(/\s+/);
 					const domain = words[1];
 					if (domain && !validator.isURL(domain, { require_valid_protocol: false, allow_underscores: true })) {
