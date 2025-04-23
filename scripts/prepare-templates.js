@@ -5,18 +5,9 @@ const local = require('./utils/local.js');
 
 const isSuspiciousDomain = domain => {
 	if (!domain) return true;
-	if (domain.length > 500) return true;
-	if ((domain.match(/\./g) || []).length > 10) return true;
-	if (!(/^[a-z0-9._-]+$/i).test(domain)) return true;
-
-	const parts = domain.split('.');
-	if (parts.some(p => p.length > 63)) return true;
-	if (parts.length === 1 || parts[0].length > 50) {
-		const entropy = domain.replace(/[.-]/g, '').split('').reduce((set, c) => set.add(c), new Set()).size;
-		if (entropy < 6) return true;
-	}
-
-	return false;
+	if (domain.length > 255) return true;
+	if ((domain.match(/\./g) || []).length > 32) return true;
+	return !(/^[a-z0-9._-]+$/i).test(domain);
 };
 
 const processDirectory = async dirPath => {
@@ -51,25 +42,55 @@ const processDirectory = async dirPath => {
 				line = line.trim();
 				if (line === '') continue;
 
-				// Remove standalone 0.0.0.0
+				// Remove empty IP mapping like: "0.0.0.0"
 				if (line === '0.0.0.0') {
 					stats.invalidLinesRemoved++;
 					continue;
 				}
 
-				// Replace 127.0.0.1 localhost entries with 0.0.0.0
+				// Skip trusted local patterns (e.g., localhost)
 				if (local.test(line)) {
 					processedLines.push(line);
 					continue;
 				}
 
-				// Preserve comments
+				// Keep regular comments
 				if (line.startsWith('#')) {
 					processedLines.push(line);
 					continue;
 				}
 
-				// Normalize case in domains
+				// ||domain.tld^ → 0.0.0.0 domain.tld
+				if (line.startsWith('||') && line.endsWith('^')) {
+					line = `0.0.0.0 ${line.replace(/^(\|\|)/, '').replace(/\^$/, '')}`;
+					stats.modifiedLines++;
+					stats.convertedAdguard++;
+				}
+
+				// example.tld/ → example.tld
+				if (line.endsWith('/')) {
+					line = line.replace(/\/$/, ''); // usuwa tylko końcowy "/"
+					stats.modifiedLines++;
+				}
+
+				// example.com → 0.0.0.0 example.com
+				if (!line.startsWith('0.0.0.0 ')) {
+					if (validator.isFQDN(line, { allow_underscores: true })) {
+						line = `0.0.0.0 ${line.toLowerCase()}`;
+						stats.modifiedLines++;
+						stats.fqdnConverted++;
+					}
+				}
+
+				// 0.0.0.0example.com → 0.0.0.0 example.com
+				const match = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
+				if (match) {
+					line = `0.0.0.0 ${match[1].toLowerCase()}${match[2] || ''}`;
+					stats.modifiedLines++;
+					stats.fixedGlued++;
+				}
+
+				// 0.0.0.0 Domain.tld → 0.0.0.0 domain.tld
 				if ((/^(0\.0\.0\.0|127\.0\.0\.1)\s+/).test(line)) {
 					const words = line.split(/\s+/);
 					const domain = words[1];
@@ -80,37 +101,20 @@ const processDirectory = async dirPath => {
 					}
 				}
 
-				// Replace specific IPs with 0.0.0.0
+				// Replace specific IPs (127.0.0.1, 195.187.6.33-35) with 0.0.0.0
 				if ((/^(127\.0\.0\.1|195\.187\.6\.3[3-5])\s+/).test(line)) {
 					line = line.replace(/^(\d{1,3}\.){3}\d{1,3}/, '0.0.0.0');
 					stats.ipsReplaced++;
 				}
 
-				// Normalize spacing after IP
+				// Fix spacing after IP (e.g., tabs or multiple spaces)
 				if (line.startsWith('0.0.0.0\t') || line.startsWith('0.0.0.0  ')) {
 					line = line.replace(/0\.0\.0\.0\s+/, '0.0.0.0 ');
 					stats.modifiedLines++;
 					stats.normalizedSpacing++;
 				}
 
-				// AdGuard-specific conversion
-				if (line.startsWith('||') && line.endsWith('^')) {
-					line = `0.0.0.0 ${line.replace(/^(\|\|)/, '').replace(/\^$/, '')}`;
-					stats.modifiedLines++;
-					stats.convertedAdguard++;
-				}
-
-				// Convert ! comments to #
-				if (line.startsWith('!')) {
-					line = line.replace('!', '#');
-					stats.modifiedLines++;
-					if (line === '# Syntax: Adblock Plus Filter List') {
-						line = '# Syntax: 0.0.0.0 domain.tld';
-						stats.commentsConverted++;
-					}
-				}
-
-				// Split multi-domain lines
+				// 0.0.0.0 a.com b.com → multiple lines
 				if ((line.startsWith('0.0.0.0') || line.startsWith('127.0.0.1')) && !line.includes('#')) {
 					const words = line.split(/\s+/);
 					if (words.length > 2) {
@@ -125,32 +129,26 @@ const processDirectory = async dirPath => {
 					}
 				}
 
-				// Fix glued IP/domain format
-				const match = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
-				if (match) {
-					line = `0.0.0.0 ${match[1].toLowerCase()}${match[2] ? match[2] : ''}`;
+				// ! comment → # comment
+				if (line.startsWith('!')) {
+					line = line.replace('!', '#');
+					if (line === '# Syntax: Adblock Plus Filter List') {
+						line = '# Syntax: 0.0.0.0 domain.tld';
+						stats.modifiedLines++;
+						stats.commentsConverted++;
+					}
 					stats.modifiedLines++;
-					stats.fixedGlued++;
+					stats.commentsConverted++;
 				}
 
-				if (!line.startsWith('#') && !line.startsWith('!') && line !== '0.0.0.0 0.0.0.0') {
-
-					if ((/^(0\.0\.0\.0|127\.0\.0\.1)\s+/).test(line)) {
-						const words = line.split(/\s+/);
-						const raw = words[1];
-						const domain = raw.split(':')[0];
-						if (!validator.isFQDN(domain, { allow_underscores: true }) || isSuspiciousDomain(domain)) {
-							stats.invalidLinesRemoved++;
-							continue;
-						}
-					}
-
-					if (!line.includes(' ')) {
-						if (validator.isFQDN(line, { allow_underscores: true })) {
-							line = `0.0.0.0 ${line.toLowerCase()}`;
-							stats.modifiedLines++;
-							stats.fqdnConverted++;
-						}
+				// Validate and remove invalid or suspicious host entries
+				if (line.startsWith('0.0.0.0')) {
+					const words = line.split(/\s+/);
+					const raw = words[1];
+					const domain = raw.split(':')[0];
+					if (!validator.isFQDN(domain, { allow_underscores: true }) || isSuspiciousDomain(domain)) {
+						stats.invalidLinesRemoved++;
+						continue;
 					}
 				}
 
