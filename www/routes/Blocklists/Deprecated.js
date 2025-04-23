@@ -12,7 +12,6 @@ const dnsmasq = path.join(__dirname, '..', '..', '..', 'blocklists', 'generated'
 // Ads
 router.get('/generated/0.0.0.0/ads/blocklistproject.ads.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/ads/blocklistproject/hosts.fork.txt`));
 router.get('/generated/0.0.0.0/ads/jerryn70.GoodbyeAds.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/ads/jerryn70/GoodbyeAds.fork.txt`));
-router.get('/generated/0.0.0.0/forks/kboghdady.youtubelist.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/ads/kboghdady/youtubelist.fork.txt`));
 router.get('/generated/0.0.0.0/ads/DandelionSprout.GameConsoleAdblockList.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/ads/DandelionSprout.GameConsoleAdblockList.txt`));
 router.get('/generated/0.0.0.0/ads/yoyo.AdsTrackersEtc.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/ads/yoyo/ads-trackers-etc.fork.txt`));
 router.get('/generated/0.0.0.0/forks/0Zinc.easylist.txt', (req, res) => res.sendFile(`${ZeroZeroZeroZero}/ads/0Zinc/easylist.fork.txt`));
@@ -196,7 +195,6 @@ router.get('/generated/0.0.0.0/games/valorant.txt', (req, res) => res.sendFile(`
 // Ads
 router.get('/generated/127.0.0.1/ads/blocklistproject.ads.txt', (req, res) => res.sendFile(`${localhost}/ads/blocklistproject/hosts.fork.txt`));
 router.get('/generated/127.0.0.1/ads/jerryn70.GoodbyeAds.txt', (req, res) => res.sendFile(`${localhost}/ads/jerryn70/GoodbyeAds.fork.txt`));
-router.get('/generated/127.0.0.1/forks/kboghdady.youtubelist.txt', (req, res) => res.sendFile(`${localhost}/ads/kboghdady/youtubelist.fork.txt`));
 router.get('/generated/127.0.0.1/ads/DandelionSprout.GameConsoleAdblockList.txt', (req, res) => res.sendFile(`${localhost}/ads/DandelionSprout.GameConsoleAdblockList.txt`));
 router.get('/generated/127.0.0.1/ads/yoyo.AdsTrackersEtc.txt', (req, res) => res.sendFile(`${localhost}/ads/yoyo/ads-trackers-etc.fork.txt`));
 router.get('/generated/127.0.0.1/forks/ShadowWhisperer.Ads.txt', (req, res) => res.sendFile(`${localhost}/ads/ShadowWhisperer/Ads.fork.txt`));
@@ -379,7 +377,6 @@ router.get('/generated/127.0.0.1/games/valorant.txt', (req, res) => res.sendFile
 // Ads
 router.get('/generated/noip/ads/blocklistproject.ads.txt', (req, res) => res.sendFile(`${noIp}/ads/blocklistproject/hosts.fork.txt`));
 router.get('/generated/noip/ads/jerryn70.GoodbyeAds.txt', (req, res) => res.sendFile(`${noIp}/ads/jerryn70/GoodbyeAds.fork.txt`));
-router.get('/generated/noip/forks/kboghdady.youtubelist.txt', (req, res) => res.sendFile(`${noIp}/ads/kboghdady/youtubelist.fork.txt`));
 router.get('/generated/noip/ads/DandelionSprout.GameConsoleAdblockList.txt', (req, res) => res.sendFile(`${noIp}/ads/DandelionSprout.GameConsoleAdblockList.txt`));
 router.get('/generated/noip/ads/yoyo.AdsTrackersEtc.txt', (req, res) => res.sendFile(`${noIp}/ads/yoyo/ads-trackers-etc.fork.txt`));
 router.get('/generated/noip/forks/0Zinc.easylist.txt', (req, res) => res.sendFile(`${noIp}/ads/0Zinc/easylist.fork.txt`));
@@ -562,7 +559,6 @@ router.get('/generated/noip/games/valorant.txt', (req, res) => res.sendFile(`${n
 // Ads
 router.get('/generated/adguard/ads/blocklistproject.ads.txt', (req, res) => res.sendFile(`${adguard}/ads/blocklistproject/hosts.fork.txt`));
 router.get('/generated/adguard/ads/jerryn70.GoodbyeAds.txt', (req, res) => res.sendFile(`${adguard}/ads/jerryn70/GoodbyeAds.fork.txt`));
-router.get('/generated/adguard/forks/kboghdady.youtubelist.txt', (req, res) => res.sendFile(`${adguard}/ads/kboghdady/youtubelist.fork.txt`));
 router.get('/generated/adguard/ads/DandelionSprout.GameConsoleAdblockList.txt', (req, res) => res.sendFile(`${adguard}/ads/DandelionSprout.GameConsoleAdblockList.txt`));
 router.get('/generated/adguard/ads/yoyo.AdsTrackersEtc.txt', (req, res) => res.sendFile(`${adguard}/ads/yoyo/ads-trackers-etc.fork.txt`));
 router.get('/generated/adguard/forks/0Zinc.easylist.txt', (req, res) => res.sendFile(`${adguard}/ads/0Zinc/easylist.fork.txt`));
@@ -745,7 +741,6 @@ router.get('/generated/adguard/games/valorant.txt', (req, res) => res.sendFile(`
 // Ads
 router.get('/generated/dnsmasq/ads/blocklistproject.ads.txt', (req, res) => res.sendFile(`${dnsmasq}/ads/blocklistproject/hosts.fork.txt`));
 router.get('/generated/dnsmasq/ads/jerryn70.GoodbyeAds.txt', (req, res) => res.sendFile(`${dnsmasq}/ads/jerryn70/GoodbyeAds.fork.txt`));
-router.get('/generated/dnsmasq/forks/kboghdady.youtubelist.txt', (req, res) => res.sendFile(`${dnsmasq}/ads/kboghdady/youtubelist.fork.txt`));
 router.get('/generated/dnsmasq/ads/DandelionSprout.GameConsoleAdblockList.txt', (req, res) => res.sendFile(`${dnsmasq}/ads/DandelionSprout.GameConsoleAdblockList.txt`));
 router.get('/generated/dnsmasq/ads/yoyo.AdsTrackersEtc.txt', (req, res) => res.sendFile(`${dnsmasq}/ads/yoyo/ads-trackers-etc.fork.txt`));
 router.get('/generated/dnsmasq/forks/0Zinc.easylist.txt', (req, res) => res.sendFile(`${dnsmasq}/ads/0Zinc/easylist.fork.txt`));
