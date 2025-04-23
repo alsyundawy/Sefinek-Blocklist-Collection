@@ -2,87 +2,82 @@ const { readdir, readFile, writeFile } = require('node:fs/promises');
 const { join, relative } = require('node:path');
 
 const loadWhitelist = async whitelistPath => {
-	const whitelistContent = await readFile(whitelistPath, 'utf8');
+	const content = await readFile(whitelistPath, 'utf8');
 	const whitelistMap = new Map();
-	const globalWhitelist = new Set();
 
-	whitelistContent.split('\n').forEach(line => {
-		if (!line.trim() || line.startsWith('#')) return;
+	for (const line of content.split('\n')) {
+		const trimmed = line.trim();
+		if (!trimmed || trimmed.startsWith('#')) continue;
 
-		const [domain, file] = line.split(' ').map(part => part.trim());
-		if (domain) {
-			if (file) {
-				const key = file.replace(/\\/g, '/');
-				const targetSet = whitelistMap.has(key) ? whitelistMap.get(key) : new Set();
-				targetSet.add(domain);
-				whitelistMap.set(key, targetSet);
-			} else {
-				globalWhitelist.add(domain);
-			}
-		}
-	});
+		const [domain, file] = trimmed.split(' ').map(s => s.trim());
+		if (!domain) continue;
 
-	if (globalWhitelist.size > 0) {
-		whitelistMap.set('*', globalWhitelist);
+		const key = file ? file.replace(/\\/g, '/') : '*';
+		const domainSet = whitelistMap.get(key) || new Set();
+		domainSet.add(domain);
+		whitelistMap.set(key, domainSet);
 	}
 
-	console.log(whitelistMap);
 	return whitelistMap;
 };
 
 const processDirectory = async (dirPath, whitelist, basePath) => {
-	const fileNames = await readdir(dirPath);
-	const txtFiles = fileNames.filter(fileName => fileName.endsWith('.txt'));
+	const entries = await readdir(dirPath, { withFileTypes: true });
 
-	for (const fileName of txtFiles) {
-		const filePath = join(dirPath, fileName);
-		const relativePath = relative(basePath, filePath).replace(/\\/g, '/').replace('templates/', '');
-		const fileContents = await readFile(filePath, 'utf8');
+	for (const entry of entries) {
+		const fullPath = join(dirPath, entry.name);
+
+		if (entry.isDirectory()) {
+			await processDirectory(fullPath, whitelist, basePath);
+			continue;
+		}
+
+		if (!entry.name.endsWith('.txt')) continue;
+
+		const relativePath = relative(basePath, fullPath).replace(/\\/g, '/').replace(/^templates\//, '');
+		const content = await readFile(fullPath, 'utf8');
+		const lines = content.split('\n');
+
+		const seen = new Set();
 		let domainsRemoved = 0;
-		const existingDomains = new Set();
 
-		const lines = fileContents.split('\n').map(line => line.trim());
-		const filteredLines = lines.filter(line => {
-			if (line.startsWith('##') || line.startsWith('#') || line.startsWith('!') || line === '') {
-				return true;
-			}
+		const filtered = lines.filter(originalLine => {
+			const line = originalLine.trim();
+			if (!line || line.startsWith('#') || line.startsWith('!')) return true;
 
 			const cleanLine = line.split('#')[0].trim();
 			const domain = cleanLine.replace(/^(0\.0\.0\.0|127\.0\.0\.1)\s+/, '');
 
-			if (!existingDomains.has(domain)) {
-				existingDomains.add(domain);
-				if (whitelist.has('*') && whitelist.get('*').has(domain) ||
-					whitelist.has(relativePath) && whitelist.get(relativePath).has(domain)) {
-					domainsRemoved++;
-					return false;
-				}
-				return true;
+			if (seen.has(domain)) return false;
+			seen.add(domain);
+
+			const global = whitelist.get('*');
+			const fileSpecific = whitelist.get(relativePath);
+
+			if ((global && global.has(domain)) || (fileSpecific && fileSpecific.has(domain))) {
+				domainsRemoved++;
+				return false;
 			}
-			return false;
+
+			return true;
 		});
 
 		if (domainsRemoved > 0) {
-			await writeFile(filePath, filteredLines.join('\n'), 'utf8');
-			console.log(`🗑️ ${domainsRemoved} domains removed from ${filePath}`);
+			await writeFile(fullPath, filtered.join('\n'), 'utf8');
+			console.log(`🗑️ ${domainsRemoved} domains removed from ${fullPath}`);
 		}
-	}
-
-	const allFiles = await readdir(dirPath, { withFileTypes: true });
-	const subdirectories = allFiles.filter(file => file.isDirectory()).map(file => join(dirPath, file.name));
-
-	for (const subdirectory of subdirectories) {
-		await processDirectory(subdirectory, whitelist, basePath);
 	}
 };
 
 const run = async () => {
 	try {
 		const basePath = join(__dirname, '..', 'blocklists');
-		const whitelist = await loadWhitelist(join(__dirname, '..', 'whitelists', 'main.txt'));
+		const whitelistPath = join(__dirname, '..', 'whitelists', 'main.txt');
+		const whitelist = await loadWhitelist(whitelistPath);
+
 		await processDirectory(join(basePath, 'templates'), whitelist, basePath);
-	} catch (error) {
-		console.error(error);
+	} catch (err) {
+		console.error(err);
 	}
 };
 
