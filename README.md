@@ -118,4 +118,4 @@ Join our [Discord server](https://discord.gg/53DBjTuzgZ) or open a new [Issue](h
 
 ## 📝 License
 [Attribution-NonCommercial-NoDerivatives 4.0 International](LICENSE)  
-Copyright 2024-2025 © by [Sefinek](https://sefinek.net). All Rights Reserved.
+Copyright 2023-2025 © by [Sefinek](https://sefinek.net). All Rights Reserved.
