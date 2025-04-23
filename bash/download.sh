@@ -51,10 +51,11 @@ urls=(
   ## Gambling
   "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-only/hosts gambling/StevenBlack/hosts.fork.txt"
   "https://blocklistproject.github.io/Lists/gambling.txt gambling/blocklistproject/hosts.fork.txt"
-  "https://raw.githubusercontent.com/alsyundawy/TrustPositif/main/gambling_indonesia.txt gambling/TrustPositif/gambling-indonesia.fork.txt"
+  # "https://raw.githubusercontent.com/alsyundawy/TrustPositif/main/gambling_indonesia.txt gambling/TrustPositif/gambling-indonesia.fork.txt"
   "https://raw.githubusercontent.com/alsyundawy/TrustPositif/main/gambling_indonesia_001.txt gambling/TrustPositif/gambling-indonesia01.fork.txt"
   "https://raw.githubusercontent.com/alsyundawy/TrustPositif/main/gambling_indonesia_002.txt gambling/TrustPositif/gambling-indonesia02.fork.txt"
   "https://raw.githubusercontent.com/alsyundawy/TrustPositif/main/gambling_indonesia_003.txt gambling/TrustPositif/gambling-indonesia03.fork.txt"
+  "https://raw.githubusercontent.com/alsyundawy/TrustPositif/main/gambling_indonesia_004.txt gambling/TrustPositif/gambling-indonesia04.fork.txt"
   "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/gambling-hosts.txt gambling/MajkiIT/gambling-hosts.fork.txt"
 
   ## Hate and junk
