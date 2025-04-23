@@ -102,22 +102,20 @@ const processDirectory = async dirPath => {
 					modifiedLines++;
 				}
 
-				// domain.tld -> 0.0.0.0 domain.tld
-				if (!line.includes(' ') && !line.startsWith('0.0.0.0') && !line.startsWith('127.0.0.1') && !line.startsWith('#') && !line.startsWith('!')) {
-					if (validator.isFQDN(line)) {
-						line = `0.0.0.0 ${line.toLowerCase()}`;
-						modifiedLines++;
-						continue;
-					}
-				}
-
 				// Remove invalid domain lines
 				if ((/^(0\.0\.0\.0|127\.0\.0\.1)\s+/).test(line)) {
 					const words = line.split(/\s+/);
 					const domain = words[1];
 					if (domain && !validator.isURL(domain, { require_valid_protocol: false, allow_underscores: true })) {
 						invalidLinesRemoved++;
-						continue;
+					}
+				}
+
+				// domain.tld -> 0.0.0.0 domain.tld
+				if (!line.includes(' ') && !line.startsWith('0.0.0.0') && !line.startsWith('127.0.0.1') && !line.startsWith('#') && !line.startsWith('!')) {
+					if (validator.isFQDN(line)) {
+						line = `0.0.0.0 ${line.toLowerCase()}`;
+						modifiedLines++;
 					}
 				}
 
