@@ -168,7 +168,7 @@ const processDirectory = async dirPath => {
 			if (Object.values(stats).some(v => v > 0)) {
 				await writeFile(filePath, processedLines.join('\n').trim(), 'utf8');
 
-				console.log('📝 ', dirPath);
+				console.log('📝', dirPath);
 				console.log(`   🧹 ${stats.modifiedLines} line(s) modified`);
 				if (stats.domainToLower) console.log(`   🔡 ${stats.domainToLower} domain(s) lowercased`);
 				if (stats.convertedAdGuard) console.log(`   🔄 ${stats.convertedAdGuard} AdGuard rule(s) converted`);
