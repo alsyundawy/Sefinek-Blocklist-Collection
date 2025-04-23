@@ -3,6 +3,22 @@ const { join } = require('node:path');
 const validator = require('validator');
 const local = require('./utils/local.js');
 
+const isSuspiciousDomain = domain => {
+	if (!domain) return true;
+	if (domain.length > 500) return true;
+	if ((domain.match(/\./g) || []).length > 10) return true;
+	if (!(/^[a-z0-9._-]+$/i).test(domain)) return true;
+
+	const parts = domain.split('.');
+	if (parts.some(p => p.length > 63)) return true;
+	if (parts.length === 1 || parts[0].length > 50) {
+		const entropy = domain.replace(/[.-]/g, '').split('').reduce((set, c) => set.add(c), new Set()).size;
+		if (entropy < 6) return true;
+	}
+
+	return false;
+};
+
 const processDirectory = async dirPath => {
 	try {
 		await mkdir(dirPath, { recursive: true });
@@ -14,7 +30,19 @@ const processDirectory = async dirPath => {
 			const filePath = join(dirPath, fileName);
 			const fileContents = await readFile(filePath, 'utf8');
 
-			let convertedDomains = 0, invalidLinesRemoved = 0, ipsReplaced = 0, modifiedLines = 0;
+			const stats = {
+				modifiedLines: 0,
+				convertedDomains: 0,
+				invalidLinesRemoved: 0,
+				ipsReplaced: 0,
+				domainToLower: 0,
+				convertedAdguard: 0,
+				splitMultiDomain: 0,
+				normalizedSpacing: 0,
+				fixedGlued: 0,
+				commentsConverted: 0,
+				fqdnConverted: 0,
+			};
 
 			const lines = fileContents.split('\n');
 			const processedLines = [];
@@ -25,16 +53,11 @@ const processDirectory = async dirPath => {
 
 				// Remove standalone 0.0.0.0
 				if (line === '0.0.0.0') {
-					invalidLinesRemoved++;
+					stats.invalidLinesRemoved++;
 					continue;
 				}
 
 				// Replace 127.0.0.1 localhost entries with 0.0.0.0
-				if ((/127\.0\.0\.1\s+(localhost(\.localdomain)?|local)/).test(line)) {
-					line = line.replace('127.0.0.1', '0.0.0.0');
-				}
-
-				// Skip entries matched by local test
 				if (local.test(line)) {
 					processedLines.push(line);
 					continue;
@@ -52,33 +75,39 @@ const processDirectory = async dirPath => {
 					const domain = words[1];
 					if ((/[A-Z]/).test(domain)) {
 						line = `${words[0]} ${domain.toLowerCase()} ${words.slice(2).join(' ')}`.trim();
-						convertedDomains++;
+						stats.convertedDomains++;
+						stats.domainToLower++;
 					}
 				}
 
 				// Replace specific IPs with 0.0.0.0
 				if ((/^(127\.0\.0\.1|195\.187\.6\.3[3-5])\s+/).test(line)) {
 					line = line.replace(/^(\d{1,3}\.){3}\d{1,3}/, '0.0.0.0');
-					ipsReplaced++;
+					stats.ipsReplaced++;
 				}
 
 				// Normalize spacing after IP
 				if (line.startsWith('0.0.0.0\t') || line.startsWith('0.0.0.0  ')) {
 					line = line.replace(/0\.0\.0\.0\s+/, '0.0.0.0 ');
-					modifiedLines++;
+					stats.modifiedLines++;
+					stats.normalizedSpacing++;
 				}
 
 				// AdGuard-specific conversion
-				if (line.startsWith('||') && !line.includes('#')) {
+				if (line.startsWith('||') && line.endsWith('^')) {
 					line = `0.0.0.0 ${line.replace(/^(\|\|)/, '').replace(/\^$/, '')}`;
-					modifiedLines++;
+					stats.modifiedLines++;
+					stats.convertedAdguard++;
 				}
 
 				// Convert ! comments to #
 				if (line.startsWith('!')) {
 					line = line.replace('!', '#');
-					if (line === '# Syntax: Adblock Plus Filter List') line = '# Syntax: 0.0.0.0 domain.tld';
-					modifiedLines++;
+					stats.modifiedLines++;
+					if (line === '# Syntax: Adblock Plus Filter List') {
+						line = '# Syntax: 0.0.0.0 domain.tld';
+						stats.commentsConverted++;
+					}
 				}
 
 				// Split multi-domain lines
@@ -91,7 +120,8 @@ const processDirectory = async dirPath => {
 							.map(d => `${ipAddress} ${d.toLowerCase()}`)
 							.join('\n')
 							.trim();
-						modifiedLines++;
+						stats.modifiedLines++;
+						stats.splitMultiDomain++;
 					}
 				}
 
@@ -99,39 +129,48 @@ const processDirectory = async dirPath => {
 				const match = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
 				if (match) {
 					line = `0.0.0.0 ${match[1].toLowerCase()}${match[2] ? match[2] : ''}`;
-					modifiedLines++;
+					stats.modifiedLines++;
+					stats.fixedGlued++;
 				}
 
-				// Remove invalid domain lines
-				if ((/^(0\.0\.0\.0|127\.0\.0\.1)\s+/).test(line)) {
-					const words = line.split(/\s+/);
-					const domain = words[1];
-					if (domain && !validator.isURL(domain, { require_valid_protocol: false, allow_underscores: true })) {
-						invalidLinesRemoved++;
+				if (!line.startsWith('#') && !line.startsWith('!') && line !== '0.0.0.0 0.0.0.0') {
+
+					if ((/^(0\.0\.0\.0|127\.0\.0\.1)\s+/).test(line)) {
+						const words = line.split(/\s+/);
+						const raw = words[1];
+						const domain = raw.split(':')[0];
+						if (!validator.isFQDN(domain, { allow_underscores: true }) || isSuspiciousDomain(domain)) {
+							stats.invalidLinesRemoved++;
+							continue;
+						}
 					}
-				}
 
-				// domain.tld -> 0.0.0.0 domain.tld
-				if (!line.includes(' ') && !line.startsWith('0.0.0.0') && !line.startsWith('127.0.0.1') && !line.startsWith('#') && !line.startsWith('!')) {
-					if (validator.isFQDN(line)) {
-						line = `0.0.0.0 ${line.toLowerCase()}`;
-						modifiedLines++;
+					if (!line.includes(' ')) {
+						if (validator.isFQDN(line, { allow_underscores: true })) {
+							line = `0.0.0.0 ${line.toLowerCase()}`;
+							stats.modifiedLines++;
+							stats.fqdnConverted++;
+						}
 					}
 				}
 
 				processedLines.push(line);
 			}
 
-			// Save
-			if (modifiedLines !== 0 || convertedDomains !== 0 || invalidLinesRemoved !== 0 || ipsReplaced !== 0) {
+			if (Object.values(stats).some(v => v > 0)) {
 				await writeFile(filePath, processedLines.join('\n').trim(), 'utf8');
 
-				console.log(
-					`📝 ${fileName}: ${modifiedLines} ${modifiedLines === 1 ? 'line' : 'lines'} modified; ` +
-					`${convertedDomains} ${convertedDomains === 1 ? 'domain' : 'domains'} converted to lowercase; ` +
-					`${invalidLinesRemoved} invalid ${invalidLinesRemoved === 1 ? 'line' : 'lines'} removed; ` +
-					`${ipsReplaced} ${ipsReplaced === 1 ? 'IP' : 'IPs'} replaced`
-				);
+				console.log(`📝 ${fileName}:`);
+				console.log(`   🧹 ${stats.modifiedLines} line(s) modified`);
+				if (stats.domainToLower) console.log(`   🔡 ${stats.domainToLower} domain(s) lowercased`);
+				if (stats.convertedAdguard) console.log(`   🔄 ${stats.convertedAdguard} AdGuard rule(s) converted`);
+				if (stats.splitMultiDomain) console.log(`   ✂️ ${stats.splitMultiDomain} line(s) split into multiple entries`);
+				if (stats.normalizedSpacing) console.log(`   🔧 ${stats.normalizedSpacing} spacing normalized`);
+				if (stats.fixedGlued) console.log(`   🩹 ${stats.fixedGlued} glued IP/domain fixed`);
+				if (stats.commentsConverted) console.log(`   💬 ${stats.commentsConverted} comment(s) reformatted`);
+				if (stats.fqdnConverted) console.log(`   🌐 ${stats.fqdnConverted} plain FQDN(s) converted to 0.0.0.0`);
+				if (stats.ipsReplaced) console.log(`   🛑 ${stats.ipsReplaced} IP(s) replaced`);
+				if (stats.invalidLinesRemoved) console.log(`   ❌ ${stats.invalidLinesRemoved} invalid line(s) removed`);
 			}
 		}
 
