@@ -11,7 +11,7 @@ urls=(
   "https://adaway.org/hosts.txt ads/adaway/hosts.fork.txt"
   "https://blocklistproject.github.io/Lists/ads.txt ads/blocklistproject/hosts.fork.txt"
   "https://blocklistproject.github.io/Lists/youtube.txt ads/blocklistproject/youtube.fork.txt"
-  "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext ads/yoyo/ads-trackers-etc.fork.txt"
+  "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0 ads/yoyo/ads-trackers-etc.fork.txt"
   "https://raw.githubusercontent.com/0Zinc/easylists-for-pihole/master/easylist.txt ads/0Zinc/easylist.fork.txt"
   "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt ads/anudeepND/adservers.fork.txt"
   "https://raw.githubusercontent.com/craiu/mobiletrackers/master/list.txt ads/craiu/mobiletrackers.fork.txt"
