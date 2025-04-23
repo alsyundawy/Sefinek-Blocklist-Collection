@@ -27,7 +27,7 @@ const processDirectory = async dirPath => {
 				invalidLinesRemoved: 0,
 				ipsReplaced: 0,
 				domainToLower: 0,
-				convertedAdguard: 0,
+				convertedAdGuard: 0,
 				splitMultiDomain: 0,
 				normalizedSpacing: 0,
 				fixedGlued: 0,
@@ -156,10 +156,10 @@ const processDirectory = async dirPath => {
 			if (Object.values(stats).some(v => v > 0)) {
 				await writeFile(filePath, processedLines.join('\n').trim(), 'utf8');
 
-				console.log(`📝 ${fileName}:`);
+				console.log('📝 ', dirPath);
 				console.log(`   🧹 ${stats.modifiedLines} line(s) modified`);
 				if (stats.domainToLower) console.log(`   🔡 ${stats.domainToLower} domain(s) lowercased`);
-				if (stats.convertedAdguard) console.log(`   🔄 ${stats.convertedAdguard} AdGuard rule(s) converted`);
+				if (stats.convertedAdGuard) console.log(`   🔄 ${stats.convertedAdGuard} AdGuard rule(s) converted`);
 				if (stats.splitMultiDomain) console.log(`   ✂️ ${stats.splitMultiDomain} line(s) split into multiple entries`);
 				if (stats.normalizedSpacing) console.log(`   🔧 ${stats.normalizedSpacing} spacing normalized`);
 				if (stats.fixedGlued) console.log(`   🩹 ${stats.fixedGlued} glued IP/domain fixed`);
