@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025042101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025042301 43200 3600 259200 300
   NS  localhost.
 0i0i0i0.com CNAME .
 *.0i0i0i0.com CNAME .
@@ -3891,8 +3891,10 @@ lkqd.com CNAME .
 *.lkqd.com CNAME .
 lkqd.net CNAME .
 *.lkqd.net CNAME .
-local CNAME .
-*.local CNAME .
+locallogic.co CNAME .
+*.locallogic.co CNAME .
+localytics.com CNAME .
+*.localytics.com CNAME .
 locketthose.com CNAME .
 *.locketthose.com CNAME .
 log-collector.shopee.co.id CNAME .
