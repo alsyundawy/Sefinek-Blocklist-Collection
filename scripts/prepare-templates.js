@@ -69,7 +69,7 @@ const processDirectory = async dirPath => {
 
 				// example.tld/ → example.tld
 				if (line.endsWith('/')) {
-					line = line.replace(/\/$/, ''); // usuwa tylko końcowy "/"
+					line = line.replace(/\/$/, '');
 					stats.modifiedLines++;
 				}
 
@@ -99,20 +99,20 @@ const processDirectory = async dirPath => {
 					}
 				}
 
-				// Replace specific IPs (127.0.0.1, 195.187.6.33-35) with 0.0.0.0
+				// 127.0.0.1 or 195.187.6.33-35 → 0.0.0.0
 				if ((/^(127\.0\.0\.1|195\.187\.6\.3[3-5])\s+/).test(line)) {
 					line = line.replace(/^(\d{1,3}\.){3}\d{1,3}/, '0.0.0.0');
 					stats.ipsReplaced++;
 				}
 
-				// Fix spacing after IP (e.g., tabs or multiple spaces)
+				// 0.0.0.0\t... or 0.0.0.0  ... → 0.0.0.0 ...
 				if (line.startsWith('0.0.0.0\t') || line.startsWith('0.0.0.0  ')) {
 					line = line.replace(/0\.0\.0\.0\s+/, '0.0.0.0 ');
 					stats.modifiedLines++;
 					stats.normalizedSpacing++;
 				}
 
-				// 0.0.0.0 a.com b.com → multiple lines
+				// 0.0.0.0 a.com b.com → split into multiple lines
 				if ((line.startsWith('0.0.0.0') || line.startsWith('127.0.0.1')) && !line.includes('#')) {
 					const words = line.split(/\s+/);
 					if (words.length > 2) {
@@ -131,7 +131,7 @@ const processDirectory = async dirPath => {
 				if (line.startsWith('!')) {
 					line = line.replace('!', '#');
 					if (line === '# Syntax: Adblock Plus Filter List') {
-						line = '# Syntax: 0.0.0.0 domain.tld';
+						line = '# Syntax: 0.0.0.0 domain.tld'; // Adblock header → custom format
 						stats.modifiedLines++;
 						stats.commentsConverted++;
 					}
