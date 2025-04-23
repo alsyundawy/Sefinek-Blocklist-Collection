@@ -41,7 +41,7 @@ const lintFile = async (file, fileContents) => {
 	return hasError;
 };
 
-const job = async () => {
+(async () => {
 	let hasError = false;
 	const blockListDir = join(__dirname, '..', 'blocklists', 'templates');
 	const files = await getAllTxtFiles(blockListDir);
@@ -56,8 +56,4 @@ const job = async () => {
 
 	console.log(hasError ? '❌ Linting failed!' : '✔️ Linting passed');
 	process.exit(hasError ? 1 : 0);
-};
-
-(async () => await job())();
-
-module.exports = () => job;
+})();

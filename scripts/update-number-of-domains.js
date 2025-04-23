@@ -40,10 +40,8 @@ const processFile = async file => {
 };
 
 (async () => {
-	const blockListDir = resolve(__dirname, '..', 'blocklists', 'templates');
-
 	try {
-		const files = await getAllTxtFiles(blockListDir);
+		const files = await getAllTxtFiles(resolve(__dirname, '..', 'blocklists', 'templates'));
 		await Promise.all(files.map(processFile));
 	} catch (err) {
 		console.error(err);

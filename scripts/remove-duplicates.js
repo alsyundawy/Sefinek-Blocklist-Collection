@@ -68,15 +68,10 @@ const processDirectory = async dirPath => {
 	}
 };
 
-const job = async () => {
+(async () => {
 	try {
-		console.log('🔍 Preparing lines in the blocklists/templates directory...');
 		await processDirectory(join(__dirname, '..', 'blocklists', 'templates'));
 	} catch (err) {
 		console.error('⚠️ Error running the process:', err.message);
 	}
-};
-
-(async () => await job())();
-
-module.exports = job;
+})();

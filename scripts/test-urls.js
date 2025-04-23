@@ -103,5 +103,3 @@ const testLinks = async () => {
 		process.exit(1);
 	}
 })();
-
-module.exports = testLinks;

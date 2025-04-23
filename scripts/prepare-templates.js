@@ -182,18 +182,10 @@ const processDirectory = async dirPath => {
 	}
 };
 
-const job = async () => {
+(async () => {
 	try {
-		console.log('🔍 Analyzing the `templates` folder...');
-
-		const templateDirPath = join(__dirname, '..', 'blocklists', 'templates');
-		await processDirectory(templateDirPath);
-		console.log(`✔️ Completed successfully for ${templateDirPath}`);
+		await processDirectory(join(__dirname, '..', 'blocklists', 'templates'));
 	} catch (err) {
 		console.error(`❌ An error occurred: ${err.message}`);
 	}
-};
-
-(async () => await job())();
-
-module.exports = () => job;
+})();

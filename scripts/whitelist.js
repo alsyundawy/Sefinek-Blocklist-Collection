@@ -69,18 +69,13 @@ const processDirectory = async (dirPath, whitelist, basePath) => {
 	}
 };
 
-const job = async () => {
+(async () => {
 	try {
-		const basePath = join(__dirname, '..', 'blocklists');
-		const whitelistPath = join(__dirname, '..', 'whitelists', 'main.txt');
-		const whitelist = await loadWhitelist(whitelistPath);
+		const whitelist = await loadWhitelist(join(__dirname, '..', 'whitelists', 'main.txt'));
 
+		const basePath = join(__dirname, '..', 'blocklists');
 		await processDirectory(join(basePath, 'templates'), whitelist, basePath);
 	} catch (err) {
 		console.error(err);
 	}
-};
-
-(async () => await job())();
-
-module.exports = job;
+})();

@@ -37,8 +37,8 @@ jobs:
       - name: Remove domains that are on the whitelist
         run: node scripts/whitelist.js
 
-      - name: Set valid encoding
-        run: node scripts/set-valid-encoding.js
+      - name: Normalize line endings in .txt files
+        run: node scripts/normalize-line-endings.js
 
       - name: Count domains
         run: node scripts/update-number-of-domains.js
