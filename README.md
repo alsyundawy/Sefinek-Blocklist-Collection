@@ -12,7 +12,10 @@
     <p>If you found this repository helpful or interesting, please consider giving it a star to show your support! ⭐</p>
 </div>
 
+<br><br>
+
 ## Please don't download these lists every few hours — once a day is enough.
+
 
 ## 📝 Information
 - Visit the official website of the project at [blocklist.sefinek.net](https://blocklist.sefinek.net) for more details.  
