@@ -12,7 +12,7 @@
     <p>If you found this repository helpful or interesting, please consider giving it a star to show your support! ⭐</p>
 </div>
 
-<br><br>
+<br>
 
 ## Please don't download these lists every few hours — once a day is enough.
 
