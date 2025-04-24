@@ -82,8 +82,12 @@ exports.fileUrls = [
 	// xRuffKez
 	{ url: 'https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/30-day/domains-only/nrd-30day_part1.txt', name: 'xRuffKez_nrd-30day-part1.txt' },
 	{ url: 'https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/30-day/domains-only/nrd-30day_part2.txt', name: 'xRuffKez_nrd-30day-part2.txt' },
+	{ url: 'https://publicsuffix.org/list/public_suffix_list.dat', name: 'publicsuffix_public_suffix_list.txt' },
 
 	// whoisds
+	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMy56aXA=/nrd', name: 'whoisds1.zip' },
+	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMi56aXA=/nrd', name: 'whoisds1.zip' },
+	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMS56aXA=/nrd', name: 'whoisds1.zip' },
 	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMC56aXA=/nrd', name: 'whoisds1.zip' },
 
 	// tb0hdan
