@@ -14,7 +14,8 @@
 
 <br>
 
-## Please don't download these lists every few hours — once a day is enough.
+> [!TIP]
+> Please don't download these lists every few hours — once a day is enough.
 
 
 ## 📝 Information
