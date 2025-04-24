@@ -22,7 +22,7 @@
 - You're welcome to join my [Discord server](https://discord.gg/53DBjTuzgZ), where I post the latest announcements and important updates.
 
 
-> [!WARNING]  
+> [!IMPORTANT]  
 > **I do not permit commercial use of my lists (CC BY-NC-ND 4.0).** Lists that I did not author are shared under the licensing terms specified by their original creators.
 > If you wish to use Sefinek Blocklists for commercial purposes, please contact me via email. Any misuse or inappropriate actions will be detected sooner or later.
 
