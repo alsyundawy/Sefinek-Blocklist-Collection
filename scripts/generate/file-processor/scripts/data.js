@@ -86,9 +86,9 @@ exports.fileUrls = [
 
 	// whoisds
 	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMy56aXA=/nrd', name: 'whoisds1.zip' },
-	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMi56aXA=/nrd', name: 'whoisds1.zip' },
-	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMS56aXA=/nrd', name: 'whoisds1.zip' },
-	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMC56aXA=/nrd', name: 'whoisds1.zip' },
+	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMi56aXA=/nrd', name: 'whoisds2.zip' },
+	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMS56aXA=/nrd', name: 'whoisds3.zip' },
+	{ url: 'https://www.whoisds.com/whois-database/newly-registered-domains/MjAyNS0wNC0yMC56aXA=/nrd', name: 'whoisds4.zip' },
 
 	// tb0hdan
 	{ url: 'https://github.com/tb0hdan/domains/raw/master/data/generic_lgbt/domain2multi-lgbt00.txt.xz', name: 'tb0hdan_generic-lgbt.xz' },
