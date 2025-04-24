@@ -1,6 +1,10 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025042301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025042401 43200 3600 259200 300
   NS  localhost.
+1000fapvids.online CNAME .
+*.1000fapvids.online CNAME .
+store.1000fapvids.online CNAME .
+*.store.1000fapvids.online CNAME .
 10xuniswap.xyz CNAME .
 *.10xuniswap.xyz CNAME .
 store.10xuniswap.xyz CNAME .
@@ -205,10 +209,6 @@ store.amznshirts.com CNAME .
 *.store.amznshirts.com CNAME .
 an1.is CNAME .
 *.an1.is CNAME .
-animeshoppers.com CNAME .
-*.animeshoppers.com CNAME .
-store.animeshoppers.com CNAME .
-*.store.animeshoppers.com CNAME .
 anydebrid.com CNAME .
 *.anydebrid.com CNAME .
 app-uniswapping.org CNAME .
@@ -1007,6 +1007,8 @@ faze24.com CNAME .
 *.faze24.com CNAME .
 store.faze24.com CNAME .
 *.store.faze24.com CNAME .
+store.faze3.com CNAME .
+*.store.faze3.com CNAME .
 faze4.com CNAME .
 *.faze4.com CNAME .
 faze40.com CNAME .
@@ -1237,8 +1239,6 @@ store.gload.info CNAME .
 *.store.gload.info CNAME .
 globalvisacorp.com CNAME .
 *.globalvisacorp.com CNAME .
-gofoexpress.com CNAME .
-*.gofoexpress.com CNAME .
 gogiworld.com CNAME .
 *.gogiworld.com CNAME .
 goindiavisa.com CNAME .
@@ -1283,8 +1283,8 @@ store.gtltower.com CNAME .
 *.store.gtltower.com CNAME .
 gtltowerinfratel.in CNAME .
 *.gtltowerinfratel.in CNAME .
-store.habilitacao.org CNAME .
-*.store.habilitacao.org CNAME .
+habilitacao.org CNAME .
+*.habilitacao.org CNAME .
 habtoorloyal.com CNAME .
 *.habtoorloyal.com CNAME .
 haceroberomaste.com CNAME .
@@ -1695,8 +1695,6 @@ lisabuddy.com CNAME .
 *.lisabuddy.com CNAME .
 litcomplex.com CNAME .
 *.litcomplex.com CNAME .
-load.365analytics.xyz CNAME .
-*.load.365analytics.xyz CNAME .
 lodrat.org CNAME .
 *.lodrat.org CNAME .
 store.lodrat.org CNAME .
@@ -1707,14 +1705,10 @@ look-like-star.myshopify.com CNAME .
 *.look-like-star.myshopify.com CNAME .
 store.look-like-star.myshopify.com CNAME .
 *.store.look-like-star.myshopify.com CNAME .
-lookinmyheart.com CNAME .
-*.lookinmyheart.com CNAME .
 lootcs.com CNAME .
 *.lootcs.com CNAME .
 lozly.com CNAME .
 *.lozly.com CNAME .
-lrgst.com CNAME .
-*.lrgst.com CNAME .
 lskg.shop CNAME .
 *.lskg.shop CNAME .
 store.lskg.shop CNAME .
@@ -1923,8 +1917,6 @@ navi1.com CNAME .
 *.navi1.com CNAME .
 store.navi1.com CNAME .
 *.store.navi1.com CNAME .
-navi1.ru CNAME .
-*.navi1.ru CNAME .
 navi10.com CNAME .
 *.navi10.com CNAME .
 store.navi10.com CNAME .
@@ -1965,8 +1957,6 @@ store.navi22.com CNAME .
 *.store.navi22.com CNAME .
 navi22.ru CNAME .
 *.navi22.ru CNAME .
-navi23.com CNAME .
-*.navi23.com CNAME .
 store.navi23.com CNAME .
 *.store.navi23.com CNAME .
 navi23.ru CNAME .
@@ -1991,8 +1981,6 @@ navi30.ru CNAME .
 *.navi30.ru CNAME .
 navi32.com CNAME .
 *.navi32.com CNAME .
-store.navi32.com CNAME .
-*.store.navi32.com CNAME .
 navi33.com CNAME .
 *.navi33.com CNAME .
 navi35.com CNAME .
@@ -2011,8 +1999,6 @@ store.navi4.com CNAME .
 *.store.navi4.com CNAME .
 navi42.ru CNAME .
 *.navi42.ru CNAME .
-store.navi42.ru CNAME .
-*.store.navi42.ru CNAME .
 navi43.com CNAME .
 *.navi43.com CNAME .
 navi44.com CNAME .
@@ -2509,6 +2495,10 @@ resources4gaming.com CNAME .
 *.resources4gaming.com CNAME .
 store.resources4gaming.com CNAME .
 *.store.resources4gaming.com CNAME .
+revanced-extended.com CNAME .
+*.revanced-extended.com CNAME .
+store.revanced-extended.com CNAME .
+*.store.revanced-extended.com CNAME .
 reviewshirts.com CNAME .
 *.reviewshirts.com CNAME .
 rewardsgiantca.com CNAME .
@@ -2705,8 +2695,6 @@ smvisa.co.il CNAME .
 *.smvisa.co.il CNAME .
 sodipi.com CNAME .
 *.sodipi.com CNAME .
-softgetpc.com CNAME .
-*.softgetpc.com CNAME .
 software19797.blogspot.com CNAME .
 *.software19797.blogspot.com CNAME .
 store.software19797.blogspot.com CNAME .
@@ -3811,6 +3799,8 @@ zerorolex.com CNAME .
 *.zerorolex.com CNAME .
 zerowasteinitiative.com CNAME .
 *.zerowasteinitiative.com CNAME .
+store.zerowasteinitiative.com CNAME .
+*.store.zerowasteinitiative.com CNAME .
 zhongda.info CNAME .
 *.zhongda.info CNAME .
 zillify.cfd CNAME .
