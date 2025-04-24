@@ -12,6 +12,8 @@
     <p>If you found this repository helpful or interesting, please consider giving it a star to show your support! ⭐</p>
 </div>
 
+## Please don't download these lists every few hours — once a day is enough.
+
 ## 📝 Information
 - Visit the official website of the project at [blocklist.sefinek.net](https://blocklist.sefinek.net) for more details.  
 - You're welcome to join my [Discord server](https://discord.gg/53DBjTuzgZ), where I post the latest announcements and important updates.
