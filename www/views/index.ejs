@@ -279,7 +279,52 @@
 </main>
 
 <script src="/js/date.js"></script>
-<script>const WEBSOCKET=`<%= process.env.WS_FULL %>`;</script>
-<script src="/js/websocket.js"></script>
+<script>
+    const updateStats = (id, value) => {
+        const statsContentElement = document.getElementById(`stats-content-${id}`);
+        if (!statsContentElement) return console.error(`Element ${id} not found`);
+
+        const oldValue = statsContentElement.textContent;
+        const formattedValue = value?.toLocaleString();
+        if (oldValue === formattedValue) return;
+
+        statsContentElement.textContent = formattedValue;
+        statsContentElement.classList.add('stats-updated');
+
+        setTimeout(() => {
+            statsContentElement.classList.remove('stats-updated');
+        }, 1000);
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const ws = new WebSocket('<%= process.env.NODE_ENV === 'production' ? process.env.WS_ADDRESS : `${process.env.WS_ADDRESS}:${process.env.WS_PORT}` %>');
+
+        ws.onopen = () => console.log('WebSocket connection established');
+
+        ws.onmessage = event => {
+            const parsedData = JSON.parse(event.data);
+
+            updateStats('total-requests', parsedData.stats.total);
+            updateStats('blocklist-requests', parsedData.stats.blocklists);
+
+            updateStats('0000', parsedData.stats.categories['0000']);
+            updateStats('127001', parsedData.stats.categories['127001']);
+            updateStats('noip', parsedData.stats.categories.noip);
+            updateStats('adguard', parsedData.stats.categories.adguard);
+            updateStats('unbound', parsedData.stats.categories.unbound);
+            updateStats('dnsmasq', parsedData.stats.categories.dnsmasq);
+            updateStats('rpz', parsedData.stats.categories.rpz);
+
+            updateStats('404', parsedData.stats.responses['404'] || 0);
+            updateStats('429', parsedData.stats.responses['429'] || 0);
+            updateStats('500', parsedData.stats.responses['500'] || 0);
+            updateStats('503', parsedData.stats.responses['503'] || 0);
+
+            updateStats('uptime', parsedData.uptime);
+            updateStats('coll-cAt', formatDate(parsedData.coll.createdAt));
+            updateStats('coll-uAt', formatDate(parsedData.coll.updatedAt));
+        };
+    });
+</script>
 
 <%- include('./includes/footer.ejs') %>

@@ -21,14 +21,15 @@ if (!process.env.SEFINEK_API) {
 
 (async () => {
 	if (process.env.NODE_ENV === 'development') {
-		connectToDatabase().then(() => require('./www/server.js'));
+		await connectToDatabase();
+		require('./www/server.js');
+		require('./www/websocket.js');
 	} else if (cluster.isPrimary) {
 		// Connect to MongoDB
 		await connectToDatabase();
 
 		// WebSocket
-		const ws = new WebSocket.Server({ port: process.env.WS_PORT });
-		require('./www/websocket.js')(ws);
+		require('./www/websocket.js');
 
 		// Global stats buffer
 		let globalStatsBuffer = { inc: {}, set: {} };
