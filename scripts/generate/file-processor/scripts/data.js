@@ -45,7 +45,7 @@ exports.CATEGORIES = [{
 	description: 'Active, inactive, and parked domains. Includes websites related to major e-sports tournaments, platforms for competitive gaming, and organizations such as ESL, FaceIT, The International, and Overwatch League.',
 	category: 'E-Sport',
 	// grex "esport" "e-sport" "hltv" "the-international" "overwatch-league" "esl-pro-league" "intel-extreme" "blast-premier" "pgl-major" "pubg-global-championship" "faceit" "esea.net" "challengermode" "sostronk" "gamersclub" "pvpro.com" "popflash.site"
-	regex: /^(?:p(?:ubg\\-global\\-championship|vpro\.com)|the\\-international|overwatch\\-league|(?:challengermod|popflash\.sit|intel\\-extrem)e|esl\\-pro\\-league|blast\\-premier|gamersclub|pgl\\-major|e(?:s(?:ea\.ne|por)|\\-spor)t|sostronk|faceit|hltv)/i,
+	regex: /p(?:ubg\\-global\\-championship|vpro\.com)|the\\-international|overwatch\\-league|(?:challengermod|popflash\.sit|intel\\-extrem)e|esl\\-pro\\-league|blast\\-premier|gamersclub|pgl\\-major|e(?:s(?:ea\.ne|por)|\\-spor)t|sostronk|faceit|hltv/i,
 	// grex "finesport" "livesport" "thesport" "familjenesport" "simplesport" "cyclesport" "teamsport" "worldsport" "allsport" "realsport" "prosport" "schoolsport" "football" "basketball" "volleyball" "baseball" "athletics" "olympics" "marathon" "runningsport" "watersport" "motorsport" "outdoorsport"
 	whitelist: /(?:f(?:amilje|i)n|liv|th)esport|(?:running|(?:outdo|mot)or|w(?:ater|orld)|team|(?:rea|al)l|pro)sport|s(?:chool|imple)sport|(?:bas(?:ket|e)|foot)ball|volleyball|cyclesport|athletics|marathon|olympics/i,
 	file: 'sites/esport.txt',
