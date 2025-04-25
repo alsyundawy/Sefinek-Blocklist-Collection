@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025042301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025042501 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -349,6 +349,8 @@ go-mpulse.net CNAME .
 *.go-mpulse.net CNAME .
 godiciardstia.com CNAME .
 *.godiciardstia.com CNAME .
+gotoda.co CNAME .
+*.gotoda.co CNAME .
 gsitrix.com CNAME .
 *.gsitrix.com CNAME .
 gw-dv.vip CNAME .
@@ -919,6 +921,8 @@ naanalle.pl CNAME .
 *.3p-geo.yahoo.com CNAME .
 3p-udc.yahoo.com CNAME .
 *.3p-udc.yahoo.com CNAME .
+682a5845.b-cdn.net CNAME .
+*.682a5845.b-cdn.net CNAME .
 9w2zed1szg.execute-api.us-east-1.amazonaws.com CNAME .
 *.9w2zed1szg.execute-api.us-east-1.amazonaws.com CNAME .
 a.emea01.idio.episerver.net CNAME .
@@ -1763,6 +1767,8 @@ fcmatch.google.com CNAME .
 *.fcmatch.google.com CNAME .
 fcmatch.youtube.com CNAME .
 *.fcmatch.youtube.com CNAME .
+fgip.rosehosting.com CNAME .
+*.fgip.rosehosting.com CNAME .
 filament-stats.herokuapp.com CNAME .
 *.filament-stats.herokuapp.com CNAME .
 fingerprinter-production.herokuapp.com CNAME .
@@ -1897,6 +1903,8 @@ informer.yandex.ru CNAME .
 *.informer.yandex.ru CNAME .
 ingest.make.rvapps.io CNAME .
 *.ingest.make.rvapps.io CNAME .
+ingress.trendii.com CNAME .
+*.ingress.trendii.com CNAME .
 ins.connatix.com CNAME .
 *.ins.connatix.com CNAME .
 insights.algolia.io CNAME .
@@ -2081,6 +2089,8 @@ monitor-api.blackcrow.ai CNAME .
 *.monitor-api.blackcrow.ai CNAME .
 monitor-frontend-collector.a.bybit-aws.com CNAME .
 *.monitor-frontend-collector.a.bybit-aws.com CNAME .
+monitor.fraudblocker.com CNAME .
+*.monitor.fraudblocker.com CNAME .
 monitoring.iraiser.eu CNAME .
 *.monitoring.iraiser.eu CNAME .
 monorail-edge.shopifysvc.com CNAME .
@@ -2259,6 +2269,8 @@ pm.boostintegrated.com CNAME .
 *.pm.boostintegrated.com CNAME .
 pmi.flowplayer.com CNAME .
 *.pmi.flowplayer.com CNAME .
+ponos.zeronaught.com CNAME .
+*.ponos.zeronaught.com CNAME .
 popup-static.unisender.com CNAME .
 *.popup-static.unisender.com CNAME .
 porpoise.azettl.net CNAME .
@@ -2319,6 +2331,8 @@ ramp.purch.com CNAME .
 *.ramp.purch.com CNAME .
 rampjs-cdn.system1.com CNAME .
 *.rampjs-cdn.system1.com CNAME .
+raven.adeptmind.ai CNAME .
+*.raven.adeptmind.ai CNAME .
 reach-id.orbit.tm-awx.com CNAME .
 *.reach-id.orbit.tm-awx.com CNAME .
 realm.hearst3pcc.com CNAME .
@@ -2419,6 +2433,8 @@ sgali-mcs.byteoversea.com CNAME .
 *.sgali-mcs.byteoversea.com CNAME .
 shared.65twenty.com CNAME .
 *.shared.65twenty.com CNAME .
+shopify-webhooks.sailthru.com CNAME .
+*.shopify-webhooks.sailthru.com CNAME .
 slackb.com CNAME .
 *.slackb.com CNAME .
 smart-data-systems.com CNAME .
@@ -3643,6 +3659,8 @@ zs.dhl.de CNAME .
 *.zs.dhl.de CNAME .
 abs.proxistore.com CNAME .
 *.abs.proxistore.com CNAME .
+analytics.ekonsilio.io CNAME .
+*.analytics.ekonsilio.io CNAME .
 analytics.freespee.com CNAME .
 *.analytics.freespee.com CNAME .
 analytics.valiuz.com CNAME .
@@ -78285,8 +78303,16 @@ compteur.developpez.com CNAME .
 *.compteur.developpez.com CNAME .
 datalayer.orange.fr CNAME .
 *.datalayer.orange.fr CNAME .
+dd.bellesdemeures.com CNAME .
+*.dd.bellesdemeures.com CNAME .
 dd.leboncoin.fr CNAME .
 *.dd.leboncoin.fr CNAME .
+dd.seloger-bureaux-commerces.com CNAME .
+*.dd.seloger-bureaux-commerces.com CNAME .
+dd.seloger.com CNAME .
+*.dd.seloger.com CNAME .
+dd.selogerneuf.com CNAME .
+*.dd.selogerneuf.com CNAME .
 e.legalstart.fr CNAME .
 *.e.legalstart.fr CNAME .
 events-logs.doctolib.com CNAME .
@@ -78817,6 +78843,8 @@ analytics.traderlink.com CNAME .
 *.analytics.traderlink.com CNAME .
 as.payback.it CNAME .
 *.as.payback.it CNAME .
+ayo.arredoitaliano.it CNAME .
+*.ayo.arredoitaliano.it CNAME .
 c.corriere.it CNAME .
 *.c.corriere.it CNAME .
 click.tv.repubblica.it CNAME .
@@ -79053,10 +79081,14 @@ mklik.gazeta.pl CNAME .
 *.mklik.gazeta.pl CNAME .
 p.gazeta.pl CNAME .
 *.p.gazeta.pl CNAME .
+pb.siepomaga.pl CNAME .
+*.pb.siepomaga.pl CNAME .
 pixel.wp.pl CNAME .
 *.pixel.wp.pl CNAME .
 rek.www.wp.pl CNAME .
 *.rek.www.wp.pl CNAME .
+sentry.siepomaga.pl CNAME .
+*.sentry.siepomaga.pl CNAME .
 ss.woodupp.pl CNAME .
 *.ss.woodupp.pl CNAME .
 stats.teledyski.info CNAME .
@@ -79251,6 +79283,8 @@ statsmp2.emol.com CNAME .
 *.statsmp2.emol.com CNAME .
 t-pan.triodos.com CNAME .
 *.t-pan.triodos.com CNAME .
+targetone-callback.chedraui.com.mx CNAME .
+*.targetone-callback.chedraui.com.mx CNAME .
 tracker.jkplayers.com CNAME .
 *.tracker.jkplayers.com CNAME .
 unm.emol.com CNAME .
