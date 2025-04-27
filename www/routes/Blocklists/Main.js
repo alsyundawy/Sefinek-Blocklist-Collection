@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const router = Router();
-const marked = require('marked');
+const Marked = require('marked');
 const fs = require('node:fs/promises');
 const path = require('node:path');
 
@@ -16,6 +16,8 @@ const CACHE_EXPIRATION_TIME = 5 * 60 * 60 * 1000;
 
 const SIZE_UNITS = ['B', 'KB', 'MB', 'GB'];
 const TEXT_FILE_EXTENSIONS = new Set(['.txt', '.conf', '.log', '.md']);
+
+const CANONICAL_REGEX = /^\[\/\/\]:\s*#\s*\(Canonical:\s*(.*)\)/mi;
 
 const formatFileSize = bytes => {
 	if (bytes === 0) return 'Empty';
@@ -91,15 +93,14 @@ const handleRequest = async (req, res, baseDir, basePath, validExtensions, templ
 			if (['.txt', '.conf'].includes(ext)) return res.sendFile(filePath);
 
 			if (ext === '.md') {
-				const md = await fs.readFile(filePath, 'utf-8');
-				const safeExtract = regex => extractMatch(regex, md) || '';
+				const markdown = await fs.readFile(filePath, 'utf-8');
+				const safeExtract = regex => extractMatch(regex, markdown) || '';
 
+				const html = Marked.parse(markdown);
 				return res.render('markdown-viewer.ejs', {
-					html: marked.parse(md),
+					html,
 					title: safeExtract(/#\s(.+)/),
-					desc: safeExtract(/<!--\s*desc:\s*(.+?)\s*-->/),
-					tags: safeExtract(/<!--\s*tags:\s*(.+?)\s*-->/),
-					canonical: safeExtract(/<!--\s*canonical:\s*(.+?)\s*-->/),
+					canonical: markdown.match(CANONICAL_REGEX)?.[1],
 				});
 			}
 

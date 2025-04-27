@@ -1,3 +1,5 @@
+[//]: # (Canonical: /markdown/lists/md/Unbound.md)
+
 <div align="center">
     <h1>📝 Default blocklist collection for Unbound</h1>
     <p>

@@ -1,3 +1,5 @@
+[//]: # (Canonical: /markdown/lists/md/noip.md)
+
 <div align="center">
     <h1>📝 Default blocklist collection (hosts)</h1>
     <p>

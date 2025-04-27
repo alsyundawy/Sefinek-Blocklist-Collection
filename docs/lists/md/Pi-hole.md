@@ -1,3 +1,5 @@
+[//]: # (Canonical: /markdown/lists/md/Pi-hole.md)
+
 <div align="center">
     <h1>📝 Default blocklist collection for Pi-hole</h1>
     <p>

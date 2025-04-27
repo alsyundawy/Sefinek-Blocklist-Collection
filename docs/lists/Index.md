@@ -1,3 +1,5 @@
+[//]: # (Canonical: /markdown/lists/Index.md)
+
 <div align="center">
     <h1>🌍 Choose your blocker</h1>
 </div>

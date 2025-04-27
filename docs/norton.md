@@ -1,3 +1,5 @@
+[//]: # (Canonical: /markdown/norton.md)
+
 | Category             | Information                                              | Date & Time          | Risk   | The attack was resulted from | Activity                                            | Status  | Recommended Action | IPS Alert Name                                       | Attacker URL                  | Source Address      | Traffic Description |
 |----------------------|----------------------------------------------------------|----------------------|--------|------------------------------|-----------------------------------------------------|---------|--------------------|------------------------------------------------------|-------------------------------|---------------------|---------------------|
 | Intrusion Prevention | Network traffic matches the signature of a known attack. | 09.03.2023, 17:19:39 | High   | BRAVE.EXE                    | An intrusion attempt by 88.99.122.199 was blocked.  | Blocked | No Action Required | Web Attack: Unwanted Browser Notification Website 30 | `https://dallianceclubs.life` | 88.99.122.199, 443  | TCP, https          |

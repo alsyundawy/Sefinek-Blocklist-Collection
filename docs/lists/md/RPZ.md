@@ -1,3 +1,5 @@
+[//]: # (Canonical: /markdown/lists/md/adguard.md)
+
 <div align="center">
     <h1>📝 Default blocklist collection (RPZ)</h1>
     <p>

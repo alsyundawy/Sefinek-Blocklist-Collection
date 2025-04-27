@@ -1,3 +1,5 @@
+[//]: # (Canonical: /markdown/changelog.md)
+
 ## Update v0.18.0 - 13.09.2024
 1. Added new lists of domains, collected using regular expressions. See [this file](https://github.com/sefinek/Sefinek-Blocklist-Collection/blob/main/scripts/generate/file-processor/scripts/data.js) for more details.
    - `anime/main.txt`
