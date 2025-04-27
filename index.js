@@ -5,7 +5,7 @@ const numCPUs = require('node:os').availableParallelism();
 const WebSocket = require('ws');
 const connectToDatabase = require('./www/database/mongoose.js');
 const mergeUpdates = require('./www/cluster/mergeUpdates.js');
-const RequestStats = require('./www/database/models/RequestStats');
+const RequestStats = require('./www/database/models/Stats');
 
 if (!process.env.NODE_ENV || !process.env.DOMAIN || !process.env.PORT) {
 	throw new Error('Environment variables are null or undefined');

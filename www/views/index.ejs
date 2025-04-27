@@ -207,25 +207,6 @@
             </div>
         </div>
 
-        <div class="container-stats">
-            <div>
-                <div class="category-small">Responses 404</div>
-                <div class="stats-content" id="stats-content-404"><%= db.responses['404']?.toLocaleString() || 0 %></div>
-            </div>
-            <div>
-                <div class="category-small">Responses 429</div>
-                <div class="stats-content" id="stats-content-429"><%= db.responses['429']?.toLocaleString() || 0 %></div>
-            </div>
-            <div>
-                <div class="category-small">Responses 500</div>
-                <div class="stats-content" id="stats-content-500"><%= db.responses['500']?.toLocaleString() || 0 %></div>
-            </div>
-            <div>
-                <div class="category-small">Responses 503</div>
-                <div class="stats-content" id="stats-content-503"><%= db.responses['503']?.toLocaleString() || 0 %></div>
-            </div>
-        </div>
-
         <div id="stats-footer">
             <code>Statistics have been collected since October 28, 2024 (28.10.2024).</code>
         </div>
@@ -286,11 +267,6 @@
             updateStats('unbound', parsedData.stats.categories.unbound);
             updateStats('dnsmasq', parsedData.stats.categories.dnsmasq);
             updateStats('rpz', parsedData.stats.categories.rpz);
-
-            updateStats('404', parsedData.stats.responses['404'] || 0);
-            updateStats('429', parsedData.stats.responses['429'] || 0);
-            updateStats('500', parsedData.stats.responses['500'] || 0);
-            updateStats('503', parsedData.stats.responses['503'] || 0);
 
             updateStats('uptime', parsedData.uptime);
             updateStats('coll-cAt', formatDate(parsedData.coll.createdAt));

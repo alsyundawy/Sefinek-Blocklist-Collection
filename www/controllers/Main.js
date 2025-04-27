@@ -2,12 +2,12 @@ const Marked = require('marked');
 const { CronExpressionParser } = require('cron-parser');
 const { version } = require('../../package.json');
 const formatTime = require('../utils/time.js');
-const RequestStats = require('../database/models/RequestStats');
+const Stats = require('../database/models/Stats');
 
 Marked.use({ pedantic: false, gfm: true });
 
 exports.index = async (req, res) => {
-	const db = await RequestStats.findOne().lean();
+	const db = await Stats.findOne().lean();
 	res.render('index.ejs', { version, db, uptime: formatTime.full(process.uptime()) });
 };
 
