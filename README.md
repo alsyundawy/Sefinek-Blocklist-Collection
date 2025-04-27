@@ -56,27 +56,27 @@ This will help you schedule the cron job for optimal timing.
 <details>
   <summary>Click here to see 👀</summary>
 
-  - **Abuse:** Blocks known domains involved in online abuse or harassment.
-  - **Advertising:** Blocks domains that serve advertisements to visitors.
-  - **AMP Hosts:** Blocks Accelerated Mobile Pages (AMP) hosts that often serve ads and track user behavior.
-  - **Cryptojacking:** Blocks domains that hijack your device to mine cryptocurrency.
-  - **Dating Services:** Blocks domains of dating websites and apps.
-  - **Drugs:** Blocks domains that sell or promote drugs.
-  - **Fake News:** Blocks domains known for publishing fake or misleading news.
-  - **Gambling:** Blocks domains of online gambling websites.
-  - **Hate & Junk:** Blocks domains promoting hate speech or spreading misinformation.
-  - **Malicious:** Blocks domains considered dangerous or malicious.
-  - **Phishing:** Blocks domains involved in phishing attempts.
-  - **Piracy:** Blocks domains distributing pirated software, etc.
-  - **Porn:** Blocks domains of adult websites.
-  - **Ransomware:** Blocks domains involved in ransomware attacks.
-  - **Redirect:** Blocks domains that redirect users to unintended websites.
-  - **Scam:** Blocks domains known for promoting scams or fraudulent activities.
-  - **Spam Mails:** Blocks domains that send unsolicited emails.
+  - **Abuse:** Blocks known domains related to harassment or online violence.
+  - **Ads:** Blocks domains serving advertisements.
+  - **AMP Hosts:** Blocks Accelerated Mobile Pages hosts, which often display ads and track users.
+  - **Cryptomining:** Blocks domains hijacking devices for cryptocurrency mining.
+  - **Dating Services:** Blocks dating services and associated scams.
+  - **Drugs:** Blocks domains selling or promoting drugs.
+  - **Fake News:** Blocks domains known for publishing fake or misleading content.
+  - **Gambling:** Blocks domains of online gambling sites.
+  - **Hate Speech and Trash Sites:** Blocks domains promoting hate speech or disinformation.
+  - **Malware:** Blocks dangerous or harmful domains.
+  - **Phishing:** Blocks domains used for phishing attempts.
+  - **Piracy:** Blocks domains sharing illegal content.
+  - **Pornography:** Blocks adult content domains.
+  - **Ransomware:** Blocks domains associated with ransomware attacks.
+  - **Redirects:** Blocks domains that redirect users to unwanted pages.
+  - **Scams:** Blocks domains promoting scams or fraudulent activities.
+  - **Spam:** Blocks domains sending unsolicited emails.
   - **Spyware:** Blocks domains distributing spyware or adware.
-  - **Telemetry & Tracking:** Blocks domains that track user activity for analytics purposes.
-  - **Useless Websites:** Blocks low-value or parked domains that offer little to no value to users.
-  - **Social Medias & Games:** TikTok, Snapchat, OmeTV, Riot Games, Valorant, League of Legends.
+  - **Telemetry and Tracking:** Blocks domains tracking user activity for analytics.
+  - **Useless Sites:** Blocks low-value or parked domains with no real content.
+  - **Social Media and Games:** Blocks TikTok, Snapchat, OmeTV, Riot Games, Valorant, League of Legends, etc.
 </details>
 
 <h3 align="right">
