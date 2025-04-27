@@ -45,7 +45,7 @@ if (!process.env.SEFINEK_API) {
 			}
 		};
 
-		setInterval(flushBuffer, 4000);
+		setInterval(flushBuffer, 2000);
 
 		// Fork workers
 		for (let i = 0; i < numCPUs; i++) {

@@ -26,7 +26,7 @@ wss.on('connection', ws => {
 				updatedAt: db.updatedAt,
 			},
 		}));
-	}, 1000);
+	}, 2500);
 
 	ws.on('close', () => {
 		console.log('WebSocket connection was closed');
