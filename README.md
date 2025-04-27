@@ -20,7 +20,7 @@
 
 > [!IMPORTANT]  
 > I do not allow commercial use of my lists. Lists I did not create are shared under the licensing terms set by their original authors.
-> If you wish to use the Sefinek Blocklist Collection for commercial purposes, please contact me via email. Any misuse or inappropriate actions will eventually be detected.
+> If you wish to use the Sefinek Blocklist Collection for commercial purposes, please contact me via email.
 > Do not download the lists every hour either. Click [here](https://blocklist.sefinek.net/update-schedule) to learn more.
 
 <a href="https://stormserverhosting.com">
