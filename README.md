@@ -7,31 +7,24 @@
     <img src="https://img.shields.io/github/stars/sefinek/Sefinek-Blocklist-Collection?label=STARS&style=for-the-badge" alt="Stars">
     <img src="https://img.shields.io/github/commit-activity/m/sefinek/Sefinek-Blocklist-Collection?label=COMMIT+ACTIVITY&style=for-the-badge" alt="Commit activity">
     <br>
-    <a href="https://blocklist.sefinek.net/#stats" target="_blank">View more stats... »</a>
+    <a href="https://blocklist.sefinek.net">Official website »</a> | <a href="https://discord.gg/53DBjTuzgZ">Discord Server »</a> | <a href="https://blocklist.sefinek.net/#stats">More stats »</a>
     <br><br>
     <p>If you find this repository useful, consider giving it a star. You can also support my work by clicking <a href="https://sefinek.net/donate">here</a>. Thank you so much! ⭐</p>
 </div>
 <br>
 
 
-## 📝 Information
-- Visit the official website of the project at [blocklist.sefinek.net](https://blocklist.sefinek.net) for more details.  
-- You're welcome to join my [Discord server](https://discord.gg/53DBjTuzgZ), where I post the latest announcements and important updates.
-
+## 📦 How to Acquire the Blocklist
+- The first option is to [generate your own list](https://sefinek.net/blocklist-generator), recommended for users who want to customize the list based on their specific needs and preferences.
+- The second option is to use the [default list](https://github.com/sefinek/Sefinek-Blocklist-Collection/tree/main/docs/lists/md) provided, ideal for those who prefer a quick, straightforward solution without customization.
 
 > [!IMPORTANT]  
 > **I do not permit commercial use of my lists (CC BY-NC-ND 4.0).** Lists that I did not author are shared under the licensing terms specified by their original creators.
 > If you wish to use Sefinek Blocklists for commercial purposes, please contact me via email. Any misuse or inappropriate actions will be detected sooner or later.
 
-
-<a href="https://stormserverhosting.com" target="_blank">
+<a href="https://stormserverhosting.com">
   <img src="https://cdn.sefinek.net/images/stormserverhosting/banner-white-gh.png" align="center" alt="Storm Server Hosting">
 </a>
-
-
-## 📦 How to Acquire the Blocklist
-- The first option is to [generate your own list](https://sefinek.net/blocklist-generator), recommended for users who want to customize the list based on their specific needs and preferences.
-- The second option is to use the [default list](https://github.com/sefinek/Sefinek-Blocklist-Collection/tree/main/docs/lists/md) provided, ideal for those who prefer a quick, straightforward solution without customization.
 
 
 ## ❌ How to Report a False Positive? ([more info](https://blocklist.sefinek.net/false-positives))
