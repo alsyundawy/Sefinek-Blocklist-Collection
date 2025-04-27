@@ -9,13 +9,8 @@
     <br>
     <a href="https://blocklist.sefinek.net/#stats" target="_blank">View more stats... »</a>
     <br><br>
-    <p>If you found this repository helpful or interesting, please consider giving it a star to show your support! ⭐</p>
+    <p>If you find this repository useful, consider giving it a star. You can also support my work by clicking <a href="https://sefinek.net/donate">here</a>. Thank you so much! ⭐</p>
 </div>
-
-<br>
-
-> [!TIP]
-> Please don't download these lists every few hours — once a day is enough.
 
 
 ## 📝 Information
