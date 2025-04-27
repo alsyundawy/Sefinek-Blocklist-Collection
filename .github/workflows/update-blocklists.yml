@@ -1,4 +1,4 @@
-name: Update manually approved blocklists
+name: Update manually added domains
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update:
+  update-lists:
     runs-on: ubuntu-latest
 
     steps:
@@ -75,10 +75,10 @@ jobs:
           git config user.name "Sefinek Actions"
           git config user.email "sefinek.actions@gmail.com"
           MODIFIED_FILES=$(git diff --name-only --cached | grep -v '^cache/')
-          [ -n "$MODIFIED_FILES" ] && {
+          if [ -n "$MODIFIED_FILES" ]; then
             FILE_COUNT=$(echo "$MODIFIED_FILES" | wc -l)
-            git commit -m "Update previously committed blocklists in $GITHUB_SHA [$FILE_COUNT files]
-          
-            $MODIFIED_FILES"
+            git commit -m "Update previously committed blocklists in $GITHUB_SHA [$FILE_COUNT files]" -m "$MODIFIED_FILES"
             git push origin main
-          } || echo "Canceled. No changes to commit."
+          else
+            echo "Canceled. No changes to commit."
+          fi

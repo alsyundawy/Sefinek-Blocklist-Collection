@@ -7,8 +7,6 @@ const normalizeLineEndings = async filePath => {
 	if (content !== normalized) {
 		await writeFile(filePath, normalized, 'utf8');
 		console.log(`🔄 Modified ${filePath}: Line endings normalized`);
-	} else {
-		console.log(`✅ ${filePath}: Already correct`);
 	}
 };
 
