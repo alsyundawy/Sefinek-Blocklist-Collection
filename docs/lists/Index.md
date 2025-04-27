@@ -17,9 +17,9 @@
 ### [**Unbound:** local-zone: "domain.tld." always_nxdomain](md/Unbound.md)
 
 
-<br><br>
-<div align="center">
+<br>
+<h2 align="center">
     <a href="https://sefinek.net/blocklist-generator" title="Personalized Blocklist Generator - Take Full Control of Your Network">
-        <img src="../../images/generator.png" width="60%" alt="">
+        Try the blocklist generator on sefinek.net (recommended)
     </a>
-</div>
+</h2>

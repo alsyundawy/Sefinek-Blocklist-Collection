@@ -78,34 +78,44 @@ const handleRequest = async (req, res, baseDir, basePath, validExtensions, templ
 
 	try {
 		const now = Date.now();
-		let stats = FILE_EXISTENCE_CACHE.get(filePath);
-		if (!stats || now - stats.timestamp >= CACHE_EXPIRATION_TIME) {
-			stats = { stats: await fs.stat(filePath), timestamp: now };
-			FILE_EXISTENCE_CACHE.set(filePath, stats);
+		let cached = FILE_EXISTENCE_CACHE.get(filePath);
+		if (!cached || now - cached.timestamp >= CACHE_EXPIRATION_TIME) {
+			const stats = await fs.stat(filePath);
+			cached = { stats, timestamp: now };
+			FILE_EXISTENCE_CACHE.set(filePath, cached);
 		}
 
-		const fileStats = stats.stats;
-		if (fileStats.isFile() && ['.txt', '.conf'].includes(path.extname(filePath))) return res.sendFile(filePath);
+		const stats = cached.stats;
+		if (stats.isFile()) {
+			const ext = path.extname(filePath);
+			if (['.txt', '.conf'].includes(ext)) return res.sendFile(filePath);
 
-		if (fileStats.isDirectory()) {
+			if (ext === '.md') {
+				const md = await fs.readFile(filePath, 'utf-8');
+				const safeExtract = regex => extractMatch(regex, md) || '';
+
+				return res.render('markdown-viewer.ejs', {
+					html: marked.parse(md),
+					title: safeExtract(/#\s(.+)/),
+					desc: safeExtract(/<!--\s*desc:\s*(.+?)\s*-->/),
+					tags: safeExtract(/<!--\s*tags:\s*(.+?)\s*-->/),
+					canonical: safeExtract(/<!--\s*canonical:\s*(.+?)\s*-->/),
+				});
+			}
+
+			return res.sendFile(filePath);
+		}
+
+		if (stats.isDirectory()) {
 			const files = await getCachedFiles(filePath, validExtensions);
 			const currentPath = path.join(basePath, relative).replace(/\\/g, '/');
-			return res.render(template, { files, currentPath });
-		}
 
-		if (relative.endsWith('.md')) {
-			const md = await fs.readFile(filePath, 'utf-8');
-			return res.render('markdown-viewer.ejs', {
-				html: marked.parse(md),
-				title: extractMatch(/#\s(.+)/, md),
-				desc: extractMatch(/<!--\s*desc:\s*(.+?)\s*-->/, md),
-				tags: extractMatch(/<!--\s*tags:\s*(.+?)\s*-->/, md),
-				canonical: extractMatch(/<!--\s*canonical:\s*(.+?)\s*-->/, md),
-			});
+			return res.render(template, { files, currentPath });
 		}
 
 		res.sendFile(filePath);
 	} catch (err) {
+		if (err.code !== 'ENOENT') console.error(err);
 		res.status(err.code === 'ENOENT' ? 404 : 500).end();
 	}
 };

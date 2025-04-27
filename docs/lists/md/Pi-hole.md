@@ -7,7 +7,7 @@
     </p>
 </div>
 <h3 align="right">
-    <a href="https://sefinek.net/blocklist-generator/pihole">🌍 Try blocklist generator on my website (recommended) »</a>
+    <a href="https://sefinek.net/blocklist-generator/pihole">🌍 Try the blocklist generator on my website (recommended) »</a>
 </h3>
 <br>
 
