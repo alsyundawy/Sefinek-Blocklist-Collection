@@ -2,50 +2,46 @@ require('dotenv').config();
 
 const cluster = require('node:cluster');
 const numCPUs = require('node:os').availableParallelism();
-const WebSocket = require('ws');
 const connectToDatabase = require('./www/database/mongoose.js');
 const mergeUpdates = require('./www/cluster/mergeUpdates.js');
 const RequestStats = require('./www/database/models/Stats');
 
-if (!process.env.NODE_ENV || !process.env.DOMAIN || !process.env.PORT) {
-	throw new Error('Environment variables are null or undefined');
-}
-
-if (!process.env.MONGODB_URL) {
-	throw new Error('The MongoDB database URL `MONGODB_URL` was not found in the .env file');
-}
-
-if (!process.env.SEFINEK_API) {
-	throw new Error('Specify the `SEFINEK_API` environment variable, e.g., https://api.sefinek.net/api/v2');
-}
+const { NODE_ENV, DOMAIN, PORT, MONGODB_URL, SEFINEK_API } = process.env;
+if (!NODE_ENV || !DOMAIN || !PORT) throw new Error('Missing basic environment variables');
+if (!MONGODB_URL) throw new Error('Missing MongoDB connection URL');
+if (!SEFINEK_API) throw new Error('Missing SEFINEK_API environment variable');
 
 (async () => {
-	if (process.env.NODE_ENV === 'development') {
+	if (NODE_ENV === 'development') {
 		await connectToDatabase();
 		require('./www/server.js');
 		require('./www/websocket.js');
-	} else if (cluster.isPrimary) {
-		// Connect to MongoDB
-		await connectToDatabase();
+		return;
+	}
 
-		// WebSocket
+	if (cluster.isPrimary) {
+		await connectToDatabase();
 		require('./www/websocket.js');
 
 		// Global stats buffer
 		let globalStatsBuffer = { inc: {}, set: {} };
 
 		const flushBuffer = async () => {
-			if (Object.keys(globalStatsBuffer.inc).length === 0 && Object.keys(globalStatsBuffer.set).length === 0) return;
+			if (!Object.keys(globalStatsBuffer.inc).length && !Object.keys(globalStatsBuffer.set).length) return;
 
 			try {
-				await RequestStats.findOneAndUpdate({}, { $inc: globalStatsBuffer.inc, $set: globalStatsBuffer.set }, { upsert: true });
+				await RequestStats.findOneAndUpdate(
+					{},
+					{ $inc: globalStatsBuffer.inc, $set: globalStatsBuffer.set },
+					{ upsert: true }
+				);
 				globalStatsBuffer = { inc: {}, set: {} };
 			} catch (err) {
-				console.error('[Index]: Error updating request stats.', err);
+				console.error('Error flushing buffer.', err);
 			}
 		};
 
-		setInterval(flushBuffer, 2000);
+		setInterval(flushBuffer, 2500);
 
 		// Fork workers
 		for (let i = 0; i < numCPUs; i++) {
@@ -54,7 +50,7 @@ if (!process.env.SEFINEK_API) {
 
 		// Merge updates
 		cluster.on('message', (worker, message) => {
-			if (message.type === 'updateStats') mergeUpdates(globalStatsBuffer, message.data);
+			if (message?.type === 'updateStats') mergeUpdates(globalStatsBuffer, message.data);
 		});
 
 		// On exit
@@ -63,11 +59,10 @@ if (!process.env.SEFINEK_API) {
 			cluster.fork();
 		});
 
-		console.log(`Primary ${process.pid} is running: http://127.0.0.1:${process.env.PORT}`);
+		console.log(`Primary ${process.pid} running at ${DOMAIN}:${PORT}`);
 	} else {
-		connectToDatabase().then(() => {
-			require('./www/server.js');
-			console.log(`Worker ${process.pid} started`);
-		});
+		await connectToDatabase();
+		require('./www/server.js');
+		console.log(`Worker ${process.pid} started`);
 	}
 })();

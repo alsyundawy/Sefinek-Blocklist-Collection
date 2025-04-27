@@ -44,14 +44,5 @@ app.use(notFound);
 app.use(internalError);
 
 // Run server
-app.listen(process.env.PORT, () => {
-	if (process.env.NODE_ENV === 'production') {
-		try {
-			process.send('ready');
-		} catch (err) {
-			console.warn('Error sending ready signal to parent process.', err.message);
-		}
-	} else {
-		console.log(`Website https://blocklist.sefinek.net is running on http://127.0.0.1:${process.env.PORT}`);
-	}
-});
+const { DOMAIN, PORT } = process.env;
+app.listen(PORT, () => process.send ? process.send('ready') : console.log(`Server running at ${DOMAIN}:${PORT}`));

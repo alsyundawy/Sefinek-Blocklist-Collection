@@ -22,7 +22,7 @@ wss.on('connection', ws => {
 				updatedAt: db.updatedAt,
 			},
 		}));
-	}, 2500);
+	}, 2000);
 
 	ws.on('close', () => {
 		console.log('WebSocket connection was closed');
@@ -32,4 +32,4 @@ wss.on('connection', ws => {
 	ws.on('error', console.error);
 });
 
-console.log(`WebSocket server is running on ${process.env.WS_ADDRESS} (port ${process.env.WS_PORT})`);
+console.log(`WebSocket server is running at ${process.env.WS_ADDRESS}:${process.env.WS_PORT}`);
