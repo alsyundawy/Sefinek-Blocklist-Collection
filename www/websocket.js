@@ -14,9 +14,6 @@ wss.on('connection', ws => {
 			stats: {
 				total: db.total,
 				blocklists: db.blocklists,
-				perDay: db.perDay,
-				perMonth: db.perMonth,
-				perYear: db.perYear,
 				categories: db.categories,
 				responses: db.responses,
 			},
