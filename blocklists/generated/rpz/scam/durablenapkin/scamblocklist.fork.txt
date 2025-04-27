@@ -1,6 +1,8 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025042601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025042701 43200 3600 259200 300
   NS  localhost.
+1.password-internal.com CNAME .
+*.1.password-internal.com CNAME .
 1000fapvids.online CNAME .
 *.1000fapvids.online CNAME .
 store.1000fapvids.online CNAME .
@@ -1015,10 +1017,6 @@ faze24.com CNAME .
 *.faze24.com CNAME .
 store.faze24.com CNAME .
 *.store.faze24.com CNAME .
-faze3.com CNAME .
-*.faze3.com CNAME .
-store.faze3.com CNAME .
-*.store.faze3.com CNAME .
 faze4.com CNAME .
 *.faze4.com CNAME .
 faze40.com CNAME .
@@ -1251,10 +1249,6 @@ globalvisacorp.com CNAME .
 *.globalvisacorp.com CNAME .
 gogiworld.com CNAME .
 *.gogiworld.com CNAME .
-goglle.com CNAME .
-*.goglle.com CNAME .
-store.goglle.com CNAME .
-*.store.goglle.com CNAME .
 goindiavisa.com CNAME .
 *.goindiavisa.com CNAME .
 gossvibe.com CNAME .
@@ -1299,10 +1293,6 @@ gtltowerinfratel.in CNAME .
 *.gtltowerinfratel.in CNAME .
 gunstee.com CNAME .
 *.gunstee.com CNAME .
-habilitacao.org CNAME .
-*.habilitacao.org CNAME .
-store.habilitacao.org CNAME .
-*.store.habilitacao.org CNAME .
 habtoorloyal.com CNAME .
 *.habtoorloyal.com CNAME .
 haceroberomaste.com CNAME .
@@ -1317,8 +1307,6 @@ happymod.cloud CNAME .
 *.happymod.cloud CNAME .
 haruko.store CNAME .
 *.haruko.store CNAME .
-store.haruko.store CNAME .
-*.store.haruko.store CNAME .
 headsets4business.co.uk CNAME .
 *.headsets4business.co.uk CNAME .
 help.premium-x-notes.com CNAME .
@@ -1655,6 +1643,8 @@ kontribusiuang.top CNAME .
 *.kontribusiuang.top CNAME .
 koperasi.naricash.com CNAME .
 *.koperasi.naricash.com CNAME .
+store.koperasi.naricash.com CNAME .
+*.store.koperasi.naricash.com CNAME .
 kopisusu.co.id CNAME .
 *.kopisusu.co.id CNAME .
 kra18.com CNAME .
@@ -2021,12 +2011,12 @@ navi4.com CNAME .
 *.navi4.com CNAME .
 store.navi4.com CNAME .
 *.store.navi4.com CNAME .
+store.navi42.ru CNAME .
+*.store.navi42.ru CNAME .
 navi43.com CNAME .
 *.navi43.com CNAME .
 navi44.com CNAME .
 *.navi44.com CNAME .
-navi45.com CNAME .
-*.navi45.com CNAME .
 navi45.ru CNAME .
 *.navi45.ru CNAME .
 navi48.com CNAME .
@@ -2193,8 +2183,6 @@ norgefotball.com CNAME .
 *.norgefotball.com CNAME .
 norgeshoes.com CNAME .
 *.norgeshoes.com CNAME .
-store.norgeshoes.com CNAME .
-*.store.norgeshoes.com CNAME .
 nosdaarte.com CNAME .
 *.nosdaarte.com CNAME .
 notasdenatran.co CNAME .
@@ -2333,6 +2321,8 @@ store.paquetsuivi7noti.com CNAME .
 *.store.paquetsuivi7noti.com CNAME .
 paradisevs.com CNAME .
 *.paradisevs.com CNAME .
+password-internal.com CNAME .
+*.password-internal.com CNAME .
 pateim.com CNAME .
 *.pateim.com CNAME .
 store.pateim.com CNAME .
@@ -2367,10 +2357,6 @@ phototan-cdirect.info CNAME .
 *.phototan-cdirect.info CNAME .
 store.phototan-cdirect.info CNAME .
 *.store.phototan-cdirect.info CNAME .
-phototan.net CNAME .
-*.phototan.net CNAME .
-store.phototan.net CNAME .
-*.store.phototan.net CNAME .
 pickablegift.com CNAME .
 *.pickablegift.com CNAME .
 store.pickablegift.com CNAME .
@@ -2619,8 +2605,6 @@ saveeeee.myshopify.com CNAME .
 *.saveeeee.myshopify.com CNAME .
 store.saveeeee.myshopify.com CNAME .
 *.store.saveeeee.myshopify.com CNAME .
-store.sber.pay.avito.pay.com-id20341.info CNAME .
-*.store.sber.pay.avito.pay.com-id20341.info CNAME .
 scoigr.buzz CNAME .
 *.scoigr.buzz CNAME .
 scottfamilyministries.org CNAME .
@@ -3043,8 +3027,6 @@ travisa.com CNAME .
 *.travisa.com CNAME .
 store.travisa.com CNAME .
 *.store.travisa.com CNAME .
-treasurefan.com CNAME .
-*.treasurefan.com CNAME .
 store.treasurefan.com CNAME .
 *.store.treasurefan.com CNAME .
 trendsharks.com CNAME .
@@ -3671,10 +3653,6 @@ wpclick.cc CNAME .
 *.wpclick.cc CNAME .
 wuqrie.info CNAME .
 *.wuqrie.info CNAME .
-ww25.utilify.me CNAME .
-*.ww25.utilify.me CNAME .
-store.ww25.utilify.me CNAME .
-*.store.ww25.utilify.me CNAME .
 base-vod.pl CNAME .
 *.base-vod.pl CNAME .
 wyzia-orderdeposits.com CNAME .
@@ -3823,10 +3801,6 @@ store.zerknij-tv.pl CNAME .
 *.store.zerknij-tv.pl CNAME .
 zerorolex.com CNAME .
 *.zerorolex.com CNAME .
-zerowasteinitiative.com CNAME .
-*.zerowasteinitiative.com CNAME .
-store.zerowasteinitiative.com CNAME .
-*.store.zerowasteinitiative.com CNAME .
 zhongda.info CNAME .
 *.zhongda.info CNAME .
 zillify.cfd CNAME .
