@@ -7,7 +7,7 @@
     <img src="https://img.shields.io/github/stars/sefinek/Sefinek-Blocklist-Collection?label=STARS&style=for-the-badge" alt="Stars">
     <img src="https://img.shields.io/github/commit-activity/m/sefinek/Sefinek-Blocklist-Collection?label=COMMIT+ACTIVITY&style=for-the-badge" alt="Commit activity">
     <br>
-    <a href="https://blocklist.sefinek.net">Official website »</a> | <a href="https://discord.gg/53DBjTuzgZ">Discord Server »</a> | <a href="https://blocklist.sefinek.net/#stats">More stats »</a>
+    <a href="https://blocklist.sefinek.net">Official website</a> | <a href="https://discord.gg/53DBjTuzgZ">Discord server</a> | <a href="https://blocklist.sefinek.net/#stats">More stats</a>
     <br><br>
     <p>If you find this repository useful, consider giving it a star. You can also support my work by clicking <a href="https://sefinek.net/donate">here</a>. Thank you so much! ⭐</p>
 </div>
