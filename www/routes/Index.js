@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const MainController = require('../controllers/Main.js');
+const MainController = require('../controllers');
 
 router.get('/', MainController.index);
 router.get('/false-positives', MainController.falsePositives);
