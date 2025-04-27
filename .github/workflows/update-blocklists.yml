@@ -65,7 +65,7 @@ jobs:
         run: node scripts/generate/unbound.js
 
       - name: Run git pull
-        run: git pull origin main
+        run: git pull --rebase origin main
 
       - name: Add files to staging
         run: git add .
@@ -74,15 +74,18 @@ jobs:
         run: |
           git config user.name "Sefinek Actions"
           git config user.email "sefinek.actions@gmail.com"
-          if [ -n "$(git status -s)" ]; then
-            MODIFIED_FILES=$(git diff --name-only HEAD | grep -v '^cache/')
-            FILE_COUNT=$(echo "$MODIFIED_FILES" | wc -l)
-            if [ "$FILE_COUNT" -gt 0 ]; then
-              git commit -m "Update previously committed blocklists in $GITHUB_SHA [$FILE_COUNT files]" -m "$MODIFIED_FILES"
-              git push origin main
-            else
-              echo "Canceled. No files to commit after excluding cache/ files."
-            fi
-          else
+          
+          if [ -z "$(git status --porcelain)" ]; then
             echo "Canceled. No changes to commit."
+            exit 0
           fi
+          
+          MODIFIED_FILES=$(git diff --name-only HEAD | grep -v '^cache/')
+          FILE_COUNT=$(echo "$MODIFIED_FILES" | grep -c . || true)
+          if [ "$FILE_COUNT" -eq 0 ]; then
+            echo "Canceled. Only cache/ changes detected."
+            exit 0
+          fi
+          
+          git commit -m "Update previously committed blocklists in $GITHUB_SHA [$FILE_COUNT files]" -m "$MODIFIED_FILES"
+          git push origin main
