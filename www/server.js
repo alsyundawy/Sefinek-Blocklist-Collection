@@ -30,8 +30,7 @@ const DeprecatedListsRouter = require('./routes/Blocklists/Deprecated.js');
 
 
 // Stats
-if (process.env.NODE_ENV === 'production') app.use(updateStats);
-
+app.use(updateStats);
 app.use(IndexRouter);
 app.use(BlocklistsRouter);
 app.use(DeprecatedListsRouter);
