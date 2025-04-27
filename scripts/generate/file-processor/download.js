@@ -30,7 +30,7 @@ const collectDomains = async (filePath, writeStream) => {
 
 	for await (const line of rl) {
 		const domain = extname(filePath) === '.csv' ? line.split(',')[0].trim() : line.trim();
-		if (domain && !writeStream.write(`${domain}\n`)) await new Promise(res => writeStream.once('drain', res));
+		if (domain && !writeStream.write(`${domain}\n`)) await new Promise(resolve => writeStream.once('drain', resolve));
 	}
 };
 
@@ -82,14 +82,11 @@ const main = async () => {
 			}
 		} catch (err) {
 			console.error(`Error handling ${fileName}:`, err.message);
-		} finally {
-			if (global.gc) global.gc();
 		}
 	}
 
-	writeStream.end(() => {
-		console.log(`Domain list saved to: ${globalFilePath}`);
-	});
+	await new Promise(resolve => writeStream.end(resolve));
+	console.log(`Domain list saved to: ${globalFilePath}`);
 };
 
 main().catch(err => console.error('Fatal error:', err.message));

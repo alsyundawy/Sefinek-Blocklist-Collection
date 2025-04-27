@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Download lists
-        run: node scripts/generate/file-processor/download.js --expose-gc
+        run: node scripts/generate/file-processor/download.js
 
       - name: Generate lists
         run: node scripts/generate/file-processor/generate.js
