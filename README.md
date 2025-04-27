@@ -7,7 +7,7 @@
     <img src="https://img.shields.io/github/stars/sefinek/Sefinek-Blocklist-Collection?label=STARS&style=for-the-badge" alt="Stars">
     <img src="https://img.shields.io/github/commit-activity/m/sefinek/Sefinek-Blocklist-Collection?label=COMMIT+ACTIVITY&style=for-the-badge" alt="Commit activity">
     <br>
-    <a href="https://blocklist.sefinek.net">Official website</a> | <a href="https://discord.gg/53DBjTuzgZ">Discord server</a> | <a href="https://blocklist.sefinek.net/#stats">More stats</a>
+    <a href="https://blocklist.sefinek.net">Official website</a> | <a href="https://blocklist.sefinek.net/#stats">More stats</a> | <a href="https://discord.gg/53DBjTuzgZ">Discord server</a>
     <br><br>
     <p>If you find this repository useful, consider giving it a star. You can also support my work by clicking <a href="https://sefinek.net/donate">here</a>. Thank you so much! ⭐</p>
 </div>
@@ -19,8 +19,9 @@
 - The second option is to use the [default list](https://github.com/sefinek/Sefinek-Blocklist-Collection/tree/main/docs/lists/md) provided, ideal for those who prefer a quick, straightforward solution without customization.
 
 > [!IMPORTANT]  
-> **I do not permit commercial use of my lists.** Lists that I did not author are shared under the licensing terms specified by their original creators.
-> If you wish to use Sefinek Blocklists for commercial purposes, please contact me via email. Any misuse or inappropriate actions will be detected sooner or later.
+> I do not allow commercial use of my lists. Lists I did not create are shared under the licensing terms set by their original authors.
+> If you wish to use the Sefinek Blocklist Collection for commercial purposes, please contact me via email. Any misuse or inappropriate actions will eventually be detected.
+> Do not download the lists every hour either. Click [here](https://blocklist.sefinek.net/update-schedule) to learn more.
 
 <a href="https://stormserverhosting.com">
   <img src="https://cdn.sefinek.net/images/stormserverhosting/banner-white-gh.png" align="center" alt="Storm Server Hosting">
