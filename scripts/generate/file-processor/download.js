@@ -1,7 +1,7 @@
 const { createInterface } = require('readline');
-const axios = require('axios');
-const unzipper = require('unzipper');
-const lzma = require('lzma-native');
+const { get } = require('axios');
+const { Extract } = require('unzipper');
+const { createDecompressor } = require('lzma-native');
 const { mkdir, rm, readdir } = require('node:fs/promises');
 const { join, basename, extname } = require('node:path');
 const { createWriteStream, createReadStream } = require('node:fs');
@@ -13,15 +13,15 @@ const globalFilePath = join(tmpDir, 'global.txt');
 
 const downloadFile = async (url, outputPath) => {
 	console.log(`Downloading: ${url}`);
-	const res = await axios.get(url, { responseType: 'stream' });
+	const res = await get(url, { responseType: 'stream' });
 	await pipeline(res.data, createWriteStream(outputPath));
 };
 
 const extractors = {
-	'.zip': (input, outputDir) => pipeline(createReadStream(input), unzipper.Extract({ path: outputDir })),
+	'.zip': (input, outputDir) => pipeline(createReadStream(input), Extract({ path: outputDir })),
 	'.xz': async (input, outputDir) => {
 		const outputFile = join(outputDir, basename(input, '.xz'));
-		await pipeline(createReadStream(input), lzma.createDecompressor(), createWriteStream(outputFile));
+		await pipeline(createReadStream(input), createDecompressor(), createWriteStream(outputFile));
 	},
 };
 
@@ -60,7 +60,7 @@ const handleCompressedFile = async (filePath, outputDir, writeStream) => {
 };
 
 const main = async () => {
-	await rm(tmpDir, { recursive: true, force: true }).catch(() => {});
+	await rm(tmpDir, { recursive: true, force: true });
 	await mkdir(tmpDir, { recursive: true });
 
 	const writeStream = createWriteStream(globalFilePath, { flags: 'a' });
@@ -86,7 +86,7 @@ const main = async () => {
 	}
 
 	await new Promise(resolve => writeStream.end(resolve));
-	console.log(`Domain list saved to: ${globalFilePath}`);
+	console.log('Domain list saved to', globalFilePath);
 };
 
 main().catch(err => console.error('Fatal error:', err.message));
