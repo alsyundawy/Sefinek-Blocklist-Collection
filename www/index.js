@@ -2,9 +2,9 @@ require('dotenv').config();
 
 const cluster = require('node:cluster');
 const numCPUs = require('node:os').availableParallelism();
-const connectToDatabase = require('./www/database/mongoose.js');
-const mergeUpdates = require('./www/cluster/mergeUpdates.js');
-const RequestStats = require('./www/database/models/Stats');
+const connectToDatabase = require('./database/mongoose.js');
+const mergeUpdates = require('./cluster/mergeUpdates.js');
+const RequestStats = require('./database/models/Stats');
 
 const { NODE_ENV, DOMAIN, PORT, MONGODB_URL, SEFINEK_API } = process.env;
 if (!NODE_ENV || !DOMAIN || !PORT) throw new Error('Missing basic environment variables');
@@ -14,14 +14,14 @@ if (!SEFINEK_API) throw new Error('Missing SEFINEK_API environment variable');
 (async () => {
 	if (NODE_ENV === 'development') {
 		await connectToDatabase();
-		require('./www/server.js');
-		require('./www/websocket.js');
+		require('./server.js');
+		require('./websocket.js');
 		return;
 	}
 
 	if (cluster.isPrimary) {
 		await connectToDatabase();
-		require('./www/websocket.js');
+		require('./websocket.js');
 
 		// Global stats buffer
 		let globalStatsBuffer = { inc: {}, set: {} };
@@ -62,7 +62,7 @@ if (!SEFINEK_API) throw new Error('Missing SEFINEK_API environment variable');
 		console.log(`Primary ${process.pid} running at ${DOMAIN}:${PORT}`);
 	} else {
 		await connectToDatabase();
-		require('./www/server.js');
+		require('./server.js');
 		console.log(`Worker ${process.pid} started`);
 	}
 })();

@@ -9,6 +9,7 @@ export default [
 			globals: {
 				...globals.node,
 				...globals.mongo,
+				...globals.browser,
 			},
 		},
 		rules: {
