@@ -1,35 +1,34 @@
 const parseCategoryFromLink = require('../../utils/parseCategoryFromLink.js');
-const time = require('../../utils/time.js');
+const { getDate } = require('../../utils/time.js');
 
 const BOT_REGEX1 = /netcraftsurveyagent|domainsproject\.org|f(?:reepublicapis|acebook)|screaming frog|i(?:a_archiv|ndex)er|s(?:istrix|crapy|lurp)|scraper|(?:s(?:cann|pid)|fetch)er|lychee\/|crawl|yahoo|jest\/|bot/i;
 
 const updateStats = (req, res) => {
-	if (BOT_REGEX1.test(req.headers['user-agent']) || req.method !== 'GET') return;
+	if (req.method !== 'GET' || BOT_REGEX1.test(req.headers['user-agent'])) return;
 
 	try {
 		const { url, type } = parseCategoryFromLink(req.originalUrl || req.url);
-		const { dateKey, yearKey, monthKey } = time.dateKey();
+		const { dateKey, yearKey, monthKey } = getDate();
 
-		const updateQuery = {
-			inc: {
-				total: 1,
-				[`responses.${res.statusCode || 'unknown'}`]: 1,
-			},
+		const statusCode = res?.statusCode ?? 'unknown';
+		const inc = {
+			total: 1,
+			[`responses.${statusCode}`]: 1,
 		};
 
-		if (type && res.statusCode >= 200 && res.statusCode <= 304 && (url.includes('.txt') || url.includes('.conf'))) {
-			updateQuery.inc.blocklists = 1;
-			updateQuery.inc[`categories.${type}`] = 1;
-
-			updateQuery.inc[`perDay.${dateKey}`] = 1;
-			updateQuery.inc[`perMonth.${monthKey}-${yearKey}`] = 1;
-			updateQuery.inc[`perYear.${yearKey}`] = 1;
-
-			// console.debug(`Updated stats for ${type}`);
+		if (type && statusCode >= 200 && statusCode <= 304 && (url.includes('.txt') || url.includes('.conf'))) {
+			inc.blocklists = 1;
+			inc[`categories.${type}`] = 1;
+			inc[`perDay.${dateKey}`] = 1;
+			inc[`perMonth.${monthKey}-${yearKey}`] = 1;
+			inc[`perYear.${yearKey}`] = 1;
+			console.debug(`Updated stats for ${type}`);
+			console.debug({ dateKey, yearKey, monthKey });
 		}
 
-		process.send({ type: 'updateStats', data: updateQuery });
-	} catch {
+		process.send({ type: 'updateStats', data: { inc } });
+	} catch (err) {
+		console.error('updateStats failed', err);
 		process.send({ type: 'updateStats', data: { inc: { updateStatsFail: 1 } } });
 	}
 };

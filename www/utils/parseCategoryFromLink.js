@@ -6,12 +6,11 @@ const types = {
 module.exports = url => {
 	const segments = url.split('/');
 	const isVersioned = segments[2] === 'v1';
-	const rawType = isVersioned ? segments[3] : segments[2];
-	const type = types[rawType] || rawType;
+	const rawType = segments[isVersioned ? 3 : 2] || '';
 
 	return {
 		url,
 		array: segments,
-		type,
+		type: types[rawType] || rawType,
 	};
 };

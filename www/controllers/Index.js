@@ -1,19 +1,17 @@
 const Marked = require('marked');
 const { CronExpressionParser } = require('cron-parser');
+const { getFullDate } = require('../utils/time.js');
 const { version } = require('../../package.json');
-const formatTime = require('../utils/time.js');
 const Stats = require('../database/models/Stats');
 
 Marked.use({ pedantic: false, gfm: true });
 
 exports.index = async (req, res) => {
-	const db = await Stats.findOne().lean();
-	res.render('index.ejs', { version, db, uptime: formatTime.full(process.uptime()) });
+	const db = await Stats.findOne({}).lean();
+	res.render('index.ejs', { version, db, uptime: getFullDate(process.uptime()) });
 };
 
-exports.falsePositives = (req, res) => {
-	res.render('false-positives.ejs');
-};
+exports.falsePositives = (req, res) => res.render('false-positives.ejs');
 
 exports.updateSchedule = (req, res) => {
 	const tzOptions = { tz: 'Europe/Warsaw', currentDate: Date.now() };

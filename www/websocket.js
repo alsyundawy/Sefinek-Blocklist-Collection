@@ -1,5 +1,5 @@
 const WebSocket = require('ws');
-const formatTime = require('./utils/time.js');
+const { getFullDate } = require('./utils/time.js');
 const RequestStats = require('./database/models/Stats');
 
 const wss = new WebSocket.Server({ port: process.env.WS_PORT });
@@ -16,7 +16,7 @@ wss.on('connection', ws => {
 				blocklists: db.blocklists,
 				categories: db.categories,
 			},
-			uptime: formatTime.full(process.uptime()),
+			uptime: getFullDate(process.uptime()),
 			coll: {
 				createdAt: db.createdAt,
 				updatedAt: db.updatedAt,
