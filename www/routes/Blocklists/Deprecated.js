@@ -1,17 +1,16 @@
 const { Router } = require('express');
+const router = Router();
 const path = require('node:path');
 
-const router = Router();
-
-const baseDirs = {
-	'0.0.0.0': path.join(__dirname, '..', '..', '..', 'blocklists', 'generated', '0.0.0.0'),
-	'127.0.0.1': path.join(__dirname, '..', '..', '..', 'blocklists', 'generated', '127.0.0.1'),
-	'noip': path.join(__dirname, '..', '..', '..', 'blocklists', 'generated', 'noip'),
-	'adguard': path.join(__dirname, '..', '..', '..', 'blocklists', 'generated', 'adguard'),
-	'dnsmasq': path.join(__dirname, '..', '..', '..', 'blocklists', 'generated', 'dnsmasq'),
+const BASE_DIRS = {
+	'0.0.0.0': path.resolve(__dirname, '..', '..', '..', 'blocklists', 'generated', '0.0.0.0'),
+	'127.0.0.1': path.resolve(__dirname, '..', '..', '..', 'blocklists', 'generated', '127.0.0.1'),
+	'noip': path.resolve(__dirname, '..', '..', '..', 'blocklists', 'generated', 'noip'),
+	'adguard': path.resolve(__dirname, '..', '..', '..', 'blocklists', 'generated', 'adguard'),
+	'dnsmasq': path.resolve(__dirname, '..', '..', '..', 'blocklists', 'generated', 'dnsmasq'),
 };
 
-const routes = [
+const ROUTES = [
 	// Ads
 	{ url: '/ads/blocklistproject.ads.txt', file: 'ads/blocklistproject/hosts.fork.txt' },
 	{ url: '/ads/jerryn70.GoodbyeAds.txt', file: 'ads/jerryn70/GoodbyeAds.fork.txt' },
@@ -161,12 +160,18 @@ const routes = [
 	{ url: '/games/valorant.txt', file: 'games/valorant.txt' },
 ];
 
-Object.entries(baseDirs).forEach(([key, basePath]) => {
-	routes.forEach(({ url, file }) => {
+for (const { url, file } of ROUTES) {
+	for (const [key, basePath] of Object.entries(BASE_DIRS)) {
+		const fullPath = path.join(basePath, file);
 		router.get(`/generated/${key}${url}`, (req, res) => {
-			res.sendFile(path.join(basePath, file));
+			res.sendFile(fullPath, err => {
+				if (err) {
+					console.error(`Failed to send ${fullPath} for request ${req.originalUrl}`, err);
+					res.sendStatus(500);
+				}
+			});
 		});
-	});
-});
+	}
+}
 
 module.exports = router;
