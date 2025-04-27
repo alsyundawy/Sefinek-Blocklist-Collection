@@ -59,7 +59,7 @@ This will help you schedule the cron job for optimal timing.
   - **Abuse:** Blocks known domains involved in online abuse or harassment.
   - **Advertising:** Blocks domains that serve advertisements to visitors.
   - **AMP Hosts:** Blocks Accelerated Mobile Pages (AMP) hosts that often serve ads and track user behavior.
-  - **CryptoJacking:** Blocks domains that hijack your device to mine cryptocurrency.
+  - **Cryptojacking:** Blocks domains that hijack your device to mine cryptocurrency.
   - **Dating Services:** Blocks domains of dating websites and apps.
   - **Drugs:** Blocks domains that sell or promote drugs.
   - **Fake News:** Blocks domains known for publishing fake or misleading news.
@@ -76,7 +76,7 @@ This will help you schedule the cron job for optimal timing.
   - **Spyware:** Blocks domains distributing spyware or adware.
   - **Telemetry & Tracking:** Blocks domains that track user activity for analytics purposes.
   - **Useless Websites:** Blocks low-value or parked domains that offer little to no value to users.
-  - **Websites & Games:** TikTok, Snapchat, OmeTV, Riot Games, Valorant, and League of Legends.
+  - **Social Medias & Games:** TikTok, Snapchat, OmeTV, Riot Games, Valorant, League of Legends.
 </details>
 
 <h3 align="right">
@@ -104,7 +104,7 @@ git clone --branch main --single-branch https://github.com/sefinek/Sefinek-Block
 ```
 
 
-## 🤝 Support
+## 🤝 Support & Questions
 Join our [Discord server](https://discord.gg/53DBjTuzgZ) or open a new [Issue](https://github.com/sefinek/Blacklisted-Emails/issues).
 
 
