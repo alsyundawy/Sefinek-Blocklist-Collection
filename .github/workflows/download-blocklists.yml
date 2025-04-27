@@ -77,11 +77,18 @@ jobs:
         run: |
           git config user.name "Sefinek Actions"
           git config user.email "sefinek.actions@gmail.com"
-          MODIFIED_FILES=$(git diff --name-only --cached | grep -v '^cache/')
-          [ -n "$MODIFIED_FILES" ] && {
-            FILE_COUNT=$(echo "$MODIFIED_FILES" | wc -l)
-            git commit -m "Main blocklist update every 3h [$FILE_COUNT files] - $(date -u '+%Y-%m-%d %H:%M:%S UTC')
           
-            $MODIFIED_FILES"
-            git push origin main
-          } || echo "Canceled. No changes to commit."
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Canceled. No changes to commit."
+            exit 0
+          fi
+          
+          MODIFIED_FILES=$(git diff --name-only HEAD | grep -v '^cache/')
+          FILE_COUNT=$(echo "$MODIFIED_FILES" | grep -c . || true)
+          if [ "$FILE_COUNT" -eq 0 ]; then
+            echo "Canceled. Only cache/ changes detected."
+            exit 0
+          fi
+          
+          git commit -m "Main blocklist update every 3h [$FILE_COUNT files] - $(date -u '+%Y-%m-%d %H:%M:%S UTC')" -m "$MODIFIED_FILES"
+          git push origin main
