@@ -1,37 +1,52 @@
-<!DOCTYPE html> <!-- Copyright 2024 © by Sefinek. All Rights Reserved. -->
+<!DOCTYPE html> <!-- Copyright 2023-2025 © by Sefinek. All Rights Reserved. -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <% if (title) { %><title><%= title %></title><% } %>
-    <% if (meta.desc) { %><meta name="description" content="<%= meta.desc %>"><% } %>
+    <% if (title) { %><title><%= title %></title><meta property="og:title" content="<%= title %>"><% } %>
+    <% if (meta.desc) { %><meta name="description" content="<%= meta.desc %>"><meta property="og:description" content="<%= meta.desc %>"><meta name="twitter:description" content="<%= meta.desc %>"><% } %>
     <% if (meta.tags) { %><meta name="keywords" content="<%= meta.tags %>"><% } %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% if (canonical || canonical === '') { %><link rel="canonical" href="<%= process.env.DOMAIN %><%= canonical %>"><% } %>
 
-    <% if (process.env.NODE_ENV === 'production') { %>
-        <!-- Meta tags -->
-        <% if (meta.siteName) { %><meta property="og:siteName" content="<%= meta.siteName %>"><% } %>
-        <% if (meta.color) { %><meta name="theme-color" content="<%= meta.color %>"><% } %>
-        <meta property="og:url" content="<%= process.env.DOMAIN %>">
-    <% } %>
-
-    <% if (canonical || canonical === '') { %>
-        <link rel="canonical" href="<%= process.env.NODE_ENV === 'production' ? `${process.env.DOMAIN}${canonical}` : `${process.env.DOMAIN}:${process.env.PORT}${canonical}` %>">
-    <% } %>
-
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/default.css">
-    <% if (style) { %><link rel="stylesheet" href="/css/<%= style %>.css"> <% } %>
-    <% if (libs === 'luxon') { %><script src="https://cdn.jsdelivr.net/npm/luxon@latest/build/global/luxon.min.js"></script><% } %>
+    <% if (css) { %><link rel="stylesheet" href="/css/<%= css %>.css"> <% } %>
+
+    <!-- JS -->
+    <% if (page === 'update-schedule') { %><script src="https://cdn.jsdelivr.net/npm/luxon@latest/build/global/luxon.min.js"></script><% } %>
+
+    <!-- SEO -->
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="application-name" content="Sefinek Blocklist Collection">
+    <meta name="apple-mobile-web-app-title" content="Sefinek Blocklist Collection">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#223672">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sefinek Blocklist Collection">
+    <meta property="og:url" content="https://blocklist.sefinek.net">
+    <meta property="og:image" content="https://blocklist.sefinek.net/images/meta-og.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://blocklist.sefinek.net">
+    <meta property="twitter:title" content="Sefinek Blocklist Collection">
+    <meta property="twitter:image" content="https://blocklist.sefinek.net/images/meta-og.jpg">
+    <meta property="twitter:image:alt" content="Sefinek Blocklist Collection banner">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="/" <%- subpage === 'home' ? 'id="selected"' : '' %>>🏠 Home page</a></li>
-            <li><a href="/generated/v1" <%- subpage === 'blocklists' ? 'id="selected"' : '' %>>📝 Blocklists</a></li>
-            <li><a href="/markdown" <%- subpage === 'markdown' ? 'id="selected"' : '' %>>📁 Explorer</a></li>
-            <li><a href="/false-positives" <%- subpage === 'false-positives' ? 'id="selected"' : '' %>>❌ Report false positive</a></li>
+            <li><a href="/" <%- page === 'home' ? 'id="selected"' : '' %>>🏠 Home page</a></li>
+            <li><a href="/generated/v1" <%- page === 'blocklists' ? 'id="selected"' : '' %>>📝 Blocklists</a></li>
+            <li><a href="/markdown" <%- page === 'markdown' ? 'id="selected"' : '' %>>📁 Explorer</a></li>
+            <li><a href="/false-positives" <%- page === 'false-positives' ? 'id="selected"' : '' %>>❌ Report false positive</a></li>
             <li><a href="/markdown/changelog.md">📥 Changelog</a></li>
-            <li><a href="/update-schedule" <%- subpage === 'update-schedule' ? 'id="selected"' : '' %>>⏳ Update schedule</a></li>
-            <li><a href="/logs/v1" <%- subpage === 'git-logs' ? 'id="selected"' : '' %>>📘 Git logs</a></li>
+            <li><a href="/update-schedule" <%- page === 'update-schedule' ? 'id="selected"' : '' %>>⏳ Update schedule</a></li>
+            <li><a href="/logs/v1" <%- page === 'git-logs' ? 'id="selected"' : '' %>>📘 Git logs</a></li>
         </ul>
 
         <button class="menu-toggle">☰</button>

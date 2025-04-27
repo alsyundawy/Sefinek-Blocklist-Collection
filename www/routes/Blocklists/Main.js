@@ -85,7 +85,7 @@ const handleRequest = async (req, res, baseDir, basePath, validExtensions, templ
 		}
 
 		const fileStats = stats.stats;
-		if (fileStats.isFile() && validExtensions.includes(path.extname(filePath))) return res.sendFile(filePath);
+		if (fileStats.isFile() && ['.txt', '.conf'].includes(path.extname(filePath))) return res.sendFile(filePath);
 
 		if (fileStats.isDirectory()) {
 			const files = await getCachedFiles(filePath, validExtensions);
