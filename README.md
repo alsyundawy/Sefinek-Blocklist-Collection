@@ -19,7 +19,7 @@
 - The second option is to use the [default list](https://github.com/sefinek/Sefinek-Blocklist-Collection/tree/main/docs/lists/md) provided, ideal for those who prefer a quick, straightforward solution without customization.
 
 > [!IMPORTANT]  
-> **I do not permit commercial use of my lists (CC BY-NC-ND 4.0).** Lists that I did not author are shared under the licensing terms specified by their original creators.
+> **I do not permit commercial use of my lists.** Lists that I did not author are shared under the licensing terms specified by their original creators.
 > If you wish to use Sefinek Blocklists for commercial purposes, please contact me via email. Any misuse or inappropriate actions will be detected sooner or later.
 
 <a href="https://stormserverhosting.com">
