@@ -36,7 +36,7 @@ const processDirectory = async dirPath => {
 
 			for (let line of lines) {
 				line = line.trim();
-				if (!line || line === '0.0.0.0') {
+				if (!line || line === '0.0.0.0' || line === '127.0.0.1') {
 					stats.invalidLinesRemoved++;
 					continue;
 				}
