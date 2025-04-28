@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const timeout = require('./middlewares/timeout.js');
 const morgan = require('./middlewares/morgan.js');
 const limiter = require('./middlewares/ratelimit.js');
-const updateStats = require('./middlewares/other/updateStats.js');
+const updateStats = require('./middlewares/other/stats.js');
 const { notFound, internalError } = require('./middlewares/other/errors.js');
 
 // Create express instance

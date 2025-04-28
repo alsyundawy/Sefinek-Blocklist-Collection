@@ -22,8 +22,7 @@ const updateStats = (req, res) => {
 			inc[`perDay.${dateKey}`] = 1;
 			inc[`perMonth.${monthKey}-${yearKey}`] = 1;
 			inc[`perYear.${yearKey}`] = 1;
-			console.debug(`Updated stats for ${type}`);
-			console.debug({ dateKey, yearKey, monthKey });
+			// console.debug(`Updated stats for ${type}`);
 		}
 
 		process.send({ type: 'updateStats', data: { inc } });
