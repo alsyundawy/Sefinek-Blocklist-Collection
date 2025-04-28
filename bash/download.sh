@@ -1,13 +1,14 @@
 #!/bin/bash
 
-# Each blocklist is stored in a directory named after the author, and the downloaded file has a 'fork' prefix to indicate that it has been forked.
-# Below, you'll find a list of URLs for the blocklists. Each entry provides both the URL and the corresponding path.
+# Each blocklist is stored in a directory named after its author.
+# The downloaded file is saved with the suffix "fork" to indicate that it is a modified copy.
+# Below is a list of blocklist URLs along with their respective destination paths.
 urls=(
-  ## Abuse
+  # Abuse
   "https://blocklistproject.github.io/Lists/abuse.txt abuse/blocklistproject/hosts.fork.txt"
   "https://urlhaus.abuse.ch/downloads/hostfile abuse/urlhaus.abuse.ch/hostfile.fork.txt"
 
-  ## Advertising
+  # Advertising
   "https://adaway.org/hosts.txt ads/adaway/hosts.fork.txt"
   "https://blocklistproject.github.io/Lists/ads.txt ads/blocklistproject/hosts.fork.txt"
   "https://blocklistproject.github.io/Lists/youtube.txt ads/blocklistproject/youtube.fork.txt"
@@ -28,36 +29,36 @@ urls=(
   "https://v.firebog.net/hosts/Easylist.txt ads/firebog/Easylist.fork.txt"
   "https://v.firebog.net/hosts/Prigent-Ads.txt ads/firebog/Prigent-Ads.fork.txt"
 
-  ## AMP hosts
+  # AMP hosts
   "https://ente.dev/api/blocklist/google-amp-hosts amp/ente-dev/google-amp-hosts.fork.txt"
   "https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt amp/developerdan/amp-hosts-extended.fork.txt"
 
-  ## CryptoJacking
+  # CryptoJacking
   "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt crypto/cryptojacking/hoshsadiq/adblock-nocoin-list.fork.txt"
   "https://raw.githubusercontent.com/Snota418/Youtube-spam-host-list/main/Crypto%20streams crypto/cryptojacking/Snota418/Crypto-streams.fork.txt"
   "https://v.firebog.net/hosts/Prigent-Crypto.txt crypto/cryptojacking/firebog/Prigent/Crypto.fork.txt"
 
-  ## Dating services
+  # Dating services
   "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Dating dating-services/ShadowWhisperer/dating.fork.txt"
   "https://www.github.developerdan.com/hosts/lists/dating-services-extended.txt dating-services/developerdan/extended.fork.txt"
 
-  ## Drugs
+  # Drugs
   "https://blocklistproject.github.io/Lists/drugs.txt drugs/blocklistproject/drugs.fork.txt"
 
-  ## Fake news
+  # Fake news
   "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-only/hosts fakenews/StevenBlack/hosts.fork.txt"
   "https://raw.githubusercontent.com/marktron/fakenews/master/fakenews fakenews/marktron/hosts.fork.txt"
 
-  ## Gambling
+  # Gambling
   "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-only/hosts gambling/StevenBlack/hosts.fork.txt"
   "https://blocklistproject.github.io/Lists/gambling.txt gambling/blocklistproject/hosts.fork.txt"
   "https://raw.githubusercontent.com/alsyundawy/TrustPositif/main/gambling_indonesia.txt gambling/TrustPositif/gambling-indonesia.fork.txt"
   "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/gambling-hosts.txt gambling/MajkiIT/gambling-hosts.fork.txt"
 
-  ## Hate and junk
+  # Hate and junk
   "https://www.github.developerdan.com/hosts/lists/hate-and-junk-extended.txt hate-and-junk/developerdan/extended.fork.txt"
 
-  ## Malicious
+  # Malicious
   "https://blocklistproject.github.io/Lists/malware.txt malicious/blocklistproject/malware.fork.txt"
   "https://gitlab.com/quidsup/notrack-blocklists/raw/master/malware.list malicious/quidsup/notrack-malware.fork.txt"
   "https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-hosts-online.txt malicious/malware-filter/urlhaus-filter-hosts-online.fork.txt"
@@ -70,16 +71,16 @@ urls=(
   "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt malicious/Spam404/main-blacklist.fork.txt"
   "https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt malicious/disconnectme/simple-malvertising.fork.txt"
 
-  ## Phishing
+  # Phishing
   "https://blocklistproject.github.io/Lists/phishing.txt phishing/blocklistproject/phishing.fork.txt"
   "https://phishing.army/download/phishing_army_blocklist_extended.txt phishing/phishing.army/blocklist-extended.fork.txt"
   "https://raw.githubusercontent.com/Dogino/Discord-Phishing-URLs/main/pihole-phishing-adlist.txt phishing/Dogino/Discord-Phishing-URLs-phishing.fork.txt"
   "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe phishing/RPiList/Phishing-Angriffe.fork.txt"
 
-  ## Piracy
+  # Piracy
   "https://blocklistproject.github.io/Lists/piracy.txt piracy/blocklistproject/piracy.fork.txt"
 
-  ## Porn & Adult
+  # Porn & Adult
   "https://blocklistproject.github.io/Lists/porn.txt porn/blocklistproject/porn.fork.txt"
   "https://nsfw.oisd.nl/domainswild2 porn/oisd/nsfw.fork.txt"
   "https://raw.githubusercontent.com/4skinSkywalker/Anti-Porn-HOSTS-File/master/HOSTS.txt porn/4skinSkywalker/hosts.fork.txt"
@@ -88,30 +89,30 @@ urls=(
   "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts porn/Sinfonietta/pornography-hosts.fork.txt"
   "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts porn/StevenBlack/porn.fork.txt"
 
-  ## Ransomware
+  # Ransomware
   "https://blocklistproject.github.io/Lists/ransomware.txt ransomware/blocklistproject/ransomware.fork.txt"
 
-  ## Redirects
+  # Redirects
   "https://blocklistproject.github.io/Lists/redirect.txt redirect/blocklistproject/redirect.fork.txt"
 
-  ## Scam
+  # Scam
   "https://blocklistproject.github.io/Lists/scam.txt scam/blocklistproject/scam.fork.txt"
   "https://raw.githubusercontent.com/Dogino/Discord-Phishing-URLs/main/scam-urls.txt scam/Dogino/Discord-Phishing-URLs-scam.fork.txt"
   "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt scam/durablenapkin/scamblocklist.fork.txt"
   "https://raw.githubusercontent.com/jarelllama/Scam-Blocklist/main/lists/wildcard_domains/scams.txt scam/jarelllama/scam.fork.txt"
   "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Scam scam/ShadowWhisperer/scam.fork.txt"
 
-  ## Polish filters
+  # Polish filters
   "https://hole.cert.pl/domains/v2/domains_hosts.txt other/polish-blocklists/cert.pl/domains-hosts.fork.txt"
   "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt other/polish-blocklists/MajkiIT/hostfile.fork.txt"
   "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt other/polish-blocklists/PolishFiltersTeam/KADhosts.fork.txt"
 
-  ## Spam
+  # Spam
   "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts spam/FadeMind/add-Spam.fork.txt"
   "https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails spam/RPiList/spam-mails.fork.txt"
   "https://www.stopforumspam.com/downloads/toxic_domains_whole.txt spam/stopforumspam/toxic-domains-whole.fork.txt"
 
-  ## Tracking and telemetry
+  # Tracking and telemetry
   "https://ente.dev/api/blocklist/tv tracking-and-telemetry/ente-dev/tv.fork.txt"
   "https://gitlab.com/quidsup/notrack-blocklists/-/raw/master/trackers.hosts tracking-and-telemetry/quidsup/trackers-hosts.fork.txt"
   "https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt tracking-and-telemetry/frogeye/firstparty-trackers-hosts.txt"
@@ -120,11 +121,11 @@ urls=(
   "https://raw.githubusercontent.com/neodevpro/neodevhost/master/host tracking-and-telemetry/neodevpro/host.fork.txt"
   "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking tracking-and-telemetry/ShadowWhisperer/tracking.fork.txt"
 
-  ## Suspicious
+  # Suspicious
   "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts suspicious/FadeMind/add-Risk.fork.txt"
   "https://v.firebog.net/hosts/static/w3kbl.txt suspicious/firebog/w3kbl.fork.txt"
 
-  ## Extension
+  # Extension
   "https://big.oisd.nl/domainswild2 extensions/oisd/big.fork.txt"
   "https://justdomains.github.io/blocklists/lists/adguarddns-justdomains.txt extensions/justdomains/adguarddns-justdomains.fork.txt"
   "https://raw.githubusercontent.com/deathbybandaid/piholeparser/master/Subscribable-Lists/CountryCodesLists/France.txt extensions/deathbybandaid/CountryCodesLists-France.fork.txt"
@@ -137,90 +138,89 @@ urls=(
   "https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardApps.txt extensions/r-a-y/AdguardApps.fork.txt"
   "https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardMobileSpyware.txt extensions/r-a-y/AdguardMobileSpyware.fork.txt"
 
-  ## Fraud
+  # Fraud
   "https://blocklistproject.github.io/Lists/fraud.txt fraud/blocklistproject/hosts.fork.txt"
 
-  ## StevenBlack hosts
+  # StevenBlack hosts
   "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts other/StevenBlack/hosts.fork.txt"
   "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts other/StevenBlack/fakenews-gambling-porn.fork.txt"
 
-  ## Useless websites
+  # Useless websites
   "https://raw.githubusercontent.com/jarelllama/Scam-Blocklist/main/data/parked_domains.txt useless-websites/jarelllama/parked-domains.fork.txt"
 
-  ## Dead domains
+  # Dead domains
   "https://raw.githubusercontent.com/jarelllama/Scam-Blocklist/main/data/dead_domains.txt dead-domains/jarelllama/dead-domains.fork.txt"
 )
 
-# Verifying the presence of required tools: curl and node
-if ! command -v curl &> /dev/null; then
-    echo "❌ curl could not be found. Please install curl!"
+# Verify required dependencies are installed
+for cmd in curl node; do
+  if ! command -v "$cmd" &>/dev/null; then
+    echo "❌ '$cmd' is not installed."
     exit 1
-fi
+  fi
+done
 
-if ! command -v node &> /dev/null; then
-    echo "❌ node could not be found. Please install Node.js!"
-    exit 1
-fi
-
-# Setting up the base directory for blocklist downloads
+# Set base directory for downloads
 base_output_dir="blocklists/templates"
-
-# Creating the base directory if it does not exist, notifying the user
 if [ ! -d "$base_output_dir" ]; then
   mkdir -p "$base_output_dir"
-  echo "🔵 Directory '$base_output_dir' was created"
+  echo "🔵 Created directory: $base_output_dir"
 fi
 
-# Reading the version from package.json to use in the user agent
-package_json_path="./package.json"
-if [ -f "$package_json_path" ]; then
-  version=$(node -p "require('$package_json_path').version")
+# Read version from package.json to build User-Agent
+if [ -f "./package.json" ]; then
+  version=$(node -p "require('./package.json').version")
   user_agent="Mozilla/5.0 (compatible; SefinekBlocklists/${version}; +https://blocklist.sefinek.net)"
 else
-  echo "🔴 package.json file not found"
+  echo "🔴 package.json not found."
   exit 1
 fi
 
-# Starting the download process
-echo "🔵 Starting the download process..."
-echo
-
-for url in "${urls[@]}"; do
-  # Splitting the URL and path for each blocklist
-  IFS=' ' read -r download_url relative_path <<< "$url"
-  old_ifs="$IFS"
-  IFS=$'\n'
-
-  # Constructing the full path and creating any missing directories
-  full_path="$base_output_dir/$relative_path"
-  file_dir=$(dirname "$full_path")
-  if [ ! -d "$file_dir" ]; then
-    mkdir -p "$file_dir"
-    echo "🔵 Directory '$file_dir' was created"
-  fi
-
-  # Downloading the blocklist with curl
-  filename=$(basename "$full_path")
-
-  echo "📥 Downloading $filename from $download_url..."
-  if ! file_size=$(curl -A "$user_agent" -L -o "$file_dir/$filename" "$download_url" -w "%{size_download}"); then
-    echo "❌ An error occurred while downloading $download_url."
+# Function: format file size
+format_size() {
+  local bytes=$1
+  if ((bytes >= 1048576)); then
+    printf "%.2f MB" "$(awk "BEGIN {print $bytes/1048576}")"
+  elif ((bytes >= 1024)); then
+    printf "%.2f KB" "$(awk "BEGIN {print $bytes/1024}")"
   else
-    # Formatting the file size for better readability
-    if [ "$file_size" -ge 1048576 ]; then
-      file_size=$(echo "scale=2; $file_size / 1048576" | bc)
-      size_unit="MB"
-    else
-      file_size=$(echo "scale=2; $file_size / 1024" | bc)
-      size_unit="KB"
-    fi
-    echo "✔️ Successfully downloaded $filename (Size: $file_size $size_unit)"
+    printf "%d B" "$bytes"
   fi
+}
 
-  echo
+# Function to download a single file
+download_file() {
+  local entry="$1"
+  local download_url="${entry%% *}"
+  local relative_path="${entry#* }"
+  local full_path="$base_output_dir/$relative_path"
+  local file_dir
+  file_dir=$(dirname "$full_path")
 
-  IFS="$old_ifs"
+  mkdir -p "$file_dir"
+
+  local file_size
+  if file_size=$(curl --silent --show-error --location --user-agent "$user_agent" --retry 3 --retry-delay 2 --retry-max-time 30 --output "$full_path" --write-out "%{size_download}" "$download_url"); then
+    local formatted_size
+    formatted_size=$(format_size "$file_size")
+    echo "✔️ Downloaded: $download_url [$formatted_size]"
+  else
+    echo "❌ Failed to download: $download_url"
+  fi
+}
+
+echo "🔵 Starting to download ${#urls[@]} files..."
+max_jobs=3
+current_jobs=0
+
+for entry in "${urls[@]}"; do
+  download_file "$entry" &
+  ((current_jobs++))
+
+  if (( current_jobs >= max_jobs )); then
+    wait -n
+    ((current_jobs--))
+  fi
 done
 
-echo
-echo "✔️ Success! Finished at: $(date +'%Y-%m-%d %H:%M:%S')"
+wait

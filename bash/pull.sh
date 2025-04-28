@@ -1,44 +1,42 @@
 #!/bin/bash
 
+# Function: get UTC date or datetime
+utc_now() {
+  if [[ "$1" == "date" ]]; then
+    date -u +"%Y-%m-%d"
+  else
+    date -u +"%Y-%m-%d %H:%M:%S"
+  fi
+}
+
 # Paths
 repo_path="/home/sefinek/node/Sefinek-Blocklist-Collection" # Path to the repository
 logs_dir="$repo_path/www/public/logs" # Directory to store logs
-output_file="$logs_dir/pull_$(date +'%Y-%m-%d').log" # Path to the output log file
+log_file="$logs_dir/pull_$(utc_now date).log" # Path to the log file
 
 # Check if Git is installed
-if ! command -v git &> /dev/null; then
-    echo "Git is not installed. Please install Git."
-    exit 1
+if ! command -v git &>/dev/null; then
+  echo "❌ Git is not installed! Please install Git."
+  exit 1
 fi
 
-echo -e "Please wait...\n"
-
-# Create the logs directory if it doesn't exist
+# Prepare the environment
 mkdir -p "$logs_dir"
 
-# Write logs to the output file
+# Run git pull and install dependencies
 {
-    echo "========================================== $(date +'%Y-%m-%d %H:%M:%S') =========================================="
+    echo "========================================== $(utc_now) UTC =========================================="
     echo
 
-    # Check if the repository directory exists
-    if [ -d "$repo_path" ]; then
-        cd "$repo_path" || exit
-
+    if cd "$repo_path"; then
         if git pull; then
             npm install --omit=dev
-            # pm2 restart blocklist
-
-            echo -e "\nSuccess! Finished at: $(date +'%Y-%m-%d %H:%M:%S')"
+            echo -e "\n✔️ Success! Finished at: $(utc_now) UTC"
         else
-            echo -e "\nError during Git operations!"
+            echo -e "\n❌ Error during Git operations!"
         fi
         echo
     else
-        echo "Repository path $repo_path does not exist."
-        exit 1
+        echo "❌ Repository path not found: $repo_path"
     fi
-} >> "$output_file"
-
-# Final
-echo -e "\nDone! Output file has been created or updated: $output_file"
+} >>"$log_file"
