@@ -210,7 +210,7 @@ download_file() {
 }
 
 echo "🔵 Starting to download ${#urls[@]} files..."
-max_jobs=3
+max_jobs=4
 current_jobs=0
 
 for entry in "${urls[@]}"; do

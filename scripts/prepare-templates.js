@@ -50,7 +50,7 @@ const processDirectory = async dirPath => {
 					continue;
 				}
 
-				// 127.0.0.1 example.com → 0.0.0.0 example.com
+				// 127.0.0.1 → 0.0.0.0
 				if ((/^127\.0\.0\.1\s+|^195\.187\.6\.3[3-5]\s+/).test(line)) {
 					line = line.replace(/^127\.0\.0\.1\s+|^195\.187\.6\.3[3-5]\s+/, '0.0.0.0 ');
 					stats.ipsReplaced++;
@@ -86,7 +86,7 @@ const processDirectory = async dirPath => {
 					stats.modifiedLines++;
 				}
 
-				// 0.0.0.0 example.com → 0.0.0.0 example.com
+				// 0.0.0.0 EXAMPLE.com → 0.0.0.0 example.com
 				if ((/^0\.0\.0\.0\s+/).test(line)) {
 					const words = line.split(/\s+/);
 					const domain = words[1];
@@ -105,7 +105,7 @@ const processDirectory = async dirPath => {
 					stats.modifiedLines++;
 				}
 
-				// 0.0.0.0 multi domain line handling
+				// 0.0.0.0 multi-domain handling (with port fix)
 				if (line.startsWith('0.0.0.0')) {
 					const commentIndex = line.indexOf('#');
 					const hasComment = commentIndex !== -1;
@@ -130,11 +130,7 @@ const processDirectory = async dirPath => {
 									}
 
 									newLines.push(entry);
-
-									if (domain !== next) {
-										stats.portRemoved++;
-										stats.modifiedLines++;
-									}
+									if (domain !== next) stats.portRemoved++;
 
 									i++;
 								}
@@ -142,9 +138,12 @@ const processDirectory = async dirPath => {
 						}
 
 						if (newLines.length) {
-							line = newLines.join('\n');
-							if (newLines.length > 1) {
+							const joined = newLines.join('\n');
+							if (joined !== line) {
+								line = joined;
 								stats.modifiedLines++;
+							}
+							if (newLines.length > 1) {
 								stats.splitMultiDomain++;
 							}
 						}
