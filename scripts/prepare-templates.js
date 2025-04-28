@@ -63,70 +63,67 @@ const processDirectory = async dirPath => {
 
 				// ||example.com^ → 0.0.0.0 example.com
 				if (line.startsWith('||') && line.endsWith('^')) {
-					line = `0.0.0.0 ${line.replace(/^(\|\|)/, '').replace(/\^$/, '')}`;
+					line = `0.0.0.0 ${line.slice(2, -1)}`;
 					stats.modifiedLines++;
 					stats.convertedAdGuard++;
 				}
 
 				// example.com/ → example.com
 				if (line.endsWith('/')) {
-					line = line.replace(/\/$/, '');
+					line = line.slice(0, -1);
 					stats.modifiedLines++;
 				}
 
-				// example.com → 0.0.0.0 example.com
-				if (!line.startsWith('0.0.0.0 ')) {
-					line = `0.0.0.0 ${line.toLowerCase()}`;
-					stats.modifiedLines++;
-					stats.fqdnConverted++;
-				}
-
-				// 0.0.0.0example.com → 0.0.0.0 example.com
-				const match = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
-				if (match) {
-					line = `0.0.0.0 ${match[1].toLowerCase()}${match[2] || ''}`;
+				// 0.0.0.0 glued with domain → separate
+				const gluedMatch = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
+				if (gluedMatch) {
+					line = `0.0.0.0 ${gluedMatch[1]}${gluedMatch[2] || ''}`;
 					stats.modifiedLines++;
 					stats.fixedGlued++;
 				}
 
-				// 0.0.0.0 DOMAIN.tld → 0.0.0.0 domain.tld
-				if ((/^0\.0\.0\.0\s+/).test(line)) {
-					const words = line.split(/\s+/);
-					const domain = words[1];
-					if ((/[A-Z]/).test(domain)) {
-						line = `${words[0]} ${domain.toLowerCase()} ${words.slice(2).join(' ')}`.trim();
-						stats.modifiedLines++;
-						stats.convertedDomains++;
-						stats.domainToLower++;
-					}
-				}
-
-				// 0.0.0.0\t... or 0.0.0.0  ... → 0.0.0.0 ...
-				if (line.startsWith('0.0.0.0\t') || line.startsWith('0.0.0.0  ')) {
-					line = line.replace(/0\.0\.0\.0\s+/, '0.0.0.0 ');
+				// Normalize whitespace after 0.0.0.0
+				if (line.startsWith('0.0.0.0\t') || line.match(/^0\.0\.0\.0\s{2,}/)) {
+					line = line.replace(/^0\.0\.0\.0\s+/, '0.0.0.0 ');
 					stats.modifiedLines++;
 					stats.normalizedSpacing++;
 				}
 
-				// Split multi-domain line and preserve comment if any
-				// . . .
+				// Ensure line starts with '0.0.0.0'
+				if (!line.startsWith('0.0.0.0 ')) {
+					line = `0.0.0.0 ${line}`;
+					stats.modifiedLines++;
+					stats.fqdnConverted++;
+				}
 
-				// 0.0.0.0 example.com:1234 → 0.0.0.0 example.com
-				if (line.startsWith('0.0.0.0')) {
-					const [, rawDomain, ...rest] = line.split(/\s+/);
-					if (!rawDomain) {
-						stats.invalidLinesRemoved++;
-						continue;
+				// Lowercase the domain
+				const parts = line.split(/\s+/);
+				if (parts[1]) {
+					const lowerDomain = parts[1].toLowerCase();
+					if (parts[1] !== lowerDomain) {
+						parts[1] = lowerDomain;
+						line = parts.join(' ');
+						stats.modifiedLines++;
+						stats.domainToLower++;
 					}
+				} else {
+					stats.invalidLinesRemoved++;
+					continue;
+				}
 
-					const domain = rawDomain.split(':')[0];
-					if (!validator.isFQDN(domain, { allow_underscores: true }) || isSuspiciousDomain(domain)) {
-						stats.invalidLinesRemoved++;
-						continue;
-					}
+				// Remove ports from domain
+				const domainNoPort = parts[1].split(':')[0];
+				if (parts[1] !== domainNoPort) {
+					parts[1] = domainNoPort;
+					line = parts.join(' ');
+					stats.modifiedLines++;
+					stats.portRemoved++;
+				}
 
-					line = `0.0.0.0 ${domain}${rest.length ? ` ${rest.join(' ')}` : ''}`;
-					if (domain !== rawDomain) stats.modifiedLines++;
+				// Final validation
+				if (!validator.isFQDN(parts[1], { allow_underscores: true }) || isSuspiciousDomain(parts[1])) {
+					stats.invalidLinesRemoved++;
+					continue;
 				}
 
 				processedLines.push(line);
