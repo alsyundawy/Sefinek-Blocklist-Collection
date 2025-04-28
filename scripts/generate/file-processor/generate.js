@@ -6,14 +6,11 @@ const cluster = require('node:cluster');
 const numCPUs = require('node:os').availableParallelism();
 const { CATEGORIES, GLOBAL_WHITELIST } = require('./scripts/data.js');
 
-const tmpDir = join(__dirname, '..', '..', '..', 'tmp');
-const inputFilePath = join(tmpDir, 'global.txt');
+const TMP_DIR = join(__dirname, '..', '..', '..', 'tmp');
+const MAIN_FILE = join(TMP_DIR, 'main.txt');
 
-const matchesPattern = (pattern, domain) =>
-	new RegExp('^' + pattern.replace(/\./g, '\\.').replace(/\*/g, '.*') + '$').test(domain);
-
-const isDomainWhitelisted = domain =>
-	GLOBAL_WHITELIST.some(pattern => matchesPattern(pattern, domain));
+const matchesPattern = (pattern, domain) => new RegExp('^' + pattern.replace(/\./g, '\\.').replace(/\*/g, '.*') + '$').test(domain);
+const isDomainWhitelisted = domain => GLOBAL_WHITELIST.some(pattern => matchesPattern(pattern, domain));
 
 const setupWriteStreams = () => {
 	const streams = {};
@@ -32,7 +29,7 @@ const processChunk = async (start, end, chunkId) => {
 	const counters = Object.fromEntries(CATEGORIES.map(({ file }) => [file, 0]));
 	const writeStreams = setupWriteStreams();
 
-	const rl = readline.createInterface({ input: createReadStream(inputFilePath, { start, end }), crlfDelay: Infinity });
+	const rl = readline.createInterface({ input: createReadStream(MAIN_FILE, { start, end }), crlfDelay: Infinity });
 	rl.on('line', line => {
 		if (!line || isDomainWhitelisted(line)) return;
 
@@ -63,7 +60,7 @@ const startMaster = async () => {
 		await mkdir(dir, { recursive: true });
 	}
 
-	const fileSize = statSync(inputFilePath).size;
+	const fileSize = statSync(MAIN_FILE).size;
 	const chunkSize = Math.ceil(fileSize / numCPUs);
 
 	for (let i = 0; i < numCPUs; i++) {
@@ -77,9 +74,9 @@ const startMaster = async () => {
 		exited++;
 		if (code !== 0) console.error(`Worker ${worker.process.pid} exited with code ${code}`);
 		if (exited === numCPUs) {
-			rm(tmpDir, { recursive: true, force: true })
-				.then(() => console.log(`Deleted ${tmpDir}`))
-				.catch(err => console.error(`Failed to delete ${tmpDir}: ${err.message}`));
+			rm(TMP_DIR, { recursive: true, force: true })
+				.then(() => console.log(`Deleted ${TMP_DIR}`))
+				.catch(err => console.error(`Failed to delete ${TMP_DIR}: ${err.message}`));
 		}
 	});
 };

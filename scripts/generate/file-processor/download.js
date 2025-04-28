@@ -8,8 +8,8 @@ const { createWriteStream, createReadStream } = require('node:fs');
 const { pipeline } = require('node:stream/promises');
 const { fileUrls } = require('./scripts/data.js');
 
-const tmpDir = join(__dirname, '..', '..', '..', 'tmp');
-const globalFilePath = join(tmpDir, 'global.txt');
+const TMP_DIR = join(__dirname, '..', '..', '..', 'tmp');
+const MAIN_FILE = join(TMP_DIR, 'main.txt');
 
 const downloadFile = async (url, outputPath) => {
 	console.log(`Downloading: ${url}`);
@@ -60,15 +60,15 @@ const handleCompressedFile = async (filePath, outputDir, writeStream) => {
 };
 
 const main = async () => {
-	await rm(tmpDir, { recursive: true, force: true });
-	await mkdir(tmpDir, { recursive: true });
+	await rm(TMP_DIR, { recursive: true, force: true });
+	await mkdir(TMP_DIR, { recursive: true });
 
-	const writeStream = createWriteStream(globalFilePath, { flags: 'a' });
+	const writeStream = createWriteStream(MAIN_FILE, { flags: 'a' });
 
 	for (const { url, name } of fileUrls) {
 		const fileName = name || basename(url);
-		const filePath = join(tmpDir, fileName);
-		const extractPath = join(tmpDir, `${fileName}_extracted`);
+		const filePath = join(TMP_DIR, fileName);
+		const extractPath = join(TMP_DIR, `${fileName}_extracted`);
 
 		try {
 			await downloadFile(url, filePath);
@@ -86,7 +86,7 @@ const main = async () => {
 	}
 
 	await new Promise(resolve => writeStream.end(resolve));
-	console.log('Domain list saved to', globalFilePath);
+	console.log('Domain list saved to', MAIN_FILE);
 };
 
 main().catch(err => console.error('Fatal error:', err.message));
