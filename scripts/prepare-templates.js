@@ -48,34 +48,34 @@ const processDirectory = async dirPath => {
 					continue;
 				}
 
-				// IP replacements
+				// 127.0.0.1 domain.com → 0.0.0.0 domain.com
 				if ((/^127\.0\.0\.1\s+/).test(line) || (/^195\.187\.6\.3[3-5]\s+/).test(line)) {
 					line = line.replace(/^127\.0\.0\.1\s+|^195\.187\.6\.3[3-5]\s+/, '0.0.0.0 ');
 					stats.ipsReplaced++;
 					stats.modifiedLines++;
 				}
 
-				// AdGuard rule
+				// ||domain.com^ → 0.0.0.0 domain.com
 				if (line.startsWith('||') && line.endsWith('^')) {
 					line = `0.0.0.0 ${line.slice(2, -1)}`;
 					stats.convertedAdGuard++;
 					stats.modifiedLines++;
 				}
 
-				// Remove trailing slash
+				// domain.com/ → domain.com
 				if (line.endsWith('/')) {
 					line = line.slice(0, -1);
 					stats.modifiedLines++;
 				}
 
-				// FQDN conversion
+				// domain.com → 0.0.0.0 domain.com
 				if (!line.startsWith('0.0.0.0 ')) {
 					line = `0.0.0.0 ${line.toLowerCase()}`;
 					stats.fqdnConverted++;
 					stats.modifiedLines++;
 				}
 
-				// Fix glued IP/domain
+				// 0.0.0.0domain.com → 0.0.0.0 domain.com
 				const glued = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
 				if (glued) {
 					line = `0.0.0.0 ${glued[1].toLowerCase()}${glued[2] || ''}`;
@@ -83,7 +83,7 @@ const processDirectory = async dirPath => {
 					stats.modifiedLines++;
 				}
 
-				// Lowercase domains
+				// 0.0.0.0 Domain.COM → 0.0.0.0 domain.com
 				if ((/^0\.0\.0\.0\s+/).test(line)) {
 					const words = line.split(/\s+/);
 					const domain = words[1];
@@ -95,14 +95,14 @@ const processDirectory = async dirPath => {
 					}
 				}
 
-				// Normalize spacing
+				// 0.0.0.0   domain.com → 0.0.0.0 domain.com
 				if ((/^0\.0\.0\.0\s{2,}|\t+/).test(line)) {
 					line = line.replace(/^0\.0\.0\.0\s+/, '0.0.0.0 ');
 					stats.normalizedSpacing++;
 					stats.modifiedLines++;
 				}
 
-				// Split multi-domain lines
+				// 0.0.0.0 domain1.com domain2.com → 0.0.0.0 domain1.com + 0.0.0.0 domain2.com
 				if (line.startsWith('0.0.0.0')) {
 					const [mainPart, comment] = line.split('#', 2);
 					const parts = mainPart.trim().split(/\s+/);
@@ -119,7 +119,7 @@ const processDirectory = async dirPath => {
 					}
 				}
 
-				// Convert comments
+				// ! comment → # comment
 				if (line.startsWith('!')) {
 					line = line.replace(/^!+/, '#');
 					if (line === '# Syntax: Adblock Plus Filter List') {
@@ -129,7 +129,7 @@ const processDirectory = async dirPath => {
 					stats.modifiedLines++;
 				}
 
-				// Validate domain and remove port if present
+				// 0.0.0.0 example.com:1234 → 0.0.0.0 example.com
 				if (line.startsWith('0.0.0.0')) {
 					const [, rawDomain, ...rest] = line.split(/\s+/);
 					if (!rawDomain) {
@@ -138,12 +138,14 @@ const processDirectory = async dirPath => {
 					}
 
 					const domain = rawDomain.split(':')[0];
+
 					if (!validator.isFQDN(domain, { allow_underscores: true }) || isSuspiciousDomain(domain)) {
 						stats.invalidLinesRemoved++;
 						continue;
 					}
 
 					line = `0.0.0.0 ${domain}${rest.length ? ' ' + rest.join(' ') : ''}`;
+
 					if (domain !== rawDomain) stats.modifiedLines++;
 				}
 
