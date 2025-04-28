@@ -43,6 +43,9 @@ jobs:
       - name: Count domains
         run: node scripts/update-number-of-domains.js
 
+      - name: Lint
+        run: node scripts/lint.js
+
       - name: Generate No IP list
         run: node scripts/generate/noip.js
 
