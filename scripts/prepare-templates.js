@@ -74,7 +74,7 @@ const processDirectory = async dirPath => {
 					stats.modifiedLines++;
 				}
 
-				// 0.0.0.0example.com → example.com
+				// 0.0.0.0example.com → 0.0.0.0 example.com
 				const gluedIpMatch = line.match(/^(?:127\.0\.0\.1|0\.0\.0\.0)([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
 				if (gluedIpMatch) {
 					line = `0.0.0.0 ${gluedIpMatch[1]}${gluedIpMatch[2] || ''}`;
@@ -97,7 +97,7 @@ const processDirectory = async dirPath => {
 				}
 
 				// 0.0.0.0 EXAMPLE.com → 0.0.0.0 example.com
-				const parts = line.split(/\s+/);
+				let parts = line.split(/\s+/);
 				if (parts[1]) {
 					const lowerDomain = parts[1].toLowerCase();
 					if (parts[1] !== lowerDomain) {
@@ -120,7 +120,7 @@ const processDirectory = async dirPath => {
 					stats.portRemoved++;
 				}
 
-				// 0.0.0.0 example1.com example2.com -> split into multiple lines
+				// 0.0.0.0 example1.com example2.com → split into multiple lines
 				if (line.startsWith('0.0.0.0') && !line.includes('#')) {
 					const words = line.split(/\s+/);
 					const ipAddress = words.shift();
@@ -146,6 +146,7 @@ const processDirectory = async dirPath => {
 						continue;
 					} else {
 						line = `${ipAddress} ${words[0].toLowerCase().split(':')[0]}`;
+						parts = line.split(/\s+/);
 					}
 				}
 
