@@ -17,14 +17,14 @@ const isSuspiciousDomain = domain =>
 	(domain.match(/\./g) || []).length > 32 ||
 	!(/^[a-z0-9._-]+$/i).test(domain);
 
+const isIPAddress = text => (/^(\d{1,3}\.){3}\d{1,3}$/).test(text);
+
 const processDirectory = async dirPath => {
 	try {
 		await mkdir(dirPath, { recursive: true });
+		const fileNames = (await readdir(dirPath)).filter(name => name.endsWith('.txt'));
 
-		const fileNames = await readdir(dirPath);
-		const txtFiles = fileNames.filter(name => name.endsWith('.txt'));
-
-		for (const fileName of txtFiles) {
+		for (const fileName of fileNames) {
 			const filePath = join(dirPath, fileName);
 			const fileContents = await readFile(filePath, 'utf8');
 			const lines = fileContents.split('\n');
@@ -51,7 +51,7 @@ const processDirectory = async dirPath => {
 				}
 
 				// 127.0.0.1 example.com → 0.0.0.0 example.com
-				if ((/^127\.0\.0\.1\s+/).test(line) || (/^195\.187\.6\.3[3-5]\s+/).test(line)) {
+				if ((/^127\.0\.0\.1\s+|^195\.187\.6\.3[3-5]\s+/).test(line)) {
 					line = line.replace(/^127\.0\.0\.1\s+|^195\.187\.6\.3[3-5]\s+/, '0.0.0.0 ');
 					stats.ipsReplaced++;
 					stats.modifiedLines++;
@@ -105,20 +105,49 @@ const processDirectory = async dirPath => {
 					stats.modifiedLines++;
 				}
 
-				// 0.0.0.0 domain1.com domain2.com → 0.0.0.0 domain1.com + 0.0.0.0 domain2.com
+				// 0.0.0.0 multi domain line handling
 				if (line.startsWith('0.0.0.0')) {
-					const [mainPart, comment] = line.split('#', 2);
-					const parts = mainPart.trim().split(/\s+/);
-					if (parts.length > 2) {
-						const ip = parts.shift();
-						const newLines = parts.map((d, i) => {
-							let l = `${ip} ${d.toLowerCase()}`;
-							if (comment && i === parts.length - 1) l += ` #${comment.trim()}`;
-							return l;
-						});
-						line = newLines.join('\n');
-						stats.splitMultiDomain++;
-						stats.modifiedLines++;
+					const commentIndex = line.indexOf('#');
+					const hasComment = commentIndex !== -1;
+					const commentText = hasComment ? line.slice(commentIndex).trim() : '';
+					const mainPart = hasComment ? line.slice(0, commentIndex).trim() : line.trim();
+					const parts = mainPart.split(/\s+/);
+
+					if (parts.length >= 2) {
+						const newLines = [];
+						for (let i = 0; i < parts.length - 1; i++) {
+							const current = parts[i];
+							const next = parts[i + 1];
+
+							if (isIPAddress(current)) {
+								if (next && !isIPAddress(next)) {
+									// 0.0.0.0 example.com:1234 → 0.0.0.0 example.com
+									const domain = next.split(':')[0];
+									let entry = `${current} ${domain.toLowerCase()}`;
+
+									if (newLines.length === 0 && commentText) {
+										entry += ` ${commentText}`;
+									}
+
+									newLines.push(entry);
+
+									if (domain !== next) {
+										stats.portRemoved++;
+										stats.modifiedLines++;
+									}
+
+									i++;
+								}
+							}
+						}
+
+						if (newLines.length) {
+							line = newLines.join('\n');
+							if (newLines.length > 1) {
+								stats.modifiedLines++;
+								stats.splitMultiDomain++;
+							}
+						}
 					}
 				}
 
@@ -130,27 +159,6 @@ const processDirectory = async dirPath => {
 					}
 					stats.commentsConverted++;
 					stats.modifiedLines++;
-				}
-
-				// 0.0.0.0 example.com:1234 → 0.0.0.0 example.com
-				if (line.startsWith('0.0.0.0')) {
-					const [, rawDomain, ...rest] = line.split(/\s+/);
-					if (!rawDomain) {
-						stats.invalidLinesRemoved++;
-						continue;
-					}
-
-					const domain = rawDomain.split(':')[0];
-					if (!validator.isFQDN(domain, { allow_underscores: true }) || isSuspiciousDomain(domain)) {
-						stats.invalidLinesRemoved++;
-						continue;
-					}
-
-					line = `0.0.0.0 ${domain}${rest.length ? ' ' + rest.join(' ') : ''}`;
-					if (domain !== rawDomain) {
-						stats.portRemoved++;
-						stats.modifiedLines++;
-					}
 				}
 
 				processedLines.push(line);
