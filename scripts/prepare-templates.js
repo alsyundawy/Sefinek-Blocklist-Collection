@@ -4,9 +4,9 @@ const validator = require('validator');
 const local = require('./utils/local.js');
 
 const emoji = key => ({
-	modifiedLines: '🧹', convertedDomains: '🔡', invalidLinesRemoved: '❌',
-	ipsReplaced: '🛑', domainToLower: '🔡', convertedAdGuard: '🔄',
-	splitMultiDomain: '✂️', normalizedSpacing: '🔧', fixedGlued: '🩹',
+	modifiedLines: '🔧', convertedDomains: '✨', invalidLinesRemoved: '🧹',
+	ipsReplaced: '🔄', domainToLower: '🔡', convertedAdGuard: '🔄',
+	splitMultiDomain: '✂️', normalizedSpacing: '🔃', fixedGlued: '🩹',
 	commentsConverted: '💬', fqdnConverted: '🌐',
 	portRemoved: '🔪', trailingSlashRemoved: '✂️',
 }[key] || '');
