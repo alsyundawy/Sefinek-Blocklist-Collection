@@ -159,7 +159,7 @@ const processDirectory = async dirPath => {
 			if (Object.values(stats).some(Boolean)) {
 				await writeFile(filePath, processedLines.join('\n').trim(), 'utf8');
 
-				console.log('📝', dirPath);
+				console.log('📝', filePath);
 				Object.entries(stats).forEach(([k, v]) => {
 					if (v) console.log(`   ${emoji(k)} ${v} ${k.replace(/([A-Z])/g, ' $1').toLowerCase()}`);
 				});
