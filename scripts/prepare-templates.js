@@ -75,9 +75,9 @@ const processDirectory = async dirPath => {
 				}
 
 				// 0.0.0.0example.com → example.com
-				const gluedMatch = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
-				if (gluedMatch) {
-					line = `0.0.0.0 ${gluedMatch[1]}${gluedMatch[2] || ''}`;
+				const gluedIpMatch = line.match(/^(?:127\.0\.0\.1|0\.0\.0\.0)([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
+				if (gluedIpMatch) {
+					line = `0.0.0.0 ${gluedIpMatch[1]}${gluedIpMatch[2] || ''}`;
 					stats.modifiedLines++;
 					stats.fixedGlued++;
 				}
@@ -123,8 +123,8 @@ const processDirectory = async dirPath => {
 				// 0.0.0.0 example1.com example2.com -> split into multiple lines
 				if (line.startsWith('0.0.0.0') && !line.includes('#')) {
 					const words = line.split(/\s+/);
-					if (words.length > 2) {
-						const ipAddress = words.shift();
+					const ipAddress = words.shift();
+					if (words.length > 1) {
 						const uniqueDomains = [...new Set(words.map(d => d.toLowerCase().split(':')[0]))];
 
 						const splitLines = uniqueDomains
@@ -138,14 +138,14 @@ const processDirectory = async dirPath => {
 							.map(domain => `${ipAddress} ${domain}`);
 
 						const duplicatesRemoved = words.length - uniqueDomains.length;
-						if (duplicatesRemoved > 0) {
-							stats.invalidLinesRemoved += duplicatesRemoved;
-						}
+						if (duplicatesRemoved > 0) stats.invalidLinesRemoved += duplicatesRemoved;
 
 						stats.modifiedLines++;
 						stats.splitMultiDomain += splitLines.length;
 						processedLines.push(...splitLines);
 						continue;
+					} else {
+						line = `${ipAddress} ${words[0].toLowerCase().split(':')[0]}`;
 					}
 				}
 
