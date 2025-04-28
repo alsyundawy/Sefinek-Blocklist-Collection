@@ -8,6 +8,7 @@ const emoji = key => ({
 	ipsReplaced: '🛑', domainToLower: '🔡', convertedAdGuard: '🔄',
 	splitMultiDomain: '✂️', normalizedSpacing: '🔧', fixedGlued: '🩹',
 	commentsConverted: '💬', fqdnConverted: '🌐',
+	portRemoved: '🔪', trailingSlashRemoved: '✂️',
 }[key] || '');
 
 const isSuspiciousDomain = domain =>
@@ -32,6 +33,7 @@ const processDirectory = async dirPath => {
 				modifiedLines: 0, convertedDomains: 0, invalidLinesRemoved: 0, ipsReplaced: 0,
 				domainToLower: 0, convertedAdGuard: 0, splitMultiDomain: 0, normalizedSpacing: 0,
 				fixedGlued: 0, commentsConverted: 0, fqdnConverted: 0,
+				portRemoved: 0, trailingSlashRemoved: 0,
 			};
 
 			const processedLines = [];
@@ -48,34 +50,35 @@ const processDirectory = async dirPath => {
 					continue;
 				}
 
-				// 127.0.0.1 domain.com → 0.0.0.0 domain.com
+				// 127.0.0.1 example.com → 0.0.0.0 example.com
 				if ((/^127\.0\.0\.1\s+/).test(line) || (/^195\.187\.6\.3[3-5]\s+/).test(line)) {
 					line = line.replace(/^127\.0\.0\.1\s+|^195\.187\.6\.3[3-5]\s+/, '0.0.0.0 ');
 					stats.ipsReplaced++;
 					stats.modifiedLines++;
 				}
 
-				// ||domain.com^ → 0.0.0.0 domain.com
+				// ||example.com^ → 0.0.0.0 example.com
 				if (line.startsWith('||') && line.endsWith('^')) {
 					line = `0.0.0.0 ${line.slice(2, -1)}`;
 					stats.convertedAdGuard++;
 					stats.modifiedLines++;
 				}
 
-				// domain.com/ → domain.com
+				// example.com/ → example.com
 				if (line.endsWith('/')) {
 					line = line.slice(0, -1);
+					stats.trailingSlashRemoved++;
 					stats.modifiedLines++;
 				}
 
-				// domain.com → 0.0.0.0 domain.com
+				// example.com → 0.0.0.0 example.com
 				if (!line.startsWith('0.0.0.0 ')) {
 					line = `0.0.0.0 ${line.toLowerCase()}`;
 					stats.fqdnConverted++;
 					stats.modifiedLines++;
 				}
 
-				// 0.0.0.0domain.com → 0.0.0.0 domain.com
+				// 0.0.0.0example.com → 0.0.0.0 example.com
 				const glued = line.match(/^0\.0\.0\.0([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(\s+.*)?$/);
 				if (glued) {
 					line = `0.0.0.0 ${glued[1].toLowerCase()}${glued[2] || ''}`;
@@ -83,7 +86,7 @@ const processDirectory = async dirPath => {
 					stats.modifiedLines++;
 				}
 
-				// 0.0.0.0 Domain.COM → 0.0.0.0 domain.com
+				// 0.0.0.0 example.com → 0.0.0.0 example.com
 				if ((/^0\.0\.0\.0\s+/).test(line)) {
 					const words = line.split(/\s+/);
 					const domain = words[1];
@@ -95,7 +98,7 @@ const processDirectory = async dirPath => {
 					}
 				}
 
-				// 0.0.0.0   domain.com → 0.0.0.0 domain.com
+				// 0.0.0.0   example.com → 0.0.0.0 example.com
 				if ((/^0\.0\.0\.0\s{2,}|\t+/).test(line)) {
 					line = line.replace(/^0\.0\.0\.0\s+/, '0.0.0.0 ');
 					stats.normalizedSpacing++;
@@ -138,15 +141,16 @@ const processDirectory = async dirPath => {
 					}
 
 					const domain = rawDomain.split(':')[0];
-
 					if (!validator.isFQDN(domain, { allow_underscores: true }) || isSuspiciousDomain(domain)) {
 						stats.invalidLinesRemoved++;
 						continue;
 					}
 
 					line = `0.0.0.0 ${domain}${rest.length ? ' ' + rest.join(' ') : ''}`;
-
-					if (domain !== rawDomain) stats.modifiedLines++;
+					if (domain !== rawDomain) {
+						stats.portRemoved++;
+						stats.modifiedLines++;
+					}
 				}
 
 				processedLines.push(line);
