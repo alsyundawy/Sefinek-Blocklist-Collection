@@ -68,7 +68,7 @@ jobs:
         run: node scripts/lint.js
 
       - name: Run git pull
-        run: git pull --rebase origin main
+        run: git pull origin main
 
       - name: Add files to staging
         run: git add .
