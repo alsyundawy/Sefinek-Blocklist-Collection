@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025042801 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025042601 43200 3600 259200 300
   NS  localhost.
 adx-open-service.youku.com CNAME .
 *.adx-open-service.youku.com CNAME .
@@ -147,8 +147,6 @@ xdrig.com CNAME .
 *.xdrig.com CNAME .
 usp1.baidu.com CNAME .
 *.usp1.baidu.com CNAME .
-54.222.186.106 CNAME .
-*.54.222.186.106 CNAME .
 plugin.mobopay.baidu.com CNAME .
 *.plugin.mobopay.baidu.com CNAME .
 mo.freeindoapp.com CNAME .

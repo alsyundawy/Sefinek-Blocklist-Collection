@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025042801 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025042501 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -4883,8 +4883,6 @@ personagraph.com CNAME .
 *.personagraph.com CNAME .
 pgl.example.com CNAME .
 *.pgl.example.com CNAME .
-pgl.example0101 CNAME .
-*.pgl.example0101 CNAME .
 pgmediaserve.com CNAME .
 *.pgmediaserve.com CNAME .
 pgpartner.com CNAME .
