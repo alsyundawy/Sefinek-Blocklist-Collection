@@ -125,12 +125,27 @@ const processDirectory = async dirPath => {
 					const words = line.split(/\s+/);
 					if (words.length > 2) {
 						const ipAddress = words.shift();
-						line = words
-							.filter(Boolean)
-							.map(d => `${ipAddress} ${d.toLowerCase()}`)
-							.join('\n')
-							.trim();
+						const uniqueDomains = [...new Set(words.map(d => d.toLowerCase().split(':')[0]))];
+
+						const splitLines = uniqueDomains
+							.filter(domain => {
+								if (!validator.isFQDN(domain, { allow_underscores: true }) || isSuspiciousDomain(domain)) {
+									stats.invalidLinesRemoved++;
+									return false;
+								}
+								return true;
+							})
+							.map(domain => `${ipAddress} ${domain}`);
+
+						const duplicatesRemoved = words.length - uniqueDomains.length;
+						if (duplicatesRemoved > 0) {
+							stats.invalidLinesRemoved += duplicatesRemoved;
+						}
+
 						stats.modifiedLines++;
+						stats.splitMultiDomain += splitLines.length;
+						processedLines.push(...splitLines);
+						continue;
 					}
 				}
 
