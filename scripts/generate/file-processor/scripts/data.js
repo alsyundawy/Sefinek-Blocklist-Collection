@@ -1,6 +1,6 @@
 exports.CATEGORIES = [{
-	title: 'Blocks websites related to anime and explicit or niche otaku content',
-	description: 'Active, inactive, and parked domains. Blocks anime, manga, cosplay, vtubers, hentai, ecchi, etc.',
+	title: 'Blocks everything related to anime, manga, or VTubers',
+	description: 'Active, inactive, and parked domains. Blocks websites related to anime, manga, cosplay, vtubers, hentai, ecchi, etc.',
 	category: 'Anime',
 	// grex "anime" "rule34" "manga" "animeboobs" "nekomimi" "nekomusume" "crunchyroll" "hentai" "vtuber" "cosplay" "otaku" "shonen" "shoujo" "yuri" "yaoi" "ecchi" "isekai" "kawaii" "tsundere" "yandere" "yande.re" "waifu" "seinen" "doujinshi" "bishounen" "bishoujo" "chibi" "bishojo" "doujin" "seiyuu" "harem" "loli"
 	regex: /c(?:runchyroll|osplay)|animeboobs|(?:nekomusum|yander)e|bisho(?:u(?:nen|jo)|jo)|(?:doujinsh|henta|iseka|kawai|chib|ecch|lol|y(?:ao|ur))i|nekomimi|yande\.re|tsundere|doujin|rule34|seiyuu|vtuber|shoujo|s(?:ei|ho)nen|anime|harem|manga|(?:otak|waif)u/i,
@@ -10,7 +10,7 @@ exports.CATEGORIES = [{
 	description: 'Active, inactive, and parked domains. Some of them may also share pornographic content.',
 	category: 'LGBTQ+',
 	// grex "lgbt" "gay" "geje" "gejowski" "lesbian" "lesbijka" "lesbijki" "lesbijek" "lesbijska" "bisexual" "biseksualny" "biseksualna" "biseksualni" "transflag" "genderflag" "transgender" "transseksualista" "transseksualistka" "transowa" "transseksualny" "transseksualna" "transexual" "transsexual" "transexual" "transowy" "tranzytowy" "nonbinary" "niebinarny" "niebinarna" "asexual" "aseksualny" "aseksualna" "aseksualni" "pansexual" "panseksualny" "panseksualna" "aromantic" "aromantyczny" "aromantyczna" "aromantyczni" "demisexual" "demiseksualny" "demiseksualna" "cisgender" "cispłciowy" "cispłciowa" "genderfluid" "genderqueer" "queer" "lesbijka" "lesbijki" "aseksualny" "aseksualna" "interseksualny" "interseksualna" "interseksualni" "bigender" "dwupłciowy" "agender" "bezpłciowy" "two-spirit" "dwuduchowy" "allosexual" "alloseksualny" "alloseksualna" "alloromantic" "alloromantyczny" "alloromantyczna" "nonconforming" "niekonformistyczny" "niekonformistyczna" "pangender" "pangenderowy" "demiboy" "demichłopiec" "demigirl" "demidziewczyna" "intergender" "interplciowy" "multisexual" "multi-seksualny" "omnisexual" "omniseksualny" "skoliosexual" "skolioseksualny" "third-gender" "trzecia-plec" "xenogender" "ksenoplciowy" "graysexual" "demigender" "neutrois" "androgyne" "biromantic" "panromantic"
-	regex: /(?:nie(?:konformistycz|binar)|alloromantycz)n[ay]|t(?:rans(?:seksualistk?a|flag)|wo\-spirit)|multi\-seksualny|skoliose(?:ksualny|xual)|(?:demidziewczyn|lesbijsk)a|(?:trans(?:seksualn|ow)|cispłciow)[ay]|inter(?:seksualn[aiy]|gender)|(?:nonconformin|genderfla)g|(?:allo|demi)seksualn[ay]|omnise(?:ksualny|xual)|(?:a(?:llo)?romanti|demichłopie|trzecia\-ple)c|pan(?:seksualn[ay]|romantic)|(?:(?:third\-|(?:(?:trans|(?:bi|a))|cis))|xeno)gender|aromantyczn[aiy]|(?:pangenderow|interplciow|ksenoplciow|(?:dwuduch|tranzyt)ow|(?:dwu|bez)płciow|nonbinar|demibo|ga)y|ge(?:nderfluid|j(?:owski|e))|(?:gender)?queer|(?:bi|a)seksualn[aiy]|(?:(?:(?:(?:(?:(?:trans|(?:bi|a))|(?:allo|demi))|pan)|tran)|gray)|multi)sexual|biromantic|demigender|pangender|androgyne|lesbi(?:j(?:ek|k[ai])|an)|neutrois|demigirl|lgbt/i,
+	regex: /(?:nie(?:konformistycz|binar)|alloromantycz)n[ay]|t(?:rans(?:seksualistk?a|flag)|wo\\-spirit)|multi\\-seksualny|skoliose(?:ksualny|xual)|(?:demidziewczyn|lesbijsk)a|(?:trans(?:seksualn|ow)|cispłciow)[ay]|inter(?:seksualn[aiy]|gender)|(?:nonconformin|genderfla)g|(?:allo|demi)seksualn[ay]|omnise(?:ksualny|xual)|(?:a(?:llo)?romanti|demichłopie|trzecia\-ple)c|pan(?:seksualn[ay]|romantic)|(?:(?:third\-|(?:(?:trans|(?:bi|a))|cis))|xeno)gender|aromantyczn[aiy]|(?:pangenderow|interplciow|ksenoplciow|(?:dwuduch|tranzyt)ow|(?:dwu|bez)płciow|nonbinar|demibo|ga)y|ge(?:nderfluid|j(?:owski|e))|(?:gender)?queer|(?:bi|a)seksualn[aiy]|(?:(?:(?:(?:(?:(?:trans|(?:bi|a))|(?:allo|demi))|pan)|tran)|gray)|multi)sexual|biromantic|demigender|pangender|androgyne|lesbi(?:j(?:ek|k[ai])|an)|neutrois|demigirl|lgbt/i,
 	file: 'sites/lgbtqplus2.txt',
 }, {
 	title: 'Blocks websites related to gambling, betting, and casinos, etc.',
@@ -41,7 +41,7 @@ exports.CATEGORIES = [{
 	regex: /ethnonationalism|white(?:nationalism|supremacy|pride)|h(?:olocaustdenial|atespeech)|antisemitism|islamophobia|a(?:ntisemite|lt\\-right)|atomwaffen|kukluxklan|radicalism|(?:hom|xen)ophobia|supremacy|(?:neonazis|antiisla)m|(?:extrem|(?:fas|ra)c)ism|neonazi|nazi/i,
 	file: 'hate-and-junk/sefinek.hosts.txt',
 }, {
-	title: 'Blocks most websites related to e-sports',
+	title: 'Blocks most websites related to e-sports, etc.',
 	description: 'Active, inactive, and parked domains. Includes websites related to major e-sports tournaments, platforms for competitive gaming, and organizations such as ESL, FaceIT, The International, and Overwatch League.',
 	category: 'E-Sport',
 	// grex "esport" "e-sport" "hltv" "the-international" "overwatch-league" "esl-pro-league" "intel-extreme" "blast-premier" "pgl-major" "pubg-global-championship" "faceit" "esea.net" "challengermode" "sostronk" "gamersclub" "pvpro.com" "popflash.site" "gampre.pl" "repeat.gg" "playvs.com" "checkmategaming.com" "battlefy.com" "toornament.com" "communitygaming.io" "matcherino.com" "matcherino.com" "skillz.com"
@@ -58,14 +58,14 @@ exports.CATEGORIES = [{
 	file: 'sites/social-media.txt',
 }, {
 	title: 'Blocks video and audio streaming platforms (beta)',
-	description: 'Active, inactive, and parked domains. Blocks websites for video and audio streaming services such as YouTube, Netflix, Spotify, Disney+, Hulu, and Twitch. The list also includes phishing domains',
+	description: 'Active, inactive, and parked domains. Blocks websites for video and audio streaming services such as YouTube, Netflix, Spotify, Disney+, Hulu, and Twitch. The list also includes phishing domains.',
 	category: 'Streaming Media',
 	// grex "youtube" "netflix" "spotify" "disneyplus" "hulu" "twitch" "vimeo" "soundcloud" "hbo" "applemusic" "itunes" "primevideo" "crunchyroll" "hbomax"
 	regex: /crunchyroll|s(?:oundcloud|potify)|applemusic|disneyplus|primevideo|netflix|youtube|twitch|hbomax|itunes|vimeo|hulu|hbo/i,
 	file: 'sites/streaming-media.txt',
 }, {
 	title: 'Blocks e-commerce websites and online shopping platforms (beta)',
-	description: 'Active, inactive, and parked domains. Blocks online shopping websites like Amazon, eBay, AliExpress, Etsy, Wish, and others. The list also includes phishing domains',
+	description: 'Active, inactive, and parked domains. Blocks online shopping websites like Amazon, eBay, AliExpress, Etsy, Wish, and others. The list also includes phishing domains.',
 	category: 'Shopping',
 	// grex "amazon" "ebay" "aliexpress" "etsy" "wish" "shopify" "zalando" "ikea" "alibaba" "ebay-kleinanzeigen" "olx" "allegro" "vinted" "temu" "shein" "cdiscount"
 	regex: /(?:ebay\\-kleinanzeige|shei)n|a(?:li(?:express|baba)|mazon)|cdiscount|shopify|allegro|zalando|vinted|ebay|temu|wish|etsy|ikea|olx/i,
