@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025042901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025043001 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -211,8 +211,6 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
-ulogjs.ksapisrv.com CNAME .
-*.ulogjs.ksapisrv.com CNAME .
 adashx4id.ut.taobao.com CNAME .
 *.adashx4id.ut.taobao.com CNAME .
 analytics.us.tiktok.com CNAME .
@@ -1619,6 +1617,30 @@ ymtracking.com CNAME .
 *.ymtracking.com CNAME .
 zdbb.net CNAME .
 *.zdbb.net CNAME .
+csplog.kwai-pro.com CNAME .
+*.csplog.kwai-pro.com CNAME .
+log-sdk.ksapisrv.com CNAME .
+*.log-sdk.ksapisrv.com CNAME .
+logsdk.kwai-pro.com CNAME .
+*.logsdk.kwai-pro.com CNAME .
+ulog.ksapisrv.com CNAME .
+*.ulog.ksapisrv.com CNAME .
+ulog.kwai-pro.com CNAME .
+*.ulog.kwai-pro.com CNAME .
+ulog.kwaipros.com CNAME .
+*.ulog.kwaipros.com CNAME .
+ulog1-us.kwai-pro.com CNAME .
+*.ulog1-us.kwai-pro.com CNAME .
+ulog2-us.kwaipros.com CNAME .
+*.ulog2-us.kwaipros.com CNAME .
+ulogjs.ksapisrv.com CNAME .
+*.ulogjs.ksapisrv.com CNAME .
+ulogs1.ksapisrv.com CNAME .
+*.ulogs1.ksapisrv.com CNAME .
+ulogs2.ksapisrv.com CNAME .
+*.ulogs2.ksapisrv.com CNAME .
+wlog.ksapisrv.com CNAME .
+*.wlog.ksapisrv.com CNAME .
 mcs.tiktokw.us CNAME .
 *.mcs.tiktokw.us CNAME .
 sf16-telemetry-proxy-oci.tiktokcdn-us.com CNAME .
