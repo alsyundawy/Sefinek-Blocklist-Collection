@@ -12,6 +12,7 @@
   },
   "license": "SEE THE LICENSE FILE",
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
+  "type": "commonjs",
   "main": "www/index.js",
   "scripts": {
     "pull": "bash bash/pull.sh",
@@ -29,7 +30,7 @@
     "helmet": "^8.1.0",
     "lzma-native": "^8.0.6",
     "marked": "^15.0.11",
-    "mongoose": "^8.14.0",
+    "mongoose": "^8.14.1",
     "morgan": "^1.10.0",
     "ws": "^8.18.1"
   },
