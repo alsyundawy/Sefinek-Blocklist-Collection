@@ -1,6 +1,10 @@
 $TTL 300
 @ SOA localhost. root.localhost. 2025050101 43200 3600 259200 300
   NS  localhost.
+namephile.com CNAME .
+*.namephile.com CNAME .
+hitbyannica.com CNAME .
+*.hitbyannica.com CNAME .
 rako.rhythmyspeak.com CNAME .
 *.rako.rhythmyspeak.com CNAME .
 auth-acc-logact-210.sincodivdf.com.br CNAME .
@@ -120955,7 +120959,3 @@ www3732.centrum24-web-pl.es CNAME .
 *.www3732.centrum24-web-pl.es CNAME .
 www5573.centrum24-web-pl.es CNAME .
 *.www5573.centrum24-web-pl.es CNAME .
-cyberfloks-pl-ee7ec43f.glas.cfolks.pl CNAME .
-*.cyberfloks-pl-ee7ec43f.glas.cfolks.pl CNAME .
-prosect.com.br CNAME .
-*.prosect.com.br CNAME .
