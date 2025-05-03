@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025050201 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025050301 43200 3600 259200 300
   NS  localhost.
 1.password-internal.com CNAME .
 *.1.password-internal.com CNAME .
@@ -207,6 +207,10 @@ store.amznshirts.com CNAME .
 *.store.amznshirts.com CNAME .
 an1.is CNAME .
 *.an1.is CNAME .
+animeshoppers.com CNAME .
+*.animeshoppers.com CNAME .
+store.animeshoppers.com CNAME .
+*.store.animeshoppers.com CNAME .
 anydebrid.com CNAME .
 *.anydebrid.com CNAME .
 app-uniswapping.org CNAME .
@@ -345,8 +349,6 @@ store.best-torrents.com CNAME .
 *.store.best-torrents.com CNAME .
 bestiamos.com CNAME .
 *.bestiamos.com CNAME .
-bestpriceonline.store CNAME .
-*.bestpriceonline.store CNAME .
 bestvod.pl CNAME .
 *.bestvod.pl CNAME .
 store.bestvod.pl CNAME .
@@ -685,6 +687,8 @@ cshrewards.net CNAME .
 *.cshrewards.net CNAME .
 csmoney.trade CNAME .
 *.csmoney.trade CNAME .
+store.csmoney.trade CNAME .
+*.store.csmoney.trade CNAME .
 cual3up029pc73fi5jug.ucapsidop.info CNAME .
 *.cual3up029pc73fi5jug.ucapsidop.info CNAME .
 store.cual3up029pc73fi5jug.ucapsidop.info CNAME .
@@ -743,8 +747,6 @@ decoryourhome.store CNAME .
 *.decoryourhome.store CNAME .
 deergift.com CNAME .
 *.deergift.com CNAME .
-store.deergift.com CNAME .
-*.store.deergift.com CNAME .
 defii-larna.net CNAME .
 *.defii-larna.net CNAME .
 deiongh.info CNAME .
@@ -899,8 +901,6 @@ emberio.com CNAME .
 *.emberio.com CNAME .
 en-trezor.io CNAME .
 *.en-trezor.io CNAME .
-store.en-trezor.io CNAME .
-*.store.en-trezor.io CNAME .
 enchantestore.myshopify.com CNAME .
 *.enchantestore.myshopify.com CNAME .
 store.enchantestore.myshopify.com CNAME .
@@ -947,10 +947,6 @@ evisaindia.com CNAME .
 *.evisaindia.com CNAME .
 store.evisaindia.com CNAME .
 *.store.evisaindia.com CNAME .
-evisaindia.org CNAME .
-*.evisaindia.org CNAME .
-store.evisaindia.org CNAME .
-*.store.evisaindia.org CNAME .
 evisaindiaonline.org CNAME .
 *.evisaindiaonline.org CNAME .
 ex-torrenty.org CNAME .
@@ -1121,6 +1117,10 @@ fiusps.com CNAME .
 *.fiusps.com CNAME .
 fkpgr.buzz CNAME .
 *.fkpgr.buzz CNAME .
+flattee.com CNAME .
+*.flattee.com CNAME .
+store.flattee.com CNAME .
+*.store.flattee.com CNAME .
 folkrbvi.pages.dev CNAME .
 *.folkrbvi.pages.dev CNAME .
 store.folkrbvi.pages.dev CNAME .
@@ -1657,6 +1657,8 @@ kuyhaa.cc CNAME .
 *.kuyhaa.cc CNAME .
 lakersfanshoponline.com CNAME .
 *.lakersfanshoponline.com CNAME .
+store.lakersfanshoponline.com CNAME .
+*.store.lakersfanshoponline.com CNAME .
 lasercutjewelry.net CNAME .
 *.lasercutjewelry.net CNAME .
 store.lasercutjewelry.net CNAME .
@@ -1783,10 +1785,6 @@ mcds100.com CNAME .
 *.mcds100.com CNAME .
 mcsglobalcargo.com CNAME .
 *.mcsglobalcargo.com CNAME .
-meaningift.com CNAME .
-*.meaningift.com CNAME .
-store.meaningift.com CNAME .
-*.store.meaningift.com CNAME .
 mega-heritage.com CNAME .
 *.mega-heritage.com CNAME .
 mega-kino.pl CNAME .
@@ -1867,8 +1865,6 @@ mujib-store28.blogspot.com CNAME .
 *.mujib-store28.blogspot.com CNAME .
 store.mujib-store28.blogspot.com CNAME .
 *.store.mujib-store28.blogspot.com CNAME .
-mulllvad.org CNAME .
-*.mulllvad.org CNAME .
 mullvaad.net CNAME .
 *.mullvaad.net CNAME .
 multifilmy.pl CNAME .
@@ -2013,8 +2009,6 @@ store.navi4.com CNAME .
 *.store.navi4.com CNAME .
 navi42.ru CNAME .
 *.navi42.ru CNAME .
-store.navi42.ru CNAME .
-*.store.navi42.ru CNAME .
 navi43.com CNAME .
 *.navi43.com CNAME .
 navi44.com CNAME .
@@ -2093,8 +2087,6 @@ navi9.com CNAME .
 *.navi9.com CNAME .
 store.navi9.com CNAME .
 *.store.navi9.com CNAME .
-navi95.com CNAME .
-*.navi95.com CNAME .
 navi98.com CNAME .
 *.navi98.com CNAME .
 navi99.com CNAME .
@@ -2201,8 +2193,8 @@ norfotball.com CNAME .
 *.norfotball.com CNAME .
 norgefotball.com CNAME .
 *.norgefotball.com CNAME .
-norgeshoes.com CNAME .
-*.norgeshoes.com CNAME .
+store.norgeshoes.com CNAME .
+*.store.norgeshoes.com CNAME .
 nosdaarte.com CNAME .
 *.nosdaarte.com CNAME .
 notasdenatran.co CNAME .
@@ -2377,6 +2369,8 @@ phototan-cdirect.info CNAME .
 *.phototan-cdirect.info CNAME .
 store.phototan-cdirect.info CNAME .
 *.store.phototan-cdirect.info CNAME .
+phototan.net CNAME .
+*.phototan.net CNAME .
 pickablegift.com CNAME .
 *.pickablegift.com CNAME .
 store.pickablegift.com CNAME .
@@ -2515,20 +2509,24 @@ rastreiobrasil.co CNAME .
 *.rastreiobrasil.co CNAME .
 rastreiocorreio.co CNAME .
 *.rastreiocorreio.co CNAME .
+rbcdevices.com CNAME .
+*.rbcdevices.com CNAME .
+store.rbcdevices.com CNAME .
+*.store.rbcdevices.com CNAME .
 reforest-iita.org CNAME .
 *.reforest-iita.org CNAME .
 regularizedenatran.co CNAME .
 *.regularizedenatran.co CNAME .
 remessacorreio.site CNAME .
 *.remessacorreio.site CNAME .
-resources4gaming.com CNAME .
-*.resources4gaming.com CNAME .
-store.resources4gaming.com CNAME .
-*.store.resources4gaming.com CNAME .
 revanced-extended.com CNAME .
 *.revanced-extended.com CNAME .
 store.revanced-extended.com CNAME .
 *.store.revanced-extended.com CNAME .
+revancedmusic.com CNAME .
+*.revancedmusic.com CNAME .
+store.revancedmusic.com CNAME .
+*.store.revancedmusic.com CNAME .
 reviewshirts.com CNAME .
 *.reviewshirts.com CNAME .
 rewardsgiantca.com CNAME .
@@ -2685,16 +2683,10 @@ store.shy-boat-90ce.jiko728928922.workers.dev CNAME .
 *.store.shy-boat-90ce.jiko728928922.workers.dev CNAME .
 si.factorysale2023.com CNAME .
 *.si.factorysale2023.com CNAME .
-store.si.factorysale2023.com CNAME .
-*.store.si.factorysale2023.com CNAME .
 sieuto.com CNAME .
 *.sieuto.com CNAME .
 sigmaoffers.com CNAME .
 *.sigmaoffers.com CNAME .
-signal-confirm.site CNAME .
-*.signal-confirm.site CNAME .
-store.signal-confirm.site CNAME .
-*.store.signal-confirm.site CNAME .
 signalgroup.site CNAME .
 *.signalgroup.site CNAME .
 signpify.com CNAME .
@@ -2799,6 +2791,8 @@ store.startuplatte.com CNAME .
 *.store.startuplatte.com CNAME .
 steamgateways.com CNAME .
 *.steamgateways.com CNAME .
+store.steamgateways.com CNAME .
+*.store.steamgateways.com CNAME .
 steamunlock.com CNAME .
 *.steamunlock.com CNAME .
 stearncommunjty.net CNAME .
@@ -2959,10 +2953,6 @@ thehappywood.com CNAME .
 *.thehappywood.com CNAME .
 thehardcorehabits.com CNAME .
 *.thehardcorehabits.com CNAME .
-themountainus.com CNAME .
-*.themountainus.com CNAME .
-store.themountainus.com CNAME .
-*.store.themountainus.com CNAME .
 theneurobalancetherapy.org CNAME .
 *.theneurobalancetherapy.org CNAME .
 thenorthfacegreece.com CNAME .
@@ -3003,6 +2993,8 @@ toko999.net CNAME .
 *.toko999.net CNAME .
 toko999.shop CNAME .
 *.toko999.shop CNAME .
+store.toko999.shop CNAME .
+*.store.toko999.shop CNAME .
 tomadamsenergy.com CNAME .
 *.tomadamsenergy.com CNAME .
 too-gle.com CNAME .
@@ -3047,10 +3039,6 @@ travisa.com CNAME .
 *.travisa.com CNAME .
 store.travisa.com CNAME .
 *.store.travisa.com CNAME .
-treasurefan.com CNAME .
-*.treasurefan.com CNAME .
-store.treasurefan.com CNAME .
-*.store.treasurefan.com CNAME .
 trendsharks.com CNAME .
 *.trendsharks.com CNAME .
 treverschmelerkris18.myshopify.com CNAME .
