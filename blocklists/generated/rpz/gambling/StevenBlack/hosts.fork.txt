@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025050101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025050501 43200 3600 259200 300
   NS  localhost.
 0000130.com CNAME .
 *.0000130.com CNAME .
@@ -6681,6 +6681,8 @@ zo1.win CNAME .
 *.zo1.win CNAME .
 zo2.win CNAME .
 *.zo2.win CNAME .
+zo88.com CNAME .
+*.zo88.com CNAME .
 zo88.org CNAME .
 *.zo88.org CNAME .
 zom8.club CNAME .
