@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025050501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025050601 43200 3600 259200 300
   NS  localhost.
 1.password-internal.com CNAME .
 *.1.password-internal.com CNAME .
@@ -207,10 +207,6 @@ store.amznshirts.com CNAME .
 *.store.amznshirts.com CNAME .
 an1.is CNAME .
 *.an1.is CNAME .
-animeshoppers.com CNAME .
-*.animeshoppers.com CNAME .
-store.animeshoppers.com CNAME .
-*.store.animeshoppers.com CNAME .
 anydebrid.com CNAME .
 *.anydebrid.com CNAME .
 app-uniswapping.org CNAME .
@@ -1017,6 +1013,8 @@ faze24.com CNAME .
 *.faze24.com CNAME .
 store.faze24.com CNAME .
 *.store.faze24.com CNAME .
+faze3.com CNAME .
+*.faze3.com CNAME .
 faze4.com CNAME .
 *.faze4.com CNAME .
 faze40.com CNAME .
@@ -1141,10 +1139,6 @@ store.freedom-ca-5g.com CNAME .
 *.store.freedom-ca-5g.com CNAME .
 freedom.service-update3.com CNAME .
 *.freedom.service-update3.com CNAME .
-freedomgift50.com CNAME .
-*.freedomgift50.com CNAME .
-store.freedomgift50.com CNAME .
-*.store.freedomgift50.com CNAME .
 frest.info CNAME .
 *.frest.info CNAME .
 store.frest.info CNAME .
@@ -1249,10 +1243,6 @@ globalvisacorp.com CNAME .
 *.globalvisacorp.com CNAME .
 gogiworld.com CNAME .
 *.gogiworld.com CNAME .
-goglle.com CNAME .
-*.goglle.com CNAME .
-store.goglle.com CNAME .
-*.store.goglle.com CNAME .
 goindiavisa.com CNAME .
 *.goindiavisa.com CNAME .
 gossvibe.com CNAME .
@@ -1297,10 +1287,6 @@ gtltowerinfratel.in CNAME .
 *.gtltowerinfratel.in CNAME .
 gunstee.com CNAME .
 *.gunstee.com CNAME .
-habilitacao.org CNAME .
-*.habilitacao.org CNAME .
-store.habilitacao.org CNAME .
-*.store.habilitacao.org CNAME .
 habtoorloyal.com CNAME .
 *.habtoorloyal.com CNAME .
 haceroberomaste.com CNAME .
@@ -1799,6 +1785,8 @@ mega-kino.pl CNAME .
 *.mega-kino.pl CNAME .
 store.mega-kino.pl CNAME .
 *.store.mega-kino.pl CNAME .
+megoindonesia.com CNAME .
+*.megoindonesia.com CNAME .
 mercyzone.com CNAME .
 *.mercyzone.com CNAME .
 meudetran.co CNAME .
@@ -1887,8 +1875,6 @@ muskusa.com CNAME .
 *.muskusa.com CNAME .
 store.muskusa.com CNAME .
 *.store.muskusa.com CNAME .
-muthaafoundation.org CNAME .
-*.muthaafoundation.org CNAME .
 mybestautologin567.com CNAME .
 *.mybestautologin567.com CNAME .
 store.mybestautologin567.com CNAME .
@@ -2017,12 +2003,12 @@ navi4.com CNAME .
 *.navi4.com CNAME .
 store.navi4.com CNAME .
 *.store.navi4.com CNAME .
-store.navi42.ru CNAME .
-*.store.navi42.ru CNAME .
 navi43.com CNAME .
 *.navi43.com CNAME .
 navi44.com CNAME .
 *.navi44.com CNAME .
+navi45.com CNAME .
+*.navi45.com CNAME .
 navi45.ru CNAME .
 *.navi45.ru CNAME .
 navi48.com CNAME .
@@ -2203,10 +2189,6 @@ norfotball.com CNAME .
 *.norfotball.com CNAME .
 norgefotball.com CNAME .
 *.norgefotball.com CNAME .
-norgeshoes.com CNAME .
-*.norgeshoes.com CNAME .
-store.norgeshoes.com CNAME .
-*.store.norgeshoes.com CNAME .
 nosdaarte.com CNAME .
 *.nosdaarte.com CNAME .
 notasdenatran.co CNAME .
@@ -2381,10 +2363,6 @@ phototan-cdirect.info CNAME .
 *.phototan-cdirect.info CNAME .
 store.phototan-cdirect.info CNAME .
 *.store.phototan-cdirect.info CNAME .
-phototan.net CNAME .
-*.phototan.net CNAME .
-store.phototan.net CNAME .
-*.store.phototan.net CNAME .
 pickablegift.com CNAME .
 *.pickablegift.com CNAME .
 store.pickablegift.com CNAME .
@@ -2631,10 +2609,6 @@ salealfresco.com CNAME .
 *.salealfresco.com CNAME .
 store.salealfresco.com CNAME .
 *.store.salealfresco.com CNAME .
-saleussports.com CNAME .
-*.saleussports.com CNAME .
-store.saleussports.com CNAME .
-*.store.saleussports.com CNAME .
 salimusic.com CNAME .
 *.salimusic.com CNAME .
 sanla-tan.net CNAME .
@@ -2831,10 +2805,6 @@ stingcool-com.myshopify.com CNAME .
 *.stingcool-com.myshopify.com CNAME .
 store.stingcool-com.myshopify.com CNAME .
 *.store.stingcool-com.myshopify.com CNAME .
-storagestory.com CNAME .
-*.storagestory.com CNAME .
-store.storagestory.com CNAME .
-*.store.storagestory.com CNAME .
 store-aleteia.org CNAME .
 *.store-aleteia.org CNAME .
 store-swatch.com CNAME .
@@ -2957,6 +2927,8 @@ store.tesla-online.net CNAME .
 *.store.tesla-online.net CNAME .
 teslafond.io CNAME .
 *.teslafond.io CNAME .
+store.teslalive23.pro CNAME .
+*.store.teslalive23.pro CNAME .
 teslamaked.com CNAME .
 *.teslamaked.com CNAME .
 the-north-face.gr CNAME .
@@ -3011,8 +2983,6 @@ tiranaaquapark-eg.com CNAME .
 *.tiranaaquapark-eg.com CNAME .
 store.tiranaaquapark-eg.com CNAME .
 *.store.tiranaaquapark-eg.com CNAME .
-toko999.net CNAME .
-*.toko999.net CNAME .
 toko999.shop CNAME .
 *.toko999.shop CNAME .
 store.toko999.shop CNAME .
@@ -3081,8 +3051,6 @@ trnzu.info CNAME .
 *.trnzu.info CNAME .
 tromselementbygg.no CNAME .
 *.tromselementbygg.no CNAME .
-tronilnk.com CNAME .
-*.tronilnk.com CNAME .
 trump-drop.org CNAME .
 *.trump-drop.org CNAME .
 trumpsupport.help CNAME .
@@ -3139,6 +3107,8 @@ ultrawa.com CNAME .
 *.ultrawa.com CNAME .
 um-bs.com CNAME .
 *.um-bs.com CNAME .
+unambia.orchael.fun CNAME .
+*.unambia.orchael.fun CNAME .
 unho.unhesiss.shop CNAME .
 *.unho.unhesiss.shop CNAME .
 uni-swap.online CNAME .
@@ -3509,14 +3479,6 @@ usplussports.com CNAME .
 *.usplussports.com CNAME .
 store.usplussports.com CNAME .
 *.store.usplussports.com CNAME .
-ussportabout.com CNAME .
-*.ussportabout.com CNAME .
-store.ussportabout.com CNAME .
-*.store.ussportabout.com CNAME .
-ussportpioneer.com CNAME .
-*.ussportpioneer.com CNAME .
-store.ussportpioneer.com CNAME .
-*.store.ussportpioneer.com CNAME .
 uydrnhsb.info CNAME .
 *.uydrnhsb.info CNAME .
 valeofoodsgroup.com CNAME .
