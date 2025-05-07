@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025050601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025050701 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -3971,6 +3971,8 @@ analytics.belgacom.be CNAME .
 *.analytics.belgacom.be CNAME .
 analytics.hatech.dev CNAME .
 *.analytics.hatech.dev CNAME .
+analytics.newsifier.nl CNAME .
+*.analytics.newsifier.nl CNAME .
 apm.tnet.nl CNAME .
 *.apm.tnet.nl CNAME .
 ct.beslist.nl CNAME .
