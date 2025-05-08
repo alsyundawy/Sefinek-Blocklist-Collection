@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025050701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025050801 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -3141,6 +3141,8 @@ try.abtasty.com CNAME .
 *.try.abtasty.com CNAME .
 ts.tradetracker.net CNAME .
 *.ts.tradetracker.net CNAME .
+uaas.yandex.ru CNAME .
+*.uaas.yandex.ru CNAME .
 ubm.docu.info CNAME .
 *.ubm.docu.info CNAME .
 ucounter.ucoz.net CNAME .
@@ -5371,6 +5373,8 @@ marketing.alibaba.com CNAME .
 *.marketing.alibaba.com CNAME .
 marketing.dropbox.com CNAME .
 *.marketing.dropbox.com CNAME .
+marketing.taskus.com CNAME .
+*.marketing.taskus.com CNAME .
 marty.zappos.com CNAME .
 *.marty.zappos.com CNAME .
 mcc-tags.cisco.com CNAME .
