@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025050601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025050801 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -1123,8 +1123,6 @@ tracking-receiver.prod-general.stocard-backend.com CNAME .
 *.tracking-receiver.prod-general.stocard-backend.com CNAME .
 metrics.happycolor.app CNAME .
 *.metrics.happycolor.app CNAME .
-digianalytics.airtel.in CNAME .
-*.digianalytics.airtel.in CNAME .
 ad-creative.projectcarmen.com CNAME .
 *.ad-creative.projectcarmen.com CNAME .
 analytics.projectcarmen.com CNAME .
