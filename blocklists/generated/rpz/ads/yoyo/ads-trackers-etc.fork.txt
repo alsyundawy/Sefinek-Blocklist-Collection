@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025050901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025051001 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -2461,6 +2461,8 @@ click.bkdpt.com CNAME .
 *.click.bkdpt.com CNAME .
 click.cartsguru.io CNAME .
 *.click.cartsguru.io CNAME .
+click.ccg.nintendo.com CNAME .
+*.click.ccg.nintendo.com CNAME .
 click.cision.com CNAME .
 *.click.cision.com CNAME .
 click.classmates.com CNAME .
