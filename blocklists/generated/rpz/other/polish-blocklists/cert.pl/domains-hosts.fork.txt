@@ -1,6 +1,10 @@
 $TTL 300
 @ SOA localhost. root.localhost. 2025051101 43200 3600 259200 300
   NS  localhost.
+worldkaartservices.com.es CNAME .
+*.worldkaartservices.com.es CNAME .
+survey-profs.eu CNAME .
+*.survey-profs.eu CNAME .
 85v-zvxvbvba-vfadbfghnh-dvafv-dbfg.vercel.app CNAME .
 *.85v-zvxvbvba-vfadbfghnh-dvafv-dbfg.vercel.app CNAME .
 cosmicresearch.website CNAME .
@@ -125889,9 +125893,3 @@ nfhrx.com CNAME .
 *.nfhrx.com CNAME .
 as-98polska.com CNAME .
 *.as-98polska.com CNAME .
-dabyiyaeldljvfu.pages.dev CNAME .
-*.dabyiyaeldljvfu.pages.dev CNAME .
-zaleskibutik.pl CNAME .
-*.zaleskibutik.pl CNAME .
-v-eh.info CNAME .
-*.v-eh.info CNAME .
