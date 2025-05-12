@@ -1,6 +1,12 @@
 $TTL 300
 @ SOA localhost. root.localhost. 2025051201 43200 3600 259200 300
   NS  localhost.
+danitsuppo.pro CNAME .
+*.danitsuppo.pro CNAME .
+olx.tybnivelo.sbs CNAME .
+*.olx.tybnivelo.sbs CNAME .
+accounts-webmail1site.webflow.io CNAME .
+*.accounts-webmail1site.webflow.io CNAME .
 request-to-identify-business-page-facebook-id100075017554.vercel.app CNAME .
 *.request-to-identify-business-page-facebook-id100075017554.vercel.app CNAME .
 allegrolokalnie.pl-prywatne-id999.icu CNAME .
@@ -126121,7 +126127,3 @@ sms-olx.first-account.shop CNAME .
 *.sms-olx.first-account.shop CNAME .
 ollx.432651548.xyz CNAME .
 *.ollx.432651548.xyz CNAME .
-main-olx.favorite-me.shop CNAME .
-*.main-olx.favorite-me.shop CNAME .
-mailboxez.com CNAME .
-*.mailboxez.com CNAME .
