@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 08 May 2025 14:11 UTC+7
-# Version: 2505081411
-# Blocked: 18.527 domains
+# Last modified: 13 May 2025 09:25 UTC+7
+# Version: 2505130925
+# Blocked: 18.580 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -4278,6 +4278,7 @@
 127.0.0.1 cm.rdr.creativecdn.com
 127.0.0.1 creativecdn.com
 127.0.0.1 eu.creativecdn.com
+127.0.0.1 invstatic101.creativecdn.com
 127.0.0.1 phx.creativecdn.com
 127.0.0.1 prebid-asia.creativecdn.com
 127.0.0.1 prebid-eu.creativecdn.com
@@ -4461,25 +4462,26 @@
 127.0.0.1 iad-usadmm.dotomi.com
 127.0.0.1 login-ds.dotomi.com
 127.0.0.1 media-ams5.msg.dotomi.com
-127.0.0.1 medianet-match.dotomi.com
 127.0.0.1 media-sj2.msg.dotomi.com
+127.0.0.1 medianet-match.dotomi.com
 127.0.0.1 openx2-match.dotomi.com
 127.0.0.1 prebid-match.dotomi.com
+127.0.0.1 proc.ad.cpe.dotomi.com
 127.0.0.1 pubmatic-match.dotomi.com
 127.0.0.1 pulsepoint-match.dotomi.com
 127.0.0.1 purch-match.dotomi.com
 127.0.0.1 rubicon-match.dotomi.com
+127.0.0.1 s-usweb.dotomi.com
 127.0.0.1 sjc-login.dotomi.com
 127.0.0.1 sortable-match.dotomi.com
 127.0.0.1 spotx-match.dotomi.com
 127.0.0.1 stx-match.dotomi.com
-127.0.0.1 s-usweb.dotomi.com
 127.0.0.1 synacor-match.dotomi.com
 127.0.0.1 tpt.dotomi.com
-127.0.0.1 tubemogul-sync.dotomi.com
 127.0.0.1 tremor-match.dotomi.com
-127.0.0.1 usadmm.dotomi.com
+127.0.0.1 tubemogul-sync.dotomi.com
 127.0.0.1 usadmm-ds.dotomi.com
+127.0.0.1 usadmm.dotomi.com
 127.0.0.1 usweb.dotomi.com
 127.0.0.1 vcm-match.dotomi.com
 #[1rx.io]
@@ -5910,10 +5912,12 @@
 127.0.0.1 ssp.send.microadinc.com
 #[microad.jp]
 127.0.0.1 microad.jp
+127.0.0.1 aid.send.microad.jp
+127.0.0.1 cache.send.microad.jp
 127.0.0.1 cdn.microad.jp
 127.0.0.1 cm.send.microad.jp
-127.0.0.1 s-rtb.send.microad.jp
 127.0.0.1 s-rtb-pb.send.microad.jp
+127.0.0.1 s-rtb.send.microad.jp
 127.0.0.1 ssp.send.microad.jp
 127.0.0.1 universe.send.microad.jp
 #[microad.net]
@@ -6568,6 +6572,7 @@
 127.0.0.1 www.publift.com
 #[id5-sync.com]
 127.0.0.1 cdn.id5-sync.com
+127.0.0.1 diagnostics.id5-sync.com
 127.0.0.1 id5-sync.com
 127.0.0.1 www.id5-sync.com
 #[eu-1-id5-sync.com]
@@ -7238,9 +7243,14 @@
 127.0.0.1 www.blueadss.com
 #[ezodn.com]
 127.0.0.1 ezodn.com
+127.0.0.1 bshr.ezodn.com
 127.0.0.1 g.ezodn.com
 127.0.0.1 go.ezodn.com
 127.0.0.1 www.ezodn.com
+#[ezoic.net]
+127.0.0.1 ezoic.net
+127.0.0.1 g.ezoic.net
+127.0.0.1 go.ezoic.net
 #[relap.io]
 127.0.0.1 api.relap.io
 127.0.0.1 cdn.relap.io
@@ -10239,6 +10249,14 @@
 127.0.0.1 go.hpyrdr.com
 127.0.0.1 hpyrdr.com
 127.0.0.1 wl.hpyrdr.com
+#[blcdog.com]
+127.0.0.1 blcdog.com
+127.0.0.1 creative.blcdog.com
+127.0.0.1 go.blcdog.com
+#[xlirdr.com]
+127.0.0.1 creative.xlirdr.com
+127.0.0.1 go.xlirdr.com
+127.0.0.1 xlirdr.com
 #[polarbyte.com]
 127.0.0.1 analytics.polarbyte.com
 127.0.0.1 api.polarbyte.com
@@ -10899,6 +10917,7 @@
 127.0.0.1 ab1n.net
 127.0.0.1 tk6if76q.ab1n.net
 #[zemanta.com]
+127.0.0.1 b1sync.zemanta.com
 127.0.0.1 p1.zemanta.com
 127.0.0.1 zemanta.com
 #[bquildna43.site]
@@ -11661,6 +11680,38 @@
 #[provenpixel.com]
 127.0.0.1 provenpixel.com
 127.0.0.1 upx.provenpixel.com
+#[rtbhouse.com]
+127.0.0.1 esp.rtbhouse.com
+127.0.0.1 rtbhouse.com
+#[openxcdn.net]
+127.0.0.1 oa.openxcdn.net
+127.0.0.1 openxcdn.net
+#[prod.uidapi.com]
+127.0.0.1 cdn.prod.uidapi.com
+127.0.0.1 prod.uidapi.com
+#[fastclick.net]
+127.0.0.1 fastclick.net
+127.0.0.1 secure.cdn.fastclick.net
+#[ccgateway.net]
+127.0.0.1 ccgateway.net
+127.0.0.1 analytics.ccgateway.net
+127.0.0.1 carbon-cdn.ccgateway.net
+127.0.0.1 ingestion-router-api.ccgateway.net
+127.0.0.1 privacy-location-edge.ccgateway.net
+127.0.0.1 script-api.ccgateway.net
+#[ust-ad.com]
+127.0.0.1 ust-ad.com
+127.0.0.1 ad.ust-ad.com
+127.0.0.1 adjs.ust-ad.com
+127.0.0.1 rcv.ust-ad.com
+#[impact-ad.jp]
+127.0.0.1 impact-ad.jp
+127.0.0.1 aw.dw.impact-ad.jp
+127.0.0.1 y.one.impact-ad.jp
+#[ssp.bance.jp]
+127.0.0.1 bid.ssp.bance.jp
+127.0.0.1 js.ssp.bance.jp
+127.0.0.1 tr.ssp.bance.jp
 # --- GroupVN block ---
 #[adtimaserver]
 127.0.0.1 adtimaserver.vn
@@ -14877,6 +14928,7 @@
 127.0.0.1 bans.bride.ru
 127.0.0.1 baresi.xyz
 127.0.0.1 barnesandnoble.bfast.com
+127.0.0.1 barometercorrodingunease.com
 127.0.0.1 barscreative1.com
 127.0.0.1 basebanner.com
 127.0.0.1 basepush.com
@@ -15130,6 +15182,7 @@
 127.0.0.1 camp.purchase-shop.com
 127.0.0.1 campaign.bharatmatrimony.com
 127.0.0.1 campaigns.williamhill.com
+127.0.0.1 cams.gratis
 127.0.0.1 can-get-so.me
 127.0.0.1 canangafierier.uno
 127.0.0.1 caniamedia.com
@@ -15426,6 +15479,7 @@
 127.0.0.1 copycarpenter.com
 127.0.0.1 copyrightaccesscontrols.com
 127.0.0.1 coremetrics.com
+127.0.0.1 correctdilutetrophy.com
 127.0.0.1 correlationcocktailinevitably.com
 127.0.0.1 count.rin.ru
 127.0.0.1 count.west263.com
@@ -15506,6 +15560,7 @@
 127.0.0.1 culturalsameunbridle.com
 127.0.0.1 culwcoam.com
 127.0.0.1 cupidonmedia.com
+127.0.0.1 cupoabie.net
 127.0.0.1 curioushingefast.com
 127.0.0.1 curlyhomes.com
 127.0.0.1 curtaincows.com
@@ -15694,6 +15749,7 @@
 127.0.0.1 displaycontentprofit.com
 127.0.0.1 displayformatcontent.com
 127.0.0.1 displayvertising.com
+127.0.0.1 disprovefacilityjolt.com
 127.0.0.1 disqusads.com
 127.0.0.1 disrespectpreceding.com
 127.0.0.1 dist.belnk.com
@@ -15726,6 +15782,7 @@
 127.0.0.1 doruffletr.com
 127.0.0.1 dotranquilla.com
 127.0.0.1 dotsonian.org
+127.0.0.1 dotyruntchan.com
 127.0.0.1 doubleadserve.com
 127.0.0.1 doubleclick.com
 127.0.0.1 doubleclick.de
@@ -15929,6 +15986,7 @@
 127.0.0.1 extreme-dm.com
 127.0.0.1 extremetracking.com
 127.0.0.1 exxohwvxupjv.com
+127.0.0.1 ey43.com
 127.0.0.1 eyeblaster.com
 127.0.0.1 eyebrowscrambledlater.com
 127.0.0.1 eyereturn.com
@@ -15959,7 +16017,6 @@
 127.0.0.1 fashmuqpi.com
 127.0.0.1 fastbuy.biz
 127.0.0.1 fastclick.com
-127.0.0.1 fastclick.net
 127.0.0.1 fatcoil.com
 127.0.0.1 fatsosjogs.com
 127.0.0.1 faukeeshie.com
@@ -15999,6 +16056,7 @@
 127.0.0.1 fistofzeus.com
 127.0.0.1 fixespreoccupation.com
 127.0.0.1 fkabzoarsoz.com
+127.0.0.1 fkwnnfwhvjmubrl.com
 127.0.0.1 flagmantensity.com
 127.0.0.1 flakyfeast.com
 127.0.0.1 fleraprt.com
@@ -16356,6 +16414,7 @@
 127.0.0.1 holahupa.com
 127.0.0.1 homepageking.de
 127.0.0.1 homespotaudience.com
+127.0.0.1 hoocaumakopaibu.com
 127.0.0.1 hookawep.net
 127.0.0.1 hoowooze.net
 127.0.0.1 hostedads.realitykings.com
@@ -16397,6 +16456,7 @@
 127.0.0.1 hypermusk.com
 127.0.0.1 hypertracker.com
 127.0.0.1 hypertusk.com
+127.0.0.1 hz.methylstewed.com
 127.0.0.1 i-lookup.com
 127.0.0.1 i.cdnkimg.com
 127.0.0.1 i1media.no
@@ -16450,7 +16510,6 @@
 127.0.0.1 immensehoney.com
 127.0.0.1 immerseweariness.com
 127.0.0.1 immoxdzdke.com
-127.0.0.1 impact-ad.jp
 127.0.0.1 impactmobile.com
 127.0.0.1 impeccablewriter.com
 127.0.0.1 importedincrease.com
@@ -16834,6 +16893,7 @@
 127.0.0.1 lumpbackstage.com
 127.0.0.1 lumupu.xyz
 127.0.0.1 lunarads.com
+127.0.0.1 lutoorgourgi.com
 127.0.0.1 luxope.com
 127.0.0.1 lvtuucmyfpz.com
 127.0.0.1 lwddlhcdwmr.com
@@ -17092,6 +17152,7 @@
 127.0.0.1 muwmedia.com
 127.0.0.1 mw19c3mi5a.com
 127.0.0.1 mwejhobumo.com
+127.0.0.1 mwekuzaj.com
 127.0.0.1 mxptint.net
 127.0.0.1 mxvp-ad-config-prod-1.zenmxapps.com
 127.0.0.1 mxvp-feature-toggle-prod-1.zenmxapps.com
@@ -17200,6 +17261,7 @@
 127.0.0.1 nextmillmedia.com
 127.0.0.1 nfucujozv.com
 127.0.0.1 ng3.ads.warnerbros.com
+127.0.0.1 nhusjhrshwxvl.com
 127.0.0.1 nicksstevmark.com
 127.0.0.1 nicohgokppuj.com
 127.0.0.1 nightmareirene.com
@@ -17770,6 +17832,7 @@
 127.0.0.1 ptukasti.com
 127.0.0.1 ptumsess.com
 127.0.0.1 ptuxapow.com
+127.0.0.1 ptuzrywmega.com
 127.0.0.1 ptygunjk.com
 127.0.0.1 pu1.biz
 127.0.0.1 pu3.biz
@@ -17911,6 +17974,7 @@
 127.0.0.1 rapleaf.com
 127.0.0.1 raresummer.com
 127.0.0.1 rate.ru
+127.0.0.1 raunoaptotoaw.com
 127.0.0.1 razzedwhimsic.website
 127.0.0.1 rbkhpjfwtmirk.com
 127.0.0.1 rcvlink.com
@@ -18055,6 +18119,7 @@
 127.0.0.1 rot.spotsniper.ru
 127.0.0.1 rotabol.com
 127.0.0.1 rotumal.com
+127.0.0.1 roumaniangravelnot.com
 127.0.0.1 rounddescribe.com
 127.0.0.1 roundspaniardindefinitely.com
 127.0.0.1 rounuatedanximum.com
@@ -18463,6 +18528,7 @@
 127.0.0.1 supportiverarity.com
 127.0.0.1 surecheapermoisture.com
 127.0.0.1 surfmusik-adserver.de
+127.0.0.1 surtaultathoado.com
 127.0.0.1 susifhfh2d8ldn09.com
 127.0.0.1 suspectedadvisor.com
 127.0.0.1 suwcaxazzn.com
@@ -18777,6 +18843,7 @@
 127.0.0.1 tzegilo.com
 127.0.0.1 tzhrmcnidxqwrb.com
 127.0.0.1 tzirtatakoqf.com
+127.0.0.1 tzwtzygxslrk.com
 127.0.0.1 u1pmt.com
 127.0.0.1 u9axpzf50.com
 127.0.0.1 uarating.com
@@ -19402,7 +19469,6 @@
 127.0.0.1 analytics.archive.org
 127.0.0.1 analytics.avcdn.net
 127.0.0.1 analytics.bitrix.info
-127.0.0.1 analytics.ccgateway.net
 127.0.0.1 analytics.cdn.live
 127.0.0.1 analytics.clickdimensions.com
 127.0.0.1 analytics.cloudron.io
@@ -19501,7 +19567,6 @@
 127.0.0.1 cankaowang.com
 127.0.0.1 cc-api-data.adobe.io
 127.0.0.1 cc.swiftype.com
-127.0.0.1 ccgateway.net
 127.0.0.1 cdn.c-i.as
 127.0.0.1 cdn.counter.dev
 127.0.0.1 cdn.lr-ingest.io
@@ -19821,7 +19886,6 @@
 127.0.0.1 ponos.zeronaught.com
 127.0.0.1 poole-collector-prod.n3twork.com
 127.0.0.1 popupmaker.com
-127.0.0.1 prod.uidapi.com
 127.0.0.1 prodregistryv2.org
 127.0.0.1 promotionengine.com
 127.0.0.1 prooffactor.com

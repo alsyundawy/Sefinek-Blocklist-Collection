@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 08 May 2025 14:11 UTC+7
-# Version: 2505081411
-# Blocked: 18.527 domains
+# Last modified: 13 May 2025 09:25 UTC+7
+# Version: 2505130925
+# Blocked: 18.580 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -4278,6 +4278,7 @@ server=/cm.creativecdn.com/
 server=/cm.rdr.creativecdn.com/
 server=/creativecdn.com/
 server=/eu.creativecdn.com/
+server=/invstatic101.creativecdn.com/
 server=/phx.creativecdn.com/
 server=/prebid-asia.creativecdn.com/
 server=/prebid-eu.creativecdn.com/
@@ -4461,25 +4462,26 @@ server=/iad-login.dotomi.com/
 server=/iad-usadmm.dotomi.com/
 server=/login-ds.dotomi.com/
 server=/media-ams5.msg.dotomi.com/
-server=/medianet-match.dotomi.com/
 server=/media-sj2.msg.dotomi.com/
+server=/medianet-match.dotomi.com/
 server=/openx2-match.dotomi.com/
 server=/prebid-match.dotomi.com/
+server=/proc.ad.cpe.dotomi.com/
 server=/pubmatic-match.dotomi.com/
 server=/pulsepoint-match.dotomi.com/
 server=/purch-match.dotomi.com/
 server=/rubicon-match.dotomi.com/
+server=/s-usweb.dotomi.com/
 server=/sjc-login.dotomi.com/
 server=/sortable-match.dotomi.com/
 server=/spotx-match.dotomi.com/
 server=/stx-match.dotomi.com/
-server=/s-usweb.dotomi.com/
 server=/synacor-match.dotomi.com/
 server=/tpt.dotomi.com/
-server=/tubemogul-sync.dotomi.com/
 server=/tremor-match.dotomi.com/
-server=/usadmm.dotomi.com/
+server=/tubemogul-sync.dotomi.com/
 server=/usadmm-ds.dotomi.com/
+server=/usadmm.dotomi.com/
 server=/usweb.dotomi.com/
 server=/vcm-match.dotomi.com/
 #[1rx.io]
@@ -5910,10 +5912,12 @@ server=/s-rtb.send.microadinc.com/
 server=/ssp.send.microadinc.com/
 #[microad.jp]
 server=/microad.jp/
+server=/aid.send.microad.jp/
+server=/cache.send.microad.jp/
 server=/cdn.microad.jp/
 server=/cm.send.microad.jp/
-server=/s-rtb.send.microad.jp/
 server=/s-rtb-pb.send.microad.jp/
+server=/s-rtb.send.microad.jp/
 server=/ssp.send.microad.jp/
 server=/universe.send.microad.jp/
 #[microad.net]
@@ -6568,6 +6572,7 @@ server=/wp-static.publift.com/
 server=/www.publift.com/
 #[id5-sync.com]
 server=/cdn.id5-sync.com/
+server=/diagnostics.id5-sync.com/
 server=/id5-sync.com/
 server=/www.id5-sync.com/
 #[eu-1-id5-sync.com]
@@ -7238,9 +7243,14 @@ server=/cdn.blueadss.com/
 server=/www.blueadss.com/
 #[ezodn.com]
 server=/ezodn.com/
+server=/bshr.ezodn.com/
 server=/g.ezodn.com/
 server=/go.ezodn.com/
 server=/www.ezodn.com/
+#[ezoic.net]
+server=/ezoic.net/
+server=/g.ezoic.net/
+server=/go.ezoic.net/
 #[relap.io]
 server=/api.relap.io/
 server=/cdn.relap.io/
@@ -10239,6 +10249,14 @@ server=/creative.hpyrdr.com/
 server=/go.hpyrdr.com/
 server=/hpyrdr.com/
 server=/wl.hpyrdr.com/
+#[blcdog.com]
+server=/blcdog.com/
+server=/creative.blcdog.com/
+server=/go.blcdog.com/
+#[xlirdr.com]
+server=/creative.xlirdr.com/
+server=/go.xlirdr.com/
+server=/xlirdr.com/
 #[polarbyte.com]
 server=/analytics.polarbyte.com/
 server=/api.polarbyte.com/
@@ -10899,6 +10917,7 @@ server=/wren.condenastdigital.com/
 server=/ab1n.net/
 server=/tk6if76q.ab1n.net/
 #[zemanta.com]
+server=/b1sync.zemanta.com/
 server=/p1.zemanta.com/
 server=/zemanta.com/
 #[bquildna43.site]
@@ -11661,6 +11680,38 @@ server=/incoming.telemetry.mozilla.org/
 #[provenpixel.com]
 server=/provenpixel.com/
 server=/upx.provenpixel.com/
+#[rtbhouse.com]
+server=/esp.rtbhouse.com/
+server=/rtbhouse.com/
+#[openxcdn.net]
+server=/oa.openxcdn.net/
+server=/openxcdn.net/
+#[prod.uidapi.com]
+server=/cdn.prod.uidapi.com/
+server=/prod.uidapi.com/
+#[fastclick.net]
+server=/fastclick.net/
+server=/secure.cdn.fastclick.net/
+#[ccgateway.net]
+server=/ccgateway.net/
+server=/analytics.ccgateway.net/
+server=/carbon-cdn.ccgateway.net/
+server=/ingestion-router-api.ccgateway.net/
+server=/privacy-location-edge.ccgateway.net/
+server=/script-api.ccgateway.net/
+#[ust-ad.com]
+server=/ust-ad.com/
+server=/ad.ust-ad.com/
+server=/adjs.ust-ad.com/
+server=/rcv.ust-ad.com/
+#[impact-ad.jp]
+server=/impact-ad.jp/
+server=/aw.dw.impact-ad.jp/
+server=/y.one.impact-ad.jp/
+#[ssp.bance.jp]
+server=/bid.ssp.bance.jp/
+server=/js.ssp.bance.jp/
+server=/tr.ssp.bance.jp/
 # --- GroupVN block ---
 #[adtimaserver]
 server=/adtimaserver.vn/
@@ -14877,6 +14928,7 @@ server=/banquetunarmedgrater.com/
 server=/bans.bride.ru/
 server=/baresi.xyz/
 server=/barnesandnoble.bfast.com/
+server=/barometercorrodingunease.com/
 server=/barscreative1.com/
 server=/basebanner.com/
 server=/basepush.com/
@@ -15130,6 +15182,7 @@ server=/cameesse.net/
 server=/camp.purchase-shop.com/
 server=/campaign.bharatmatrimony.com/
 server=/campaigns.williamhill.com/
+server=/cams.gratis/
 server=/can-get-so.me/
 server=/canangafierier.uno/
 server=/caniamedia.com/
@@ -15426,6 +15479,7 @@ server=/copiousgoutswimwear.com/
 server=/copycarpenter.com/
 server=/copyrightaccesscontrols.com/
 server=/coremetrics.com/
+server=/correctdilutetrophy.com/
 server=/correlationcocktailinevitably.com/
 server=/count.rin.ru/
 server=/count.west263.com/
@@ -15506,6 +15560,7 @@ server=/culterwhether.com/
 server=/culturalsameunbridle.com/
 server=/culwcoam.com/
 server=/cupidonmedia.com/
+server=/cupoabie.net/
 server=/curioushingefast.com/
 server=/curlyhomes.com/
 server=/curtaincows.com/
@@ -15694,6 +15749,7 @@ server=/displayadsmedia.com/
 server=/displaycontentprofit.com/
 server=/displayformatcontent.com/
 server=/displayvertising.com/
+server=/disprovefacilityjolt.com/
 server=/disqusads.com/
 server=/disrespectpreceding.com/
 server=/dist.belnk.com/
@@ -15726,6 +15782,7 @@ server=/dorkingvoust.com/
 server=/doruffletr.com/
 server=/dotranquilla.com/
 server=/dotsonian.org/
+server=/dotyruntchan.com/
 server=/doubleadserve.com/
 server=/doubleclick.com/
 server=/doubleclick.de/
@@ -15929,6 +15986,7 @@ server=/extracthorizontaldashing.com/
 server=/extreme-dm.com/
 server=/extremetracking.com/
 server=/exxohwvxupjv.com/
+server=/ey43.com/
 server=/eyeblaster.com/
 server=/eyebrowscrambledlater.com/
 server=/eyereturn.com/
@@ -15959,7 +16017,6 @@ server=/faronqdkimah.com/
 server=/fashmuqpi.com/
 server=/fastbuy.biz/
 server=/fastclick.com/
-server=/fastclick.net/
 server=/fatcoil.com/
 server=/fatsosjogs.com/
 server=/faukeeshie.com/
@@ -15999,6 +16056,7 @@ server=/firstlightera.com/
 server=/fistofzeus.com/
 server=/fixespreoccupation.com/
 server=/fkabzoarsoz.com/
+server=/fkwnnfwhvjmubrl.com/
 server=/flagmantensity.com/
 server=/flakyfeast.com/
 server=/fleraprt.com/
@@ -16356,6 +16414,7 @@ server=/hoddlegamey.com/
 server=/holahupa.com/
 server=/homepageking.de/
 server=/homespotaudience.com/
+server=/hoocaumakopaibu.com/
 server=/hookawep.net/
 server=/hoowooze.net/
 server=/hostedads.realitykings.com/
@@ -16397,6 +16456,7 @@ server=/hyperbanner.net/
 server=/hypermusk.com/
 server=/hypertracker.com/
 server=/hypertusk.com/
+server=/hz.methylstewed.com/
 server=/i-lookup.com/
 server=/i.cdnkimg.com/
 server=/i1media.no/
@@ -16450,7 +16510,6 @@ server=/imimobile.com/
 server=/immensehoney.com/
 server=/immerseweariness.com/
 server=/immoxdzdke.com/
-server=/impact-ad.jp/
 server=/impactmobile.com/
 server=/impeccablewriter.com/
 server=/importedincrease.com/
@@ -16834,6 +16893,7 @@ server=/luloffer.com/
 server=/lumpbackstage.com/
 server=/lumupu.xyz/
 server=/lunarads.com/
+server=/lutoorgourgi.com/
 server=/luxope.com/
 server=/lvtuucmyfpz.com/
 server=/lwddlhcdwmr.com/
@@ -17092,6 +17152,7 @@ server=/mutcheng.net/
 server=/muwmedia.com/
 server=/mw19c3mi5a.com/
 server=/mwejhobumo.com/
+server=/mwekuzaj.com/
 server=/mxptint.net/
 server=/mxvp-ad-config-prod-1.zenmxapps.com/
 server=/mxvp-feature-toggle-prod-1.zenmxapps.com/
@@ -17200,6 +17261,7 @@ server=/nexac.com/
 server=/nextmillmedia.com/
 server=/nfucujozv.com/
 server=/ng3.ads.warnerbros.com/
+server=/nhusjhrshwxvl.com/
 server=/nicksstevmark.com/
 server=/nicohgokppuj.com/
 server=/nightmareirene.com/
@@ -17770,6 +17832,7 @@ server=/ptoushoa.com/
 server=/ptukasti.com/
 server=/ptumsess.com/
 server=/ptuxapow.com/
+server=/ptuzrywmega.com/
 server=/ptygunjk.com/
 server=/pu1.biz/
 server=/pu3.biz/
@@ -17911,6 +17974,7 @@ server=/rapidfoxengine.com/
 server=/rapleaf.com/
 server=/raresummer.com/
 server=/rate.ru/
+server=/raunoaptotoaw.com/
 server=/razzedwhimsic.website/
 server=/rbkhpjfwtmirk.com/
 server=/rcvlink.com/
@@ -18055,6 +18119,7 @@ server=/rosysolvingscallion.com/
 server=/rot.spotsniper.ru/
 server=/rotabol.com/
 server=/rotumal.com/
+server=/roumaniangravelnot.com/
 server=/rounddescribe.com/
 server=/roundspaniardindefinitely.com/
 server=/rounuatedanximum.com/
@@ -18463,6 +18528,7 @@ server=/suppliedhopelesspredestination.com/
 server=/supportiverarity.com/
 server=/surecheapermoisture.com/
 server=/surfmusik-adserver.de/
+server=/surtaultathoado.com/
 server=/susifhfh2d8ldn09.com/
 server=/suspectedadvisor.com/
 server=/suwcaxazzn.com/
@@ -18777,6 +18843,7 @@ server=/tyroo.com/
 server=/tzegilo.com/
 server=/tzhrmcnidxqwrb.com/
 server=/tzirtatakoqf.com/
+server=/tzwtzygxslrk.com/
 server=/u1pmt.com/
 server=/u9axpzf50.com/
 server=/uarating.com/
@@ -19402,7 +19469,6 @@ server=/analytics.amazing-media.com/
 server=/analytics.archive.org/
 server=/analytics.avcdn.net/
 server=/analytics.bitrix.info/
-server=/analytics.ccgateway.net/
 server=/analytics.cdn.live/
 server=/analytics.clickdimensions.com/
 server=/analytics.cloudron.io/
@@ -19501,7 +19567,6 @@ server=/cadmus.script.ac/
 server=/cankaowang.com/
 server=/cc-api-data.adobe.io/
 server=/cc.swiftype.com/
-server=/ccgateway.net/
 server=/cdn.c-i.as/
 server=/cdn.counter.dev/
 server=/cdn.lr-ingest.io/
@@ -19821,7 +19886,6 @@ server=/playtomic.com/
 server=/ponos.zeronaught.com/
 server=/poole-collector-prod.n3twork.com/
 server=/popupmaker.com/
-server=/prod.uidapi.com/
 server=/prodregistryv2.org/
 server=/promotionengine.com/
 server=/prooffactor.com/
