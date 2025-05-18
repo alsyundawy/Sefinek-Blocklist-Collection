@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025051601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025051801 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -26161,6 +26161,8 @@ geoip.instiengage.com CNAME .
 *.geoip.instiengage.com CNAME .
 geoip.nekudo.com CNAME .
 *.geoip.nekudo.com CNAME .
+geoip.radio-canada.ca CNAME .
+*.geoip.radio-canada.ca CNAME .
 geolocation.forbes.com CNAME .
 *.geolocation.forbes.com CNAME .
 geolocation.outreach.com CNAME .
@@ -26371,8 +26373,6 @@ get.qapital.com CNAME .
 *.get.qapital.com CNAME .
 get.recolor.info CNAME .
 *.get.recolor.info CNAME .
-get.revolut.com CNAME .
-*.get.revolut.com CNAME .
 get.reward.me CNAME .
 *.get.reward.me CNAME .
 get.riyazapp.com CNAME .
@@ -48439,8 +48439,6 @@ prod.tracking.refinitiv.com CNAME .
 *.prod.tracking.refinitiv.com CNAME .
 proditor.sparda.de CNAME .
 *.proditor.sparda.de CNAME .
-prodregistryv2.org CNAME .
-*.prodregistryv2.org CNAME .
 product.cel-fi.com CNAME .
 *.product.cel-fi.com CNAME .
 product.cloud.travelport.com CNAME .
@@ -63695,6 +63693,8 @@ stats.healthydirections.com CNAME .
 *.stats.healthydirections.com CNAME .
 stats.henkverlinde.com CNAME .
 *.stats.henkverlinde.com CNAME .
+stats.hexa.watch CNAME .
+*.stats.hexa.watch CNAME .
 stats.heyoya.com CNAME .
 *.stats.heyoya.com CNAME .
 stats.his-j.com CNAME .
