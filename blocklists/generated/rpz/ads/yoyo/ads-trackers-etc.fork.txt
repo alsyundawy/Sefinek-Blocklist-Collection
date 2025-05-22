@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025051701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025052201 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -651,6 +651,8 @@ ads-dev.pinterest.com CNAME .
 *.ads-dev.pinterest.com CNAME .
 ads-game-187f4.firebaseapp.com CNAME .
 *.ads-game-187f4.firebaseapp.com CNAME .
+ads-img.mozilla.org CNAME .
+*.ads-img.mozilla.org CNAME .
 ads-trk.vidible.tv CNAME .
 *.ads-trk.vidible.tv CNAME .
 ads-twitter.com CNAME .
@@ -1053,6 +1055,8 @@ ads.printscr.com CNAME .
 *.ads.printscr.com CNAME .
 ads.prisacom.com CNAME .
 *.ads.prisacom.com CNAME .
+ads.prod.webservices.mozgcp.net CNAME .
+*.ads.prod.webservices.mozgcp.net CNAME .
 ads.program3.com CNAME .
 *.ads.program3.com CNAME .
 ads.psd2html.com CNAME .
