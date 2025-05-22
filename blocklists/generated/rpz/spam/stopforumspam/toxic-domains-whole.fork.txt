@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025052101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025052201 43200 3600 259200 300
   NS  localhost.
 00-tv.com CNAME .
 *.00-tv.com CNAME .
@@ -43643,6 +43643,8 @@ fvgs.com CNAME .
 *.fvgs.com CNAME .
 fvia.app CNAME .
 *.fvia.app CNAME .
+fviamail.com CNAME .
+*.fviamail.com CNAME .
 fviamail.site CNAME .
 *.fviamail.site CNAME .
 fviatool.com CNAME .
@@ -71397,6 +71399,8 @@ mmo01.com CNAME .
 *.mmo01.com CNAME .
 mmo05.com CNAME .
 *.mmo05.com CNAME .
+mmo55.com CNAME .
+*.mmo55.com CNAME .
 mmohe.com CNAME .
 *.mmohe.com CNAME .
 mmpan.com CNAME .
