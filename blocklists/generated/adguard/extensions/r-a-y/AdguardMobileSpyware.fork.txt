@@ -1,7 +1,7 @@
 ! AdguardMobileSpyware
 !
 ! Converted from - https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt
-! Last converted - Fri, 23 May 2025 02:14:52 +0000
+! Last converted - Sat, 24 May 2025 02:05:13 +0000
 !
 ||adeventtracker.spotify.com^
 ||do-not-tracker.org^
@@ -108,6 +108,8 @@
 ||int.vlancaa.site^
 ||int.vlancaa.fun^
 ||tok.vaicore.xyz^
+||fp-it.fengkongcloud.com^
+||api-fp-retry-bj.fengkongcloud.com^
 ||app-tracking.hlogo.de^
 ||px.wpk.quark.cn^
 ||uc9.ucweb.com^
@@ -197,11 +199,16 @@
 ||stats.samsungpass.com^
 ||analytics.google.com^
 ||log.pdfviewerscannerstore.live^
+||log-sg.capcutapi.com^
+||mon-sg.capcutapi.com^
+||tnc-sg.capcutapi.com^
+||tnc-boot.capcutapi.com^
+||tnc-va-us-looki.capcutapi.com^
 ||mon-va-us-looki.capcutapi.com^
+||log-va-us-looki.capcutapi.com^
 ||metrics-prod.suno.com^
 ||logs-ingress.svc.vinted.com^
 ||analytics.baliusuperapp.xyz^
-||log-va-us-looki.capcutapi.com^
 ||analytics.hardlightgames.com^
 ||plankton-gtm.a.autoscout24.com^
 ||pangle-b.io^
@@ -532,6 +539,7 @@
 ||collector.vhx.tv^
 ||analytics-server.gimbal.com^
 ||log-tb.sgsnssdk.com^
+||rtlog.byteoversea.com^
 ||xlog.byteoversea.com^
 ||ug-sg.byteoversea.com^
 ||tracking.aldi-international.com^

@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025052301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025052401 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -211,6 +211,10 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+fp-it.fengkongcloud.com CNAME .
+*.fp-it.fengkongcloud.com CNAME .
+api-fp-retry-bj.fengkongcloud.com CNAME .
+*.api-fp-retry-bj.fengkongcloud.com CNAME .
 app-tracking.hlogo.de CNAME .
 *.app-tracking.hlogo.de CNAME .
 px.wpk.quark.cn CNAME .
@@ -389,16 +393,26 @@ analytics.google.com CNAME .
 *.analytics.google.com CNAME .
 log.pdfviewerscannerstore.live CNAME .
 *.log.pdfviewerscannerstore.live CNAME .
+log-sg.capcutapi.com CNAME .
+*.log-sg.capcutapi.com CNAME .
+mon-sg.capcutapi.com CNAME .
+*.mon-sg.capcutapi.com CNAME .
+tnc-sg.capcutapi.com CNAME .
+*.tnc-sg.capcutapi.com CNAME .
+tnc-boot.capcutapi.com CNAME .
+*.tnc-boot.capcutapi.com CNAME .
+tnc-va-us-looki.capcutapi.com CNAME .
+*.tnc-va-us-looki.capcutapi.com CNAME .
 mon-va-us-looki.capcutapi.com CNAME .
 *.mon-va-us-looki.capcutapi.com CNAME .
+log-va-us-looki.capcutapi.com CNAME .
+*.log-va-us-looki.capcutapi.com CNAME .
 metrics-prod.suno.com CNAME .
 *.metrics-prod.suno.com CNAME .
 logs-ingress.svc.vinted.com CNAME .
 *.logs-ingress.svc.vinted.com CNAME .
 analytics.baliusuperapp.xyz CNAME .
 *.analytics.baliusuperapp.xyz CNAME .
-log-va-us-looki.capcutapi.com CNAME .
-*.log-va-us-looki.capcutapi.com CNAME .
 analytics.hardlightgames.com CNAME .
 *.analytics.hardlightgames.com CNAME .
 plankton-gtm.a.autoscout24.com CNAME .
@@ -1059,6 +1073,8 @@ analytics-server.gimbal.com CNAME .
 *.analytics-server.gimbal.com CNAME .
 log-tb.sgsnssdk.com CNAME .
 *.log-tb.sgsnssdk.com CNAME .
+rtlog.byteoversea.com CNAME .
+*.rtlog.byteoversea.com CNAME .
 xlog.byteoversea.com CNAME .
 *.xlog.byteoversea.com CNAME .
 ug-sg.byteoversea.com CNAME .

@@ -1,7 +1,7 @@
 # AdguardMobileSpyware
 #
 # Converted from - https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt
-# Last converted - Fri, 23 May 2025 02:14:52 +0000
+# Last converted - Sat, 24 May 2025 02:05:13 +0000
 #
 127.0.0.1 adeventtracker.spotify.com
 127.0.0.1 do-not-tracker.org
@@ -108,6 +108,8 @@
 127.0.0.1 int.vlancaa.site
 127.0.0.1 int.vlancaa.fun
 127.0.0.1 tok.vaicore.xyz
+127.0.0.1 fp-it.fengkongcloud.com
+127.0.0.1 api-fp-retry-bj.fengkongcloud.com
 127.0.0.1 app-tracking.hlogo.de
 127.0.0.1 px.wpk.quark.cn
 127.0.0.1 uc9.ucweb.com
@@ -197,11 +199,16 @@
 127.0.0.1 stats.samsungpass.com
 127.0.0.1 analytics.google.com
 127.0.0.1 log.pdfviewerscannerstore.live
+127.0.0.1 log-sg.capcutapi.com
+127.0.0.1 mon-sg.capcutapi.com
+127.0.0.1 tnc-sg.capcutapi.com
+127.0.0.1 tnc-boot.capcutapi.com
+127.0.0.1 tnc-va-us-looki.capcutapi.com
 127.0.0.1 mon-va-us-looki.capcutapi.com
+127.0.0.1 log-va-us-looki.capcutapi.com
 127.0.0.1 metrics-prod.suno.com
 127.0.0.1 logs-ingress.svc.vinted.com
 127.0.0.1 analytics.baliusuperapp.xyz
-127.0.0.1 log-va-us-looki.capcutapi.com
 127.0.0.1 analytics.hardlightgames.com
 127.0.0.1 plankton-gtm.a.autoscout24.com
 127.0.0.1 pangle-b.io
@@ -532,6 +539,7 @@
 127.0.0.1 collector.vhx.tv
 127.0.0.1 analytics-server.gimbal.com
 127.0.0.1 log-tb.sgsnssdk.com
+127.0.0.1 rtlog.byteoversea.com
 127.0.0.1 xlog.byteoversea.com
 127.0.0.1 ug-sg.byteoversea.com
 127.0.0.1 tracking.aldi-international.com
