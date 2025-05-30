@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025052901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025053001 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -211,6 +211,8 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+smartcard.apps.coloros.com CNAME .
+*.smartcard.apps.coloros.com CNAME .
 fp-it.fengkongcloud.com CNAME .
 *.fp-it.fengkongcloud.com CNAME .
 api-fp-retry-bj.fengkongcloud.com CNAME .
