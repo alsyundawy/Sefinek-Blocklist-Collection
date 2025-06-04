@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025060201 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025060401 43200 3600 259200 300
   NS  localhost.
 api-adservices.apple.com CNAME .
 *.api-adservices.apple.com CNAME .
@@ -21929,6 +21929,10 @@ log.tv360.vn CNAME .
 *.log.tv360.vn CNAME .
 pubads-wiinvent.tv360.vn CNAME .
 *.pubads-wiinvent.tv360.vn CNAME .
+log-collector.shopee.vn CNAME .
+*.log-collector.shopee.vn CNAME .
+userstats.shopee.vn CNAME .
+*.userstats.shopee.vn CNAME .
 12signup.com CNAME .
 *.12signup.com CNAME .
 ad-admin.vnay.vn CNAME .
@@ -22561,8 +22565,6 @@ live.vnpgroup.net CNAME .
 *.live.vnpgroup.net CNAME .
 liveonline.nhanhoa.com CNAME .
 *.liveonline.nhanhoa.com CNAME .
-log-collector.shopee.vn CNAME .
-*.log-collector.shopee.vn CNAME .
 log-dttc.sggp.org.vn CNAME .
 *.log-dttc.sggp.org.vn CNAME .
 log-en.nhandan.vn CNAME .
@@ -22931,8 +22933,6 @@ upl.net-solutions.vn CNAME .
 *.upl.net-solutions.vn CNAME .
 us.mplis.gov.vn CNAME .
 *.us.mplis.gov.vn CNAME .
-userstats.shopee.vn CNAME .
-*.userstats.shopee.vn CNAME .
 vieon-tracking.vieon.vn CNAME .
 *.vieon-tracking.vieon.vn CNAME .
 vietnamdaily-log.kienthuc.net.vn CNAME .
@@ -23789,6 +23789,8 @@ adrazzi.com CNAME .
 *.adrazzi.com CNAME .
 adreactor.com CNAME .
 *.adreactor.com CNAME .
+adready.vip CNAME .
+*.adready.vip CNAME .
 adreclaim.com CNAME .
 *.adreclaim.com CNAME .
 adrecreate.com CNAME .
@@ -29375,6 +29377,8 @@ lidburger.com CNAME .
 *.lidburger.com CNAME .
 lidosquey.shop CNAME .
 *.lidosquey.shop CNAME .
+lifpv.com CNAME .
+*.lifpv.com CNAME .
 liftdna.com CNAME .
 *.liftdna.com CNAME .
 ligatus.de CNAME .
@@ -30173,6 +30177,8 @@ nazolncubha.com CNAME .
 *.nazolncubha.com CNAME .
 ncaxvlngll.com CNAME .
 *.ncaxvlngll.com CNAME .
+nddjdbxwbpp.com CNAME .
+*.nddjdbxwbpp.com CNAME .
 ndha4sding6gf.com CNAME .
 *.ndha4sding6gf.com CNAME .
 ndparking.com CNAME .
@@ -33767,6 +33773,8 @@ velocecdn.com CNAME .
 *.velocecdn.com CNAME .
 velocitycdn.com CNAME .
 *.velocitycdn.com CNAME .
+velsirtohoosh.net CNAME .
+*.velsirtohoosh.net CNAME .
 velti.com CNAME .
 *.velti.com CNAME .
 venetrigni.com CNAME .
@@ -34509,6 +34517,8 @@ zimpolo.com CNAME .
 *.zimpolo.com CNAME .
 zintext.com CNAME .
 *.zintext.com CNAME .
+zipazvzu.com CNAME .
+*.zipazvzu.com CNAME .
 zkuziwzzyf.com CNAME .
 *.zkuziwzzyf.com CNAME .
 zkyqafavdg.com CNAME .
@@ -34809,8 +34819,6 @@ blueoyster.click CNAME .
 *.blueoyster.click CNAME .
 burstly.com CNAME .
 *.burstly.com CNAME .
-c-api-bit.shopeemobile.com CNAME .
-*.c-api-bit.shopeemobile.com CNAME .
 c.riskified.com CNAME .
 *.c.riskified.com CNAME .
 c2i-cdn.startappnetwork.com CNAME .
