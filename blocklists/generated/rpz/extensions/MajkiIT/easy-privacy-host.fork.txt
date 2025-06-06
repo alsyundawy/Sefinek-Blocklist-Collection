@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025060401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025060601 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -10733,6 +10733,8 @@ analytics.prezly.com CNAME .
 *.analytics.prezly.com CNAME .
 analytics.productreview.com.au CNAME .
 *.analytics.productreview.com.au CNAME .
+analytics.pyksid.com CNAME .
+*.analytics.pyksid.com CNAME .
 analytics.qogita.com CNAME .
 *.analytics.qogita.com CNAME .
 analytics.qualcomm.com CNAME .
