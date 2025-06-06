@@ -1,6 +1,8 @@
 $TTL 300
 @ SOA localhost. root.localhost. 2025060601 43200 3600 259200 300
   NS  localhost.
+xrumersale.site CNAME .
+*.xrumersale.site CNAME .
 00-tv.com CNAME .
 *.00-tv.com CNAME .
 00.pe CNAME .
@@ -6155,6 +6157,8 @@ adidas-predator.fr CNAME .
 *.adidas-predator.fr CNAME .
 adidas-predator.it CNAME .
 *.adidas-predator.it CNAME .
+adidasspezial.de CNAME .
+*.adidasspezial.de CNAME .
 adil.pl CNAME .
 *.adil.pl CNAME .
 adios.email CNAME .
