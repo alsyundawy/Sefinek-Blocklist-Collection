@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025060301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025060701 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -95,14 +95,8 @@ dynamic-report-api.appsflyersdk.com CNAME .
 *.dynamic-report-api.appsflyersdk.com CNAME .
 privacy-sandbox.appsflyersdk.com CNAME .
 *.privacy-sandbox.appsflyersdk.com CNAME .
-register.appsflyersdk.com CNAME .
-*.register.appsflyersdk.com CNAME .
-conversions.appsflyersdk.com CNAME .
-*.conversions.appsflyersdk.com CNAME .
 gcdsdk.appsflyersdk.com CNAME .
 *.gcdsdk.appsflyersdk.com CNAME .
-cdn-settings.appsflyersdk.com CNAME .
-*.cdn-settings.appsflyersdk.com CNAME .
 dlsdk.appsflyersdk.com CNAME .
 *.dlsdk.appsflyersdk.com CNAME .
 adrevenue.appsflyer.com CNAME .
@@ -139,12 +133,8 @@ impression.appsflyer.com CNAME .
 *.impression.appsflyer.com CNAME .
 inapps.appsflyer.com CNAME .
 *.inapps.appsflyer.com CNAME .
-inapps.appsflyersdk.com CNAME .
-*.inapps.appsflyersdk.com CNAME .
 launches.appsflyer.com CNAME .
 *.launches.appsflyer.com CNAME .
-launches.appsflyersdk.com CNAME .
-*.launches.appsflyersdk.com CNAME .
 onelink.appsflyer.com CNAME .
 *.onelink.appsflyer.com CNAME .
 register.appsflyer.com CNAME .
