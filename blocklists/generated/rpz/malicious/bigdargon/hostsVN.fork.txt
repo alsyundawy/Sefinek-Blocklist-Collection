@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025060501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025060801 43200 3600 259200 300
   NS  localhost.
 api-adservices.apple.com CNAME .
 *.api-adservices.apple.com CNAME .
@@ -2175,8 +2175,10 @@ sdk.appnext.com CNAME .
 *.sdk.appnext.com CNAME .
 ads.api.vungle.com CNAME .
 *.ads.api.vungle.com CNAME .
-vungle.com CNAME .
-*.vungle.com CNAME .
+adx.ads.vungle.com CNAME .
+*.adx.ads.vungle.com CNAME .
+akamai.vungle-cdn.vungle.com CNAME .
+*.akamai.vungle-cdn.vungle.com CNAME .
 api.vungle.com CNAME .
 *.api.vungle.com CNAME .
 bd.vungle.com CNAME .
@@ -2187,20 +2189,22 @@ cdn-lb.vungle.com CNAME .
 *.cdn-lb.vungle.com CNAME .
 ci.vungle.com CNAME .
 *.ci.vungle.com CNAME .
-data.vungle.com CNAME .
-*.data.vungle.com CNAME .
 data-ext.vungle.com CNAME .
 *.data-ext.vungle.com CNAME .
+data.vungle.com CNAME .
+*.data.vungle.com CNAME .
 influxdb2.vungle.com CNAME .
 *.influxdb2.vungle.com CNAME .
+ingest-qa.kube-prod.vungle.com CNAME .
+*.ingest-qa.kube-prod.vungle.com CNAME .
 ingest.vungle.com CNAME .
 *.ingest.vungle.com CNAME .
 jaeger.vungle.com CNAME .
 *.jaeger.vungle.com CNAME .
 kubana.vungle.com CNAME .
 *.kubana.vungle.com CNAME .
-ingest-qa.kube-prod.vungle.com CNAME .
-*.ingest-qa.kube-prod.vungle.com CNAME .
+logs.ads.vungle.com CNAME .
+*.logs.ads.vungle.com CNAME .
 ltv-data-api.kube-prod.vungle.com CNAME .
 *.ltv-data-api.kube-prod.vungle.com CNAME .
 ltv-spark-webui.kube-prod.vungle.com CNAME .
@@ -2209,8 +2213,8 @@ monitoring.vungle.com CNAME .
 *.monitoring.vungle.com CNAME .
 v.vungle.com CNAME .
 *.v.vungle.com CNAME .
-akamai.vungle-cdn.vungle.com CNAME .
-*.akamai.vungle-cdn.vungle.com CNAME .
+vungle.com CNAME .
+*.vungle.com CNAME .
 ad.qq.com CNAME .
 *.ad.qq.com CNAME .
 aegis.qq.com CNAME .
@@ -25261,6 +25265,8 @@ ausoafab.net CNAME .
 *.ausoafab.net CNAME .
 autchoog.net CNAME .
 *.autchoog.net CNAME .
+authoaxoms.net CNAME .
+*.authoaxoms.net CNAME .
 autjaetpxhj.com CNAME .
 *.autjaetpxhj.com CNAME .
 auto-bannertausch.de CNAME .
@@ -25563,6 +25569,8 @@ bbbpromos.org CNAME .
 *.bbbpromos.org CNAME .
 bbelements.com CNAME .
 *.bbelements.com CNAME .
+bbyloavu.com CNAME .
+*.bbyloavu.com CNAME .
 bcaojrbriciw.com CNAME .
 *.bcaojrbriciw.com CNAME .
 bcfads.com CNAME .
@@ -28589,6 +28597,8 @@ hppvkbfcuq.com CNAME .
 *.hppvkbfcuq.com CNAME .
 hrjbylofyso.com CNAME .
 *.hrjbylofyso.com CNAME .
+hscozgoqffn.com CNAME .
+*.hscozgoqffn.com CNAME .
 htlbid.com CNAME .
 *.htlbid.com CNAME .
 httpool.com CNAME .
@@ -28619,6 +28629,8 @@ huskypartydance.com CNAME .
 *.huskypartydance.com CNAME .
 hutchieshode.com CNAME .
 *.hutchieshode.com CNAME .
+hvxnlmjx.com CNAME .
+*.hvxnlmjx.com CNAME .
 hw.zuimeitianqi.com CNAME .
 *.hw.zuimeitianqi.com CNAME .
 hwpnocpctu.com CNAME .
@@ -29111,6 +29123,8 @@ justwebads.com CNAME .
 *.justwebads.com CNAME .
 jvmhtxiqdfr.xyz CNAME .
 *.jvmhtxiqdfr.xyz CNAME .
+jxjttecednvb.com CNAME .
+*.jxjttecednvb.com CNAME .
 jyhlgpkn.com CNAME .
 *.jyhlgpkn.com CNAME .
 k.iinfo.cz CNAME .
@@ -29471,6 +29485,8 @@ lkhbcpwpyecs.com CNAME .
 *.lkhbcpwpyecs.com CNAME .
 llink.site CNAME .
 *.llink.site CNAME .
+llzv.lzazqroyklozv.top CNAME .
+*.llzv.lzazqroyklozv.top CNAME .
 lmajm.lbylqerzmzlzq.top CNAME .
 *.lmajm.lbylqerzmzlzq.top CNAME .
 lmmjj.lqbvjmkoozark.top CNAME .
@@ -30857,8 +30873,6 @@ pageranktop.com CNAME .
 *.pageranktop.com CNAME .
 pagiwp.com CNAME .
 *.pagiwp.com CNAME .
-paikoasa.tv CNAME .
-*.paikoasa.tv CNAME .
 pajnutas.com CNAME .
 *.pajnutas.com CNAME .
 palaceunlituntouched.com CNAME .
@@ -31581,6 +31595,8 @@ qa.shboshbok.com CNAME .
 *.qa.shboshbok.com CNAME .
 qahntenkyf.com CNAME .
 *.qahntenkyf.com CNAME .
+qainfcnvfensl.site CNAME .
+*.qainfcnvfensl.site CNAME .
 qakzfubfozaj.com CNAME .
 *.qakzfubfozaj.com CNAME .
 qarhrytwyqp.com CNAME .
@@ -34131,6 +34147,8 @@ widgets.coinmarketcap.com CNAME .
 *.widgets.coinmarketcap.com CNAME .
 widow5blackfr.com CNAME .
 *.widow5blackfr.com CNAME .
+wijwunrcoo.com CNAME .
+*.wijwunrcoo.com CNAME .
 wikfuttupw.com CNAME .
 *.wikfuttupw.com CNAME .
 wikia-ads.wikia.com CNAME .
