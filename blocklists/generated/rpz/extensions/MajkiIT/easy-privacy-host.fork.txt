@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025060601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025060801 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -10733,6 +10733,8 @@ analytics.prezly.com CNAME .
 *.analytics.prezly.com CNAME .
 analytics.productreview.com.au CNAME .
 *.analytics.productreview.com.au CNAME .
+analytics.propensity.com CNAME .
+*.analytics.propensity.com CNAME .
 analytics.pyksid.com CNAME .
 *.analytics.pyksid.com CNAME .
 analytics.qogita.com CNAME .
@@ -24429,6 +24431,8 @@ event.seatradecruiseglobal.com CNAME .
 *.event.seatradecruiseglobal.com CNAME .
 event.spektare.com CNAME .
 *.event.spektare.com CNAME .
+event.syftdata.com CNAME .
+*.event.syftdata.com CNAME .
 event.syndigo.cloud CNAME .
 *.event.syndigo.cloud CNAME .
 event.tagtoo.co CNAME .
@@ -40295,6 +40299,8 @@ mato.clanto.cloud CNAME .
 *.mato.clanto.cloud CNAME .
 matomo.clanto.cloud CNAME .
 *.matomo.clanto.cloud CNAME .
+matomo3.org CNAME .
+*.matomo3.org CNAME .
 matrix.elecle.bike CNAME .
 *.matrix.elecle.bike CNAME .
 matrix.hbo.com CNAME .
