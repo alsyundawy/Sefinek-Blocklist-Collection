@@ -1,5 +1,5 @@
 # Admiral, parsed and mirrored by https://firebog.net
-# Updated 02JUN25 from https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/getadmiral-domains.txt
+# Updated 09JUN25 from https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/getadmiral-domains.txt
 # This is sourced from an "adblock" style list which is flat-out NOT designed to work with DNS sinkholes
 # There WILL be mistakes with how this is parsed, due to how domain names are extracted and exceptions handled
 # Please bring any parsing issues up at https://github.com/WaLLy3K/wally3k.github.io/issues prior to raising a request upstream
@@ -11,6 +11,7 @@
 0.0.0.0 abjectattempt.com
 0.0.0.0 aboardamusement.com
 0.0.0.0 aboardlevel.com
+0.0.0.0 abruptroad.com
 0.0.0.0 absentairport.com
 0.0.0.0 absorbingband.com
 0.0.0.0 absorbingprison.com
@@ -24,7 +25,6 @@
 0.0.0.0 acidicstraw.com
 0.0.0.0 acidpigs.com
 0.0.0.0 acousticairplane.com
-0.0.0.0 acridangle.com
 0.0.0.0 acridtwist.com
 0.0.0.0 actuallysheep.com
 0.0.0.0 actuallysnake.com
@@ -131,7 +131,6 @@
 0.0.0.0 bewilderedblade.com
 0.0.0.0 bhcumsc.com
 0.0.0.0 bikepaws.com
-0.0.0.0 bikesboard.com
 0.0.0.0 bikinginspire.com
 0.0.0.0 bilingualgeek.com
 0.0.0.0 billowybead.com
@@ -164,7 +163,6 @@
 0.0.0.0 boringberry.com
 0.0.0.0 bouncyproperty.com
 0.0.0.0 boundarybusiness.com
-0.0.0.0 boundlessargument.com
 0.0.0.0 boundlessbrake.com
 0.0.0.0 boundlessveil.com
 0.0.0.0 brainybasin.com
@@ -240,7 +238,6 @@
 0.0.0.0 cautiouscrate.com
 0.0.0.0 cautiouscredit.com
 0.0.0.0 cavecurtain.com
-0.0.0.0 ceciliavenus.com
 0.0.0.0 celestialeuphony.com
 0.0.0.0 celestialquasar.com
 0.0.0.0 celestialspectra.com
@@ -276,7 +273,6 @@
 0.0.0.0 cleanhaircut.com
 0.0.0.0 clearcomb.com
 0.0.0.0 cloisteredcurve.com
-0.0.0.0 closefriction.com
 0.0.0.0 cloudhustles.com
 0.0.0.0 cloudjumbo.com
 0.0.0.0 clumsycar.com
@@ -287,7 +283,6 @@
 0.0.0.0 coldbalance.com
 0.0.0.0 coldcallpro.com
 0.0.0.0 coloradoserves.com
-0.0.0.0 colossalchance.com
 0.0.0.0 colossalclouds.com
 0.0.0.0 colossalcoat.com
 0.0.0.0 colossalcry.com
@@ -369,7 +364,6 @@
 0.0.0.0 currentcollar.com
 0.0.0.0 curtaincows.com
 0.0.0.0 curvedhoney.com
-0.0.0.0 curvycord.com
 0.0.0.0 curvycry.com
 0.0.0.0 cushiondrum.com
 0.0.0.0 cutecalculator.com
@@ -386,13 +380,13 @@
 0.0.0.0 dashingdrop.com
 0.0.0.0 daymodern.com
 0.0.0.0 dazzlingbook.com
-0.0.0.0 deafeningdowntown.com
 0.0.0.0 debonairdust.com
 0.0.0.0 debonairtree.com
 0.0.0.0 decidedrum.com
 0.0.0.0 decisivebase.com
 0.0.0.0 decisivedrawer.com
 0.0.0.0 decklibrary.com
+0.0.0.0 decoroustitle.com
 0.0.0.0 deeptack.com
 0.0.0.0 deerbeginner.com
 0.0.0.0 defeatedbadge.com
@@ -481,7 +475,6 @@
 0.0.0.0 endurablebulb.com
 0.0.0.0 energeticexample.com
 0.0.0.0 energeticladybug.com
-0.0.0.0 engineergrape.com
 0.0.0.0 engineertrick.com
 0.0.0.0 enigmaprint.com
 0.0.0.0 enigmaticcanyon.com
@@ -491,7 +484,6 @@
 0.0.0.0 enterdrama.com
 0.0.0.0 entertainskin.com
 0.0.0.0 enthusiasticring.com
-0.0.0.0 enthusiastictemper.com
 0.0.0.0 enviousshape.com
 0.0.0.0 enviousthread.com
 0.0.0.0 epicoldschool.com
@@ -679,12 +671,11 @@
 0.0.0.0 habitualhumor.com
 0.0.0.0 halcyoncanyon.com
 0.0.0.0 halcyonsculpture.com
-0.0.0.0 hallowedinvention.com
 0.0.0.0 haltingbadge.com
 0.0.0.0 haltingdivision.com
+0.0.0.0 haltinggold.com
 0.0.0.0 hammerhearing.com
 0.0.0.0 handleteeth.com
-0.0.0.0 handnorth.com
 0.0.0.0 handsomehose.com
 0.0.0.0 handsomeindustry.com
 0.0.0.0 handsomelyhealth.com
@@ -787,6 +778,7 @@
 0.0.0.0 justconfig.com
 0.0.0.0 justicejudo.com
 0.0.0.0 justpickaname.com
+0.0.0.0 justwebcards.com
 0.0.0.0 keenquill.com
 0.0.0.0 kidpowers.com
 0.0.0.0 kindhush.com
@@ -809,6 +801,7 @@
 0.0.0.0 launchjack.com
 0.0.0.0 lazychord.com
 0.0.0.0 leafpilot.com
+0.0.0.0 leapfaucet.com
 0.0.0.0 leaplunchroom.com
 0.0.0.0 learnedmarket.com
 0.0.0.0 leftliquid.com
@@ -875,6 +868,7 @@
 0.0.0.0 marrowleaves.com
 0.0.0.0 materialisticmoon.com
 0.0.0.0 materialmilk.com
+0.0.0.0 materialmoon.com
 0.0.0.0 materialparcel.com
 0.0.0.0 materialplayground.com
 0.0.0.0 maxcruisers.com
@@ -885,7 +879,6 @@
 0.0.0.0 mediatescarf.com
 0.0.0.0 mediavine.com
 0.0.0.0 mellowhush.com
-0.0.0.0 mellowmailbox.com
 0.0.0.0 melodiouschorus.com
 0.0.0.0 melodiouscomposition.com
 0.0.0.0 melodiousharmony.com
@@ -1029,7 +1022,6 @@
 0.0.0.0 pastoralroad.com
 0.0.0.0 pawsnug.com
 0.0.0.0 peacefullimit.com
-0.0.0.0 pedromister.com
 0.0.0.0 pedropanther.com
 0.0.0.0 pegsbuttons.com
 0.0.0.0 perceivequarter.com
@@ -1040,7 +1032,6 @@
 0.0.0.0 photohints.com
 0.0.0.0 physicstees.com
 0.0.0.0 pickmicro.com
-0.0.0.0 piespower.com
 0.0.0.0 pietexture.com
 0.0.0.0 pigeonsetc.com
 0.0.0.0 pinchsquirrel.com
@@ -1066,6 +1057,7 @@
 0.0.0.0 pluckyzone.com
 0.0.0.0 pocketfaucet.com
 0.0.0.0 pocketsonic.com
+0.0.0.0 podiumpresto.com
 0.0.0.0 podname.com
 0.0.0.0 poemprompt.com
 0.0.0.0 poeticpackage.com
@@ -1074,7 +1066,6 @@
 0.0.0.0 pointlessprofit.com
 0.0.0.0 poisedfuel.com
 0.0.0.0 poisedpig.com
-0.0.0.0 polarismagnet.com
 0.0.0.0 polishedcrescent.com
 0.0.0.0 polishedfolly.com
 0.0.0.0 politeplanes.com
@@ -1085,10 +1076,10 @@
 0.0.0.0 possibleboats.com
 0.0.0.0 possiblepencil.com
 0.0.0.0 potatoinvention.com
-0.0.0.0 powderjourney.com
 0.0.0.0 powerfulblends.com
 0.0.0.0 powerfulcopper.com
 0.0.0.0 preciousplanes.com
+0.0.0.0 preciousyoke.com
 0.0.0.0 predictplate.com
 0.0.0.0 prefixpatriot.com
 0.0.0.0 prepareplanes.com
@@ -1232,7 +1223,6 @@
 0.0.0.0 ruralrobin.com
 0.0.0.0 rusticprice.com
 0.0.0.0 ruthlessdegree.com
-0.0.0.0 sableloss.com
 0.0.0.0 sableshelf.com
 0.0.0.0 sablesmile.com
 0.0.0.0 sablesong.com
@@ -1254,7 +1244,6 @@
 0.0.0.0 savoryorange.com
 0.0.0.0 savorystructure.com
 0.0.0.0 sayinnovation.com
-0.0.0.0 scarcecard.com
 0.0.0.0 scarceshock.com
 0.0.0.0 scarcesign.com
 0.0.0.0 scarcestream.com
@@ -1267,6 +1256,7 @@
 0.0.0.0 scaredsnakes.com
 0.0.0.0 scaredsong.com
 0.0.0.0 scaredstomach.com
+0.0.0.0 scaredstory.com
 0.0.0.0 scarefowl.com
 0.0.0.0 scarfsmash.com
 0.0.0.0 scatteredheat.com
@@ -1379,6 +1369,7 @@
 0.0.0.0 smoggysongs.com
 0.0.0.0 smoggystation.com
 0.0.0.0 snacktoken.com
+0.0.0.0 snakemineral.com
 0.0.0.0 snakeslang.com
 0.0.0.0 snappyreport.com
 0.0.0.0 snapsgate.com
@@ -1488,6 +1479,7 @@
 0.0.0.0 stonechin.com
 0.0.0.0 stonetumble.com
 0.0.0.0 stopstomach.com
+0.0.0.0 storeslope.com
 0.0.0.0 storesurprise.com
 0.0.0.0 straightnest.com
 0.0.0.0 straindrinks.com
@@ -1508,7 +1500,6 @@
 0.0.0.0 sturdysnail.com
 0.0.0.0 stylishbuds.com
 0.0.0.0 subjectivepoint.com
-0.0.0.0 subletyoke.com
 0.0.0.0 sublimequartz.com
 0.0.0.0 subseaagent.com
 0.0.0.0 subseasecurity.com
@@ -1540,6 +1531,7 @@
 0.0.0.0 syllablesight.com
 0.0.0.0 synonymoussticks.com
 0.0.0.0 synthesizescarecrow.com
+0.0.0.0 synthesizespoon.com
 0.0.0.0 tackytrains.com
 0.0.0.0 tacojournal.com
 0.0.0.0 talltouch.com
@@ -1619,7 +1611,6 @@
 0.0.0.0 trappush.com
 0.0.0.0 treadbun.com
 0.0.0.0 treatoceans.com
-0.0.0.0 tremendousearthquake.com
 0.0.0.0 tremendousplastic.com
 0.0.0.0 tremendoustime.com
 0.0.0.0 trickfile.com
@@ -1628,6 +1619,7 @@
 0.0.0.0 tritethunder.com
 0.0.0.0 tritetongue.com
 0.0.0.0 tropicalpal.com
+0.0.0.0 troubledtail.com
 0.0.0.0 troubleshade.com
 0.0.0.0 truckstomatoes.com
 0.0.0.0 truculentrate.com
@@ -1636,7 +1628,6 @@
 0.0.0.0 tumbleicicle.com
 0.0.0.0 tuneupcoffee.com
 0.0.0.0 twistloss.com
-0.0.0.0 twistsweater.com
 0.0.0.0 typicalairplane.com
 0.0.0.0 typicalteeth.com
 0.0.0.0 ubiquitoussea.com
@@ -1644,7 +1635,6 @@
 0.0.0.0 ultraoranges.com
 0.0.0.0 ultravalid.com
 0.0.0.0 unablehope.com
-0.0.0.0 unaccountablecreator.com
 0.0.0.0 unaccountablepie.com
 0.0.0.0 unarmedindustry.com
 0.0.0.0 unbecominghall.com
@@ -1661,6 +1651,7 @@
 0.0.0.0 unknownidea.com
 0.0.0.0 unloadyourself.com
 0.0.0.0 untidyrice.com
+0.0.0.0 unusedquestion.com
 0.0.0.0 unusedstone.com
 0.0.0.0 unusualtitle.com
 0.0.0.0 unwieldyhealth.com
@@ -1681,6 +1672,7 @@
 0.0.0.0 verdantlabyrinth.com
 0.0.0.0 verdantloom.com
 0.0.0.0 verdantsculpture.com
+0.0.0.0 verifyvegetable.com
 0.0.0.0 verseballs.com
 0.0.0.0 vibrantcelebration.com
 0.0.0.0 vibrantgale.com
@@ -1766,6 +1758,7 @@
 0.0.0.0 zestywire.com
 0.0.0.0 zigzagcabin.com
 0.0.0.0 zipperxray.com
+0.0.0.0 zippywind.com
 0.0.0.0 zipthelake.com
 0.0.0.0 zlp6s.pw
 0.0.0.0 zonewedgeshaft.com
