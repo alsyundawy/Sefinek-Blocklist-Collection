@@ -24,4 +24,4 @@ const StatsSchema = new Schema({
 	updateStatsFail: { type: Number, default: 0 },
 }, { timestamps: true, versionKey: false });
 
-module.exports = model('request-stats', StatsSchema);
+module.exports = model('RequestStats', StatsSchema, 'request_stats');

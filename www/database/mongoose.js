@@ -1,5 +1,5 @@
 const { connect, connection } = require('mongoose');
-const RequestStats = require('./models/Stats.js');
+const RequestStats = require('./models/request-stats.model.js');
 
 const connectToDatabase = async () => {
 	try {

@@ -4,7 +4,7 @@ const cluster = require('node:cluster');
 const numCPUs = require('node:os').availableParallelism();
 const connectToDatabase = require('./database/mongoose.js');
 const mergeUpdates = require('./cluster/mergeUpdates.js');
-const RequestStats = require('./database/models/Stats');
+const RequestStats = require('./database/models/request-stats.model');
 
 const { NODE_ENV, DOMAIN, PORT, MONGODB_URL, SEFINEK_API } = process.env;
 if (!NODE_ENV || !DOMAIN || !PORT) throw new Error('Missing basic environment variables');

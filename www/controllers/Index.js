@@ -2,7 +2,7 @@ const Marked = require('marked');
 const { CronExpressionParser } = require('cron-parser');
 const { getFullDate } = require('../utils/time.js');
 const { version } = require('../../package.json');
-const Stats = require('../database/models/Stats');
+const Stats = require('../database/models/request-stats.model');
 
 Marked.use({ pedantic: false, gfm: true });
 

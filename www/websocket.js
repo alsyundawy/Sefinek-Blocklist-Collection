@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 const { getFullDate } = require('./utils/time.js');
-const RequestStats = require('./database/models/Stats');
+const RequestStats = require('./database/models/request-stats.model');
 
 const wss = new WebSocket.Server({ port: process.env.WS_PORT });
 
