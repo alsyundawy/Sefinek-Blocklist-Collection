@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025060701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025061001 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -671,8 +671,6 @@ log-music-data.line-apps.com CNAME .
 *.log-music-data.line-apps.com CNAME .
 events-api.soundcloud.com CNAME .
 *.events-api.soundcloud.com CNAME .
-biddingmax.apse.trk.rixserv.com CNAME .
-*.biddingmax.apse.trk.rixserv.com CNAME .
 profiler-collector.wshareit.com CNAME .
 *.profiler-collector.wshareit.com CNAME .
 receiver-metis.infeng.site CNAME .
@@ -1023,8 +1021,6 @@ mgs123.com CNAME .
 *.mgs123.com CNAME .
 metrics.sp0n.io CNAME .
 *.metrics.sp0n.io CNAME .
-online-metrix.imars.cloud CNAME .
-*.online-metrix.imars.cloud CNAME .
 adtracker.jpchd.veraxen.com CNAME .
 *.adtracker.jpchd.veraxen.com CNAME .
 adtracker.oilpainting.colorbynumber.veraxen.com CNAME .
@@ -1175,8 +1171,6 @@ trk2.pinterest.com CNAME .
 *.trk2.pinterest.com CNAME .
 mobiletelemetry.ebay.com CNAME .
 *.mobiletelemetry.ebay.com CNAME .
-tracker.departapp.com CNAME .
-*.tracker.departapp.com CNAME .
 us-tracking.nextdoor.com CNAME .
 *.us-tracking.nextdoor.com CNAME .
 us-events.api.iheart.com CNAME .
@@ -1195,8 +1189,6 @@ smetrics.cnn.com CNAME .
 *.smetrics.cnn.com CNAME .
 metrics.claspws.tv CNAME .
 *.metrics.claspws.tv CNAME .
-logs.gaaana.com CNAME .
-*.logs.gaaana.com CNAME .
 sdk-log-inter.youdao.com CNAME .
 *.sdk-log-inter.youdao.com CNAME .
 sensors.snappea.com CNAME .
@@ -1573,8 +1565,6 @@ krxd.net CNAME .
 *.krxd.net CNAME .
 lepodownload.mediatek.com CNAME .
 *.lepodownload.mediatek.com CNAME .
-lhzbdvm.com CNAME .
-*.lhzbdvm.com CNAME .
 log.droid4x.cn CNAME .
 *.log.droid4x.cn CNAME .
 log.umsns.com CNAME .
