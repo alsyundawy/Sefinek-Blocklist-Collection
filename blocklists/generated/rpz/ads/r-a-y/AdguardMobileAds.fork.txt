@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025061001 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025061301 43200 3600 259200 300
   NS  localhost.
 adx-open-service.youku.com CNAME .
 *.adx-open-service.youku.com CNAME .
@@ -467,8 +467,6 @@ api-ad-adapter.wps.com CNAME .
 *.api-ad-adapter.wps.com CNAME .
 nasimobi.com CNAME .
 *.nasimobi.com CNAME .
-wd.adcolony.xyz CNAME .
-*.wd.adcolony.xyz CNAME .
 im.ov.yahoo.co.jp CNAME .
 *.im.ov.yahoo.co.jp CNAME .
 thecatmachine.com CNAME .
@@ -553,8 +551,6 @@ athena.api.kwalee.com CNAME .
 *.athena.api.kwalee.com CNAME .
 mobondhrd.appspot.com CNAME .
 *.mobondhrd.appspot.com CNAME .
-a.cookpad-ads.com CNAME .
-*.a.cookpad-ads.com CNAME .
 api.ads.newsdigest.jp CNAME .
 *.api.ads.newsdigest.jp CNAME .
 mobi.yanosik.pl CNAME .
