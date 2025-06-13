@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025061101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025061301 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -10037,6 +10037,8 @@ analytics-stamp.confi.com.vc CNAME .
 *.analytics-stamp.confi.com.vc CNAME .
 analytics-static.ugc.bazaarvoice.com CNAME .
 *.analytics-static.ugc.bazaarvoice.com CNAME .
+analytics-tracker.thescore.com CNAME .
+*.analytics-tracker.thescore.com CNAME .
 analytics-tracking.meetup.com CNAME .
 *.analytics-tracking.meetup.com CNAME .
 analytics-wcms.joins.net CNAME .
@@ -13591,6 +13593,8 @@ atlasworldusa.actonservice.com CNAME .
 *.atlasworldusa.actonservice.com CNAME .
 atlkse.aosom.it CNAME .
 *.atlkse.aosom.it CNAME .
+atmtd.com CNAME .
+*.atmtd.com CNAME .
 atom-log.3.cn CNAME .
 *.atom-log.3.cn CNAME .
 ats.alot.com CNAME .
@@ -33227,8 +33231,6 @@ k.voyageursdumonde.fr CNAME .
 *.k.voyageursdumonde.fr CNAME .
 k50.rtl2.de CNAME .
 *.k50.rtl2.de CNAME .
-k5a.io CNAME .
-*.k5a.io CNAME .
 k5app.byjus.com CNAME .
 *.k5app.byjus.com CNAME .
 kaacsi.belvilla.nl CNAME .
