@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025061201 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025061401 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -871,6 +871,8 @@ log.estand.jp CNAME .
 *.log.estand.jp CNAME .
 event-search.jorte.com CNAME .
 *.event-search.jorte.com CNAME .
+sdk-log-upload-os.hoyoverse.com CNAME .
+*.sdk-log-upload-os.hoyoverse.com CNAME .
 ad-log-upload-os.hoyoverse.com CNAME .
 *.ad-log-upload-os.hoyoverse.com CNAME .
 apm-log-upload-os.hoyoverse.com CNAME .
@@ -1491,10 +1493,6 @@ analytics.query.yahoo.com CNAME .
 *.analytics.query.yahoo.com CNAME .
 andmlb.kshwtj.com CNAME .
 *.andmlb.kshwtj.com CNAME .
-api-analytics-bootstrap.metaps.com CNAME .
-*.api-analytics-bootstrap.metaps.com CNAME .
-api-analytics.metaps.com CNAME .
-*.api-analytics.metaps.com CNAME .
 api.amplitude.com CNAME .
 *.api.amplitude.com CNAME .
 api.analytics.omgpop.com CNAME .
