@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025061401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025061701 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -201,6 +201,14 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+rtc-logger.bytevcloud.com CNAME .
+*.rtc-logger.bytevcloud.com CNAME .
+gpm-mon-va.byteoversea.com CNAME .
+*.gpm-mon-va.byteoversea.com CNAME .
+logs-sg.rebxgame.com CNAME .
+*.logs-sg.rebxgame.com CNAME .
+talog-eu.rebxgame.com CNAME .
+*.talog-eu.rebxgame.com CNAME .
 data-detect.nie.easebar.com CNAME .
 *.data-detect.nie.easebar.com CNAME .
 urbanairship.com CNAME .
@@ -631,8 +639,6 @@ log.espn.com CNAME .
 *.log.espn.com CNAME .
 sia.internet.apps.samsung.com CNAME .
 *.sia.internet.apps.samsung.com CNAME .
-config-api.internet.apps.samsung.com CNAME .
-*.config-api.internet.apps.samsung.com CNAME .
 r.apkpure.net CNAME .
 *.r.apkpure.net CNAME .
 analytics.zg-api.com CNAME .
