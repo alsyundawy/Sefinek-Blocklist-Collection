@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 13 Jun 2025 11:35 UTC+7
-# Version: 2506131135
-# Blocked: 18.753 domains
+# Last modified: 20 Jun 2025 10:53 UTC+7
+# Version: 2506201053
+# Blocked: 18.766 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -9526,6 +9526,13 @@ server=/logs.browser-intake-datadoghq.com/
 server=/rum.browser-intake-datadoghq.com/
 server=/session-replay.browser-intake-datadoghq.com/
 server=/trace.browser-intake-datadoghq.com/
+#[browser-intake-*-datadoghq.com]
+server=/browser-intake-ap1-datadoghq.com/
+server=/browser-intake-us3-datadoghq.com/
+server=/browser-intake-us5-datadoghq.com/
+#[datadoghq]
+server=/browser-intake-datadoghq.eu/
+server=/browser-intake-ddog-gov.com/
 #[aliyuncs.com]
 server=/beacon-api.aliyuncs.com/
 server=/adash.man.aliyuncs.com/
@@ -14636,6 +14643,7 @@ server=/ahscdn.com/
 server=/ahtomjpzymf.com/
 server=/aibsgc.com/
 server=/aickeebsi.com/
+server=/aiftoupsains.net/
 server=/aiglaidra.com/
 server=/aigretsulaups.net/
 server=/ailtashoackie.com/
@@ -16087,6 +16095,7 @@ server=/fagawdasv.com/
 server=/fagywalu.pro/
 server=/faisaphoofa.net/
 server=/familiarpyromaniasloping.com/
+server=/faqirsgoliard.top/
 server=/farcivinage.shop/
 server=/farethief.com/
 server=/farmergoldfish.com/
@@ -16493,6 +16502,7 @@ server=/hits4pay.com/
 server=/hitslink.com/
 server=/hittail.com/
 server=/hivaqfofkche.com/
+server=/hjbtunmh.com/
 server=/hkilops.com/
 server=/hmazuxhikosj.com/
 server=/hmepalobfn.com/
@@ -16801,6 +16811,7 @@ server=/kauleeci.com/
 server=/kaulouvaun.com/
 server=/kaurieseluxate.com/
 server=/kcaapxanwv.com/
+server=/kcgkiumubea.com/
 server=/kdm8.com/
 server=/kdpxksukngrg.com/
 server=/ke.minterhazes.com/
@@ -17426,6 +17437,7 @@ server=/nudgehydrogen.com/
 server=/nuffnang.com.my/
 server=/nuggad.net/
 server=/nui.media/
+server=/numerosuffice.shop/
 server=/nuseek.com/
 server=/nuzatbdmy.com/
 server=/nv3tosjqd.com/
@@ -17601,6 +17613,7 @@ server=/osrxzucira.com/
 server=/osrzawox.com/
 server=/ostaigukeshoak.com/
 server=/ota.cartrawler.com/
+server=/othabqmag.com/
 server=/othniqvu.com/
 server=/otqxvqzdgl.com/
 server=/oufauthy.net/
@@ -18745,6 +18758,7 @@ server=/tawdryson.com/
 server=/tb.baimgfroggd.site/
 server=/tcads.net/
 server=/tccnqgnmeveay.com/
+server=/tcseehnbrn.com/
 server=/tdpjzjpfuiis.com/
 server=/tealeaf.com/
 server=/tealium.com/
@@ -20390,4 +20404,5 @@ server=/gcdsdk.appsflyersdk.com/
 server=/inapps.appsflyersdk.com/
 server=/launches.appsflyersdk.com/
 server=/register.appsflyersdk.com/
+server=/skadsdk.appsflyersdk.com/
 # CNAME Popup
