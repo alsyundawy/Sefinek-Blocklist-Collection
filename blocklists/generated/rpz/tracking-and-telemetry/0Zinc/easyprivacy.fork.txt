@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025062201 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025062301 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -2241,6 +2241,8 @@ p.placed.com CNAME .
 *.p.placed.com CNAME .
 p.skimresources.com CNAME .
 *.p.skimresources.com CNAME .
+p.tryretool.com CNAME .
+*.p.tryretool.com CNAME .
 p.yotpo.com CNAME .
 *.p.yotpo.com CNAME .
 page-events-ustats.udemy.com CNAME .
