@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025062401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025062601 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -3057,6 +3057,8 @@ emetriq.de CNAME .
 *.emetriq.de CNAME .
 emjcd.com CNAME .
 *.emjcd.com CNAME .
+eml.blackduck.com CNAME .
+*.eml.blackduck.com CNAME .
 emltrk.com CNAME .
 *.emltrk.com CNAME .
 emodoinc.com CNAME .
