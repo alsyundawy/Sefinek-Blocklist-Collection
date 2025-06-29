@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025062701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025062901 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -32091,6 +32091,8 @@ insights.labcorp.com CNAME .
 *.insights.labcorp.com CNAME .
 insights.morrismohawk.ca CNAME .
 *.insights.morrismohawk.ca CNAME .
+insights.mtv.a2d.tv CNAME .
+*.insights.mtv.a2d.tv CNAME .
 insights.networks.global.fujitsu.com CNAME .
 *.insights.networks.global.fujitsu.com CNAME .
 insights.nexansdatacenter.com CNAME .
@@ -74323,8 +74325,12 @@ umami.aigenerations.net CNAME .
 *.umami.aigenerations.net CNAME .
 umami.askrella.de CNAME .
 *.umami.askrella.de CNAME .
+umami.flixer.su CNAME .
+*.umami.flixer.su CNAME .
 umami.heroku.uk CNAME .
 *.umami.heroku.uk CNAME .
+umami.spencerdevs.xyz CNAME .
+*.umami.spencerdevs.xyz CNAME .
 umami.vidfast.pro CNAME .
 *.umami.vidfast.pro CNAME .
 umami.wakarimasen.moe CNAME .
