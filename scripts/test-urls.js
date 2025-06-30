@@ -1,4 +1,4 @@
-require('dotenv').config({ path: './.env' });
+require('dotenv').config({ path: './.env', c: true });
 const fs = require('fs').promises;
 const axios = require('axios');
 const { version } = require('../package.json');
