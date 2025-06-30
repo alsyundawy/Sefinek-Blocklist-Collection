@@ -1,5 +1,5 @@
 ! Admiral, parsed and mirrored by https://firebog.net
-! Updated 23JUN25 from https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/getadmiral-domains.txt
+! Updated 30JUN25 from https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/getadmiral-domains.txt
 ! This is sourced from an "adblock" style list which is flat-out NOT designed to work with DNS sinkholes
 ! There WILL be mistakes with how this is parsed, due to how domain names are extracted and exceptions handled
 ! Please bring any parsing issues up at https://github.com/WaLLy3K/wally3k.github.io/issues prior to raising a request upstream
@@ -37,6 +37,7 @@
 ||admiral.website^
 ||admiralcdn.com^
 ||admiralcdnstaging.com^
+||admiralexternal.com^
 ||admlcdn.com^
 ||adorableanger.com^
 ||adorableattention.com^
@@ -46,7 +47,6 @@
 ||agreeablearch.com^
 ||agreeabletouch.com^
 ||aheadday.com^
-||aheadgrow.com^
 ||ak0gsh40.com^
 ||aliasanvil.com^
 ||alikeaddition.com^
@@ -85,7 +85,6 @@
 ||aspiringattempt.com^
 ||aspiringtoy.com^
 ||astonishingfood.com^
-||astralhustle.com^
 ||attractionbanana.com^
 ||attractivecap.com^
 ||audioarctic.com^
@@ -122,7 +121,6 @@
 ||beamincrease.com^
 ||beamvolcano.com^
 ||beancontrol.com^
-||bearmoonlodge.com^
 ||bedsberry.com^
 ||beginnerpancake.com^
 ||berserkhydrant.com^
@@ -192,6 +190,7 @@
 ||bulbbait.com^
 ||bumpermash.com^
 ||bumpydevelopment.com^
+||bunchance.com^
 ||bungeesleeves.com^
 ||burgersalt.com^
 ||burlywhistle.com^
@@ -210,7 +209,6 @@
 ||calculatorstatement.com^
 ||callousbrake.com^
 ||calmcactus.com^
-||calmstudent.com^
 ||calypsocapsule.com^
 ||cannonchange.com^
 ||canvasandsocks.com^
@@ -263,7 +261,6 @@
 ||childlikeform.com^
 ||chilledliquid.com^
 ||chingovernment.com^
-||chipperisle.com^
 ||chivalrouscord.com^
 ||chubbycreature.com^
 ||chunkycactus.com^
@@ -295,7 +292,6 @@
 ||combcattle.com^
 ||combcompetition.com^
 ||comfortablecheese.com^
-||comfygoodness.com^
 ||commonalmanac.com^
 ||comparereaction.com^
 ||condemnedcomb.com^
@@ -330,7 +326,6 @@
 ||costumeoffers.com^
 ||costwinner.com^
 ||courageousbaby.com^
-||coverlayer.com^
 ||cozydusk.com^
 ||cozyhillside.com^
 ||cozytryst.com^
@@ -347,10 +342,10 @@
 ||critictruck.com^
 ||crookedcreature.com^
 ||crowdedmass.com^
+||cruisetourist.com^
 ||crunchcontrol.com^
 ||cryptvalue.com^
 ||crystalboulevard.com^
-||crystalstatus.com^
 ||cubchannel.com^
 ||cubepins.com^
 ||cuddlycake.com^
@@ -412,7 +407,6 @@
 ||detailedkitten.com^
 ||detectdinner.com^
 ||detectdiscovery.com^
-||detourgame.com^
 ||deviceseal.com^
 ||devilishdinner.com^
 ||dewdroplagoon.com^
@@ -420,10 +414,10 @@
 ||digestiondrawer.com^
 ||digithalo.com^
 ||dinnerquartz.com^
-||direfuldesk.com^
 ||disagreeabledrop.com^
 ||discreetfield.com^
 ||discreetquarter.com^
+||distributionneck.com^
 ||distributionpocket.com^
 ||distributiontomatoes.com^
 ||disturbedquiet.com^
@@ -435,6 +429,7 @@
 ||doubledefend.com^
 ||doubtdrawer.com^
 ||dq95d35.com^
+||dragzebra.com^
 ||drainpaste.com^
 ||dramaticdirection.com^
 ||dreamsdome.com^
@@ -452,7 +447,6 @@
 ||earthups.com^
 ||earthyfarm.com^
 ||eatablesquare.com^
-||echochief.com^
 ||echoinghaven.com^
 ||echotop.com^
 ||educrated.com^
@@ -516,7 +510,6 @@
 ||extramonies.com^
 ||exuberantedge.com^
 ||fabcharting.com^
-||fabledsoul.com^
 ||facilitatebreakfast.com^
 ||fadedsnow.com^
 ||fairfeeling.com^
@@ -563,7 +556,6 @@
 ||fireworkcamp.com^
 ||firstendpoint.com^
 ||fishersfinds.com^
-||fitmessage.com^
 ||fitnessmapper.com^
 ||fivesidedsquare.com^
 ||fixedfold.com^
@@ -599,18 +591,15 @@
 ||freezingbuilding.com^
 ||frequentflesh.com^
 ||friedone.com^
-||friendlycrayon.com^
 ||friendlyfold.com^
 ||frogator.com^
 ||frogtray.com^
 ||fronttoad.com^
 ||frugalfiestas.com^
-||fuelreaction.com^
 ||fumblingform.com^
 ||functionalcrown.com^
 ||functionalfeather.com^
 ||funoverbored.com^
-||furnstudio.com^
 ||furryfork.com^
 ||furryhorses.com^
 ||fusedcontent.com^
@@ -661,7 +650,6 @@
 ||grainmass.com^
 ||grandfatherguitar.com^
 ||granlite.com^
-||gravitygive.com^
 ||gravitykick.com^
 ||grayoranges.com^
 ||grayreceipt.com^
@@ -677,8 +665,6 @@
 ||grumpydrawer.com^
 ||guardeddirection.com^
 ||guardedschool.com^
-||guessdetail.com^
-||guidecent.com^
 ||guildalpha.com^
 ||guiltlessbasketball.com^
 ||gulliblegrip.com^
@@ -711,6 +697,7 @@
 ||headydegree.com^
 ||headyhook.com^
 ||healflowers.com^
+||hearinglizards.com^
 ||heartbreakingmind.com^
 ||heavydetail.com^
 ||heavyplayground.com^
@@ -766,7 +753,6 @@
 ||inquisitiveinvention.com^
 ||insulatech.com^
 ||intelligentscissors.com^
-||intentlens.com^
 ||internalcondition.com^
 ||internalsink.com^
 ||inventtango.com^
@@ -795,6 +781,7 @@
 ||juiceblocks.com^
 ||justicejudo.com^
 ||justpickaname.com^
+||justwebcards.com^
 ||keenquill.com^
 ||kidpowers.com^
 ||kindhush.com^
@@ -831,6 +818,7 @@
 ||limepeal.com^
 ||livelumber.com^
 ||livelylaugh.com^
+||livelyreward.com^
 ||livingsleet.com^
 ||lizardslaugh.com^
 ||llamavoice.com^
@@ -871,13 +859,13 @@
 ||mapbasin.com^
 ||mapcommand.com^
 ||marblediscussion.com^
-||markahouse.com^
 ||markedcrayon.com^
 ||markedmeasure.com^
 ||marketspiders.com^
 ||marriedbelief.com^
 ||marriedmailbox.com^
 ||marriedvalue.com^
+||marrowleaves.com^
 ||materialisticmoon.com^
 ||materialmilk.com^
 ||materialmoon.com^
@@ -917,6 +905,7 @@
 ||mindfulgem.com^
 ||mindlessmark.com^
 ||minorcattle.com^
+||minusmental.com^
 ||minuteburst.com^
 ||miscreantmoon.com^
 ||missionrewards.com^
@@ -1008,7 +997,6 @@
 ||orionember.com^
 ||ourblogthing.com^
 ||outdoorthingy.com^
-||outsidevibe.com^
 ||overconfidentfood.com^
 ||overkick.com^
 ||overratedchalk.com^
@@ -1027,6 +1015,7 @@
 ||papamug.com^
 ||parallelbulb.com^
 ||parchedsofa.com^
+||pardonpopular.com^
 ||parentpicture.com^
 ||parsimoniouspolice.com^
 ||partplanes.com^
@@ -1038,7 +1027,6 @@
 ||pegsbuttons.com^
 ||perceivequarter.com^
 ||perkyjade.com^
-||philippinch.com^
 ||phonecup.com^
 ||photohints.com^
 ||physicstees.com^
@@ -1068,6 +1056,7 @@
 ||pluckyzone.com^
 ||pocketfaucet.com^
 ||pocketsonic.com^
+||podiumpresto.com^
 ||podname.com^
 ||poemprompt.com^
 ||poeticpackage.com^
@@ -1088,6 +1077,7 @@
 ||powerfulblends.com^
 ||powerfulcopper.com^
 ||preciousplanes.com^
+||preciousyoke.com^
 ||predictplate.com^
 ||prefixpatriot.com^
 ||prepareplanes.com^
@@ -1110,11 +1100,11 @@
 ||profitrumour.com^
 ||profusesupport.com^
 ||promiseair.com^
-||proofconvert.com^
 ||propertypotato.com^
 ||propsynergy.com^
 ||protestcopy.com^
 ||psychedelicarithmetic.com^
+||psychedelicchess.com^
 ||publicsofa.com^
 ||puffyloss.com^
 ||puffypaste.com^
@@ -1262,6 +1252,7 @@
 ||scaredsong.com^
 ||scaredstomach.com^
 ||scaredstory.com^
+||scaredswing.com^
 ||scarefowl.com^
 ||scarfsmash.com^
 ||scatteredheat.com^
@@ -1303,7 +1294,6 @@
 ||serenecascade.com^
 ||serenepebble.com^
 ||serenesurf.com^
-||serenezenith.com^
 ||serenezephyr.com^
 ||serioussuit.com^
 ||serpentshampoo.com^
@@ -1318,7 +1308,6 @@
 ||shallowblade.com^
 ||shamerain.com^
 ||shapecomb.com^
-||sharkskids.com^
 ||sheargovernor.com^
 ||sheideal.com^
 ||shesubscriptions.com^
@@ -1374,7 +1363,6 @@
 ||snacktoken.com^
 ||snakemineral.com^
 ||snakeslang.com^
-||snakesshop.com^
 ||snappyreport.com^
 ||snapsgate.com^
 ||sneakwind.com^
@@ -1404,6 +1392,7 @@
 ||soundstocking.com^
 ||sowlettuce.com^
 ||spaceaffinity.com^
+||spadelocket.com^
 ||spareapp.com^
 ||sparkgoal.com^
 ||sparklingshelf.com^
@@ -1518,7 +1507,6 @@
 ||sulkycook.com^
 ||summerobject.com^
 ||sunsetstatic.com^
-||sunshinegates.com^
 ||superchichair.com^
 ||superficialeyes.com^
 ||superficialspring.com^
@@ -1554,7 +1542,6 @@
 ||tawdryson.com^
 ||tealjewel.com^
 ||tearfulglass.com^
-||techconverter.com^
 ||tediousbear.com^
 ||tedioustooth.com^
 ||teenytinycellar.com^
@@ -1606,7 +1593,6 @@
 ||toysbasics.com^
 ||toytakeover.com^
 ||tracecontent.com^
-||trackcaddie.com^
 ||traderbyte.com^
 ||tradetooth.com^
 ||trafficviews.com^
@@ -1714,7 +1700,6 @@
 ||websitesdude.com^
 ||wellgroomedapparel.com^
 ||wellgroomedhydrant.com^
-||westpalmweb.com^
 ||whimsicalcanyon.com^
 ||whimsicalgrove.com^
 ||whimsicalvantage.com^
