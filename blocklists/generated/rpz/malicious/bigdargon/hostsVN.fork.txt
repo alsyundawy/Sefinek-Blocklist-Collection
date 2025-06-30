@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025062701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025063001 43200 3600 259200 300
   NS  localhost.
 api-adservices.apple.com CNAME .
 *.api-adservices.apple.com CNAME .
@@ -605,6 +605,8 @@ aax-vx-us-us-west-2.amazon-adsystem.com CNAME .
 *.aax-vx-us-us-west-2.amazon-adsystem.com CNAME .
 aax.amazon-adsystem.com CNAME .
 *.aax.amazon-adsystem.com CNAME .
+aes.eu-west.ono.axp.amazon-adsystem.com CNAME .
+*.aes.eu-west.ono.axp.amazon-adsystem.com CNAME .
 amazon-adsystem.com CNAME .
 *.amazon-adsystem.com CNAME .
 assoc-msdk-cn.amazon-adsystem.com CNAME .
@@ -679,6 +681,8 @@ rcm-na.amazon-adsystem.com CNAME .
 *.rcm-na.amazon-adsystem.com CNAME .
 s.amazon-adsystem.com CNAME .
 *.s.amazon-adsystem.com CNAME .
+ts.amazon-adsystem.com CNAME .
+*.ts.amazon-adsystem.com CNAME .
 v-eu-preprod.amazon-adsystem.com CNAME .
 *.v-eu-preprod.amazon-adsystem.com CNAME .
 v-eu.amazon-adsystem.com CNAME .
@@ -769,14 +773,16 @@ us-west-2.prod.pr.analytics.console.aws.a2z.com CNAME .
 *.us-west-2.prod.pr.analytics.console.aws.a2z.com CNAME .
 us-east-1.prod.pw.analytics.console.aws.a2z.com CNAME .
 *.us-east-1.prod.pw.analytics.console.aws.a2z.com CNAME .
-minerva.devices.a2z.com CNAME .
-*.minerva.devices.a2z.com CNAME .
-us-east-1.prod.service.minerva.devices.a2z.com CNAME .
-*.us-east-1.prod.service.minerva.devices.a2z.com CNAME .
 global.telemetry.insights.video.a2z.com CNAME .
 *.global.telemetry.insights.video.a2z.com CNAME .
 us-east-1.telemetry.insights.video.a2z.com CNAME .
 *.us-east-1.telemetry.insights.video.a2z.com CNAME .
+metrics.imdb.a2z.com CNAME .
+*.metrics.imdb.a2z.com CNAME .
+cdn.prod.metrics.imdb.a2z.com CNAME .
+*.cdn.prod.metrics.imdb.a2z.com CNAME .
+clientlogger.marketplace.aws.a2z.com CNAME .
+*.clientlogger.marketplace.aws.a2z.com CNAME .
 platform.tumblr.com CNAME .
 *.platform.tumblr.com CNAME .
 ls.srvcs.tumblr.com CNAME .
@@ -27839,6 +27845,8 @@ familiarpyromaniasloping.com CNAME .
 *.familiarpyromaniasloping.com CNAME .
 faqirsgoliard.top CNAME .
 *.faqirsgoliard.top CNAME .
+faqlikbid.com CNAME .
+*.faqlikbid.com CNAME .
 farcivinage.shop CNAME .
 *.farcivinage.shop CNAME .
 farethief.com CNAME .
@@ -28095,6 +28103,8 @@ futuristicfairies.com CNAME .
 *.futuristicfairies.com CNAME .
 fuwalrnce.com CNAME .
 *.fuwalrnce.com CNAME .
+fvchjvaiisuxrpb.com CNAME .
+*.fvchjvaiisuxrpb.com CNAME .
 fwilmdact.com CNAME .
 *.fwilmdact.com CNAME .
 fxclix.com CNAME .
@@ -30505,6 +30515,8 @@ nowheresank.com CNAME .
 *.nowheresank.com CNAME .
 npipajajn.com CNAME .
 *.npipajajn.com CNAME .
+nqcgdvuuyxwj.com CNAME .
+*.nqcgdvuuyxwj.com CNAME .
 nqucjilr.com CNAME .
 *.nqucjilr.com CNAME .
 nrc.tapas.net CNAME .
@@ -32615,6 +32627,8 @@ sixscissors.com CNAME .
 *.sixscissors.com CNAME .
 sixsigmatraffic.com CNAME .
 *.sixsigmatraffic.com CNAME .
+sjvaovqhn.com CNAME .
+*.sjvaovqhn.com CNAME .
 skimlinks.com CNAME .
 *.skimlinks.com CNAME .
 skullhalfway.com CNAME .
@@ -34379,6 +34393,8 @@ wondoads.de CNAME .
 *.wondoads.de CNAME .
 woochithoothie.net CNAME .
 *.woochithoothie.net CNAME .
+woomerapapacy.shop CNAME .
+*.woomerapapacy.shop CNAME .
 woorucauhou.net CNAME .
 *.woorucauhou.net CNAME .
 woovoree.net CNAME .
