@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025062901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025070101 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -4785,6 +4785,8 @@ analytics.kkb.com.tr CNAME .
 *.analytics.kkb.com.tr CNAME .
 analytics.qushad.com CNAME .
 *.analytics.qushad.com CNAME .
+analytics.ticimax.cloud CNAME .
+*.analytics.ticimax.cloud CNAME .
 c.keltis.com CNAME .
 *.c.keltis.com CNAME .
 collector.wawlabs.com CNAME .
@@ -5651,8 +5653,6 @@ pf.newegg.com CNAME .
 *.pf.newegg.com CNAME .
 pftk.temu.com CNAME .
 *.pftk.temu.com CNAME .
-ph.thenextweb.com CNAME .
-*.ph.thenextweb.com CNAME .
 ping.hashnode.com CNAME .
 *.ping.hashnode.com CNAME .
 ping.hungama.com CNAME .
