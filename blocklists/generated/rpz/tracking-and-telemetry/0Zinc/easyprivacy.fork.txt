@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025070101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025070201 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -4257,8 +4257,6 @@ analytics.partcommunity.com CNAME .
 *.analytics.partcommunity.com CNAME .
 analytics.spearly.com CNAME .
 *.analytics.spearly.com CNAME .
-analyzer51.fc2.com CNAME .
-*.analyzer51.fc2.com CNAME .
 asumi.shinobi.jp CNAME .
 *.asumi.shinobi.jp CNAME .
 b.clipkit.co CNAME .
@@ -4929,6 +4927,8 @@ analytics.inquisitr.com CNAME .
 *.analytics.inquisitr.com CNAME .
 analytics.kaggle.io CNAME .
 *.analytics.kaggle.io CNAME .
+analytics.komiku.org CNAME .
+*.analytics.komiku.org CNAME .
 analytics.makeitmeme.com CNAME .
 *.analytics.makeitmeme.com CNAME .
 analytics.maxroll.gg CNAME .
