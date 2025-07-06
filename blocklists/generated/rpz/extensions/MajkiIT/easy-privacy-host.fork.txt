@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025070401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025070601 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -26177,6 +26177,8 @@ genesis.malwarebytes.com CNAME .
 *.genesis.malwarebytes.com CNAME .
 gentian-frd.hjapi.com CNAME .
 *.gentian-frd.hjapi.com CNAME .
+geo.bdg.com CNAME .
+*.geo.bdg.com CNAME .
 geo.brobible.com CNAME .
 *.geo.brobible.com CNAME .
 geo.emol.cl CNAME .
@@ -36369,6 +36371,8 @@ logs.animaapp.com CNAME .
 *.logs.animaapp.com CNAME .
 logs.chatboost-cv.algoage.co.jp CNAME .
 *.logs.chatboost-cv.algoage.co.jp CNAME .
+logs.dynamicauth.com CNAME .
+*.logs.dynamicauth.com CNAME .
 logs.hotstar.com CNAME .
 *.logs.hotstar.com CNAME .
 logs.mezmo.com CNAME .
@@ -64707,6 +64711,8 @@ stats.vidbinge.com CNAME .
 *.stats.vidbinge.com CNAME .
 stats.viddler.com CNAME .
 *.stats.viddler.com CNAME .
+stats.videasy.net CNAME .
+*.stats.videasy.net CNAME .
 stats.vidyome.com CNAME .
 *.stats.vidyome.com CNAME .
 stats.visions.ch CNAME .
