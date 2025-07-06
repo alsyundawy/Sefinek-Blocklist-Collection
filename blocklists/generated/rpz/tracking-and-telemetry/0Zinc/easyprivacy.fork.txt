@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025070501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025070601 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -2115,6 +2115,8 @@ logs-api.shoprunner.com CNAME .
 *.logs-api.shoprunner.com CNAME .
 logs.animaapp.com CNAME .
 *.logs.animaapp.com CNAME .
+logs.dynamicauth.com CNAME .
+*.logs.dynamicauth.com CNAME .
 logs.mezmo.com CNAME .
 *.logs.mezmo.com CNAME .
 logs.spilgames.com CNAME .
