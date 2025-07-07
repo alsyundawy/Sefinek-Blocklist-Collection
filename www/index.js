@@ -1,4 +1,4 @@
-require('dotenv').config({ quiet: true });
+require('env-native').config();
 
 const cluster = require('node:cluster');
 const numCPUs = require('node:os').availableParallelism();
