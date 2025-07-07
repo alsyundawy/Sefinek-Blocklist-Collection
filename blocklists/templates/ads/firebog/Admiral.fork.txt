@@ -1,5 +1,5 @@
 # Admiral, parsed and mirrored by https://firebog.net
-# Updated 30JUN25 from https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/getadmiral-domains.txt
+# Updated 07JUL25 from https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/getadmiral-domains.txt
 # This is sourced from an "adblock" style list which is flat-out NOT designed to work with DNS sinkholes
 # There WILL be mistakes with how this is parsed, due to how domain names are extracted and exceptions handled
 # Please bring any parsing issues up at https://github.com/WaLLy3K/wally3k.github.io/issues prior to raising a request upstream
@@ -37,7 +37,6 @@
 0.0.0.0 admiral.website
 0.0.0.0 admiralcdn.com
 0.0.0.0 admiralcdnstaging.com
-0.0.0.0 admiralexternal.com
 0.0.0.0 admlcdn.com
 0.0.0.0 adorableanger.com
 0.0.0.0 adorableattention.com
@@ -85,6 +84,7 @@
 0.0.0.0 aspiringattempt.com
 0.0.0.0 aspiringtoy.com
 0.0.0.0 astonishingfood.com
+0.0.0.0 attendchase.com
 0.0.0.0 attractionbanana.com
 0.0.0.0 attractivecap.com
 0.0.0.0 audioarctic.com
@@ -190,7 +190,6 @@
 0.0.0.0 bulbbait.com
 0.0.0.0 bumpermash.com
 0.0.0.0 bumpydevelopment.com
-0.0.0.0 bunchance.com
 0.0.0.0 bungeesleeves.com
 0.0.0.0 burgersalt.com
 0.0.0.0 burlywhistle.com
@@ -203,12 +202,12 @@
 0.0.0.0 buttonladybug.com
 0.0.0.0 buzzaoutlet.com
 0.0.0.0 cafefrench.com
-0.0.0.0 cakesdrum.com
 0.0.0.0 calculatingchannel.com
 0.0.0.0 calculatingcircle.com
 0.0.0.0 calculatorstatement.com
 0.0.0.0 callousbrake.com
 0.0.0.0 calmcactus.com
+0.0.0.0 calmstudent.com
 0.0.0.0 calypsocapsule.com
 0.0.0.0 cannonchange.com
 0.0.0.0 canvasandsocks.com
@@ -261,6 +260,7 @@
 0.0.0.0 childlikeform.com
 0.0.0.0 chilledliquid.com
 0.0.0.0 chingovernment.com
+0.0.0.0 chipperisle.com
 0.0.0.0 chivalrouscord.com
 0.0.0.0 chubbycreature.com
 0.0.0.0 chunkycactus.com
@@ -287,7 +287,6 @@
 0.0.0.0 colossalcoat.com
 0.0.0.0 colossalcry.com
 0.0.0.0 combativecar.com
-0.0.0.0 combativedetail.com
 0.0.0.0 combbit.com
 0.0.0.0 combcattle.com
 0.0.0.0 combcompetition.com
@@ -334,6 +333,7 @@
 0.0.0.0 crafthenry.com
 0.0.0.0 crashchance.com
 0.0.0.0 cratecamera.com
+0.0.0.0 craterbox.com
 0.0.0.0 crawlclocks.com
 0.0.0.0 creatorcherry.com
 0.0.0.0 creatorpassenger.com
@@ -342,7 +342,6 @@
 0.0.0.0 critictruck.com
 0.0.0.0 crookedcreature.com
 0.0.0.0 crowdedmass.com
-0.0.0.0 cruisetourist.com
 0.0.0.0 crunchcontrol.com
 0.0.0.0 cryptvalue.com
 0.0.0.0 crystalboulevard.com
@@ -397,6 +396,7 @@
 0.0.0.0 delicatecascade.com
 0.0.0.0 deliciousducks.com
 0.0.0.0 delightdriving.com
+0.0.0.0 deltafault.com
 0.0.0.0 deluxecrate.com
 0.0.0.0 dependenttrip.com
 0.0.0.0 deployinput.com
@@ -407,6 +407,7 @@
 0.0.0.0 detailedkitten.com
 0.0.0.0 detectdinner.com
 0.0.0.0 detectdiscovery.com
+0.0.0.0 detourgame.com
 0.0.0.0 deviceseal.com
 0.0.0.0 devilishdinner.com
 0.0.0.0 dewdroplagoon.com
@@ -414,10 +415,10 @@
 0.0.0.0 digestiondrawer.com
 0.0.0.0 digithalo.com
 0.0.0.0 dinnerquartz.com
+0.0.0.0 direfuldesk.com
 0.0.0.0 disagreeabledrop.com
 0.0.0.0 discreetfield.com
 0.0.0.0 discreetquarter.com
-0.0.0.0 distributionneck.com
 0.0.0.0 distributionpocket.com
 0.0.0.0 distributiontomatoes.com
 0.0.0.0 disturbedquiet.com
@@ -510,6 +511,7 @@
 0.0.0.0 extramonies.com
 0.0.0.0 exuberantedge.com
 0.0.0.0 fabcharting.com
+0.0.0.0 fabledsoul.com
 0.0.0.0 facilitatebreakfast.com
 0.0.0.0 fadedsnow.com
 0.0.0.0 fairfeeling.com
@@ -560,13 +562,10 @@
 0.0.0.0 fivesidedsquare.com
 0.0.0.0 fixedfold.com
 0.0.0.0 flakyfeast.com
-0.0.0.0 flameuncle.com
 0.0.0.0 flimsycircle.com
 0.0.0.0 flimsythought.com
 0.0.0.0 flippedfunnel.com
 0.0.0.0 floodprincipal.com
-0.0.0.0 flourishingcollaboration.com
-0.0.0.0 flourishingendeavor.com
 0.0.0.0 flourishinginnovation.com
 0.0.0.0 flourishingpartnership.com
 0.0.0.0 flowersornament.com
@@ -591,11 +590,13 @@
 0.0.0.0 freezingbuilding.com
 0.0.0.0 frequentflesh.com
 0.0.0.0 friedone.com
+0.0.0.0 friendlycrayon.com
 0.0.0.0 friendlyfold.com
 0.0.0.0 frogator.com
 0.0.0.0 frogtray.com
 0.0.0.0 fronttoad.com
 0.0.0.0 frugalfiestas.com
+0.0.0.0 fuelreaction.com
 0.0.0.0 fumblingform.com
 0.0.0.0 functionalcrown.com
 0.0.0.0 functionalfeather.com
@@ -627,6 +628,7 @@
 0.0.0.0 giddycoat.com
 0.0.0.0 gigkarma.com
 0.0.0.0 giraffepiano.com
+0.0.0.0 gitcrumbs.com
 0.0.0.0 givevacation.com
 0.0.0.0 gladysway.com
 0.0.0.0 glamhawk.com
@@ -663,8 +665,9 @@
 0.0.0.0 grouchypush.com
 0.0.0.0 grumpydime.com
 0.0.0.0 grumpydrawer.com
-0.0.0.0 guardeddirection.com
 0.0.0.0 guardedschool.com
+0.0.0.0 guessdetail.com
+0.0.0.0 guidecent.com
 0.0.0.0 guildalpha.com
 0.0.0.0 guiltlessbasketball.com
 0.0.0.0 gulliblegrip.com
@@ -781,7 +784,6 @@
 0.0.0.0 juiceblocks.com
 0.0.0.0 justicejudo.com
 0.0.0.0 justpickaname.com
-0.0.0.0 justwebcards.com
 0.0.0.0 keenquill.com
 0.0.0.0 kidpowers.com
 0.0.0.0 kindhush.com
@@ -849,7 +851,6 @@
 0.0.0.0 magicaljoin.com
 0.0.0.0 magicminibox.com
 0.0.0.0 magnificentarticle.com
-0.0.0.0 majesticwaterscape.com
 0.0.0.0 majesticwilderness.com
 0.0.0.0 makesimpact.com
 0.0.0.0 maliciousmusic.com
@@ -930,6 +931,7 @@
 0.0.0.0 muddledaftermath.com
 0.0.0.0 muddledmemory.com
 0.0.0.0 mundanenail.com
+0.0.0.0 mundanepollution.com
 0.0.0.0 mushywaste.com
 0.0.0.0 muteknife.com
 0.0.0.0 mutemailbox.com
@@ -1056,7 +1058,6 @@
 0.0.0.0 pluckyzone.com
 0.0.0.0 pocketfaucet.com
 0.0.0.0 pocketsonic.com
-0.0.0.0 podiumpresto.com
 0.0.0.0 podname.com
 0.0.0.0 poemprompt.com
 0.0.0.0 poeticpackage.com
@@ -1074,7 +1075,6 @@
 0.0.0.0 possibleboats.com
 0.0.0.0 possiblepencil.com
 0.0.0.0 potatoinvention.com
-0.0.0.0 powerfulblends.com
 0.0.0.0 powerfulcopper.com
 0.0.0.0 preciousplanes.com
 0.0.0.0 preciousyoke.com
@@ -1243,7 +1243,6 @@
 0.0.0.0 scarcesign.com
 0.0.0.0 scarcestream.com
 0.0.0.0 scarcestructure.com
-0.0.0.0 scarcesurprise.com
 0.0.0.0 scaredcomfort.com
 0.0.0.0 scaredsidewalk.com
 0.0.0.0 scaredslip.com
@@ -1279,7 +1278,6 @@
 0.0.0.0 secretivesponge.com
 0.0.0.0 secretspiders.com
 0.0.0.0 secretturtle.com
-0.0.0.0 seedscissors.com
 0.0.0.0 seenvault.com
 0.0.0.0 seespice.com
 0.0.0.0 selectivesummer.com
@@ -1294,6 +1292,7 @@
 0.0.0.0 serenecascade.com
 0.0.0.0 serenepebble.com
 0.0.0.0 serenesurf.com
+0.0.0.0 serenezenith.com
 0.0.0.0 serenezephyr.com
 0.0.0.0 serioussuit.com
 0.0.0.0 serpentshampoo.com
@@ -1338,6 +1337,7 @@
 0.0.0.0 sinceresubstance.com
 0.0.0.0 singroot.com
 0.0.0.0 sinkportal.com
+0.0.0.0 sittingpets.com
 0.0.0.0 sixauthority.com
 0.0.0.0 sixscissors.com
 0.0.0.0 sizzlingsmoke.com
@@ -1363,6 +1363,7 @@
 0.0.0.0 snacktoken.com
 0.0.0.0 snakemineral.com
 0.0.0.0 snakeslang.com
+0.0.0.0 snakesshop.com
 0.0.0.0 snappyreport.com
 0.0.0.0 snapsgate.com
 0.0.0.0 sneakwind.com
@@ -1426,6 +1427,7 @@
 0.0.0.0 sprysummit.com
 0.0.0.0 spuriousair.com
 0.0.0.0 spurioussquirrel.com
+0.0.0.0 spurioussteam.com
 0.0.0.0 spuriousstranger.com
 0.0.0.0 spysubstance.com
 0.0.0.0 squalidscrew.com
@@ -1505,6 +1507,7 @@
 0.0.0.0 sugarcurtain.com
 0.0.0.0 suggestionbridge.com
 0.0.0.0 sulkycook.com
+0.0.0.0 summerhamster.com
 0.0.0.0 summerobject.com
 0.0.0.0 sunsetstatic.com
 0.0.0.0 superchichair.com
@@ -1595,7 +1598,6 @@
 0.0.0.0 tracecontent.com
 0.0.0.0 traderbyte.com
 0.0.0.0 tradetooth.com
-0.0.0.0 trafficviews.com
 0.0.0.0 tranquilcan.com
 0.0.0.0 tranquilcanyon.com
 0.0.0.0 tranquilplume.com
