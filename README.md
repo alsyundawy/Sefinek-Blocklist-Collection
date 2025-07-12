@@ -113,11 +113,9 @@ Join our [Discord server](https://discord.gg/53DBjTuzgZ) or open a new [Issue](h
 
 
 ## 🐈 Sources of Images Used
-
 | pinterest.com | freepik.com |
 |---------------|-------------|
 
 
-## 📝 License
-[Attribution-NonCommercial-NoDerivatives 4.0 International](LICENSE)  
+## 📝 [CC BY-NC-ND 4.0 License](LICENSE)
 Copyright 2023-2025 © by [Sefinek](https://sefinek.net). All Rights Reserved.
