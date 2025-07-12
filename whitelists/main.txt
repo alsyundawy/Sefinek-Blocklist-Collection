@@ -94,7 +94,7 @@ client.wns.windows.com ads/ShadowWhisperer/Ads.fork.txt
 # mail.ru (Russian mail service)
 trk.mail.ru extensions/hagezi/pro.fork.txt
 
-# WP.pl (Polish mail service)
+# WP (Polish mail service)
 onelogin.wpcdn.pl ads/ShadowWhisperer/Ads.fork.txt
 
 # Nvidia (graphics cards)
@@ -125,15 +125,6 @@ s72.chomikuj.pl malicious/blocklistproject/malware.fork.txt
 s8802.chomikuj.pl abuse/blocklistproject/hosts.fork.txt
 s8802.chomikuj.pl malicious/blocklistproject/malware.fork.txt
 
-# Pixalate
-pixalate.com ads/ShadowWhisperer/Ads.fork.txt
-
-# 2IP (Russian IP address lookup service)
-2ip.io malicious/RPiList/Malware.fork.txt
-
-# Cedexis (content delivery network)
-cedexis.net ads/ShadowWhisperer/Ads.fork.txt
-
 # Zapier (automation tool)
 email.mail.zapier.com ads/jerryn70/GoodbyeAds.fork.txt
 email.mail.zapier.com malicious/RPiList/Malware.fork.txt
@@ -141,20 +132,11 @@ email.mail.zapier.com malicious/RPiList/Malware.fork.txt
 # Wordpress (blogging platform) & Gravatar (avatar service)
 s0.wp.com porn/4skinSkywalker/hosts.fork.txt
 
-# Mailgun (email service)
-mailgun.org malicious/RPiList/Malware.fork.txt
-
 # Sirus (Private server of World of Warcraft)
 sirus.su abuse/blocklistproject/hosts.fork.txt
 sirus.su malicious/blocklistproject/malware.fork.txt
 www.sirus.su abuse/blocklistproject/hosts.fork.txt
 www.sirus.su malicious/blocklistproject/malware.fork.txt
-
-# PostIMG (image hosting)
-postimg.cc gambling/TrustPositif/gambling-indonesia.fork.txt
-
-# ImgBB (image hosting)
-i.ibb.co gambling/TrustPositif/gambling-indonesia.fork.txt
 
 # Customer.io (email service)
 e.customeriomail.com ads/jerryn70/GoodbyeAds.fork.txt
@@ -174,21 +156,6 @@ www.ipqualityscore.com ads/blocklistproject/hosts.fork.txt
 api.ipify.org ads/blocklistproject/hosts.fork.txt
 ipify.org ads/blocklistproject/hosts.fork.txt
 www.ipify.org ads/blocklistproject/hosts.fork.txt
-
-# HH.ru (Russian job search engine)
-api.hh.ru ads/blocklistproject/hosts.fork.txt
-
-# Fossa (open-source license compliance software)
-go.fossa.com malicious/RPiList/Malware.fork.txt
-
-# AdTidy (email service)
-email-link.adtidy.org ads/yoyo/ads-trackers-etc.fork.txt
-
-# Webparanoid tool protects against online scams and phishing
-webparanoid.com gambling/TrustPositif/gambling-indonesia.fork.txt
-
-# Cookie law (cookie consent solution)
-cdn.cookielaw.org other/polish-blocklists/MajkiIT/hostfile.fork.txt
 
 # Semrush
 semrush.com ads/blocklistproject/hosts.fork.txt
@@ -212,29 +179,11 @@ c6.patreon.com ads/ShadowWhisperer/Ads.fork.txt
 discordservers.com phishing/Dogino/Discord-Phishing-URLs-phishing.fork.txt
 discordservers.com scam/Dogino/Discord-Phishing-URLs-scam.fork.txt
 
-# MSI
-storage-asset.msi.com gambling/TrustPositif/gambling-indonesia.fork.txt
-
-# gethatch.com
-gethatch.com ads/ShadowWhisperer/Ads.fork.txt
-
 # Chat
 embed.tawk.to ads/blocklistproject/hosts.fork.txt
 va.tawk.to abuse/blocklistproject/hosts.fork.txt
 va.tawk.to ads/blocklistproject/hosts.fork.txt
 va.tawk.to malicious/blocklistproject/malware.fork.txt
-
-# ip2location.com
-ip2location.com ads/blocklistproject/hosts.fork.txt
-
-# MIUI
-api.sec.intl.miui.com ads/blocklistproject/hosts.fork.txt
-
-# Arquivo
-arquivo.pt phishing/blocklistproject/phishing.fork.txt
-
-# scholar.google.com
-scholar.google.com ads/jerryn70/GoodbyeAds.fork.txt
 
 # Samsung (Blocking these subdomains prevents adding a Samsung refrigerator to the SmartThings app)
 eu-auth2.samsungosp.com tracking-and-telemetry/ente-dev/tv.fork.txt
@@ -253,7 +202,7 @@ www.nicovideo.jp porn/oisd/nsfw.fork.txt
 keepersecurity.com porn/4skinSkywalker/hosts.fork.txt
 www.keepersecurity.com porn/4skinSkywalker/hosts.fork.txt
 
-# o2.pl
+# o2.pl (Polish mail service)
 poczta.o2.pl porn/StevenBlack/porn.fork.txt
 poczta.o2.pl porn/Sinfonietta/pornography-hosts.fork.txt
 
@@ -261,12 +210,6 @@ poczta.o2.pl porn/Sinfonietta/pornography-hosts.fork.txt
 m.vk.com porn/StevenBlack/porn.fork.txt
 m.vk.com porn/Sinfonietta/pornography-hosts.fork.txt
 vk.com porn/4skinSkywalker/hosts.fork.txt
-
-# Wykop.pl
-wykop.pl porn/oisd/nsfw.fork.txt
-
-# whatismyip.akamai.com
-whatismyip.akamai.com ads/blocklistproject/hosts.fork.txt
 
 # albahost.net
 albahost.net malicious/blocklistproject/malware.fork.txt
@@ -276,33 +219,41 @@ albahost.net abuse/blocklistproject/hosts.fork.txt
 shipspotting.com malicious/blocklistproject/malware.fork.txt
 shipspotting.com abuse/blocklistproject/hosts.fork.txt
 
-# referrals.brave.com
-referrals.brave.com ads/firebog/Prigent-Ads.fork.txt
-
-# Buffer
-buffer-media-uploads.s3.amazonaws.com phishing/blocklistproject/phishing.fork.txt
-
-# eveninsight
-eveninsight.com gambling/TrustPositif/gambling-indonesia.fork.txt
-
-# counter-strike.net
+# Counter-Strike (game)
 counter-strike.net phishing/Dogino/Discord-Phishing-URLs-phishing.fork.txt
 counter-strike.net scam/Dogino/Discord-Phishing-URLs-scam.fork.txt
 
-# wcpstatic.microsoft.com
-wcpstatic.microsoft.com ads/ShadowWhisperer/Ads.fork.txt
-
-# bitbucket.io
-bitbucket.io ads/blocklistproject/hosts.fork.txt
-
-# Ahrefs
-ahrefs.com tracking-and-telemetry/neodevpro/host.fork.txt
-
-# secure.livechatinc.com
-secure.livechatinc.com gambling/TrustPositif/gambling-indonesia.fork.txt
-
-# firstmail.ltd
-firstmail.ltd spam/stopforumspam/toxic-domains-whole.fork.txt
-
 # Other
 my.plexapp.com ads/blocklistproject/hosts.fork.txt
+firstmail.ltd spam/stopforumspam/toxic-domains-whole.fork.txt
+secure.livechatinc.com gambling/TrustPositif/gambling-indonesia.fork.txt
+ahrefs.com tracking-and-telemetry/neodevpro/host.fork.txt
+bitbucket.io ads/blocklistproject/hosts.fork.txt
+wcpstatic.microsoft.com ads/ShadowWhisperer/Ads.fork.txt
+eveninsight.com gambling/TrustPositif/gambling-indonesia.fork.txt
+buffer-media-uploads.s3.amazonaws.com phishing/blocklistproject/phishing.fork.txt
+referrals.brave.com ads/firebog/Prigent-Ads.fork.txt
+wykop.pl porn/oisd/nsfw.fork.txt
+whatismyip.akamai.com ads/blocklistproject/hosts.fork.txt
+ip2location.com ads/blocklistproject/hosts.fork.txt
+api.sec.intl.miui.com ads/blocklistproject/hosts.fork.txt
+arquivo.pt phishing/blocklistproject/phishing.fork.txt
+scholar.google.com ads/jerryn70/GoodbyeAds.fork.txt
+api.hh.ru ads/blocklistproject/hosts.fork.txt
+go.fossa.com malicious/RPiList/Malware.fork.txt
+email-link.adtidy.org ads/yoyo/ads-trackers-etc.fork.txt
+webparanoid.com gambling/TrustPositif/gambling-indonesia.fork.txt
+cdn.cookielaw.org other/polish-blocklists/MajkiIT/hostfile.fork.txt
+postimg.cc gambling/TrustPositif/gambling-indonesia.fork.txt
+i.ibb.co gambling/TrustPositif/gambling-indonesia.fork.txt
+storage-asset.msi.com gambling/TrustPositif/gambling-indonesia.fork.txt
+gethatch.com ads/ShadowWhisperer/Ads.fork.txt
+pixalate.com ads/ShadowWhisperer/Ads.fork.txt
+2ip.io malicious/RPiList/Malware.fork.txt
+cedexis.net ads/ShadowWhisperer/Ads.fork.txt
+mailgun.org malicious/RPiList/Malware.fork.txt
+
+# driftt.com
+driftt.com ads/firebog/AdguardDNS.fork.txt
+driftt.com tracking-and-telemetry/quidsup/trackers-hosts.fork.txt
+driftt.com extensions/MajkiIT/adguard-host.fork.txt
