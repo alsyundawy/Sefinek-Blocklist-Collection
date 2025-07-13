@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025071101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025071301 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -1647,6 +1647,10 @@ ct.pinterest.com CNAME .
 *.ct.pinterest.com CNAME .
 curated.fieldtest.cc CNAME .
 *.curated.fieldtest.cc CNAME .
+customers.edgetag.io CNAME .
+*.customers.edgetag.io CNAME .
+customers.xray-superpixel.com CNAME .
+*.customers.xray-superpixel.com CNAME .
 customfingerprints.bablosoft.com CNAME .
 *.customfingerprints.bablosoft.com CNAME .
 cws.conviva.com CNAME .
@@ -1855,6 +1859,10 @@ f-log-at.grammarly.io CNAME .
 *.f-log-at.grammarly.io CNAME .
 f-log-test.grammarly.io CNAME .
 *.f-log-test.grammarly.io CNAME .
+fallback.attntags.com CNAME .
+*.fallback.attntags.com CNAME .
+fallback.emtag.net CNAME .
+*.fallback.emtag.net CNAME .
 fcmatch.google.com CNAME .
 *.fcmatch.google.com CNAME .
 fcmatch.youtube.com CNAME .
@@ -4353,6 +4361,8 @@ sync.shinobi.jp CNAME .
 *.sync.shinobi.jp CNAME .
 sysmon.kakaku.com CNAME .
 *.sysmon.kakaku.com CNAME .
+t.adclr.jp CNAME .
+*.t.adclr.jp CNAME .
 t.adlpo.com CNAME .
 *.t.adlpo.com CNAME .
 t.blog.livedoor.jp CNAME .
