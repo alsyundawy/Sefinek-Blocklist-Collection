@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025071301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025071401 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -1027,6 +1027,8 @@ ams-pageview-public.s3.amazonaws.com CNAME .
 *.ams-pageview-public.s3.amazonaws.com CNAME .
 analyse.bcovery.com CNAME .
 *.analyse.bcovery.com CNAME .
+analytic-client.blitzmightyparty.com CNAME .
+*.analytic-client.blitzmightyparty.com CNAME .
 analytic-client.chickgoddess.com CNAME .
 *.analytic-client.chickgoddess.com CNAME .
 analytic-client.panowars.com CNAME .
@@ -2505,6 +2507,8 @@ rtc.multiscreensite.com CNAME .
 *.rtc.multiscreensite.com CNAME .
 rtxpx-a.akamaihd.net CNAME .
 *.rtxpx-a.akamaihd.net CNAME .
+rudder-tracking.rudderstack.com CNAME .
+*.rudder-tracking.rudderstack.com CNAME .
 rum.azion.com CNAME .
 *.rum.azion.com CNAME .
 rum.azioncdn.net CNAME .
@@ -79413,6 +79417,8 @@ beacon.watch.impress.co.jp CNAME .
 *.beacon.watch.impress.co.jp CNAME .
 beat.yourtv.jp CNAME .
 *.beat.yourtv.jp CNAME .
+clb.yahoo.co.jp CNAME .
+*.clb.yahoo.co.jp CNAME .
 count.upc.rakuten.co.jp CNAME .
 *.count.upc.rakuten.co.jp CNAME .
 counter.asobeans.jp CNAME .
