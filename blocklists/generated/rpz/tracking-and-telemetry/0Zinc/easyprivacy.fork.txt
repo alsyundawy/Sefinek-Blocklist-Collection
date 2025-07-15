@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025071401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025071501 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -1687,6 +1687,8 @@ datadog-service.mvfglobal.com CNAME .
 *.datadog-service.mvfglobal.com CNAME .
 dcinfos-cache.abtasty.com CNAME .
 *.dcinfos-cache.abtasty.com CNAME .
+dd.garena.com CNAME .
+*.dd.garena.com CNAME .
 dep.hmgroup.com CNAME .
 *.dep.hmgroup.com CNAME .
 dfanalytics.dealerfire.com CNAME .
@@ -79875,6 +79877,8 @@ counter.ukr.net CNAME .
 *.counter.ukr.net CNAME .
 remp.nv.ua CNAME .
 *.remp.nv.ua CNAME .
+stats.itc.ua CNAME .
+*.stats.itc.ua CNAME .
 target.ukr.net CNAME .
 *.target.ukr.net CNAME .
 analytics.aita.gov.vn CNAME .
