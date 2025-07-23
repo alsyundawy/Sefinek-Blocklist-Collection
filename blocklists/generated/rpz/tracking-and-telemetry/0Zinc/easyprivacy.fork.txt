@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025072101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025072301 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -2735,6 +2735,8 @@ stats.slashed.cloud CNAME .
 *.stats.slashed.cloud CNAME .
 stats.smartclip.net CNAME .
 *.stats.smartclip.net CNAME .
+stats.spreadsimple.com CNAME .
+*.stats.spreadsimple.com CNAME .
 stats.tiktoker.win CNAME .
 *.stats.tiktoker.win CNAME .
 stats.topofblogs.com CNAME .
@@ -2907,6 +2909,8 @@ tags.master-perf-tools.com CNAME .
 *.tags.master-perf-tools.com CNAME .
 tags.pw.adn.cloud CNAME .
 *.tags.pw.adn.cloud CNAME .
+tagservice.maximus.mobkoi.com CNAME .
+*.tagservice.maximus.mobkoi.com CNAME .
 tagtracking.vibescm.com CNAME .
 *.tagtracking.vibescm.com CNAME .
 target.mixi.media CNAME .
@@ -28569,8 +28573,6 @@ sstats.belgiantrain.be CNAME .
 *.sstats.belgiantrain.be CNAME .
 sstats.bever.nl CNAME .
 *.sstats.bever.nl CNAME .
-sstats.bitdefender.com CNAME .
-*.sstats.bitdefender.com CNAME .
 sstats.bnpparibasfortis.be CNAME .
 *.sstats.bnpparibasfortis.be CNAME .
 sstats.bonappetit.com CNAME .
