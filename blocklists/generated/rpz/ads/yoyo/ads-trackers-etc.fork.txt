@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025072601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025072901 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -969,6 +969,8 @@ ads.mmania.com CNAME .
 *.ads.mmania.com CNAME .
 ads.mobilebet.com CNAME .
 *.ads.mobilebet.com CNAME .
+ads.mozilla.org CNAME .
+*.ads.mozilla.org CNAME .
 ads.msn.com CNAME .
 *.ads.msn.com CNAME .
 ads.multimania.lycos.fr CNAME .
@@ -2435,8 +2437,6 @@ cl.turkishairlines.com CNAME .
 *.cl.turkishairlines.com CNAME .
 cl0udh0st1ng.com CNAME .
 *.cl0udh0st1ng.com CNAME .
-claria.com CNAME .
-*.claria.com CNAME .
 clck.ru CNAME .
 *.clck.ru CNAME .
 clevernt.com CNAME .
