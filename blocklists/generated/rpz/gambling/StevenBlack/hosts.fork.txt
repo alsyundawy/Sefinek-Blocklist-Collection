@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025072601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025073101 43200 3600 259200 300
   NS  localhost.
 0000130.com CNAME .
 *.0000130.com CNAME .
@@ -329,6 +329,8 @@ $TTL 300
 *.789.fun CNAME .
 789.mobi CNAME .
 *.789.mobi CNAME .
+789.sx CNAME .
+*.789.sx CNAME .
 789.win CNAME .
 *.789.win CNAME .
 78966.app CNAME .
