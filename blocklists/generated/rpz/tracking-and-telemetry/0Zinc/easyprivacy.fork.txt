@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025072901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025073101 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -3331,6 +3331,8 @@ video-ad-stats.googlesyndication.com CNAME .
 *.video-ad-stats.googlesyndication.com CNAME .
 video-analytics-api.cloudinary.com CNAME .
 *.video-analytics-api.cloudinary.com CNAME .
+video-intel.pixels.ai CNAME .
+*.video-intel.pixels.ai CNAME .
 videoevents.outbrain.com CNAME .
 *.videoevents.outbrain.com CNAME .
 vortex.data.microsoft.com CNAME .
