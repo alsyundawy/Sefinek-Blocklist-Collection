@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025073001 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025080101 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -75765,6 +75765,8 @@ video-ad-stats.googlesyndication.com CNAME .
 *.video-ad-stats.googlesyndication.com CNAME .
 video-analytics-api.cloudinary.com CNAME .
 *.video-analytics-api.cloudinary.com CNAME .
+video-intel.pixels.ai CNAME .
+*.video-intel.pixels.ai CNAME .
 video.bzfd.it CNAME .
 *.video.bzfd.it CNAME .
 video.funnelbox.com CNAME .
