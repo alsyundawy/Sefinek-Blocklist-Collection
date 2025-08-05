@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025080401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025080501 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -6079,6 +6079,8 @@ theadhost.com CNAME .
 *.theadhost.com CNAME .
 thebugs.ws CNAME .
 *.thebugs.ws CNAME .
+themangotea.com CNAME .
+*.themangotea.com CNAME .
 themoneytizer.com CNAME .
 *.themoneytizer.com CNAME .
 therapistla.com CNAME .
