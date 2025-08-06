@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025080501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025080601 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -3071,6 +3071,8 @@ tracker-server.high-cdn.com CNAME .
 *.tracker-server.high-cdn.com CNAME .
 tracker-v4.gamedock.io CNAME .
 *.tracker-v4.gamedock.io CNAME .
+tracker.3dissue.com CNAME .
+*.tracker.3dissue.com CNAME .
 tracker.affirm.com CNAME .
 *.tracker.affirm.com CNAME .
 tracker.au.zitcha.app CNAME .
@@ -6111,6 +6113,8 @@ telemetry.canva.com CNAME .
 *.telemetry.canva.com CNAME .
 telemetry.firez.one CNAME .
 *.telemetry.firez.one CNAME .
+telemetry.proton.me CNAME .
+*.telemetry.proton.me CNAME .
 telemetry.tradingview.com CNAME .
 *.telemetry.tradingview.com CNAME .
 tgt.maep.ibm.com CNAME .
@@ -79751,8 +79755,6 @@ cvt1.sibnet.ru CNAME .
 *.cvt1.sibnet.ru CNAME .
 data.glamour.ru CNAME .
 *.data.glamour.ru CNAME .
-ga.finam.ru CNAME .
-*.ga.finam.ru CNAME .
 link.subscribe.ru CNAME .
 *.link.subscribe.ru CNAME .
 log.dzen.ru CNAME .
