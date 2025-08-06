@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2025080401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2025080601 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -17119,6 +17119,8 @@ collector.mazeberry.com CNAME .
 *.collector.mazeberry.com CNAME .
 collector.megaxh.com CNAME .
 *.collector.megaxh.com CNAME .
+collector.net-logger.com CNAME .
+*.collector.net-logger.com CNAME .
 collector.pi.spectrum.net CNAME .
 *.collector.pi.spectrum.net CNAME .
 collector.quillbot.com CNAME .
@@ -26097,8 +26099,6 @@ ga-beacon.appspot.com CNAME .
 *.ga-beacon.appspot.com CNAME .
 ga-tracker-dot-detmir-bonus.appspot.com CNAME .
 *.ga-tracker-dot-detmir-bonus.appspot.com CNAME .
-ga.finam.ru CNAME .
-*.ga.finam.ru CNAME .
 ga.groc.press CNAME .
 *.ga.groc.press CNAME .
 ga.nsimg.net CNAME .
@@ -67633,6 +67633,8 @@ telemetry.owenscorning.com CNAME .
 *.telemetry.owenscorning.com CNAME .
 telemetry.phenixrts.com CNAME .
 *.telemetry.phenixrts.com CNAME .
+telemetry.proton.me CNAME .
+*.telemetry.proton.me CNAME .
 telemetry.reembed.com CNAME .
 *.telemetry.reembed.com CNAME .
 telemetry.ruthschris.com CNAME .
@@ -71435,6 +71437,8 @@ tracker-server.high-cdn.com CNAME .
 *.tracker-server.high-cdn.com CNAME .
 tracker-v4.gamedock.io CNAME .
 *.tracker-v4.gamedock.io CNAME .
+tracker.3dissue.com CNAME .
+*.tracker.3dissue.com CNAME .
 tracker.520call.me CNAME .
 *.tracker.520call.me CNAME .
 tracker.adbinead.com CNAME .
