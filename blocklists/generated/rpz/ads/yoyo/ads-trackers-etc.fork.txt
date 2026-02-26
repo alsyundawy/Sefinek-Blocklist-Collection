@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026022001 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026022601 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -5701,6 +5701,8 @@ sidebar.angelfire.com CNAME .
 *.sidebar.angelfire.com CNAME .
 signalayer.com CNAME .
 *.signalayer.com CNAME .
+signalszone.com CNAME .
+*.signalszone.com CNAME .
 sillyscrew.com CNAME .
 *.sillyscrew.com CNAME .
 silvermob.com CNAME .
