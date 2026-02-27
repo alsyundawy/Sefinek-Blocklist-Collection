@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026022601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026022701 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -6513,6 +6513,8 @@ trk.bc.shutterfly.com CNAME .
 *.trk.bc.shutterfly.com CNAME .
 trk.pinterest.com CNAME .
 *.trk.pinterest.com CNAME .
+trk.sayerfinancial.com CNAME .
+*.trk.sayerfinancial.com CNAME .
 trk.techtarget.com CNAME .
 *.trk.techtarget.com CNAME .
 trk42.net CNAME .
