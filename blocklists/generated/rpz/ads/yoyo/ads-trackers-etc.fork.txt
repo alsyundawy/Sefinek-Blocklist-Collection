@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026022701 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026022801 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -5279,6 +5279,8 @@ r.scoota.co CNAME .
 *.r.scoota.co CNAME .
 r.sibmail.havasit.com CNAME .
 *.r.sibmail.havasit.com CNAME .
+r1.arts-mail.com CNAME .
+*.r1.arts-mail.com CNAME .
 r1.visualwebsiteoptimizer.com CNAME .
 *.r1.visualwebsiteoptimizer.com CNAME .
 r2.visualwebsiteoptimizer.com CNAME .
