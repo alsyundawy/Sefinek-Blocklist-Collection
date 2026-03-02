@@ -1,12 +1,16 @@
 ! Admiral, parsed and mirrored by https://firebog.net
-! Updated 23FEB26 from https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/getadmiral-domains.txt
+! Updated 02MAR26 from https://raw.githubusercontent.com/LanikSJ/ubo-filters/main/filters/getadmiral-domains.txt
 ! This is sourced from an "adblock" style list which is flat-out NOT designed to work with DNS sinkholes
 ! There WILL be mistakes with how this is parsed, due to how domain names are extracted and exceptions handled
 ! Please bring any parsing issues up at https://github.com/WaLLy3K/wally3k.github.io/issues prior to raising a request upstream
 ! Please contact the original maintainer for any list corrections
 ||2znp09oa.com^
 ||4jnzhl0d0.com^
+||5mcwl.pw^
+||6ldu6qa.com^
 ||82o9v830.com^
+||abackafterthought.com^
+||abackframe.com^
 ||abilityscale.com^
 ||abjectattempt.com^
 ||aboardamusement.com^
@@ -37,6 +41,7 @@
 ||admiral.support^
 ||admiral.website^
 ||admiralcdn.com^
+||admiralexternal.com^
 ||admlcdn.com^
 ||adorableanger.com^
 ||adorableattention.com^
@@ -75,6 +80,7 @@
 ||applesarmy.com^
 ||applyless.com^
 ||aquaticowl.com^
+||ar1nvz5.com^
 ||archswimming.com^
 ||aromamirror.com^
 ||arrivegrowth.com^
@@ -121,12 +127,12 @@
 ||battlebalance.com^
 ||bawdybalance.com^
 ||beamincrease.com^
+||beamkite.com^
 ||beamvolcano.com^
 ||beancontrol.com^
 ||bedsberry.com^
 ||beginnerpancake.com^
 ||berserkhydrant.com^
-||bespokesandals.com^
 ||bestboundary.com^
 ||betazebra.com^
 ||bewilderedbattle.com^
@@ -206,6 +212,7 @@
 ||butterburst.com^
 ||buttonladybug.com^
 ||buzzaoutlet.com^
+||cabledemand.com^
 ||cafefrench.com^
 ||cakesdrum.com^
 ||calculatingcircle.com^
@@ -252,7 +259,6 @@
 ||chargecracker.com^
 ||charmingplate.com^
 ||cheerycraze.com^
-||chemicalsnake.com^
 ||cherriescare.com^
 ||chessbranch.com^
 ||chesscolor.com^
@@ -287,7 +293,6 @@
 ||colossalclouds.com^
 ||colossalcoat.com^
 ||colossalcry.com^
-||combativecar.com^
 ||combativedetail.com^
 ||combbit.com^
 ||combcattle.com^
@@ -304,13 +309,11 @@
 ||configchain.com^
 ||confirmglobal.com^
 ||confusedcart.com^
-||connectashelf.com^
 ||consciouschairs.com^
 ||consciouscheese.com^
 ||consciousdirt.com^
 ||consumerknowhow.com^
 ||consumerzero.com^
-||controlcola.com^
 ||controlhall.com^
 ||controlswim.com^
 ||convertbatch.com^
@@ -348,7 +351,6 @@
 ||crowdedmass.com^
 ||cruisetourist.com^
 ||crunchcontrol.com^
-||cryptvalue.com^
 ||crystalboulevard.com^
 ||cubchannel.com^
 ||cubepins.com^
@@ -423,6 +425,7 @@
 ||distributiontomatoes.com^
 ||disturbedquiet.com^
 ||divergentoffer.com^
+||dk4ywix.com^
 ||dockdigestion.com^
 ||dogbedscentral.com^
 ||dollardelta.com^
@@ -456,6 +459,7 @@
 ||efficaciouscactus.com^
 ||effulgentnook.com^
 ||effulgenttempest.com^
+||ejyymghi.com^
 ||elasticchange.com^
 ||elderlytown.com^
 ||elegantboulevard.com^
@@ -508,9 +512,7 @@
 ||extramonies.com^
 ||exuberantedge.com^
 ||fabcharting.com^
-||fabledsoul.com^
 ||facilitatebreakfast.com^
-||fadedprofit.com^
 ||fadedsnow.com^
 ||fairfeeling.com^
 ||fairiesbranch.com^
@@ -689,7 +691,6 @@
 ||handyincrease.com^
 ||haplesshydrant.com^
 ||haplessland.com^
-||happysponge.com^
 ||harborcaption.com^
 ||harborcontrol.com^
 ||harborcub.com^
@@ -757,7 +758,6 @@
 ||itemslice.com^
 ||ivykiosk.com^
 ||j93557g.com^
-||jaderooster.com^
 ||jailbulb.com^
 ||joblessdrum.com^
 ||joyfulharbor.com^
@@ -829,6 +829,7 @@
 ||loudlunch.com^
 ||lovelydrum.com^
 ||loveseashore.com^
+||lp3tdqle.com^
 ||ludicrousarch.com^
 ||lumberamount.com^
 ||luminousboulevard.com^
@@ -846,6 +847,7 @@
 ||magicaljoin.com^
 ||magicminibox.com^
 ||magnificentarticle.com^
+||magnificentmist.com^
 ||majesticwaterscape.com^
 ||majesticwilderness.com^
 ||makesimpact.com^
@@ -862,7 +864,6 @@
 ||marriedbelief.com^
 ||marriedmailbox.com^
 ||marriedvalue.com^
-||massivemark.com^
 ||materialisticmoon.com^
 ||materialmilk.com^
 ||materialmoon.com^
@@ -908,7 +909,6 @@
 ||missionrewards.com^
 ||mistyhorizon.com^
 ||mittencattle.com^
-||mixedreading.com^
 ||modifiedchaos.com^
 ||modularmental.com^
 ||monacobeatles.com^
@@ -1201,7 +1201,6 @@
 ||ritzykey.com^
 ||ritzyrepresentative.com^
 ||ritzyveil.com^
-||roadwalks.com^
 ||robotgarages.com^
 ||rockagainst.com^
 ||rockpebbles.com^
@@ -1325,7 +1324,6 @@
 ||signaturepod.com^
 ||silentcredit.com^
 ||silentjackal.com^
-||silentwrench.com^
 ||siliconslow.com^
 ||sillyscrew.com^
 ||simplenaming.com^
@@ -1434,9 +1432,7 @@
 ||stakingbasket.com^
 ||stakingshock.com^
 ||stakingsmile.com^
-||staleshow.com^
 ||stalesummer.com^
-||stampknot.com^
 ||starkscale.com^
 ||startercost.com^
 ||startingcars.com^
@@ -1448,7 +1444,6 @@
 ||steadfastsound.com^
 ||steadfastsystem.com^
 ||steadycopper.com^
-||stealsteel.com^
 ||steelmaiden.com^
 ||steepsister.com^
 ||steepsquirrel.com^
@@ -1483,7 +1478,6 @@
 ||stretchsneeze.com^
 ||stretchsquirrel.com^
 ||stripedbat.com^
-||stripedburst.com^
 ||strivesidewalk.com^
 ||strivesquirrel.com^
 ||strokesystem.com^
@@ -1593,8 +1587,8 @@
 ||tofusquirrel.com^
 ||toolcapital.com^
 ||toomanyalts.com^
+||toothbrushnote.com^
 ||topcrazypress.com^
-||touristfuel.com^
 ||toweringanswer.com^
 ||toysbasics.com^
 ||toytakeover.com^
@@ -1607,6 +1601,7 @@
 ||tranquilveil.com^
 ||tranquilveranda.com^
 ||trappush.com^
+||traytouch.com^
 ||treadbun.com^
 ||treatoceans.com^
 ||tremendousplastic.com^
@@ -1625,8 +1620,10 @@
 ||tumbleicicle.com^
 ||tuneupcoffee.com^
 ||twistloss.com^
+||twistsweater.com^
 ||typicalairplane.com^
 ||typicalteeth.com^
+||tzwaw.pw^
 ||ubiquitoussea.com^
 ||ubiquitousyard.com^
 ||ultraoranges.com^
@@ -1697,7 +1694,6 @@
 ||warmquiver.com^
 ||warnwing.com^
 ||washbanana.com^
-||watersensible.com^
 ||waterywave.com^
 ||waveinverter.com^
 ||waxsirens.com^
@@ -1740,8 +1736,10 @@
 ||wrongpotato.com^
 ||wrongwound.com^
 ||wtaccesscontrol.com^
+||xovq5nemr.com^
 ||yieldingwoman.com^
 ||yourlifedream.com^
+||zbwp6ghm.com^
 ||zephyrcatalyst.com^
 ||zephyrlabyrinth.com^
 ||zeppelinradio.com^
