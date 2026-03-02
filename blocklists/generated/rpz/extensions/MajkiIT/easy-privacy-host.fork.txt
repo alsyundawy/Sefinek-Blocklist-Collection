@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026030101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026030201 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -36557,6 +36557,8 @@ log.aimtell.com CNAME .
 *.log.aimtell.com CNAME .
 log.aliyuncs.com CNAME .
 *.log.aliyuncs.com CNAME .
+log.arkansasonline.com CNAME .
+*.log.arkansasonline.com CNAME .
 log.bitauto.com CNAME .
 *.log.bitauto.com CNAME .
 log.china.cn CNAME .
