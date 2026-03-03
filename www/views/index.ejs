@@ -68,11 +68,10 @@ const categories = [
 <main class="main">
     <section class="info" id="more-info" aria-labelledby="info-heading">
         <div class="info__container">
-            <h2 class="info__heading" id="info-heading">Information</h2>
             <p class="info__text">
-                Welcome to Sefinek Blocklists, your premier source for top-quality lists used for DNS servers and beyond. We are committed to providing the most reliable and comprehensive lists that effectively eliminate unwanted ads with minimal false alarms. Our blocklists ensure a safer, more private, and faster internet browsing experience for you.
-            </p>
-            <p class="info__text">
+                Welcome to Sefinek Blocklists, your premier source for top-quality lists used for DNS servers and beyond.
+                We are committed to providing the most reliable and comprehensive lists that effectively eliminate unwanted ads with minimal false alarms.
+                Our blocklists ensure a safer, more private, and faster internet browsing experience for you.
                 Say goodbye to false positives and interruptions, and enjoy seamless browsing while safeguarding your privacy!
             </p>
         </div>
@@ -200,7 +199,7 @@ const categories = [
         <p class="stats__subtitle">
             Statistics have been collected since <time class="stats__date" id="stats-since-date" datetime="<%= createdDate.toISOString() %>"></time>. They are updated every few minutes to avoid server overload.
             <br>
-            Want to see detailed metrics? Check out the <a href="/metrics" class="info__link">Metrics</a> page.
+            Want to see detailed metrics? Check out the <a href="/metrics">Metrics</a> page!
         </p>
 
         <div class="stats__grid stats__grid--primary">
@@ -257,6 +256,10 @@ const categories = [
         </div>
     </section>
 </main>
+
+<footer id="footer" role="contentinfo">
+    <p>Copyright 2023-2026 &copy; <span>Sefinek</span>. All Rights Reserved.</p>
+</footer>
 
 <script type="module" src="/js/index.js" data-ws-address="<%= process.env.NODE_ENV === 'production' ? process.env.WS_ADDRESS : `${process.env.WS_ADDRESS}:${process.env.WS_PORT}` %>"></script>
 

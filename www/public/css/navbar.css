@@ -67,6 +67,7 @@ nav.active {
 	overflow:hidden;
 	padding:.625rem 1.5rem;
 	position:relative;
+	text-shadow:0 0 6px #000;
 	text-decoration:none;
 	transition:color .25s cubic-bezier(0.4,0,0.2,1),background .25s cubic-bezier(0.4,0,0.2,1),transform .25s cubic-bezier(0.4,0,0.2,1);
 	will-change:transform
@@ -96,6 +97,7 @@ nav.active {
 
 .nav-menu a.active {
 	background:linear-gradient(135deg,#58a6ff33,#58a6ff26);
+	text-shadow:0 0 4px #000;
 	box-shadow:0 0 0 1px #58A6FF4C,0 4px 12px #58A6FF26;
 	color:#fff
 }

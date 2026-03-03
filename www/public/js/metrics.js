@@ -51,7 +51,7 @@ const localStorageBatcher = (() => {
 				timeoutId = setTimeout(flush, 100);
 			}
 		},
-		flush
+		flush,
 	};
 })();
 const FORMAT_LABELS = {
@@ -149,9 +149,10 @@ const updateServerTimeOffset = serverTime => {
 
 const updateClocks = () => {
 	const now = new Date();
+	updateElement('client-time', formatTimeLocal(now));
+
 	const serverTime = new Date(now.getTime() + serverTimeOffset);
 	updateElement('server-time', formatTimeUTC(serverTime));
-	updateElement('client-time', formatTimeLocal(now));
 };
 
 const addUTCFooter = callbacks => ({

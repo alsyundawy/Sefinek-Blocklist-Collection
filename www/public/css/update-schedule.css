@@ -7,7 +7,8 @@ body {
 .main {
 	margin:70px auto 0;
 	max-width:1000px;
-	padding:2rem 1rem
+	padding:2rem 1rem;
+	text-shadow:0 0 4px #000;
 }
 
 .schedule-info {
@@ -38,11 +39,6 @@ body {
 	margin-bottom:2rem;
 	padding:2rem;
 	transition:box-shadow .25s cubic-bezier(0.4,0,0.2,1),border-color .25s cubic-bezier(0.4,0,0.2,1)
-}
-
-.schedule-card:hover {
-	border-color:#58a6ff4d;
-	box-shadow: 0 0 0 1px #58A6FF4C, 0 8px 32px #0000004C;
 }
 
 .schedule-card__content {
@@ -94,8 +90,7 @@ body {
 	color:#a5d6ff;
 	font-family:var(--font-mono, 'Cascadia Mono'),monospace;
 	font-size:1.0625rem;
-	font-weight:600;
-	text-shadow:0 0 12px #a5d6ff80
+	text-shadow:0 0 12px #000;
 }
 
 .schedule-card__meta {
@@ -109,9 +104,7 @@ body {
 .schedule-card__countdown {
 	color:#c9def7;
 	font-family:var(--font-mono, 'Cascadia Mono'),monospace;
-	font-size:.9375rem;
-	font-weight:600;
-	text-shadow:0 0 10px #a5d6ff4d
+	font-size:.9375rem
 }
 
 .schedule-note {
@@ -150,18 +143,7 @@ body {
 .schedule-note__link {
 	color:#58a6ff;
 	text-decoration:underline;
-	transition:color .25s cubic-bezier(0.4,0,0.2,1),text-shadow .25s cubic-bezier(0.4,0,0.2,1)
-}
-
-.schedule-note__link:hover {
-	color:#79c0ff;
-	text-decoration:none;
-	text-shadow:0 0 8px #79c0ff66
-}
-
-.schedule-note__link:active {
-	text-decoration:none;
-	text-shadow:0 0 12px #79c0ff99
+	transition:color .25s cubic-bezier(0.4,0,0.2,1)
 }
 
 .schedule-note__link:focus-visible {

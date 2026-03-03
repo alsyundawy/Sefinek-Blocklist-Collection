@@ -17,7 +17,7 @@ const SIZE_UNITS = ['B', 'KB', 'MB', 'GB'];
 const TEXT_FILE_EXTENSIONS = new Set(['.txt', '.conf', '.log', '.md']);
 const SENDFILE_EXTENSIONS = new Set(['.txt', '.conf', '.log']);
 
-const CANONICAL_REGEX = /^\[\/\/\]:\s*#\s*\(Canonical:\s*(.*)\)/mi;
+const CANONICAL_REGEX = /^\[\/\/]:\s*#\s*\(Canonical:\s*(.*)\)/mi;
 
 const formatFileSize = bytes => {
 	if (bytes === 0) return 'Empty';
