@@ -5,14 +5,14 @@ body {
     padding-top:0!important
 }
 
-.metrics-container {
+main {
     margin:0 auto;
     max-width:1920px;
     min-height:100vh;
     padding:90px 4rem 2rem
 }
 
-.metrics-container h1 {
+main h1 {
     color:var(--color-text,#fff);
     font-family:var(--font-mono, 'Cascadia Mono'),var(--font-primary, Calibri),sans-serif;
     font-size:3.2rem;
@@ -26,7 +26,7 @@ body {
     text-shadow:0 0 12px #fff
 }
 
-.metrics-container h1::after {
+main h1::after {
     background:linear-gradient(90deg,transparent,#00a8fc 20%,#00a8fc 80%,transparent);
     border-radius:3px;
     bottom:0;
@@ -793,11 +793,11 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .metrics-container {
+    main {
         padding:90px 2rem 2rem
     }
 
-    .metrics-container h1 {
+    main h1 {
         font-size:2.5rem
     }
 
@@ -811,11 +811,11 @@ body {
 }
 
 @media (max-width: 768px) {
-    .metrics-container {
+    main {
         padding:80px 1.5rem 1.5rem
     }
 
-    .metrics-container h1 {
+    main h1 {
         font-size:2rem;
         margin-bottom:2.5rem
     }
@@ -903,16 +903,16 @@ body {
 }
 
 @media (max-width: 480px) {
-    .metrics-container {
+    main {
         padding:70px 1rem 1rem
     }
 
-    .metrics-container h1 {
+    main h1 {
         font-size:1.6rem;
         margin-bottom:2rem
     }
 
-    .metrics-container h1::after {
+    main h1::after {
         width:120px
     }
 

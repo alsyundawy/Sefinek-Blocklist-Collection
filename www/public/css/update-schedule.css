@@ -4,7 +4,7 @@ body {
 	padding-top:0!important
 }
 
-.main {
+main {
 	margin:70px auto 0;
 	max-width:1000px;
 	padding:2rem 1rem;
@@ -153,7 +153,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-	.main {
+	main {
 		padding:2rem 1rem
 	}
 
@@ -171,7 +171,7 @@ body {
 }
 
 @media (max-width: 768px) {
-	.main {
+	main {
 		padding:1.5rem .75rem
 	}
 
@@ -213,7 +213,7 @@ body {
 }
 
 @media (max-width: 480px) {
-	.main {
+	main {
 		padding:1rem .5rem
 	}
 

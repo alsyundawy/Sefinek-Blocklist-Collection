@@ -8,7 +8,7 @@ body {
     padding-top:0!important
 }
 
-.main {
+main {
     align-items:flex-start;
     box-sizing:border-box;
     display:flex;
@@ -265,7 +265,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .main {
+    main {
         padding:1rem 1.5rem
     }
 
@@ -308,7 +308,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .main {
+    main {
         padding:.75rem 1rem
     }
 
@@ -362,7 +362,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .main {
+    main {
         padding:.5rem
     }
 

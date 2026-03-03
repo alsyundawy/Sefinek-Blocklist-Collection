@@ -4,7 +4,7 @@ body {
 	padding-top:0!important
 }
 
-.main {
+main {
 	display:flex;
 	flex-direction:column;
 	min-height:100vh;
@@ -130,7 +130,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-	.main {
+	main {
 		padding:90px 1rem 1.5rem
 	}
 
@@ -140,7 +140,7 @@ body {
 }
 
 @media (max-width: 768px) {
-	.main {
+	main {
 		padding:80px .625rem 1rem
 	}
 
@@ -162,7 +162,7 @@ body {
 }
 
 @media (max-width: 480px) {
-	.main {
+	main {
 		padding:70px .5rem .75rem
 	}
 
