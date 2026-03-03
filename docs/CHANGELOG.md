@@ -13,10 +13,9 @@ The project uses semantic versioning. Thank you for choosing Sefinek Blocklists!
 3. Completely redesigned the project frontend to make it more modern and intuitive.
 4. Added a new subpage [/metrics](https://blocklist.sefinek.net/metrics) with extended statistics.
 5. Templates no longer use the `0.0.0.0` prefix and are now saved as standard hosts files for greater convenience.
-6. Introduced additional improvements and optimizations.
-7. Renamed: `malicious/sefinek.hosts2.txt`, `malicious/sefinek.hosts1.txt` to `malicious/sefinek.hosts.txt`.
-8. Moved `crypto/sites/sefinek.hosts.txt` to `crypto/sefinek.hosts.txt`.
-9. Removed the following lists:
+6. Renamed: `malicious/sefinek.hosts2.txt`, `malicious/sefinek.hosts1.txt` to `malicious/sefinek.hosts.txt`.
+7. Moved `crypto/sites/sefinek.hosts.txt` to `crypto/sefinek.hosts.txt`.
+8. Removed the following lists:
    - malicious/digitalside/latestdomains.fork.txt
    - ads/blocklistproject/youtube.fork.txt
    - hate-and-junk/developerdan/extended.fork.txt
@@ -24,6 +23,7 @@ The project uses semantic versioning. Thank you for choosing Sefinek Blocklists!
    - developerdan/amp-hosts-extended.fork.txt
    - piracy/sefinek.hosts.txt
    - malicious/suspicious.txt
+9. Introduced additional improvements and optimizations.
 10. And many more changes and fixes!
 
 
