@@ -346,23 +346,6 @@ main {
 	text-shadow:0 0 4px #0006
 }
 
-.feature__link {
-	color:#79c0ff;
-	text-decoration:underline;
-	transition:color .2s ease
-}
-
-.feature__link:hover {
-	color:#a5d6ff;
-	text-decoration:none
-}
-
-.feature__link:focus-visible {
-	border-radius:2px;
-	outline:2px solid #58a6ff99;
-	outline-offset:2px
-}
-
 .feature__media {
 	align-items:center;
 	display:flex;
