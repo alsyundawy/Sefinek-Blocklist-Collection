@@ -9,7 +9,7 @@ The project uses semantic versioning. Thank you for choosing Sefinek Blocklists!
 
 ## Version 0.19.0 from 3.03.2026
 1. Improved the design of https://sefinek.net/blocklist-generator.
-2. Added a new list: https://blocklist.sefinek.net/generated/v1/0.0.0.0/tracking-and-telemetry/sefinek.hosts.txt.
+2. Added a new list: https://blocklist.sefinek.net/generated/v1/0.0.0.0/tracking-and-telemetry/sefinek.hosts.txt
 3. Completely redesigned the project frontend to make it more modern and intuitive.
 4. Added a new subpage [/metrics](https://blocklist.sefinek.net/metrics) with extended statistics.
 5. Templates no longer use the `0.0.0.0` prefix and are now saved as standard hosts files for greater convenience.
