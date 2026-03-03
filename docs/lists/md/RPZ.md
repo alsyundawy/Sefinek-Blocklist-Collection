@@ -4,7 +4,7 @@
     <h1>📝 Default blocklist collection (RPZ)</h1>
     <p>
         📄 » <b>Format: domain.tld CNAME .</b><br>
-        📥 » <b>Last update: 1.11.2025 / DD.MM.YYYY</b><br>
+        📥 » <b>Last update: 3.03.2026 / DD.MM.YYYY</b><br>
         ⭐ » <b>Mark this repository with a star if you find it useful.</b>
     </p>
 </div>
@@ -72,7 +72,6 @@ https://blocklist.sefinek.net/generated/v1/rpz/malicious/reported-by-norton.txt
 https://blocklist.sefinek.net/generated/v1/rpz/malicious/RPiList/Malware.fork.txt
 https://blocklist.sefinek.net/generated/v1/rpz/malicious/sefinek.hosts.txt
 https://blocklist.sefinek.net/generated/v1/rpz/malicious/Spam404/main-blacklist.fork.txt
-https://blocklist.sefinek.net/generated/v1/rpz/malicious/suspicious.txt
 https://blocklist.sefinek.net/generated/v1/rpz/malicious/web-attacks.txt
 https://blocklist.sefinek.net/generated/v1/rpz/other/polish-blocklists/cert.pl/domains-hosts.fork.txt
 https://blocklist.sefinek.net/generated/v1/rpz/other/polish-blocklists/MajkiIT/hostfile.fork.txt
