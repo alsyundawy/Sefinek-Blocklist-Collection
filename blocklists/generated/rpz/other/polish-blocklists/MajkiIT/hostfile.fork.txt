@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026021101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026030401 43200 3600 259200 300
   NS  localhost.
 0daib.pl CNAME .
 *.0daib.pl CNAME .
@@ -1487,3 +1487,7 @@ secure.sign-doc.com CNAME .
 *.secure.sign-doc.com CNAME .
 sign-doc.com CNAME .
 *.sign-doc.com CNAME .
+zdroweporadniki.pl CNAME .
+*.zdroweporadniki.pl CNAME .
+serialowo.eu CNAME .
+*.serialowo.eu CNAME .
