@@ -1,6 +1,8 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026030301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026030401 43200 3600 259200 300
   NS  localhost.
+0.0.0.rvice.com CNAME .
+*.0.0.0.rvice.com CNAME .
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
 0.net.easyjet.com CNAME .
@@ -3765,8 +3767,6 @@ $TTL 300
 *.629jpgi3i.com CNAME .
 62a53367c9.com CNAME .
 *.62a53367c9.com CNAME .
-62ad.com CNAME .
-*.62ad.com CNAME .
 63-217-112-145.static.pccwglobal.net.iberostar.com CNAME .
 *.63-217-112-145.static.pccwglobal.net.iberostar.com CNAME .
 631.dlads.cn CNAME .
@@ -7197,8 +7197,8 @@ a16161.actonservice.com CNAME .
 *.a16161.actonservice.com CNAME .
 a16176.actonservice.com CNAME .
 *.a16176.actonservice.com CNAME .
-a16178.actonservice.com CNAME .
-*.a16178.actonservice.com CNAME .
+a16178.actonservice.cosrecord.com CNAME .
+*.a16178.actonservice.cosrecord.com CNAME .
 a16179.actonservice.com CNAME .
 *.a16179.actonservice.com CNAME .
 a16206.actonservice.com CNAME .
@@ -8597,8 +8597,6 @@ a26807.actonservice.com CNAME .
 *.a26807.actonservice.com CNAME .
 a26813.actonservice.com CNAME .
 *.a26813.actonservice.com CNAME .
-a26816.actonservice.com CNAME .
-*.a26816.actonservice.com CNAME .
 a26826.actonservice.com CNAME .
 *.a26826.actonservice.com CNAME .
 a26839.actonservice.com CNAME .
@@ -12497,8 +12495,6 @@ a8cv.alvo.co.jp CNAME .
 *.a8cv.alvo.co.jp CNAME .
 a8cv.amiami.jp CNAME .
 *.a8cv.amiami.jp CNAME .
-a8cv.anapnet.com CNAME .
-*.a8cv.anapnet.com CNAME .
 a8cv.androsophybaby.com CNAME .
 *.a8cv.androsophybaby.com CNAME .
 a8cv.ans-ec.shop CNAME .
@@ -21405,8 +21401,8 @@ aishang.bid CNAME .
 *.aishang.bid CNAME .
 aishowbger.com CNAME .
 *.aishowbger.com CNAME .
-aisletowelreasoning.com CNAME .
-*.aisletowelreasoning.com CNAME .
+aisletowelreasowinvn15.com CNAME .
+*.aisletowelreasowinvn15.com CNAME .
 aiso.live CNAME .
 *.aiso.live CNAME .
 aisouk.cn CNAME .
@@ -24337,6 +24333,8 @@ anattospursier.com CNAME .
 *.anattospursier.com CNAME .
 anbavidkids.shop CNAME .
 *.anbavidkids.shop CNAME .
+anbet.com CNAME .
+*.anbet.com CNAME .
 anbvofwznwbma.website CNAME .
 *.anbvofwznwbma.website CNAME .
 anceenablesasm.com CNAME .
@@ -27723,8 +27721,6 @@ apptornado.com CNAME .
 *.apptornado.com CNAME .
 apptquitesouse.com CNAME .
 *.apptquitesouse.com CNAME .
-apptracer.ru CNAME .
-*.apptracer.ru CNAME .
 apptracker.torob.com CNAME .
 *.apptracker.torob.com CNAME .
 apptus.actonservice.com CNAME .
@@ -33925,8 +33921,8 @@ betindex.net CNAME .
 *.betindex.net CNAME .
 betinternet.com CNAME .
 *.betinternet.com CNAME .
-betive.com CNAME .
-*.betive.com CNAME .
+betive.cning.com CNAME .
+*.betive.cning.com CNAME .
 betjamaica.com CNAME .
 *.betjamaica.com CNAME .
 betjambo.com CNAME .
@@ -52299,8 +52295,8 @@ cybkit.com CNAME .
 *.cybkit.com CNAME .
 cybmas.com CNAME .
 *.cybmas.com CNAME .
-cyborg.news CNAME .
-*.cyborg.news CNAME .
+cyborg.ngh.5lu.com CNAME .
+*.cyborg.ngh.5lu.com CNAME .
 cybyhdinwmntx.site CNAME .
 *.cybyhdinwmntx.site CNAME .
 cyclinghere.com CNAME .
@@ -67257,8 +67253,6 @@ efgam.actonservice.com CNAME .
 *.efgam.actonservice.com CNAME .
 efgebmmcngkp.com CNAME .
 *.efgebmmcngkp.com CNAME .
-efgh.5lu.com CNAME .
-*.efgh.5lu.com CNAME .
 efglbp.baur.de CNAME .
 *.efglbp.baur.de CNAME .
 efigvoydotdmc.website CNAME .
@@ -120357,12 +120351,12 @@ manrec.cc CNAME .
 *.manrec.cc CNAME .
 mansfieldtimes.com CNAME .
 *.mansfieldtimes.com CNAME .
+mansioet.com CNAME .
+*.mansioet.com CNAME .
 mansion88.com CNAME .
 *.mansion88.com CNAME .
 mansionappointmentmoon.com CNAME .
 *.mansionappointmentmoon.com CNAME .
-mansionbet.com CNAME .
-*.mansionbet.com CNAME .
 mansudee.net CNAME .
 *.mansudee.net CNAME .
 mantisadnetwork.com CNAME .
@@ -150715,6 +150709,8 @@ ppszivkqubxut.online CNAME .
 *.ppszivkqubxut.online CNAME .
 pptfhhrohykzk.online CNAME .
 *.pptfhhrohykzk.online CNAME .
+pptracer.ru CNAME .
+*.pptracer.ru CNAME .
 pptshwgmvfhie.website CNAME .
 *.pptshwgmvfhie.website CNAME .
 pptte.com CNAME .
@@ -170043,8 +170039,8 @@ setaram.actonservice.com CNAME .
 *.setaram.actonservice.com CNAME .
 setennnews.com CNAME .
 *.setennnews.com CNAME .
-setexasrecord.com CNAME .
-*.setexasrecord.com CNAME .
+setexad.com CNAME .
+*.setexad.com CNAME .
 setexastimes.com CNAME .
 *.setexastimes.com CNAME .
 setgrjeiiqkrj.com CNAME .
@@ -217685,8 +217681,6 @@ winvn.vip CNAME .
 *.winvn.vip CNAME .
 winvn13.com CNAME .
 *.winvn13.com CNAME .
-winvn15.com CNAME .
-*.winvn15.com CNAME .
 winvn17.com CNAME .
 *.winvn17.com CNAME .
 winvn18.com CNAME .
@@ -220217,6 +220211,8 @@ betcoin.ag CNAME .
 *.betcoin.ag CNAME .
 betfair.com CNAME .
 *.betfair.com CNAME .
+betive.com CNAME .
+*.betive.com CNAME .
 betmylines.com CNAME .
 *.betmylines.com CNAME .
 betodds.ag CNAME .
@@ -220675,6 +220671,8 @@ m88my.com CNAME .
 *.m88my.com CNAME .
 mansion66.com CNAME .
 *.mansion66.com CNAME .
+mansionbet.com CNAME .
+*.mansionbet.com CNAME .
 marathonbet.co.uk CNAME .
 *.marathonbet.co.uk CNAME .
 maxbet.id CNAME .
@@ -221223,6 +221221,8 @@ winbaicai.com CNAME .
 *.winbaicai.com CNAME .
 winner.co.uk CNAME .
 *.winner.co.uk CNAME .
+winvn15.com CNAME .
+*.winvn15.com CNAME .
 wjxcdn.com CNAME .
 *.wjxcdn.com CNAME .
 wnd.com CNAME .
