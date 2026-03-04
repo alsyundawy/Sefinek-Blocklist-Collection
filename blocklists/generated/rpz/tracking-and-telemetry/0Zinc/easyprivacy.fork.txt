@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026030301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026030401 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -3677,6 +3677,8 @@ videoevents.outbrain.com CNAME .
 *.videoevents.outbrain.com CNAME .
 vitals.flyingpress.com CNAME .
 *.vitals.flyingpress.com CNAME .
+vm.target-video.com CNAME .
+*.vm.target-video.com CNAME .
 vortex.data.microsoft.com CNAME .
 *.vortex.data.microsoft.com CNAME .
 vplayeranalytics.vidgyor.com CNAME .
@@ -28311,6 +28313,8 @@ somni.superonline.net CNAME .
 *.somni.superonline.net CNAME .
 somni.syf.com CNAME .
 *.somni.syf.com CNAME .
+somni.syfpayments.com CNAME .
+*.somni.syfpayments.com CNAME .
 somni.synchrony.com CNAME .
 *.somni.synchrony.com CNAME .
 somni.synchronybank.com CNAME .
@@ -74575,8 +74579,6 @@ join.talker.network CNAME .
 *.join.talker.network CNAME .
 join.thekrishi.com CNAME .
 *.join.thekrishi.com CNAME .
-join.tlon.io CNAME .
-*.join.tlon.io CNAME .
 join.travelxp.com CNAME .
 *.join.travelxp.com CNAME .
 join.vibely.io CNAME .
