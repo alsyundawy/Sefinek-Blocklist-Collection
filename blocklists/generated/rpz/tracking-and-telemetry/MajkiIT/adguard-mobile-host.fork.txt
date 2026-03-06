@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026030401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026030601 43200 3600 259200 300
   NS  localhost.
 023hysj.com CNAME .
 *.023hysj.com CNAME .
@@ -427,6 +427,8 @@ adzmobi.com CNAME .
 *.adzmobi.com CNAME .
 afafb.com CNAME .
 *.afafb.com CNAME .
+afs.googlesyndication.com CNAME .
+*.afs.googlesyndication.com CNAME .
 agent.tamedia.com.tw CNAME .
 *.agent.tamedia.com.tw CNAME .
 ahoy-internal-ads-hv.b-cdn.net CNAME .
@@ -1325,6 +1327,8 @@ plugin.mobopay.baidu.com CNAME .
 *.plugin.mobopay.baidu.com CNAME .
 pn.ybp.yahoo.com CNAME .
 *.pn.ybp.yahoo.com CNAME .
+pob-mob2.websearchbrowser.com CNAME .
+*.pob-mob2.websearchbrowser.com CNAME .
 polymorphicads.jp CNAME .
 *.polymorphicads.jp CNAME .
 pontiflex.com CNAME .
