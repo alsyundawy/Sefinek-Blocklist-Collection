@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026030501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026030601 43200 3600 259200 300
   NS  localhost.
 000-000-37645t2783296323fn2.calibrescientifics.com CNAME .
 *.000-000-37645t2783296323fn2.calibrescientifics.com CNAME .
@@ -191121,8 +191121,6 @@ stat.rickenbach-tg.ch CNAME .
 *.stat.rickenbach-tg.ch CNAME .
 stat.rigexpert.com CNAME .
 *.stat.rigexpert.com CNAME .
-stat.ripe.net CNAME .
-*.stat.ripe.net CNAME .
 stat.rkltuovinen.fi CNAME .
 *.stat.rkltuovinen.fi CNAME .
 stat-rock.com CNAME .
@@ -211377,6 +211375,8 @@ telemetry.api.2kcoretech.online CNAME .
 *.telemetry.api.2kcoretech.online CNAME .
 telemetryapi.logos.com CNAME .
 *.telemetryapi.logos.com CNAME .
+telemetry.api.mylyve.com CNAME .
+*.telemetry.api.mylyve.com CNAME .
 telemetry.api.playstation.com CNAME .
 *.telemetry.api.playstation.com CNAME .
 telemetry.api.wmcdp.io CNAME .
@@ -221401,6 +221401,8 @@ usage.osmap.uk CNAME .
 *.usage.osmap.uk CNAME .
 usage.osmap.us CNAME .
 *.usage.osmap.us CNAME .
+usage-ping.brave.com CNAME .
+*.usage-ping.brave.com CNAME .
 usage-reporter.duplicati.com CNAME .
 *.usage-reporter.duplicati.com CNAME .
 usage.weba-sonnenschirme.de CNAME .
