@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026030601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026030901 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -5161,6 +5161,8 @@ props.id CNAME .
 *.props.id CNAME .
 protectcrev.com CNAME .
 *.protectcrev.com CNAME .
+protectpool.com CNAME .
+*.protectpool.com CNAME .
 protectsubrev.com CNAME .
 *.protectsubrev.com CNAME .
 protestcopy.com CNAME .
