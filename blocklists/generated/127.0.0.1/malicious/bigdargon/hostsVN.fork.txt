@@ -1,7 +1,7 @@
 # Title: hostsVN
-# Last modified: 06 Mar 2026 14:49 UTC+7
-# Version: 2603061449
-# Blocked: 17.409 domains
+# Last modified: 11 Mar 2026 11:19 UTC+7
+# Version: 2603111119
+# Blocked: 17.552 domains
 # Please report any ads or problems on GitHub
 # Homepage: https://bigdargon.github.io/hostsVN/
 # GitHub: https://github.com/bigdargon/hostsVN
@@ -1863,9 +1863,12 @@
 127.0.0.1 vpaid.doubleverify.com
 127.0.0.1 vtrk.doubleverify.com
 127.0.0.1 criteo.net
+127.0.0.1 client-side-metrics.as.criteo.net
+127.0.0.1 imageproxy.as.criteo.net
 127.0.0.1 pix.hk.as.criteo.net
 127.0.0.1 static.criteo.net
 127.0.0.1 static.eu.criteo.net
+127.0.0.1 ads.as.criteo.com
 127.0.0.1 ads.eu.criteo.com
 127.0.0.1 ads.us.criteo.com
 127.0.0.1 ag.gbc.criteo.com
@@ -7281,6 +7284,7 @@
 127.0.0.1 api16-access-sg.pangle.io
 127.0.0.1 api16-access-va.pangle.io
 127.0.0.1 api16-access-wf-sg.pangle.io
+127.0.0.1 api16-dual-event-sg2.pangle.io
 127.0.0.1 api16-endcard-pack-sg.pangle.io
 127.0.0.1 api16-log-gcp.pangle.io
 127.0.0.1 api16-log-sg.pangle.io
@@ -8712,6 +8716,12 @@
 127.0.0.1 alivc-aio-sgp.ap-southeast-1.log.aliyuncs.com
 127.0.0.1 videocloud-sgp.ap-southeast-1.log.aliyuncs.com
 127.0.0.1 vod-newplayer-sg.ap-southeast-1.log.aliyuncs.com
+127.0.0.1 ad-host-backup-america.oss-us-west-1.aliyuncs.com
+127.0.0.1 ad-host-backup-asia.oss-ap-southeast-1.aliyuncs.com
+127.0.0.1 ad-host-backup-europe.oss-eu-central-1.aliyuncs.com
+127.0.0.1 ad-host-backup-america.s3.us-west-1.amazonaws.com
+127.0.0.1 ad-host-backup-asia.s3.ap-southeast-1.amazonaws.com
+127.0.0.1 ad-host-backup-europe.s3.eu-central-1.amazonaws.com
 127.0.0.1 analytics.userreport.com
 127.0.0.1 bapi.userreport.com
 127.0.0.1 cdn.userreport.com
@@ -10532,6 +10542,129 @@
 127.0.0.1 cvt-s1.agl006.host
 127.0.0.1 cvt-s2.agl006.host
 127.0.0.1 spx-s1.agl006.host
+127.0.0.1 adups.cn
+127.0.0.1 fota4.adups.cn
+127.0.0.1 fota5.adups.cn
+127.0.0.1 fota5p.adups.cn
+127.0.0.1 fota5s.adups.cn
+127.0.0.1 www.adups.cn
+127.0.0.1 adups.com
+127.0.0.1 ap.adups.com
+127.0.0.1 clean.adups.com
+127.0.0.1 fota5.adups.com
+127.0.0.1 fota5p.adups.com
+127.0.0.1 fota5s.adups.com
+127.0.0.1 fota5t.adups.com
+127.0.0.1 fotareliance.adups.com
+127.0.0.1 iotapi.adups.com
+127.0.0.1 push5.adups.com
+127.0.0.1 ad-ipd.sxp.smartclip.net
+127.0.0.1 ad.smartclip.net
+127.0.0.1 ad.sxp.smartclip.net
+127.0.0.1 appassets.smartclip.net
+127.0.0.1 bid.sxp.smartclip.net
+127.0.0.1 cache.sxp.smartclip.net
+127.0.0.1 cdn.hbbtv.smartclip.net
+127.0.0.1 cdn.smartclip.net
+127.0.0.1 dco.smartclip.net
+127.0.0.1 des.smartclip.net
+127.0.0.1 des.sxp.smartclip.net
+127.0.0.1 errors.hbbtv.smartclip.net
+127.0.0.1 hbbtv.smartclip.net
+127.0.0.1 hoover.sxp.smartclip.net
+127.0.0.1 hoovermedia.sxp.smartclip.net
+127.0.0.1 scheduler.atv.smartclip.net
+127.0.0.1 scheduler.hbbtv.smartclip.net
+127.0.0.1 smartclip.net
+127.0.0.1 stats.hbbtv.smartclip.net
+127.0.0.1 stats.smartclip.net
+127.0.0.1 stats.sxp.smartclip.net
+127.0.0.1 sxp.smartclip.net
+127.0.0.1 sync.sxp.smartclip.net
+127.0.0.1 www.smartclip.net
+127.0.0.1 smartclip-services.com
+127.0.0.1 cdn.smartclip-services.com
+127.0.0.1 www.smartclip-services.com
+127.0.0.1 maxesads.com
+127.0.0.1 api.maxesads.com
+127.0.0.1 gdl.maxesads.com
+127.0.0.1 rep.maxesads.com
+127.0.0.1 mossturbo.com
+127.0.0.1 adx.mossturbo.com
+127.0.0.1 adx-fk-req.mossturbo.com
+127.0.0.1 adx-rf-request.mossturbo.com
+127.0.0.1 adx-sg-req.mossturbo.com
+127.0.0.1 adx-vg-req.mossturbo.com
+127.0.0.1 api.mossturbo.com
+127.0.0.1 api-sec.mossturbo.com
+127.0.0.1 da.mossturbo.com
+127.0.0.1 mores.mossturbo.com
+127.0.0.1 tk.mossturbo.com
+127.0.0.1 tk-sg.mossturbo.com
+127.0.0.1 tkda.mossturbo.com
+127.0.0.1 www.mossturbo.com
+127.0.0.1 onegg.site
+127.0.0.1 api.onegg.site
+127.0.0.1 hookspf.com
+127.0.0.1 adx-strategy-api.hookspf.com
+127.0.0.1 da.hookspf.com
+127.0.0.1 tk.hookspf.com
+127.0.0.1 tkda.hookspf.com
+127.0.0.1 sonicsads.com
+127.0.0.1 cfg.sonicsads.com
+127.0.0.1 npv.sonicsads.com
+127.0.0.1 acobt.tech
+127.0.0.1 done.acobt.tech
+127.0.0.1 tr.acobt.tech
+127.0.0.1 www.acobt.tech
+127.0.0.1 adx-fk-req.mosspf.cn
+127.0.0.1 adx-sg-req.mosspf.cn
+127.0.0.1 adx-vg-req.mosspf.cn
+127.0.0.1 adx.mosspf.cn
+127.0.0.1 api.mosspf.cn
+127.0.0.1 da.mosspf.cn
+127.0.0.1 mosspf.cn
+127.0.0.1 ssapi.mosspf.cn
+127.0.0.1 tk-sg.mosspf.cn
+127.0.0.1 tk.mosspf.cn
+127.0.0.1 www.mosspf.cn
+127.0.0.1 mosspf.com
+127.0.0.1 adx-sg-req.mosspf.com
+127.0.0.1 adx-vg-req.mosspf.com
+127.0.0.1 adx.mosspf.com
+127.0.0.1 api.mosspf.com
+127.0.0.1 da.mosspf.com
+127.0.0.1 tk-sg.mosspf.com
+127.0.0.1 tk.mosspf.com
+127.0.0.1 tkda.mosspf.com
+127.0.0.1 mosspf.net
+127.0.0.1 adx-fk-req.mosspf.net
+127.0.0.1 adx-fk.mosspf.net
+127.0.0.1 adx-rf-request.mosspf.net
+127.0.0.1 adx-rf.mosspf.net
+127.0.0.1 adx-vg-req.mosspf.net
+127.0.0.1 adx-vg.mosspf.net
+127.0.0.1 adx.mosspf.net
+127.0.0.1 api.mosspf.net
+127.0.0.1 da.mosspf.net
+127.0.0.1 mores.mosspf.net
+127.0.0.1 tk-sg.mosspf.net
+127.0.0.1 tk.mosspf.net
+127.0.0.1 tkda.mosspf.net
+127.0.0.1 youngle.tech
+127.0.0.1 api.youngle.tech
+127.0.0.1 cname-cdn.youngle.tech
+127.0.0.1 eu-cdn.youngle.tech
+127.0.0.1 gdl.youngle.tech
+127.0.0.1 hk-cdn.youngle.tech
+127.0.0.1 na-cdn.youngle.tech
+127.0.0.1 sg-cdn.youngle.tech
+127.0.0.1 www.youngle.tech
+127.0.0.1 dmrtb.com
+127.0.0.1 dmsdk-api.dmrtb.com
+127.0.0.1 sdk-oversea.dmrtb.com
+127.0.0.1 ssp-api.dmrtb.com
+127.0.0.1 www.dmrtb.com
 # --- GroupVN block ---
 #[adtimaserver]
 127.0.0.1 adtimaserver.vn
@@ -12859,6 +12992,7 @@
 127.0.0.1 ads.xtra.co.nz
 127.0.0.1 ads.yimg.com
 127.0.0.1 ads.yldmgrimg.net
+127.0.0.1 ads.zorvec.top
 127.0.0.1 ads04.tapsense.com
 127.0.0.1 ads1.mediacapital.pt
 127.0.0.1 ads1.opensubtitles.org
@@ -13184,6 +13318,7 @@
 127.0.0.1 api.myadsget.com
 127.0.0.1 api.parse.com
 127.0.0.1 api.unthem.com
+127.0.0.1 api.youngle.site
 127.0.0.1 apis.appnxt.net
 127.0.0.1 apoilpnwr.com
 127.0.0.1 app-promo.com
@@ -13978,6 +14113,7 @@
 127.0.0.1 devaluequalmrelative.com
 127.0.0.1 deviatestartblock.com
 127.0.0.1 devoteegibberishsinister.com
+127.0.0.1 devpeakomegainnovations.com
 127.0.0.1 diagramjawlineunhappy.com
 127.0.0.1 dianomi.com
 127.0.0.1 dibsemey.com
@@ -14501,6 +14637,7 @@
 127.0.0.1 hw.zuimeitianqi.com
 127.0.0.1 hwoqshyx.com
 127.0.0.1 hwpnocpctu.com
+127.0.0.1 hwuhkabi.in
 127.0.0.1 hxgqqxopf.com
 127.0.0.1 hybrid.ai
 127.0.0.1 hydramedia.com
@@ -15197,6 +15334,7 @@
 127.0.0.1 ofleafeona.com
 127.0.0.1 og-shopee9.com
 127.0.0.1 oghqvffmnt.com
+127.0.0.1 ogpriuleifns.com
 127.0.0.1 ohtctjiuow.com
 127.0.0.1 oinkedbowls.com
 127.0.0.1 oixohmve.com
@@ -15891,7 +16029,7 @@
 127.0.0.1 smart2cnjuh34jb.com
 127.0.0.1 smart4ads.com
 127.0.0.1 smartclick.net
-127.0.0.1 smartclip.net
+127.0.0.1 smartclip.com
 127.0.0.1 smartmad.com
 127.0.0.1 smartyads.com
 127.0.0.1 smashsurprise.com
@@ -16115,6 +16253,7 @@
 127.0.0.1 telaria.com
 127.0.0.1 teliad.de
 127.0.0.1 temelio.com
+127.0.0.1 templatein13.net
 127.0.0.1 tendertest.com
 127.0.0.1 tenthsfrumpy.com
 127.0.0.1 terra8nb.com
@@ -16155,6 +16294,7 @@
 127.0.0.1 tipsembankment.com
 127.0.0.1 tipslyrev.com
 127.0.0.1 tirosagalite.com
+127.0.0.1 tkexutqf.in
 127.0.0.1 tlvmedia.com
 127.0.0.1 tm-banners.gamingadult.com
 127.0.0.1 tm-offers.gamingadult.com
@@ -16617,6 +16757,7 @@
 127.0.0.1 www.routeserve.info
 127.0.0.1 www.servsave.com
 127.0.0.1 www.shndrktrk.com
+127.0.0.1 www.smartclip.com
 127.0.0.1 www.swpsvc.com
 127.0.0.1 www.theweblocker.net
 127.0.0.1 www.tkqlhce.com
@@ -17338,6 +17479,7 @@
 127.0.0.1 tagmanager.alright.network
 127.0.0.1 tamgrt.com
 127.0.0.1 targeting.washpost.nile.works
+127.0.0.1 tc.vbnmhjlp.com
 127.0.0.1 tdf.ringier.ch
 127.0.0.1 ted.dailymail.co.uk
 127.0.0.1 ted.metro.co.uk
@@ -17357,6 +17499,7 @@
 127.0.0.1 to.getnitropack.com
 127.0.0.1 track-aws.notsy.io
 127.0.0.1 track.56txs4.com
+127.0.0.1 track.bluexad.ai
 127.0.0.1 track.cbdatatracker.com
 127.0.0.1 track.cordial.io
 127.0.0.1 track.easeus.com
