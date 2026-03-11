@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026030501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026031101 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -207,6 +207,10 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+bdtelemetry.amazon CNAME .
+*.bdtelemetry.amazon CNAME .
+rum.us-east-1.amazonaws.com CNAME .
+*.rum.us-east-1.amazonaws.com CNAME .
 log.sweepycleanplus.com CNAME .
 *.log.sweepycleanplus.com CNAME .
 log.photorecoverypicturerecovery.com CNAME .
@@ -215,8 +219,6 @@ log.scanqrcodedesign.live CNAME .
 *.log.scanqrcodedesign.live CNAME .
 log.cleanerwish.live CNAME .
 *.log.cleanerwish.live CNAME .
-trace-v1.free-reels.com CNAME .
-*.trace-v1.free-reels.com CNAME .
 tracking.twelveapp.sh CNAME .
 *.tracking.twelveapp.sh CNAME .
 trkcliq.com CNAME .
@@ -1327,8 +1329,6 @@ hkrpg-log-upload-os.hoyoverse.com CNAME .
 *.hkrpg-log-upload-os.hoyoverse.com CNAME .
 log-upload-os.hoyoverse.com CNAME .
 *.log-upload-os.hoyoverse.com CNAME .
-minor-api-os.hoyoverse.com CNAME .
-*.minor-api-os.hoyoverse.com CNAME .
 overseauspider.yuanshen.com CNAME .
 *.overseauspider.yuanshen.com CNAME .
 sentry.eks.hoyoverse.com CNAME .

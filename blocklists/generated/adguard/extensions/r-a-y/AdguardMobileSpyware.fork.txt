@@ -1,7 +1,7 @@
 ! AdguardMobileSpyware
 !
 ! Converted from - https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt
-! Last converted - Thu, 05 Mar 2026 02:51:27 +0000
+! Last converted - Wed, 11 Mar 2026 02:48:14 +0000
 !
 ||adeventtracker.spotify.com^
 ||do-not-tracker.org^
@@ -106,11 +106,12 @@
 ||int.vlancaa.site^
 ||int.vlancaa.fun^
 ||tok.vaicore.xyz^
+||bdtelemetry.amazon^
+||rum.us-east-1.amazonaws.com^
 ||log.sweepycleanplus.com^
 ||log.photorecoverypicturerecovery.com^
 ||log.scanqrcodedesign.live^
 ||log.cleanerwish.live^
-||trace-v1.free-reels.com^
 ||tracking.twelveapp.sh^
 ||trkcliq.com^
 ||stats.norton.com^
@@ -666,7 +667,6 @@
 ||devlog-upload-os.hoyoverse.com^
 ||hkrpg-log-upload-os.hoyoverse.com^
 ||log-upload-os.hoyoverse.com^
-||minor-api-os.hoyoverse.com^
 ||overseauspider.yuanshen.com^
 ||sentry.eks.hoyoverse.com^
 ||sg-public-data-api.hoyoverse.com^
