@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026030901 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026031201 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -6131,6 +6131,8 @@ t.visitorqueue.com CNAME .
 *.t.visitorqueue.com CNAME .
 t.x.co CNAME .
 *.t.x.co CNAME .
+t1.rorytravelclub-news.co.uk CNAME .
+*.t1.rorytravelclub-news.co.uk CNAME .
 taboola.com CNAME .
 *.taboola.com CNAME .
 tag-demo.mention-me.com CNAME .
