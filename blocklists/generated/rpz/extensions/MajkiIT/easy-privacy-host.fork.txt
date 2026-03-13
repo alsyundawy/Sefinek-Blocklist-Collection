@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026031101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026031301 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -14743,6 +14743,8 @@ bhwkju.vivo.com CNAME .
 *.bhwkju.vivo.com CNAME .
 bhxemw.charleskeith.com CNAME .
 *.bhxemw.charleskeith.com CNAME .
+bi-events-collector.spot.im CNAME .
+*.bi-events-collector.spot.im CNAME .
 bi-metrics.aramuz.net CNAME .
 *.bi-metrics.aramuz.net CNAME .
 bi.banggood.com CNAME .
@@ -47413,10 +47415,16 @@ p.logbox.io CNAME .
 *.p.logbox.io CNAME .
 p.marqueplace.com CNAME .
 *.p.marqueplace.com CNAME .
+p.mdb.tools CNAME .
+*.p.mdb.tools CNAME .
 p.meilentrio.de CNAME .
 *.p.meilentrio.de CNAME .
 p.metrilo.com CNAME .
 *.p.metrilo.com CNAME .
+p.midbound.click CNAME .
+*.p.midbound.click CNAME .
+p.midbound.net CNAME .
+*.p.midbound.net CNAME .
 p.minds.com CNAME .
 *.p.minds.com CNAME .
 p.pagesjaunes.fr CNAME .

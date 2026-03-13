@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026031101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026031301 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -207,6 +207,20 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+log-nontt.bytegsdk.com CNAME .
+*.log-nontt.bytegsdk.com CNAME .
+gpm-mon-va.bytegsdk.com CNAME .
+*.gpm-mon-va.bytegsdk.com CNAME .
+gplog-sg.byteoversea.com CNAME .
+*.gplog-sg.byteoversea.com CNAME .
+gsdk-quic-gcp-va.bytegsdk.com CNAME .
+*.gsdk-quic-gcp-va.bytegsdk.com CNAME .
+gsdk19-va.bytegsdk.com CNAME .
+*.gsdk19-va.bytegsdk.com CNAME .
+gsdk-va.bytegsdk.com CNAME .
+*.gsdk-va.bytegsdk.com CNAME .
+global-report.ml.youngjoygame.com CNAME .
+*.global-report.ml.youngjoygame.com CNAME .
 bdtelemetry.amazon CNAME .
 *.bdtelemetry.amazon CNAME .
 rum.us-east-1.amazonaws.com CNAME .
