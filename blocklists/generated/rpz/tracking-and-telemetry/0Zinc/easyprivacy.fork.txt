@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026031401 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026031601 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -2745,6 +2745,8 @@ qubitanalytics.appspot.com CNAME .
 *.qubitanalytics.appspot.com CNAME .
 query1.petametrics.com CNAME .
 *.query1.petametrics.com CNAME .
+r.sdiapi.net CNAME .
+*.r.sdiapi.net CNAME .
 r.skimresources.com CNAME .
 *.r.skimresources.com CNAME .
 r.winf.site CNAME .
@@ -3203,6 +3205,8 @@ tag.elevaate.io CNAME .
 *.tag.elevaate.io CNAME .
 tag.flagship.io CNAME .
 *.tag.flagship.io CNAME .
+tag.gendiscover.com CNAME .
+*.tag.gendiscover.com CNAME .
 tag.getamigo.io CNAME .
 *.tag.getamigo.io CNAME .
 tag.imagino.com CNAME .
