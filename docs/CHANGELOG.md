@@ -7,6 +7,12 @@ It is also a place where you can suggest new lists, report bugs, false positives
 The project uses semantic versioning. Thank you for choosing Sefinek Blocklists!
 
 
+## Version 0.19.1 from 17.03.2026
+1. Improved security measures.
+2. Various performance improvements.
+3. Minor fixes.
+
+
 ## Version 0.19.0 from 3.03.2026
 1. Improved the design of https://sefinek.net/blocklist-generator.
 2. Added a new list: https://blocklist.sefinek.net/generated/v1/0.0.0.0/tracking-and-telemetry/sefinek.hosts.txt
