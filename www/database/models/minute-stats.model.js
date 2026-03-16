@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const { CategoriesSchema } = require('./request-stats.model.js');
 
 const MinuteStatsSchema = new Schema({
 	timestamp: { type: Date, required: true },
@@ -8,21 +9,12 @@ const MinuteStatsSchema = new Schema({
 	total: { type: Number, default: 0 },
 	blocklists: { type: Number, default: 0 },
 
-	categories: {
-		hosts: { type: Number, default: 0 },
-		localhost: { type: Number, default: 0 },
-		adguard: { type: Number, default: 0 },
-		dnsmasq: { type: Number, default: 0 },
-		noip: { type: Number, default: 0 },
-		rpz: { type: Number, default: 0 },
-		unbound: { type: Number, default: 0 },
-	},
-
+	categories: { type: CategoriesSchema, default: () => ({}) },
 	responses: { type: Map, of: Number, default: () => ({}) },
-}, { timestamps: false, versionKey: false });
+}, { timestamps: false, versionKey: false, collection: 'minute-stats' });
 
 MinuteStatsSchema.index({ date: 1, time: 1 }, { unique: true });
 MinuteStatsSchema.index({ timestamp: 1 }, { expireAfterSeconds: 90 * 24 * 60 * 60 });
 MinuteStatsSchema.index({ date: 1, timestamp: 1 });
 
-module.exports = model('MinuteStats', MinuteStatsSchema, 'minute-stats');
+module.exports = model('MinuteStats', MinuteStatsSchema);

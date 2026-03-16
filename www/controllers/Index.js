@@ -3,6 +3,9 @@ const { CronExpressionParser } = require('cron-parser');
 const { getFullDate } = require('../utils/time.js');
 const { version } = require('../../package.json');
 const Stats = require('../database/models/request-stats.model');
+const withCache = require('../utils/withCache.js');
+
+const INDEX_STATS_CACHE_TTL = 20; // seconds
 
 Marked.use({ pedantic: false, gfm: true });
 
@@ -50,7 +53,7 @@ const getTimeZoneOffset = (timeZone, date = new Date()) => {
 };
 
 exports.index = async (req, res) => {
-	const db = await Stats.findOne({}).lean();
+	const db = await withCache('cache:index:stats', INDEX_STATS_CACHE_TTL, () => Stats.findOne({}).lean());
 	res.render('index.ejs', { version, db, uptime: getFullDate(process.uptime()) });
 };
 

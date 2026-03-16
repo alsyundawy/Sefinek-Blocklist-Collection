@@ -159,18 +159,24 @@ const ROUTES = [
 	{ url: '/games/valorant.txt', file: 'games/valorant.txt' },
 ];
 
+const ROUTE_MAP = new Map();
 for (const { url, file } of ROUTES) {
 	for (const [key, basePath] of Object.entries(BASE_DIRS)) {
-		const fullPath = path.join(basePath, file);
-		router.get(`/generated/${key}${url}`, (req, res) => {
-			res.sendFile(fullPath, err => {
-				if (err) {
-					console.error(`Failed to send ${fullPath} for request ${req.originalUrl}`, err);
-					res.sendStatus(500);
-				}
-			});
-		});
+		ROUTE_MAP.set(`/generated/${key}${url}`, path.join(basePath, file));
 	}
 }
+
+const BASE_DIRS_PATTERN = Object.keys(BASE_DIRS).map(k => k.replace(/\./g, '\\.')).join('|');
+router.get(new RegExp(`^\\/generated\\/(${BASE_DIRS_PATTERN})(\\/.*)?$`), (req, res) => {
+	const fullPath = ROUTE_MAP.get(req.path);
+	if (!fullPath) return res.sendStatus(404);
+
+	res.sendFile(fullPath, err => {
+		if (err) {
+			console.error(`Failed to send ${fullPath} for request ${req.originalUrl}`, err);
+			res.sendStatus(500);
+		}
+	});
+});
 
 module.exports = router;

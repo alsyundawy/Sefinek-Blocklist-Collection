@@ -79,7 +79,6 @@ const connect = () => {
 	ws = new WebSocket(WS_ADDRESS);
 
 	ws.onopen = () => {
-		console.log('WebSocket connected');
 		reconnectAttempts = 0;
 		lastMessageTime = Date.now();
 

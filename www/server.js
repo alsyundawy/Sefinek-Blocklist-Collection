@@ -12,12 +12,21 @@ const { notFound, internalError } = require('./middleware/other/errors.js');
 const app = express();
 
 // App configuration
-app.set('trust proxy', 1);
+if (process.env.NODE_ENV === 'production') app.set('trust proxy', 1);
 app.set('view engine', 'ejs');
 app.set('views', './www/views');
 
 // Middleware configuration
-app.use(helmet({ contentSecurityPolicy: false, crossOriginResourcePolicy: false }));
+app.use(helmet({
+	contentSecurityPolicy: {
+		directives: {
+			scriptSrc: ['\'self\'', 'https://cdn.jsdelivr.net'],
+			imgSrc: ['\'self\'', 'https://sefinek.net', 'https://cdn.sefinek.net'],
+			connectSrc: ['\'self\'', 'ws:', 'wss:', 'https://cdn.jsdelivr.net'],
+		},
+	},
+	crossOriginResourcePolicy: false,
+}));
 app.use(express.static('./www/public'));
 app.use(morgan);
 app.use(limiter);

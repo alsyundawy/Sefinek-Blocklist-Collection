@@ -16,6 +16,7 @@ const StatsSchema = new Schema({
 
 	categories: { type: CategoriesSchema, default: () => ({}) },
 	responses: { type: Map, of: Number, default: () => ({}) },
-}, { timestamps: true, versionKey: false });
+}, { timestamps: true, versionKey: false, collection: 'request-stats' });
 
-module.exports = model('RequestStats', StatsSchema, 'request-stats');
+module.exports = model('RequestStats', StatsSchema);
+module.exports.CategoriesSchema = CategoriesSchema;

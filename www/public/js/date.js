@@ -1,7 +1,5 @@
 const clientLanguage = navigator.language || 'en-US';
 
-console.log(`Client language: ${clientLanguage}`);
-
 export const dateFormatOptions = {
 	year: 'numeric',
 	month: 'long',

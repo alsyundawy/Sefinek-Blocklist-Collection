@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const MinuteStats = require('../database/models/minute-stats.model.js');
 const RequestStats = require('../database/models/request-stats.model.js');
-const RedisClient = require('../services/redis.js');
+const withCache = require('../utils/withCache.js');
 
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 const MAX_RANGE_DAYS = 365;
@@ -22,37 +22,21 @@ const parseDate = dateStr => {
 // Get all-time statistics
 router.get('/api/stats/alltime', async (req, res) => {
 	try {
-		const cacheKey = 'api:stats:alltime';
-
-		// Try cache first
-		try {
-			const cached = await RedisClient.get(cacheKey);
-			if (cached) {
-				const data = JSON.parse(cached);
-				data.serverTime = new Date().toISOString();
-				return res.json({ success: true, data });
-			}
-		} catch {
-			// Continue to DB if cache fails
-		}
-
-		const stats = await RequestStats.findOne({}).lean();
+		const stats = await withCache('api:stats:alltime', ALLTIME_CACHE_TTL, () => RequestStats.findOne({}).lean());
 		if (!stats) return res.json({ success: true, data: { total: 0, blocklists: 0, categories: {}, responses: {}, serverTime: new Date().toISOString() } });
 
-		const responseData = {
-			total: stats.total || 0,
-			blocklists: stats.blocklists || 0,
-			categories: stats.categories || {},
-			responses: stats.responses || {},
-			createdAt: stats.createdAt,
-			updatedAt: stats.updatedAt,
-			serverTime: new Date().toISOString(),
-		};
-
-		// Cache the result (async, don't wait)
-		RedisClient.setEx(cacheKey, ALLTIME_CACHE_TTL, JSON.stringify(responseData)).catch(() => {});
-
-		res.json({ success: true, data: responseData });
+		res.json({
+			success: true,
+			data: {
+				total: stats.total || 0,
+				blocklists: stats.blocklists || 0,
+				categories: stats.categories || {},
+				responses: stats.responses || {},
+				createdAt: stats.createdAt,
+				updatedAt: stats.updatedAt,
+				serverTime: new Date().toISOString(),
+			},
+		});
 	} catch (err) {
 		console.error('Error fetching all-time stats:', err);
 		res.status(500).json({ success: false, status: 500, message: 'Internal server error' });
@@ -92,30 +76,13 @@ router.get('/api/stats/minute', async (req, res) => {
 
 		const maxLimit = daysDiff > 90 ? 10000 : daysDiff > 30 ? 30000 : 50000;
 
-		// Try cache first
 		const cacheKey = `api:stats:minute:${from}:${to || from}:${parsedInterval}`;
-		try {
-			const cached = await RedisClient.get(cacheKey);
-			if (cached) {
-				const cachedData = JSON.parse(cached);
-				return res.json({ success: true, count: cachedData.length, data: cachedData, serverTime: new Date().toISOString() });
-			}
-		} catch {
-			// Continue to DB if cache fails
-		}
-
 		const query = { date: from };
 		if (to && to !== from) query.date = { $gte: from, $lte: to };
 
-		const stats = await MinuteStats
-			.find(query)
-			.select('-_id')
-			.sort({ timestamp: 1 })
-			.limit(maxLimit)
-			.lean();
-
-		// Cache the result (async, don't wait)
-		RedisClient.setEx(cacheKey, MINUTE_CACHE_TTL, JSON.stringify(stats)).catch(() => {});
+		const stats = await withCache(cacheKey, MINUTE_CACHE_TTL, () =>
+			MinuteStats.find(query).select('-_id').sort({ timestamp: 1 }).limit(maxLimit).lean()
+		);
 
 		res.json({ success: true, count: stats.length, data: stats, serverTime: new Date().toISOString() });
 	} catch (err) {

@@ -1,6 +1,8 @@
 (() => {
 	'use strict';
 
+	const { cronGh, cronRemote } = document.currentScript.dataset;
+
 	const FORMATTER_OPTIONS = {
 		year: 'numeric',
 		month: 'long',

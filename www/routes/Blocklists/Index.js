@@ -94,6 +94,11 @@ const handleRequest = async (req, res, baseDir, basePath, validExtensions, templ
 	const filePath = path.join(baseDir, relative);
 	const isAjax = req.headers['x-requested-with'] === 'XMLHttpRequest';
 
+	if (filePath !== baseDir && !filePath.startsWith(baseDir + path.sep)) {
+		if (isAjax) return res.status(403).json({ success: false, error: 'Forbidden' });
+		return res.status(403).end();
+	}
+
 	try {
 		const now = Date.now();
 		let cached = FILE_EXISTENCE_CACHE.get(filePath);

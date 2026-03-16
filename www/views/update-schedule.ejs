@@ -61,10 +61,6 @@
     <p>Copyright 2023-2026 &copy; <span>Sefinek</span>. All Rights Reserved.</p>
 </footer>
 
-<script>
-    const cronGh = '<%= cron.github %>';
-    const cronRemote = '<%= cron.remote %>';
-</script>
-<script src="/js/update-schedule.js"></script>
+<script src="/js/update-schedule.js" data-cron-gh="<%= cron.github %>" data-cron-remote="<%= cron.remote %>"></script>
 
 <%- include('./includes/footer.ejs') %>

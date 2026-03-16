@@ -7,9 +7,8 @@ exports.rateLimit = (req, res) => {
 };
 
 exports.internalError = (err, req, res, next) => {
-	res.status(500).render('errors/500.ejs');
-
 	if (err) console.error(err);
+	res.status(500).render('errors/500.ejs');
 };
 
 exports.onTimeout = (req, res) => {

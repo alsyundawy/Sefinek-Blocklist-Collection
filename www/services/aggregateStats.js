@@ -8,23 +8,28 @@ const isDev = process.env.NODE_ENV !== 'production';
 const CHUNK_SIZE = 100; // Process 100 keys in parallel
 const BULK_WRITE_CHUNK_SIZE = 1000; // Write 1000 documents per bulkWrite operation
 
+const scanAllKeys = async (pattern) => {
+	const keys = [];
+	let cursor = '0';
+	do {
+		const result = await RedisClient.scan(cursor, { MATCH: pattern, COUNT: 200 });
+		cursor = result.cursor;
+		keys.push(...result.keys);
+	} while (cursor !== '0');
+	return keys;
+};
+
 const aggregateRedisToMongo = async () => {
 	try {
-		// Get all minute keys from Redis
-		const allKeys = await RedisClient.keys('stats:minute:*');
+		const allKeys = await scanAllKeys('stats:minute:*');
 		if (!allKeys.length) return;
 
 		if (isDev) console.log(`Found ${allKeys.length} minute keys to aggregate`);
 
-		// Aggregate data
-		const aggregated = {
-			inc: {},
-		};
-
+		const aggregated = { inc: {} };
 		const minuteDocuments = [];
 		const keysToDelete = [];
 
-		// Process keys in parallel chunks
 		for (let i = 0; i < allKeys.length; i += CHUNK_SIZE) {
 			const chunk = allKeys.slice(i, i + CHUNK_SIZE);
 
@@ -40,7 +45,6 @@ const aggregateRedisToMongo = async () => {
 				})
 			);
 
-			// Process results
 			for (const result of results) {
 				if (!result) continue;
 				const { key, data } = result;
@@ -52,7 +56,6 @@ const aggregateRedisToMongo = async () => {
 					}
 
 					// Parse date from key: stats:minute:YYYY-MM-DD:HH:mm
-					// Key format: stats:minute:2024-11-26:08:16 splits as ["stats", "minute", "2024-11-26", "08", "16"]
 					const parts = key.split(':');
 
 					if (parts.length !== 5) {
@@ -63,7 +66,7 @@ const aggregateRedisToMongo = async () => {
 					const date = parts[2]; // YYYY-MM-DD
 					const hour = parts[3]; // HH
 					const minute = parts[4]; // mm
-					const time = `${hour}:${minute}`; // HH:mm
+					const time = `${hour}:${minute}`;
 
 					const dateParts = date.split('-');
 					if (dateParts.length !== 3) {
@@ -71,15 +74,10 @@ const aggregateRedisToMongo = async () => {
 						continue;
 					}
 
-					const year = dateParts[0];
-					const month = dateParts[1];
-					const day = dateParts[2];
-
-					// Create timestamp (UTC)
 					const timestamp = new Date(Date.UTC(
-						parseInt(year),
-						parseInt(month) - 1,
-						parseInt(day),
+						parseInt(dateParts[0]),
+						parseInt(dateParts[1]) - 1,
+						parseInt(dateParts[2]),
 						parseInt(hour),
 						parseInt(minute),
 						0, 0
@@ -90,13 +88,12 @@ const aggregateRedisToMongo = async () => {
 						continue;
 					}
 
-					// Prepare minute document for minute-stats collection
 					const minuteDoc = {
 						timestamp,
 						date,
 						time,
-						total: parseInt(data.total || 0),
-						blocklists: parseInt(data.blocklists || 0),
+						total: parseInt(data.total || 0, 10),
+						blocklists: parseInt(data.blocklists || 0, 10),
 						categories: {
 							hosts: 0,
 							localhost: 0,
@@ -109,45 +106,24 @@ const aggregateRedisToMongo = async () => {
 						responses: {},
 					};
 
-					// Parse categories and responses
+					if (minuteDoc.total) aggregated.inc.total = (aggregated.inc.total || 0) + minuteDoc.total;
+					if (minuteDoc.blocklists) aggregated.inc.blocklists = (aggregated.inc.blocklists || 0) + minuteDoc.blocklists;
+
 					for (const [field, value] of Object.entries(data)) {
 						if (field.startsWith('categories:')) {
-							const category = field.replace('categories:', '');
-							minuteDoc.categories[category] = parseInt(value);
-						}
-
-						if (field.startsWith('responses:')) {
-							const code = field.replace('responses:', '');
-							minuteDoc.responses[code] = parseInt(value);
+							const category = field.slice('categories:'.length);
+							const n = parseInt(value, 10);
+							minuteDoc.categories[category] = n;
+							aggregated.inc[`categories.${category}`] = (aggregated.inc[`categories.${category}`] || 0) + n;
+						} else if (field.startsWith('responses:')) {
+							const code = field.slice('responses:'.length);
+							const n = parseInt(value, 10);
+							minuteDoc.responses[code] = n;
+							aggregated.inc[`responses.${code}`] = (aggregated.inc[`responses.${code}`] || 0) + n;
 						}
 					}
 
 					minuteDocuments.push(minuteDoc);
-
-					// Aggregate for request-stats collection (totals)
-					if (data.total) {
-						aggregated.inc.total = (aggregated.inc.total || 0) + parseInt(data.total);
-					}
-
-					if (data.blocklists) {
-						aggregated.inc.blocklists = (aggregated.inc.blocklists || 0) + parseInt(data.blocklists);
-					}
-
-					// Aggregate categories and responses
-					for (const [field, value] of Object.entries(data)) {
-						if (field.startsWith('categories:')) {
-							const category = field.replace('categories:', '');
-							const categoryKey = `categories.${category}`;
-							aggregated.inc[categoryKey] = (aggregated.inc[categoryKey] || 0) + parseInt(value);
-						}
-
-						if (field.startsWith('responses:')) {
-							const code = field.replace('responses:', '');
-							const responseKey = `responses.${code}`;
-							aggregated.inc[responseKey] = (aggregated.inc[responseKey] || 0) + parseInt(value);
-						}
-					}
-
 					keysToDelete.push(key);
 				} catch (err) {
 					console.error(`Error processing key ${key}:`, err.message);
@@ -155,7 +131,6 @@ const aggregateRedisToMongo = async () => {
 			}
 		}
 
-		// Save minute documents to MongoDB in chunks (upsert prevents duplicates)
 		if (minuteDocuments.length > 0) {
 			try {
 				const operations = minuteDocuments.map(doc => ({
@@ -186,7 +161,6 @@ const aggregateRedisToMongo = async () => {
 					},
 				}));
 
-				// Process in chunks to avoid timeouts
 				for (let i = 0; i < operations.length; i += BULK_WRITE_CHUNK_SIZE) {
 					const chunk = operations.slice(i, i + BULK_WRITE_CHUNK_SIZE);
 					await MinuteStats.bulkWrite(chunk);
@@ -199,7 +173,6 @@ const aggregateRedisToMongo = async () => {
 			}
 		}
 
-		// Update aggregated request-stats (only if we have data)
 		if (Object.keys(aggregated.inc).length > 0) {
 			try {
 				await RequestStats.findOneAndUpdate(
@@ -216,7 +189,6 @@ const aggregateRedisToMongo = async () => {
 			}
 		}
 
-		// Delete processed keys from Redis
 		if (keysToDelete.length > 0) {
 			try {
 				await RedisClient.del(keysToDelete);
@@ -235,11 +207,7 @@ const aggregateRedisToMongo = async () => {
 
 const startAggregationJob = () => {
 	if (isDev) console.log(`Job started, running every ${AGGREGATION_INTERVAL / 1000 / 60} minutes`);
-
-	// Run immediately on start
 	void aggregateRedisToMongo();
-
-	// Then run every N minutes
 	setInterval(aggregateRedisToMongo, AGGREGATION_INTERVAL);
 };
 

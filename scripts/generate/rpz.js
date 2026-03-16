@@ -25,8 +25,7 @@ const convert = async (folderPath = path.join(__dirname, '../../blocklists/templ
 		fileContent.split('\n').forEach(line => {
 			if (!line || line.startsWith('#')) return;
 
-			let domain = line.startsWith('www.') ? line.slice(4) : line;
-
+			const domain = line.startsWith('www.') ? line.slice(4) : line;
 			if (!seenDomains.has(domain)) {
 				seenDomains.add(domain);
 				outputLines.push(`${domain} CNAME .`, `*.${domain} CNAME .`);
