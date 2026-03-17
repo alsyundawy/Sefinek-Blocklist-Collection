@@ -101,12 +101,15 @@ main {
 
 .explorer__action:hover {
     background:rgba(88,166,255,.2);
-    color:var(--color-text);
-    transform:translateY(-1px)
+    color:var(--color-text)
 }
 
-.explorer__action:active {
-    transform:translateY(0)
+.explorer__action:disabled,
+.explorer__action:disabled:hover {
+    background:rgba(255,255,255,.05);
+    border-color:rgba(255,255,255,.08);
+    cursor:not-allowed;
+    opacity:.5
 }
 
 .explorer__action:focus-visible {
@@ -246,6 +249,41 @@ main {
 
 .explorer__row--parent .explorer__name {
     color:#ffffffb3
+}
+
+.explorer__status {
+    padding:0;
+    width:100%
+}
+
+.explorer__status__inner {
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    padding:3rem 2rem;
+    width:100%
+}
+
+.explorer__status__gif {
+    height:64px;
+    width:64px
+}
+
+.explorer__status__label {
+    color:#fff;
+    font-family:var(--font-primary,'Segoe UI'),Tahoma,sans-serif;
+    font-size:1.1rem;
+    text-shadow:0 0 7px rgba(0,0,0,.6)
+}
+
+.explorer__status--error .explorer__status__inner {
+    color:rgba(255,100,100,.85)
+}
+
+.explorer__status--error .explorer__status__label {
+    color:rgba(255,100,100,.85);
+    font-size:1.1rem
 }
 
 .explorer__empty {

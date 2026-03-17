@@ -4,7 +4,10 @@
 	const requestCache = new Map();
 	const CACHE_TTL = 60000;
 	const navSound = new Audio('/sounds/navigate.wav');
-	const playNavSound = () => navSound.cloneNode().play().catch(() => { /* autoplay blocked */ });
+	const playNavSound = () => {
+		navSound.currentTime = 0;
+		navSound.play().catch(() => {/* ... */});
+	};
 
 	const formatTimestamp = element => {
 		const timestamp = Number(element.dataset.timestamp);
@@ -62,13 +65,6 @@
 		return row;
 	};
 
-	const attachAjaxListeners = handleClick => {
-		document.querySelectorAll('a[data-ajax-link]').forEach(link => {
-			link.removeEventListener('click', handleClick);
-			link.addEventListener('click', handleClick);
-		});
-	};
-
 	const renderDirectory = (data, tbody, pathElement, pushState) => {
 		tbody.innerHTML = '';
 
@@ -76,9 +72,8 @@
 		const parentRow = createParentRow(data.currentPath, basePath);
 		if (parentRow) tbody.appendChild(parentRow);
 
-		data.files.forEach(file => {
-			tbody.appendChild(createTableRow(file, data.currentPath.replace(/\/$/, '')));
-		});
+		const trimmedPath = data.currentPath.replace(/\/$/, '');
+		data.files.forEach(file => tbody.appendChild(createTableRow(file, trimmedPath)));
 
 		tbody.querySelectorAll('.explorer__cell--date[data-timestamp]').forEach(formatTimestamp);
 
@@ -88,8 +83,6 @@
 			const newUrl = data.currentPath.endsWith('/') ? data.currentPath : `${data.currentPath}/`;
 			window.history.pushState({ path: newUrl }, '', newUrl);
 		}
-
-		attachAjaxListeners(handleAjaxClick);
 	};
 
 	const loadDirectory = async (url, pushState = true, playSound = false) => {
@@ -98,47 +91,69 @@
 		if (!tbody) return;
 
 		const cached = requestCache.get(url);
-		const now = Date.now();
-		if (cached && (now - cached.timestamp) < CACHE_TTL) {
+		if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
+			if (playSound) playNavSound();
 			renderDirectory(cached.data, tbody, pathElement, pushState);
 			return;
 		}
 
-		tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;padding:2rem;color:rgba(255,255,255,0.6)">Loading...</td></tr>';
+		const reloadBtn = document.getElementById('reloadPage');
+		if (reloadBtn) reloadBtn.disabled = true;
 
+		const showError = msg => {
+			tbody.innerHTML = `<tr><td colspan="3" class="explorer__status explorer__status--error"><div class="explorer__status__inner"><img src="https://cdn.sefinek.net/images/error.gif" alt="Error" class="explorer__status__gif"><span class="explorer__status__label">${msg}</span></div></td></tr>`;
+		};
+
+		tbody.innerHTML = '<tr><td colspan="3" class="explorer__status explorer__status--loading"><div class="explorer__status__inner"><img src="https://cdn.sefinek.net/images/loading.gif" alt="Loading..." class="explorer__status__gif"><span class="explorer__status__label">Loading...</span></div></td></tr>';
+
+		let data, response;
 		try {
-			const response = await fetch(url, {
-				headers: { 'X-Requested-With': 'XMLHttpRequest' },
-			});
-
-			if (!response.ok) throw new Error('Failed to load directory');
-
-			const data = await response.json();
-			if (!data.success) throw new Error(data.error || 'Unknown error');
-
-			requestCache.set(url, { data, timestamp: Date.now() });
-
-			if (requestCache.size > 50) {
-				const firstKey = requestCache.keys().next().value;
-				requestCache.delete(firstKey);
-			}
-
-			renderDirectory(data, tbody, pathElement, pushState);
-			if (playSound) playNavSound();
+			response = await fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
+			data = await response.json();
 		} catch (err) {
 			console.error('Error loading directory:', err);
-			tbody.innerHTML = `<tr><td colspan="3" style="text-align:center;padding:2rem;color:rgba(255,100,100,0.8)">Error: ${err.message}</td></tr>`;
+			const msg = !navigator.onLine
+				? 'No internet connection'
+				: err instanceof TypeError
+					? 'Unable to connect to the server'
+					: err.message;
+			showError(msg);
+			if (reloadBtn) reloadBtn.disabled = false;
+			return;
 		}
+
+		if (!response.ok) {
+			showError(data?.error || `HTTP ${response.status} ${response.statusText}`);
+			if (reloadBtn) reloadBtn.disabled = false;
+			return;
+		}
+
+		if (!data.success) {
+			showError(data.error || 'Unknown error');
+			if (reloadBtn) reloadBtn.disabled = false;
+			return;
+		}
+
+		requestCache.set(url, { data, timestamp: Date.now() });
+		if (requestCache.size > 50) {
+			requestCache.delete(requestCache.keys().next().value);
+		}
+
+		if (playSound) playNavSound();
+		renderDirectory(data, tbody, pathElement, pushState);
+		if (reloadBtn) reloadBtn.disabled = false;
 	};
 
-	function handleAjaxClick(e) {
+	const handleAjaxClick = e => {
+		const link = e.target.closest('a[data-ajax-link]');
+		if (!link) return;
 		if (window.history.length <= 1) return;
 
 		e.preventDefault();
-		const row = e.currentTarget.closest('tr');
+		const row = link.closest('tr');
 		const isEnter = row?.classList.contains('explorer__row--folder') || row?.classList.contains('explorer__row--parent');
-		void loadDirectory(e.currentTarget.href, true, isEnter);
-	}
+		void loadDirectory(link.href, true, isEnter);
+	};
 
 	const initializeExplorer = () => {
 		document.querySelectorAll('.explorer__cell--date[data-timestamp]').forEach(formatTimestamp);
@@ -152,7 +167,7 @@
 			});
 		}
 
-		attachAjaxListeners(handleAjaxClick);
+		document.addEventListener('click', handleAjaxClick);
 
 		window.addEventListener('popstate', e => {
 			if (e.state?.path) {
