@@ -11,6 +11,7 @@ The project uses semantic versioning. Thank you for choosing Sefinek Blocklists!
 1. Improved security measures.
 2. Various performance improvements.
 3. Minor fixes.
+4. Fixed rate limiter counters not being shared across cluster workers.
 
 
 ## Version 0.19.0 from 3.03.2026
