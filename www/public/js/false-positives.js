@@ -142,7 +142,7 @@
 			? matches.map(m => `
 				<li class="fp-match">
 					<span class="fp-match__path">
-						<span class="fp-match__category">${m.category ?? ''}</span>
+						<span class="fp-match__category">${(m.category ?? '').replaceAll('-', ' ')}</span>
 						${m.source ? `<span class="fp-match__sep">/</span><span class="fp-match__source">${m.source}</span>` : ''}
 						${m.file ? `<span class="fp-match__sep">/</span><span class="fp-match__file">${m.file}</span>` : ''}
 					</span>
@@ -229,9 +229,9 @@
 
 		try {
 			const res = await fetch('/api/v1/reports/false-positive', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+
 			const json = await res.json();
 			const ms = Math.round(performance.now() - t0);
-
 			if (json.success) {
 				setModalState({
 					title: 'Report sent',

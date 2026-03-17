@@ -55,7 +55,7 @@ const getFileIndex = () => {
 
 exports.searchDomain = async domain => {
 	return withCache(`blocklist:check:${domain}`, DOMAIN_CACHE_TTL, async () => {
-		const index = getFileIndex();
+		const index = await getFileIndex();
 		const matches = [];
 		for (const { meta, domains } of index.values()) {
 			if (domains.has(domain)) matches.push(meta);

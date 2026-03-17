@@ -30,21 +30,26 @@ const getFileIcon = (fileName, isDirectory) =>
 		: TEXT_FILE_EXTENSIONS.has(path.extname(fileName).toLowerCase()) ? 'word.png'
 			: 'unknown-file.png';
 
-const getDirectorySize = async dirPath => {
+const getDirStats = async dirPath => {
 	try {
 		const entries = await fs.readdir(dirPath, { withFileTypes: true });
-		let totalSize = 0;
+		let size = 0;
+		let newestMtime = 0;
 		for (const entry of entries) {
 			const fullPath = path.join(dirPath, entry.name);
 			if (entry.isDirectory()) {
-				totalSize += await getDirectorySize(fullPath);
+				const sub = await getDirStats(fullPath);
+				size += sub.size;
+				if (sub.newestMtime > newestMtime) newestMtime = sub.newestMtime;
 			} else {
-				totalSize += (await fs.stat(fullPath)).size;
+				const stat = await fs.stat(fullPath);
+				size += stat.size;
+				if (stat.mtimeMs > newestMtime) newestMtime = stat.mtimeMs;
 			}
 		}
-		return totalSize;
+		return { size, newestMtime };
 	} catch {
-		return 0;
+		return { size: 0, newestMtime: 0 };
 	}
 };
 
@@ -71,9 +76,17 @@ const getCachedFiles = async (dirPath, validExtensions, sortByDate = false) => {
 				const fullPath = path.join(dirPath, name);
 				const stats = await fs.stat(fullPath);
 				const isDir = entry.isDirectory();
-				const size = isDir ? await getDirectorySize(fullPath) : stats.size;
+				let lastModified, size;
+				if (isDir) {
+					const dirStats = await getDirStats(fullPath);
+					size = dirStats.size;
+					lastModified = dirStats.newestMtime || stats.mtimeMs;
+				} else {
+					size = stats.size;
+					lastModified = stats.mtimeMs;
+				}
 
-				return { name, isDirectory: isDir, lastModified: stats.mtime.getTime(), icon: getFileIcon(name, isDir), formattedSize: formatFileSize(size) };
+				return { name, isDirectory: isDir, lastModified, icon: getFileIcon(name, isDir), formattedSize: formatFileSize(size) };
 			})
 	);
 

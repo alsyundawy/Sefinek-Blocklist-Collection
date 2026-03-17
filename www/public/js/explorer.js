@@ -3,12 +3,14 @@
 
 	const requestCache = new Map();
 	const CACHE_TTL = 60000;
+	const navSound = new Audio('/sounds/navigate.wav');
+	const playNavSound = () => navSound.cloneNode().play().catch(() => { /* autoplay blocked */ });
 
 	const formatTimestamp = element => {
 		const timestamp = Number(element.dataset.timestamp);
 		if (!Number.isNaN(timestamp) && timestamp > 0) {
 			const date = new Date(timestamp);
-			element.textContent = date.toLocaleString(undefined, {
+			element.textContent = date.toLocaleString(navigator.languages, {
 				year: 'numeric',
 				month: '2-digit',
 				day: '2-digit',
@@ -90,7 +92,7 @@
 		attachAjaxListeners(handleAjaxClick);
 	};
 
-	const loadDirectory = async (url, pushState = true) => {
+	const loadDirectory = async (url, pushState = true, playSound = false) => {
 		const tbody = document.querySelector('.explorer__tbody');
 		const pathElement = document.querySelector('.explorer__path');
 		if (!tbody) return;
@@ -122,6 +124,7 @@
 			}
 
 			renderDirectory(data, tbody, pathElement, pushState);
+			if (playSound) playNavSound();
 		} catch (err) {
 			console.error('Error loading directory:', err);
 			tbody.innerHTML = `<tr><td colspan="3" style="text-align:center;padding:2rem;color:rgba(255,100,100,0.8)">Error: ${err.message}</td></tr>`;
@@ -132,7 +135,9 @@
 		if (window.history.length <= 1) return;
 
 		e.preventDefault();
-		void loadDirectory(e.currentTarget.href);
+		const row = e.currentTarget.closest('tr');
+		const isEnter = row?.classList.contains('explorer__row--folder') || row?.classList.contains('explorer__row--parent');
+		void loadDirectory(e.currentTarget.href, true, isEnter);
 	}
 
 	const initializeExplorer = () => {
@@ -142,15 +147,16 @@
 		if (reloadButton) {
 			reloadButton.addEventListener('click', () => {
 				const currentPath = document.querySelector('.explorer__path')?.textContent || window.location.pathname;
+				requestCache.delete(currentPath);
 				void loadDirectory(currentPath, false);
-			}, { passive: false });
+			});
 		}
 
 		attachAjaxListeners(handleAjaxClick);
 
 		window.addEventListener('popstate', e => {
 			if (e.state?.path) {
-				void loadDirectory(e.state.path, false);
+				void loadDirectory(e.state.path, false, true);
 			} else {
 				window.location.reload();
 			}

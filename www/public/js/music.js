@@ -1,4 +1,4 @@
-const audioElement = new Audio('/sound/404.mp3');
+const audioElement = new Audio('/sounds/404.mp3');
 const playButtonElement = document.getElementById('play-button');
 let isAudioPlaying = false;
 
@@ -19,9 +19,7 @@ const toggleAudioPlayback = async () => {
 			isAudioPlaying = true;
 		}
 	} catch (err) {
-		if (err.name === 'NotAllowedError') {
-			isAudioPlaying = false;
-		}
+		if (err.name === 'NotAllowedError') isAudioPlaying = false;
 	} finally {
 		updateButtonLabel();
 	}
