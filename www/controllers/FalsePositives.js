@@ -54,10 +54,10 @@ exports.submit = async (req, res) => {
 Reported domain:
 ${defanged}
 
-Found in:
+Found in (${matches.length} matches):
 ${matches.map(m => `- https://blocklist.sefinek.net${m.siteUrl}`).join('\n')}
 
-Report submitted: ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/Warsaw', dateStyle: 'full', timeStyle: 'medium' })} (${new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw', dateStyle: 'full', timeStyle: 'medium' })})
+Report submitted: ${(d => `${d.toLocaleString('en-GB', { timeZone: 'Europe/Warsaw', dateStyle: 'full', timeStyle: 'medium' })} (${d.toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw', dateStyle: 'full', timeStyle: 'medium' })})`)(new Date())}
 
 Reason provided by the reporter:
 ${reason}
