@@ -18,14 +18,14 @@
 - The first option is to [generate your own list](https://sefinek.net/blocklist-generator), recommended for users who want to customize the list based on their specific needs and preferences.
 - The second option is to use the [default list](https://github.com/sefinek/Sefinek-Blocklist-Collection/tree/main/docs/lists/md) provided, ideal for those who prefer a quick, straightforward solution without customization.
 
+<a href="https://stormserverhosting.com">
+  <img src="https://cdn.sefinek.net/images/stormserverhosting/banner-white-gh.png" align="center" alt="Storm Server Hosting">
+</a>
+
 > [!IMPORTANT]  
 > I do not allow commercial use of my lists. Lists I did not create are shared under the licensing terms set by their original authors.
 > If you wish to use the Sefinek Blocklist Collection for commercial purposes, please contact me via email.
 > Do not download the lists every hour either. Click [here](https://blocklist.sefinek.net/update-schedule) to learn more.
-
-<a href="https://stormserverhosting.com">
-  <img src="https://cdn.sefinek.net/images/stormserverhosting/banner-white-gh.png" align="center" alt="Storm Server Hosting">
-</a>
 
 
 ## ❌ How to Report a False Positive? ([more info](https://blocklist.sefinek.net/false-positives))
