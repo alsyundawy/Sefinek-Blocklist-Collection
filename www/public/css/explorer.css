@@ -20,7 +20,7 @@ main {
 
 .explorer {
     backdrop-filter:blur(6px);
-    background:rgba(0,0,0,.12);
+    background:#0000001f;
     border:1px solid var(--color-border-light);
     border-radius:12px;
     box-shadow:0 4px 24px #0003;
@@ -35,7 +35,7 @@ main {
 .explorer__header {
     align-items:center;
     backdrop-filter:blur(6px);
-    background:rgba(0,0,0,.3);
+    background:#0000004d;
     border-bottom:1px solid var(--color-border-light);
     display:flex;
     flex-shrink:0;
@@ -61,14 +61,14 @@ main {
 }
 
 .explorer__icon {
-    display:inline-flex;
     align-items:center;
-    justify-content:center;
+    display:inline-flex;
     filter:drop-shadow(0 0 8px #58a6ff80);
     flex-shrink:0;
     font-size:1.3rem;
-    width:1.5rem;
-    height:1.5rem
+    height:1.5rem;
+    justify-content:center;
+    width:1.5rem
 }
 
 .explorer__path {
@@ -80,8 +80,8 @@ main {
 
 .explorer__action {
     align-items:center;
-    background:rgba(88,166,255,.1);
-    border:1px solid rgba(88,166,255,.2);
+    background:#58a6ff1a;
+    border:1px solid #58a6ff33;
     border-radius:var(--radius-sm);
     color:#ffffffd9;
     cursor:pointer;
@@ -100,14 +100,13 @@ main {
 }
 
 .explorer__action:hover {
-    background:rgba(88,166,255,.2);
+    background:#58a6ff33;
     color:var(--color-text)
 }
 
-.explorer__action:disabled,
-.explorer__action:disabled:hover {
-    background:rgba(255,255,255,.05);
-    border-color:rgba(255,255,255,.08);
+.explorer__action:disabled,.explorer__action:disabled:hover {
+    background:#ffffff0d;
+    border-color:#ffffff14;
     cursor:not-allowed;
     opacity:.5
 }
@@ -119,7 +118,7 @@ main {
 
 .explorer__content {
     backdrop-filter:blur(6px);
-    background:rgba(0, 0, 0, 0.1);
+    background:#0000001a;
     flex:1;
     min-height:0;
     overflow-x:auto;
@@ -135,7 +134,7 @@ main {
 
 .explorer__thead {
     backdrop-filter:blur(6px);
-    background:rgba(0, 0, 0, 0.2);
+    background:#0003;
     border-bottom:1px solid #FFFFFF0D;
     box-shadow:0 2px 8px #0003;
     position:sticky;
@@ -172,11 +171,11 @@ main {
 }
 
 .explorer__row:hover {
-    background:rgba(88,166,255,.08)
+    background:#58a6ff14
 }
 
 .explorer__row:focus-within {
-    background:rgba(88,166,255,.12)
+    background:#58a6ff1f
 }
 
 .explorer__cell {
@@ -189,7 +188,7 @@ main {
 }
 
 .explorer__cell--date {
-    color:rgba(255, 255, 255, 0.8);
+    color:#fffc;
     font-family:var(--font-mono, 'Cascadia Mono'),monospace;
     font-size:.875rem;
     user-select:none
@@ -208,7 +207,7 @@ main {
     align-items:center;
     color:inherit;
     display:flex;
-    gap:.70rem;
+    gap:.7rem;
     padding:.625rem 1.5rem;
     text-decoration:none;
     width:100%
@@ -274,15 +273,15 @@ main {
     color:#fff;
     font-family:var(--font-primary,'Segoe UI'),Tahoma,sans-serif;
     font-size:1.1rem;
-    text-shadow:0 0 7px rgba(0,0,0,.6)
+    text-shadow:0 0 7px #0009
 }
 
 .explorer__status--error .explorer__status__inner {
-    color:rgba(255,100,100,.85)
+    color:#ff6464d9
 }
 
 .explorer__status--error .explorer__status__label {
-    color:rgba(255,100,100,.85);
+    color:#ff6464d9;
     font-size:1.1rem
 }
 
