@@ -57,7 +57,7 @@ ${defanged}
 Found in:
 ${matches.map(m => `- https://blocklist.sefinek.net${m.siteUrl}`).join('\n')}
 
-Report submitted: ${new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw', dateStyle: 'full', timeStyle: 'medium' })} (${new Date().toLocaleString('en-GB', { timeZone: 'Europe/Warsaw', dateStyle: 'full', timeStyle: 'medium' })})
+Report submitted: ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/Warsaw', dateStyle: 'full', timeStyle: 'medium' })} (${new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw', dateStyle: 'full', timeStyle: 'medium' })})
 
 Reason provided by the reporter:
 ${reason}
@@ -69,6 +69,6 @@ Reply required: ${email ? 'Yes (note for recipient: your email address has not b
 		res.json({ success: true, status: 200, message: 'Thank you! Your report has been sent.' });
 	} catch (err) {
 		console.error('Failed to send false positive report:', err.message);
-		res.status(500).json({ success: false, status: 500, message: 'Failed to send report. Please try again later.' });
+		res.status(500).json({ success: false, status: 500, message: 'Failed to send the report. Please try again or report this issue.' });
 	}
 };
