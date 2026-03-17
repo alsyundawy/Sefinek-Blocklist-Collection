@@ -14,7 +14,7 @@
 <br>
 
 
-## 📦 How to Acquire the Blocklist
+## 📃 How to Acquire the Blocklist
 - The first option is to [generate your own list](https://sefinek.net/blocklist-generator), recommended for users who want to customize the list based on their specific needs and preferences.
 - The second option is to use the [default list](https://github.com/sefinek/Sefinek-Blocklist-Collection/tree/main/docs/lists/md) provided, ideal for those who prefer a quick, straightforward solution without customization.
 
