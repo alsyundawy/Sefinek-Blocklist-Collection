@@ -66,7 +66,7 @@ Reply required: ${email ? 'Yes (note for recipient: your email address has not b
 		});
 
 		await redis.set(fpKey(domain), '1', { EX: FP_TTL });
-		res.json({ success: true, status: 200, message: 'Thank you! Your report has been sent.' });
+		res.json({ success: true, status: 200, message: 'Thank you! Your report has been submitted successfully.' });
 	} catch (err) {
 		console.error('Failed to send false positive report:', err.message);
 		res.status(500).json({ success: false, status: 500, message: 'Failed to send the report. Please try again or report this issue.' });
