@@ -7,11 +7,12 @@ It is also a place where you can suggest new lists, report bugs, false positives
 The project uses semantic versioning. Thank you for choosing Sefinek Blocklists!
 
 
-## Version 0.19.1 from 17.03.2026
-1. Improved security measures.
-2. Various performance improvements.
-3. Minor fixes.
+## Version 0.20.0 from 17.03.2026
+1. Added the ability to report false positives at [/false-positives](https://blocklist.sefinek.net/false-positives).
+2. Improved security measures.
+3. Various performance improvements.
 4. Fixed rate limiter counters not being shared across cluster workers.
+5. Minor fixes.
 
 
 ## Version 0.19.0 from 3.03.2026

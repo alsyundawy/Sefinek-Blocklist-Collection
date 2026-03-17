@@ -20,13 +20,15 @@ const parseDate = dateStr => {
 };
 
 // Get all-time statistics
-router.get('/api/stats/alltime', async (req, res) => {
+router.get('/api/v1/stats/alltime', async (req, res) => {
 	try {
-		const stats = await withCache('api:stats:alltime', ALLTIME_CACHE_TTL, () => RequestStats.findOne({}).lean());
-		if (!stats) return res.json({ success: true, data: { total: 0, blocklists: 0, categories: {}, responses: {}, serverTime: new Date().toISOString() } });
+		const stats = await withCache('stats:alltime', ALLTIME_CACHE_TTL, () => RequestStats.findOne({}).lean());
+		if (!stats) return res.json({ success: true, status: 200, message: 'No data yet.', data: { total: 0, blocklists: 0, categories: {}, responses: {}, serverTime: new Date().toISOString() } });
 
 		res.json({
 			success: true,
+			status: 200,
+			message: 'OK',
 			data: {
 				total: stats.total || 0,
 				blocklists: stats.blocklists || 0,
@@ -44,8 +46,8 @@ router.get('/api/stats/alltime', async (req, res) => {
 });
 
 // Get minute stats for a specific date range
-// Example: GET /api/stats/minute?from=2024-11-26&to=2024-11-27&interval=10
-router.get('/api/stats/minute', async (req, res) => {
+// Example: GET /api/v1/stats/minute?from=2024-11-26&to=2024-11-27&interval=10
+router.get('/api/v1/stats/minute', async (req, res) => {
 	try {
 		const { from, to, interval = 1 } = req.query;
 		if (!from) return res.status(400).json({ success: false, status: 400, message: 'Missing "from" query parameter (YYYY-MM-DD)' });
@@ -76,7 +78,7 @@ router.get('/api/stats/minute', async (req, res) => {
 
 		const maxLimit = daysDiff > 90 ? 10000 : daysDiff > 30 ? 30000 : 50000;
 
-		const cacheKey = `api:stats:minute:${from}:${to || from}:${parsedInterval}`;
+		const cacheKey = `stats:minute:${from}:${to || from}:${parsedInterval}`;
 		const query = { date: from };
 		if (to && to !== from) query.date = { $gte: from, $lte: to };
 
@@ -84,7 +86,7 @@ router.get('/api/stats/minute', async (req, res) => {
 			MinuteStats.find(query).select('-_id').sort({ timestamp: 1 }).limit(maxLimit).lean()
 		);
 
-		res.json({ success: true, count: stats.length, data: stats, serverTime: new Date().toISOString() });
+		res.json({ success: true, status: 200, message: 'OK', count: stats.length, data: stats, serverTime: new Date().toISOString() });
 	} catch (err) {
 		console.error('Error fetching minute stats:', err);
 		res.status(500).json({ success: false, status: 500, message: 'Internal server error' });

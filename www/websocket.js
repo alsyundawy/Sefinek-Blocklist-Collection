@@ -53,9 +53,7 @@ const broadcast = async () => {
 	const message = JSON.stringify({ ...cachedStats, uptime });
 
 	wss.clients.forEach(client => {
-		if (client.readyState === WebSocket.OPEN) {
-			client.send(message);
-		}
+		if (client.readyState === WebSocket.OPEN) client.send(message);
 	});
 };
 
@@ -70,9 +68,7 @@ wss.on('connection', (ws, req) => {
 	console.log(`WebSocket connected from ${req.socket.remoteAddress}`);
 
 	fetchStats().then(stats => {
-		if (stats && ws.readyState === WebSocket.OPEN) {
-			ws.send(JSON.stringify({ ...stats, uptime: getFullDate(process.uptime()) }));
-		}
+		if (stats && ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ ...stats, uptime: getFullDate(process.uptime()) }));
 	});
 
 	ws.on('close', () => console.log('WebSocket disconnected'));

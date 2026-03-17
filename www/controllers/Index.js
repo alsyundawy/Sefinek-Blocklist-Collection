@@ -53,11 +53,9 @@ const getTimeZoneOffset = (timeZone, date = new Date()) => {
 };
 
 exports.index = async (req, res) => {
-	const db = await withCache('cache:index:stats', INDEX_STATS_CACHE_TTL, () => Stats.findOne({}).lean());
+	const db = await withCache('page:index:stats', INDEX_STATS_CACHE_TTL, () => Stats.findOne({}).lean());
 	res.render('index.ejs', { version, db, uptime: getFullDate(process.uptime()) });
 };
-
-exports.falsePositives = (req, res) => res.render('false-positives.ejs');
 
 exports.updateSchedule = (req, res) => {
 	const tzOptions = { tz: UPDATE_SCHEDULE.timeZone, currentDate: Date.now() };

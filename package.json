@@ -1,6 +1,6 @@
 {
   "name": "blocklist.sefinek.net",
-  "version": "0.19.1-rc.1+20260317",
+  "version": "0.20.0-rc.1+20260317",
   "homepage": "https://blocklist.sefinek.net",
   "bugs": {
     "url": "https://github.com/sefinek/Sefinek-Blocklist-Collection/issues"
@@ -27,11 +27,13 @@
     "express": "^5.2.1",
     "express-rate-limit": "^8.3.1",
     "express-timeout-handler": "^2.2.2",
+    "express-validator": "^7.3.1",
     "helmet": "^8.1.0",
     "lzma-native": "^8.0.6",
     "marked": "^17.0.4",
     "mongoose": "^9.3.0",
     "morgan": "^1.10.1",
+    "nodemailer": "^8.0.2",
     "rate-limit-redis": "^4.3.1",
     "redis": "^5.11.0",
     "ws": "^8.19.0"

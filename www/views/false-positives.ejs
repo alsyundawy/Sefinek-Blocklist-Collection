@@ -12,20 +12,57 @@
 <main>
     <header class="page-header">
         <h1 class="page-header__title">Report a false positive</h1>
-        <p class="page-header__subtitle">Choose your preferred reporting method.</p>
+        <p class="page-header__subtitle">Found a domain that shouldn't be blocked? Let us know.</p>
     </header>
 
-    <section class="report-methods" aria-label="Reporting methods">
-        <a href="mailto:contact@sefinek.net?subject=False%20positive%20report&body=Hi%2C%0AI'd%20like%20to%20report%20a%20false%20positive%20on%20the%20Sefinek%20Blocklist%20Collection.%0A%0ADomain%20or%20URL%3A%0A%0AReason%3A%0A%0AScreenshots%20(optional)%3A" class="report-card">
-            <div class="report-card__icon">
-                <img src="/images/flaticon/mail.png" alt="Email icon" width="40" height="40" loading="lazy">
-            </div>
-            <div class="report-card__content">
-                <h2 class="report-card__title">Via email</h2>
-                <p class="report-card__description">Send a detailed report directly to our contact address. Pre-filled template makes it easy to submit the domain with justification.</p>
-            </div>
-        </a>
+    <section class="report-form-section" aria-labelledby="form-heading">
+        <h2 class="report-form-section__heading" id="form-heading">Quick report form (recommended)</h2>
+        <p class="report-form-section__desc">Fill out the form below, and we will review your report as soon as possible. The domain will also be automatically checked in the source.</p>
 
+        <form class="report-form" id="reportForm" novalidate>
+            <div class="report-form__group">
+                <label class="report-form__label" for="domain">Domain <span id="domain-hint" class="report-form__label-hint" aria-live="polite">*</span></label>
+                <input class="report-form__input" type="text" id="domain" name="domain" placeholder="example.com" maxlength="253" required autocomplete="off" spellcheck="false">
+            </div>
+
+            <div class="report-form__group">
+                <label class="report-form__label" for="reason">Reason <span id="reason-hint" class="report-form__label-hint" aria-live="polite">*</span></label>
+                <textarea class="report-form__textarea" id="reason" name="reason" placeholder="Explain why this domain should not be blocked (screenshots uploaded to Imgur are welcome)..." minlength="10" maxlength="2000" required rows="5"></textarea>
+            </div>
+
+            <div class="report-form__group">
+                <label class="report-form__label" for="email">Your email <span id="email-hint" class="report-form__label-hint report-form__optional" aria-live="polite">(optional, you'll receive a reply)</span></label>
+                <input class="report-form__input" type="email" id="email" name="email" placeholder="username@example.com" maxlength="254" autocomplete="email">
+            </div>
+
+            <div class="report-form__footer">
+                <button class="report-form__submit" type="submit" id="checkBtn">Check domain</button>
+            </div>
+        </form>
+    </section>
+
+    <div id="fpModal" role="dialog" aria-modal="true" aria-labelledby="fpModalTitle" hidden>
+        <div id="fpModalBackdrop"></div>
+        <div id="fpModalBox">
+            <div id="fpModalHeader">
+                <span id="fpModalIcon" hidden></span>
+                <h3 id="fpModalTitle">Domain check results</h3>
+                <button id="fpModalClose" aria-label="Close">&times;</button>
+            </div>
+            <div id="fpModalBody">
+                <p id="fpModalStatus" role="status" aria-live="polite"></p>
+                <ul id="fpModalMatches" hidden></ul>
+            </div>
+            <div id="fpModalFooter">
+                <button id="fpModalCancel" type="button">Close</button>
+                <button id="fpModalClearClose" type="button" hidden>Clear &amp; close</button>
+                <button id="fpModalConfirm" type="button" hidden>Confirm &amp; send report</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="report-methods__heading" id="alternatives-heading">Or use an alternative method</h2>
+    <section class="report-methods" aria-labelledby="alternatives-heading">
         <a href="https://discord.gg/53DBjTuzgZ" target="_blank" rel="noopener" class="report-card">
             <div class="report-card__icon">
                 <img src="/images/flaticon/chat.png" alt="Chat icon" width="40" height="40" loading="lazy">
@@ -58,4 +95,7 @@
     </section>
 </main>
 
+<script src="/js/false-positives.js"></script>
+
+<%- include('./includes/copyright.ejs') %>
 <%- include('./includes/footer.ejs') %>

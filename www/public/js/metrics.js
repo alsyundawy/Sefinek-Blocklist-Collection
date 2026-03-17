@@ -375,7 +375,7 @@ const updateDayButtons = () => {
 
 const loadAllTimeStats = async () => {
 	try {
-		const response = await fetch('/api/stats/alltime');
+		const response = await fetch('/api/v1/stats/alltime');
 		if (!response.ok) throw new Error('Failed to fetch all-time stats');
 
 		const { data: stats } = await response.json();
@@ -428,7 +428,7 @@ const fetchMetrics = async (from, to) => {
 	try {
 		showLoading();
 
-		const response = await fetch(`/api/stats/minute?from=${from}&to=${to}&interval=${currentInterval}`);
+		const response = await fetch(`/api/v1/stats/minute?from=${from}&to=${to}&interval=${currentInterval}`);
 		if (!response.ok) {
 			const errorData = await response.json().catch(() => ({}));
 			throw new Error(errorData.message || 'Failed to fetch metrics');

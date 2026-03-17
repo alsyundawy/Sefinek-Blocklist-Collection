@@ -4,7 +4,7 @@ const helmet = require('helmet');
 // Middleware imports
 const timeout = require('./middleware/timeout.js');
 const morgan = require('./middleware/morgan.js');
-const limiter = require('./middleware/ratelimit.js');
+const { global: limiter } = require('./middleware/ratelimit.js');
 const updateStats = require('./middleware/other/stats-redis.js');
 const { notFound, internalError } = require('./middleware/other/errors.js');
 
@@ -28,20 +28,24 @@ app.use(helmet({
 	crossOriginResourcePolicy: false,
 }));
 app.use(express.static('./www/public'));
+app.use(express.json({ limit: '16kb' }));
+app.use(express.urlencoded({ extended: false, limit: '16kb' }));
 app.use(morgan);
 app.use(limiter);
 app.use(timeout());
 
 // Routes
 const IndexRouter = require('./routes/Index.js');
+const FalsePositivesRouter = require('./routes/FalsePositives.js');
 const BlocklistsRouter = require('./routes/Blocklists/Index.js');
 const StatsRouter = require('./routes/Stats.js');
 const DeprecatedListsRouter = require('./routes/Blocklists/Deprecated.js');
 
-
-// Stats
 app.use(updateStats);
+
+// Routes
 app.use(IndexRouter);
+app.use(FalsePositivesRouter);
 app.use(BlocklistsRouter);
 app.use(StatsRouter);
 app.use(DeprecatedListsRouter);

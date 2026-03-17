@@ -257,9 +257,7 @@ const categories = [
     </section>
 </main>
 
-<footer id="footer" role="contentinfo">
-    <p>Copyright 2023-2026 &copy; <span>Sefinek</span>. All Rights Reserved.</p>
-</footer>
+<%- include('./includes/copyright.ejs') %>
 
 <script type="module" src="/js/index.js" data-ws-address="<%= process.env.NODE_ENV === 'production' ? process.env.WS_ADDRESS : `${process.env.WS_ADDRESS}:${process.env.WS_PORT}` %>"></script>
 
