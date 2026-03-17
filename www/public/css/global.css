@@ -1,10 +1,12 @@
 :root {
+    --backdrop-blur:blur(8px) saturate(150%);
+    --backdrop-blur-strong:blur(10px) saturate(150%);
     --color-bg-card:#09090a;
     --color-bg-dark:#070606;
     --color-bg-darker:#101011;
+    --color-bg-overlay:#0006;
+    --color-bg-overlay-light:#0000000d;
     --color-bg-stats:#121215;
-    --color-bg-overlay:rgba(0,0,0,.4);
-    --color-bg-overlay-light:rgba(0,0,0,.05);
     --color-border:#1e1f22;
     --color-border-light:#FFFFFF0D;
     --color-primary:#00a8fc;
@@ -31,9 +33,7 @@
     --transition-fast:.1s ease;
     --transition-normal:.2s ease;
     --transition-slow:.3s ease;
-    --transition-smooth:.3s cubic-bezier(0.4,0,0.2,1);
-    --backdrop-blur:blur(8px) saturate(150%);
-    --backdrop-blur-strong:blur(10px) saturate(150%)
+    --transition-smooth:.3s cubic-bezier(0.4,0,0.2,1)
 }
 
 html {
@@ -45,10 +45,10 @@ body {
     background-color:var(--color-bg-dark);
     font-family:var(--font-primary),sans-serif;
     margin:0;
-    padding:70px 0 0 0
+    padding:70px 0 0
 }
 
-*,*::before,*::after {
+*,::before,::after {
     box-sizing:border-box
 }
 
@@ -108,8 +108,8 @@ a {
 
 a:hover {
     color:#a5d6ff;
-    text-decoration-color:#79c0ff66;
     text-decoration:underline;
+    text-decoration-color:#79c0ff66;
     text-shadow:0 0 6px #58a6ff80
 }
 
@@ -341,19 +341,19 @@ main {
 }
 
 #footer {
-    backdrop-filter:blur(9px);
     -webkit-backdrop-filter:blur(9px);
-    text-shadow:0 0 8px #000;
-    box-shadow: 0 -4px 9px rgba(0, 0, 0, 0.5);
+    backdrop-filter:blur(9px);
     border-top:1px solid #FFFFFF0D;
+    box-shadow:0 -4px 9px #00000080;
     color:var(--color-text);
     padding:var(--spacing-md);
-    text-align:center
+    text-align:center;
+    text-shadow:0 0 8px #000
 }
 
 #footer p {
     font-size:16px;
+    letter-spacing:.4px;
     margin:0;
-    opacity:.7;
-    letter-spacing:.4px
+    opacity:.7
 }

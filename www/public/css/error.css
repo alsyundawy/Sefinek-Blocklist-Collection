@@ -1,43 +1,3 @@
-@media screen and (max-width: 500px) {
-    #header {
-        font-size:23px
-    }
-
-    #text {
-        font-size:12px;
-        margin-left:8px;
-        margin-right:8px
-    }
-}
-
-@media screen and (max-width: 400px) {
-    p {
-        font-size:12px
-    }
-}
-
-@media screen and (max-width: 375px) {
-    h1 {
-        font-size:22px
-    }
-
-    p {
-        font-size:12px
-    }
-}
-
-@media screen and (max-width: 350px) {
-    #header {
-        font-size:19px;
-        margin-left:5px;
-        margin-right:5px
-    }
-
-    #text {
-        font-size:10px
-    }
-}
-
 body {
     color:#fff;
     font-family:"Noto Sans Mono",monospace;
@@ -93,4 +53,44 @@ footer {
     margin-right:8px;
     position:absolute;
     right:0
+}
+
+@media screen and (max-width: 500px) {
+    #header {
+        font-size:23px
+    }
+
+    #text {
+        font-size:12px;
+        margin-left:8px;
+        margin-right:8px
+    }
+}
+
+@media screen and (max-width: 400px) {
+    p {
+        font-size:12px
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size:22px
+    }
+
+    p {
+        font-size:12px
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #header {
+        font-size:19px;
+        margin-left:5px;
+        margin-right:5px
+    }
+
+    #text {
+        font-size:10px
+    }
 }

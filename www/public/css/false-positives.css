@@ -403,8 +403,7 @@ main {
 	padding:1rem 1.5rem
 }
 
-#fpModalCancel,
-#fpModalClearClose {
+#fpModalCancel,#fpModalClearClose {
 	background:#FFFFFF0D;
 	border:1px solid #FFFFFF1A;
 	border-radius:6px;
@@ -416,8 +415,7 @@ main {
 	transition:background .15s,color .15s
 }
 
-#fpModalCancel:hover,
-#fpModalClearClose:hover {
+#fpModalCancel:hover,#fpModalClearClose:hover {
 	background:#FFFFFF1A;
 	color:#fff
 }

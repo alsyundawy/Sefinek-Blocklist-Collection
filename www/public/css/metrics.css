@@ -95,7 +95,7 @@ main h1::after {
 
 .stats-timestamps {
     backdrop-filter:blur(8px);
-    background:rgba(0, 0, 0, 0.05);
+    background:#0000000d;
     border:1px solid #FFFFFF0D;
     border-radius:12px;
     box-shadow:0 0 12px #0006;
@@ -147,7 +147,7 @@ main h1::after {
 
 .date-controls {
     backdrop-filter:blur(8px);
-    background:rgba(0, 0, 0, 0.05);
+    background:#0000000d;
     border:1px solid #FFFFFF0D;
     border-radius:20px;
     box-shadow:0 0 12px #0006;
@@ -319,8 +319,7 @@ main h1::after {
     transform:translateY(-1px)
 }
 
-.btn-quick,
-.btn-interval {
+.btn-quick,.btn-interval {
     backdrop-filter:blur(8px);
     background:#ffffff0d;
     border:1px solid #fff3;
@@ -336,22 +335,19 @@ main h1::after {
     transition:all .3s cubic-bezier(0.4,0,0.2,1)
 }
 
-.btn-quick:hover:not(:disabled):not(.active),
-.btn-interval:hover:not(:disabled):not(.active) {
+.btn-quick:hover:not(:disabled):not(.active),.btn-interval:hover:not(:disabled):not(.active) {
     background:#ffffff1a;
     border-color:#00a8fc99;
     box-shadow:0 0 12px #0006;
     transform:translateY(-2px)
 }
 
-.btn-quick:disabled,
-.btn-interval:disabled {
+.btn-quick:disabled,.btn-interval:disabled {
     cursor:not-allowed;
     opacity:.4
 }
 
-.btn-quick.active,
-.btn-interval.active {
+.btn-quick.active,.btn-interval.active {
     background:linear-gradient(135deg,#00a8fc4d 0%,#00a8fc80 100%);
     border-color:#00a8fccc;
     box-shadow:0 0 12px #0006
@@ -360,7 +356,7 @@ main h1::after {
 .interval-controls {
     align-items:center;
     backdrop-filter:blur(8px);
-    background:rgba(0, 0, 0, 0.05);
+    background:#0000000d;
     border:1px solid #FFFFFF0D;
     border-radius:20px;
     box-shadow:0 0 12px #0006;
@@ -558,7 +554,7 @@ main h1::after {
 
 .stat-card {
     backdrop-filter:blur(8px);
-    background:rgba(0, 0, 0, 0.05);
+    background:#0000000d;
     border:1px solid #FFFFFF0D;
     border-radius:20px;
     box-shadow:0 0 12px #0006;
@@ -618,7 +614,7 @@ main h1::after {
     font-weight:700;
     letter-spacing:-1px;
     margin:.8rem 0;
-    text-shadow:0 0 12px #000c 0 0 20px currentColor;
+    text-shadow:0 0 11px #000c;
     transition:transform .4s
 }
 
@@ -651,7 +647,7 @@ main h1::after {
 
 .chart-container {
     backdrop-filter:blur(8px);
-    background:rgba(0, 0, 0, 0.05);
+    background:#0000000d;
     border:1px solid #FFFFFF0D;
     border-radius:20px;
     box-shadow:0 0 12px #0006;
@@ -717,9 +713,9 @@ main h1::after {
 
 .spinner {
     animation:spin 1s linear infinite;
-    border:7px solid rgba(0, 136, 204, 0.15);
+    border:7px solid #0088cc26;
     border-radius:50%;
-    border-top-color:#0088cc;
+    border-top-color:#08c;
     box-shadow:0 0 25px rgba(0, 136, 204, 0.35),
                0 0 50px rgba(0, 136, 204, 0.15),
                inset 0 0 15px rgba(0, 136, 204, 0.1);
@@ -731,7 +727,7 @@ main h1::after {
 
 .spinner::after {
     animation:spinnerPulse 2s ease-in-out infinite;
-    background:radial-gradient(circle, rgba(0, 136, 204, 0.2) 0%, transparent 70%);
+    background:radial-gradient(circle,#08c3 0%,transparent 70%);
     border-radius:50%;
     content:'';
     height:140%;
@@ -749,12 +745,13 @@ main h1::after {
 }
 
 @keyframes spinnerPulse {
-    0%, 100% {
-        opacity:0.3;
+    0%,100% {
+        opacity:.3;
         transform:scale(1)
     }
+
     50% {
-        opacity:0.6;
+        opacity:.6;
         transform:scale(1.15)
     }
 }
@@ -776,7 +773,7 @@ main h1::after {
 
 @keyframes textPulse {
     0%,100% {
-        opacity:0.85;
+        opacity:.85;
         transform:scale(1)
     }
 
@@ -846,8 +843,7 @@ main h1::after {
         gap:.6rem
     }
 
-    .btn-quick,
-    .btn-interval {
+    .btn-quick,.btn-interval {
         font-size:13px;
         padding:.55rem 1.1rem
     }
@@ -968,13 +964,11 @@ main h1::after {
         font-size:.95rem
     }
 
-    .quick-select,
-    .interval-select {
+    .quick-select,.interval-select {
         gap:.5rem
     }
 
-    .btn-quick,
-    .btn-interval {
+    .btn-quick,.btn-interval {
         flex:1 1 calc(33.333% - 0.33rem);
         font-size:12px;
         min-width:0;

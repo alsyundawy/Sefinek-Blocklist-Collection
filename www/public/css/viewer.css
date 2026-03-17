@@ -24,27 +24,27 @@ main {
 	border:1px solid #FFFFFF0D;
 	border-radius:16px;
 	box-shadow:0 8px 32px #0000004d;
+	font-size:1.03rem;
 	overflow:hidden;
 	padding:2.5rem;
 	position:relative;
-	font-size:1.03rem;
 	transition:all .3s cubic-bezier(0.4,0,0.2,1)
 }
 
 .markdown-viewer__content ol,.markdown-viewer__content p,.markdown-viewer__content li,.markdown-viewer__content pre {
 	line-height:1.6;
-	text-align:left;
+	text-align:left
 }
 
 .markdown-viewer__content h1 {
 	font-size:1.85rem;
-	padding:0;
+	padding:0
 }
 
 .markdown-viewer__content h2 {
 	color:#fff;
 	padding:0;
-	text-align:left;
+	text-align:left
 }
 
 .markdown-viewer__content h2:not(:first-child) {
@@ -56,7 +56,7 @@ main {
 	color:#fff;
 	font-size:1.18rem;
 	margin-bottom:0;
-	text-align:left;
+	text-align:left
 }
 
 .markdown-viewer__content p {
