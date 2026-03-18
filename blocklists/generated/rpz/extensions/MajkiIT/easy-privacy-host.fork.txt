@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026031601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026031801 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -32557,10 +32557,6 @@ interest.truvenhealth.com CNAME .
 *.interest.truvenhealth.com CNAME .
 internal-analytics.odoo.com CNAME .
 *.internal-analytics.odoo.com CNAME .
-internal-e.posthog.com CNAME .
-*.internal-e.posthog.com CNAME .
-internal-t.posthog.com CNAME .
-*.internal-t.posthog.com CNAME .
 internal.hcltech.com CNAME .
 *.internal.hcltech.com CNAME .
 internalcomms.dbschenker.com CNAME .
@@ -47929,6 +47925,8 @@ people.mbtionline.com CNAME .
 *.people.mbtionline.com CNAME .
 peoplehr.actonservice.com CNAME .
 *.peoplehr.actonservice.com CNAME .
+pepin.padlet.com CNAME .
+*.pepin.padlet.com CNAME .
 pepleb.ekosport.de CNAME .
 *.pepleb.ekosport.de CNAME .
 peqvwk.notino.at CNAME .
@@ -66989,6 +66987,8 @@ t.prageru.com CNAME .
 *.t.prageru.com CNAME .
 t.prod1.discover.binge.com.au CNAME .
 *.t.prod1.discover.binge.com.au CNAME .
+t.producthunt.com CNAME .
+*.t.producthunt.com CNAME .
 t.purduesports.com CNAME .
 *.t.purduesports.com CNAME .
 t.quisma.com CNAME .
