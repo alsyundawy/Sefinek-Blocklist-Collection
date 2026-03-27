@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026032601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026032701 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -14935,8 +14935,6 @@ active.baofeng.com CNAME .
 *.active.baofeng.com CNAME .
 active.sangfor.com CNAME .
 *.active.sangfor.com CNAME .
-active.tc.skysrt.com CNAME .
-*.active.tc.skysrt.com CNAME .
 active24stats.nl CNAME .
 *.active24stats.nl CNAME .
 activeconversion.com CNAME .
@@ -58305,6 +58303,8 @@ dl.rivafashion.com CNAME .
 *.dl.rivafashion.com CNAME .
 dl.shopwell.com CNAME .
 *.dl.shopwell.com CNAME .
+dl.space CNAME .
+*.dl.space CNAME .
 dl.sybspools.com CNAME .
 *.dl.sybspools.com CNAME .
 dl.tablelist.com CNAME .
@@ -103459,8 +103459,8 @@ kadfaedmpjdki.space CNAME .
 *.kadfaedmpjdki.space CNAME .
 kadime.cc CNAME .
 *.kadime.cc CNAME .
-kadjovuylhcdl.space CNAME .
-*.kadjovuylhcdl.space CNAME .
+kadjovuylhcactive.tc.skysrt.com CNAME .
+*.kadjovuylhcactive.tc.skysrt.com CNAME .
 kadlec.psjhealth.org CNAME .
 *.kadlec.psjhealth.org CNAME .
 kaebyy.autouncle.se CNAME .
