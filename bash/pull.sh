@@ -30,7 +30,7 @@ mkdir -p "$logs_dir"
 
     if cd "$repo_path"; then
         if git pull; then
-            npm install --omit=dev
+            npm ci --omit=dev
             echo -e "\n✔️ Success! Finished at: $(utc_now) UTC"
         else
             echo -e "\n❌ Error during Git operations!"
