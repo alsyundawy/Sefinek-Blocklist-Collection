@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026032501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026033101 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -207,6 +207,14 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+api.event.appstack.tech CNAME .
+*.api.event.appstack.tech CNAME .
+detailroi.com CNAME .
+*.detailroi.com CNAME .
+detaillog-global-dual.coolgcloud.com CNAME .
+*.detaillog-global-dual.coolgcloud.com CNAME .
+logapi.bodyevey.com CNAME .
+*.logapi.bodyevey.com CNAME .
 ingest.skarb.work CNAME .
 *.ingest.skarb.work CNAME .
 sensor.photogrid.app CNAME .
