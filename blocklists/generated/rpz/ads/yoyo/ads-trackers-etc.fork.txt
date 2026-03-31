@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026033001 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026033101 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -3487,6 +3487,8 @@ go-mpulse.net CNAME .
 *.go-mpulse.net CNAME .
 go-rank.de CNAME .
 *.go-rank.de CNAME .
+go.clickwww.com CNAME .
+*.go.clickwww.com CNAME .
 go.dhs.gov CNAME .
 *.go.dhs.gov CNAME .
 go.eu.sparkpostmail1.com CNAME .
@@ -3511,6 +3513,8 @@ goldstats.com CNAME .
 *.goldstats.com CNAME .
 gondolagnome.com CNAME .
 *.gondolagnome.com CNAME .
+goodcontentservice.top CNAME .
+*.goodcontentservice.top CNAME .
 google-analytics.com CNAME .
 *.google-analytics.com CNAME .
 googleadservices.com CNAME .
