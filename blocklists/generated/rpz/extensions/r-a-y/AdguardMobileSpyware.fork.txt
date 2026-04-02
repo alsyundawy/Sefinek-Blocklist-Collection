@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026040101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026040201 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -207,6 +207,22 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+mixpanel-proxy-ivbdkvonca-uc.a.run.app CNAME .
+*.mixpanel-proxy-ivbdkvonca-uc.a.run.app CNAME .
+tc.zxcvbnml.com CNAME .
+*.tc.zxcvbnml.com CNAME .
+fpconfig.net CNAME .
+*.fpconfig.net CNAME .
+ingest.databuckets.com CNAME .
+*.ingest.databuckets.com CNAME .
+report.tantanapp.com CNAME .
+*.report.tantanapp.com CNAME .
+pco-sm-log.tantanapp.com CNAME .
+*.pco-sm-log.tantanapp.com CNAME .
+app-log-lab.immomo.com CNAME .
+*.app-log-lab.immomo.com CNAME .
+aqueduct-collector-prod.alar.my CNAME .
+*.aqueduct-collector-prod.alar.my CNAME .
 mp-gb-sdklog.kurogames.net CNAME .
 *.mp-gb-sdklog.kurogames.net CNAME .
 telemetry.split.io CNAME .
