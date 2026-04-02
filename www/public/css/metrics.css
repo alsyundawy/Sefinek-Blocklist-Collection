@@ -771,6 +771,15 @@ main h1::after {
     z-index:1
 }
 
+#loading-kb {
+    color:rgba(255,255,255,0.45);
+    font-family:'Cascadia Mono','Calibri',sans-serif;
+    font-size:.85rem;
+    letter-spacing:1px;
+    margin-top:.6rem;
+    min-height:1.2em
+}
+
 @keyframes textPulse {
     0%,100% {
         opacity:.85;

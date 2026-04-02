@@ -22,7 +22,7 @@ app.use(helmet({
 		directives: {
 			scriptSrc: ['\'self\'', 'https://cdn.jsdelivr.net'],
 			imgSrc: ['\'self\'', 'https://sefinek.net', 'https://cdn.sefinek.net'],
-			connectSrc: ['\'self\'', 'ws:', 'wss:', 'https://cdn.jsdelivr.net'],
+			connectSrc: ['\'self\'', 'https://blocklist.sefinek.net', 'ws:', 'wss:', 'https://cdn.jsdelivr.net'],
 		},
 	},
 	crossOriginResourcePolicy: false,

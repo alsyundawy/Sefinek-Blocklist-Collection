@@ -12,17 +12,14 @@ const MAX_CACHE_SIZE = 500;
 
 const memoizedFormatToYYYYMMDD = date => {
 	const timestamp = date instanceof Date ? date.getTime() : new Date(date).getTime();
-	if (dateFormatCache.has(timestamp)) {
-		return dateFormatCache.get(timestamp);
-	}
-
-	const result = formatToYYYYMMDD(date);
+	if (dateFormatCache.has(timestamp)) return dateFormatCache.get(timestamp);
 
 	if (dateFormatCache.size >= MAX_CACHE_SIZE) {
 		const firstKey = dateFormatCache.keys().next().value;
 		dateFormatCache.delete(firstKey);
 	}
 
+	const result = formatToYYYYMMDD(date);
 	dateFormatCache.set(timestamp, result);
 	return result;
 };
@@ -46,14 +43,12 @@ const localStorageBatcher = (() => {
 	return {
 		set: (key, value) => {
 			pendingWrites.set(key, String(value));
-
-			if (!timeoutId) {
-				timeoutId = setTimeout(flush, 100);
-			}
+			if (!timeoutId) timeoutId = setTimeout(flush, 100);
 		},
 		flush,
 	};
 })();
+
 const FORMAT_LABELS = {
 	hosts: 'hosts 0.0.0.0',
 	localhost: 'localhost',
@@ -73,7 +68,8 @@ const FORMAT_LABELS_SHORT = {
 	rpz: 'RPZ',
 	unbound: 'Unbound',
 };
-let currentInterval = 10;
+const TIME_RANGE_DEFAULTS = { days: 30, interval: 60 };
+let currentInterval = TIME_RANGE_DEFAULTS.interval;
 
 const FONT_FAMILY = '\'Cascadia Mono\', \'Calibri\', sans-serif';
 
@@ -112,19 +108,28 @@ const HEATMAP_COLORS = {
 
 const HOURS_24 = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, '0'));
 
-let loadingElement;
+let loadingElement, loadingKbElement;
 const showLoading = () => {
-	if (!loadingElement) loadingElement = document.getElementById('loading');
+	loadingKbElement.textContent = 'Downloading data...';
 	loadingElement.style.display = 'flex';
 };
-const hideLoading = () => {
-	if (!loadingElement) loadingElement = document.getElementById('loading');
-	loadingElement.style.display = 'none';
+const hideLoading = () => { loadingElement.style.display = 'none'; };
+
+const formatBytes = bytes => {
+	if (bytes < 1024) return `${bytes} B`;
+	if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+	return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
 };
 
+const elementCache = new Map();
 const updateElement = (id, value) => {
-	const element = document.getElementById(id);
-	if (element) element.textContent = value;
+	let el = elementCache.get(id);
+	if (!el) {
+		el = document.getElementById(id);
+		if (!el) return;
+		elementCache.set(id, el);
+	}
+	el.textContent = value;
 };
 
 const clientLanguage = navigator.language || 'en-US';
@@ -135,8 +140,9 @@ const localTimeOptions = {
 	second: '2-digit',
 };
 
-const formatTimeUTC = date => date.toLocaleString(clientLanguage, { ...dateShortOptions, second: '2-digit' });
+const utcTimeOptions = { ...dateShortOptions, second: '2-digit' };
 
+const formatTimeUTC = date => date.toLocaleString(clientLanguage, utcTimeOptions);
 const formatTimeLocal = date => date.toLocaleString(clientLanguage, localTimeOptions);
 
 const updateServerTimeOffset = serverTime => {
@@ -268,13 +274,12 @@ const aggregateByInterval = (data, intervalMinutes) => {
 		const roundedTimestamp = new Date(roundedMs);
 
 		const key = roundedTimestamp.toISOString();
-
 		if (!aggregated[key]) {
 			const dateStr = memoizedFormatToYYYYMMDD(roundedTimestamp);
 			const timeStr = `${String(roundedTimestamp.getUTCHours()).padStart(2, '0')}:${String(roundedTimestamp.getUTCMinutes()).padStart(2, '0')}`;
 
 			aggregated[key] = {
-				timestamp: roundedTimestamp.toISOString(),
+				timestamp: key,
 				date: dateStr,
 				time: timeStr,
 				total: 0,
@@ -300,7 +305,7 @@ const aggregateByInterval = (data, intervalMinutes) => {
 		}
 	}
 
-	return Object.values(aggregated).sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+	return Object.values(aggregated).sort((a, b) => a.timestamp < b.timestamp ? -1 : 1);
 };
 
 const calculateSuccessRate = (responses, total) => {
@@ -321,11 +326,12 @@ let dateFromInputCached, dateToInputCached;
 let intervalButtonsCached, quickButtonsCached;
 
 const initDOMCache = () => {
+	loadingElement = document.getElementById('loading');
+	loadingKbElement = document.getElementById('loading-kb');
 	dateFromInputCached = document.getElementById('date-from');
 	dateToInputCached = document.getElementById('date-to');
 	intervalButtonsCached = document.querySelectorAll('.btn-interval');
 	quickButtonsCached = document.querySelectorAll('.btn-quick');
-	loadingElement = document.getElementById('loading');
 };
 
 const debounce = (fn, delay) => {
@@ -417,10 +423,10 @@ const loadAllTimeStats = async () => {
 
 const setDefaultDates = () => {
 	const today = new Date();
-	const sevenDaysAgo = new Date(today);
-	sevenDaysAgo.setDate(today.getDate() - 7);
+	const defaultFrom = new Date(today);
+	defaultFrom.setDate(today.getDate() - TIME_RANGE_DEFAULTS.days);
 
-	if (dateFromInputCached) dateFromInputCached.value = memoizedFormatToYYYYMMDD(sevenDaysAgo);
+	if (dateFromInputCached) dateFromInputCached.value = memoizedFormatToYYYYMMDD(defaultFrom);
 	if (dateToInputCached) dateToInputCached.value = memoizedFormatToYYYYMMDD(today);
 };
 
@@ -434,7 +440,26 @@ const fetchMetrics = async (from, to) => {
 			throw new Error(errorData.message || 'Failed to fetch metrics');
 		}
 
-		const data = await response.json();
+		const reader = response.body.getReader();
+		const chunks = [];
+		let received = 0;
+
+		while (true) {
+			const { done, value } = await reader.read();
+			if (done) break;
+			chunks.push(value);
+			received += value.length;
+			loadingKbElement.textContent = `Downloading data... ${formatBytes(received)}`;
+		}
+
+		const buffer = new Uint8Array(received);
+		let offset = 0;
+		for (const chunk of chunks) {
+			buffer.set(chunk, offset);
+			offset += chunk.length;
+		}
+
+		const data = JSON.parse(new TextDecoder().decode(buffer));
 		updateServerTimeOffset(data.serverTime);
 		return data.data || [];
 	} catch (err) {
@@ -821,11 +846,11 @@ const createDailyChart = data => {
 	if (!ctx) return;
 
 	const dailyData = {};
-	data.forEach(item => {
+	for (const item of data) {
 		if (!dailyData[item.date]) dailyData[item.date] = { total: 0, blocklists: 0 };
 		dailyData[item.date].total += item.total || 0;
 		dailyData[item.date].blocklists += item.blocklists || 0;
-	});
+	}
 
 	const dates = Object.keys(dailyData).sort();
 
@@ -887,11 +912,11 @@ const createPeakHoursChart = data => {
 	if (!ctx) return;
 
 	const hourlyData = {};
-	data.forEach(item => {
+	for (const item of data) {
 		const hour = item.time.split(':')[0];
 		const key = `${item.date} ${hour}:00`;
 		hourlyData[key] = (hourlyData[key] || 0) + (item.total || 0);
-	});
+	}
 
 	const sorted = Object.entries(hourlyData)
 		.sort((a, b) => b[1] - a[1])
@@ -997,59 +1022,68 @@ const createFormatDistributionChart = data => {
 	});
 };
 
+const buildHeatmapMatrix = data => {
+	const heatmapData = {};
+	for (const item of data) {
+		const hour = item.time.split(':')[0];
+		if (!heatmapData[item.date]) heatmapData[item.date] = {};
+		heatmapData[item.date][hour] = (heatmapData[item.date][hour] || 0) + (item.total || 0);
+	}
+
+	const dates = Object.keys(heatmapData).sort();
+	const matrix = [];
+	for (const date of dates) {
+		for (const [hourIndex, hour] of HOURS_24.entries()) {
+			matrix.push({ x: hourIndex, y: date, v: heatmapData[date]?.[hour] || 0, hour });
+		}
+	}
+
+	return { dates, matrix };
+};
+
+const getHeatmapColor = (value, maxValue) => {
+	if (value === 0 || maxValue === 0) return HEATMAP_COLORS.empty;
+	const intensity = value / maxValue;
+	if (intensity < 0.2) return `rgba(${HEATMAP_COLORS.low}, ${0.3 + intensity * 0.3})`;
+	if (intensity < 0.5) return `rgba(${HEATMAP_COLORS.medium}, ${0.4 + intensity * 0.3})`;
+	if (intensity < 0.8) return `rgba(${HEATMAP_COLORS.high}, ${0.5 + intensity * 0.3})`;
+	return `rgba(${HEATMAP_COLORS.veryHigh}, ${0.6 + intensity * 0.4})`;
+};
+
 const createHeatmapChart = data => {
 	const ctx = document.getElementById('heatmap-chart')?.getContext('2d');
 	if (!ctx) return;
 
-	const heatmapData = {};
-	data.forEach(item => {
-		const hour = item.time.split(':')[0];
-		if (!heatmapData[item.date]) heatmapData[item.date] = {};
-		heatmapData[item.date][hour] = (heatmapData[item.date][hour] || 0) + (item.total || 0);
-	});
+	const { dates, matrix } = buildHeatmapMatrix(data);
+	const maxValue = Math.max(...matrix.map(d => d.v), 1);
+	const colors = matrix.map(d => getHeatmapColor(d.v, maxValue));
+	const chartData = matrix.map(d => ({
+		x: d.x,
+		y: dates.indexOf(d.y),
+		r: maxValue > 0 ? Math.sqrt(d.v / maxValue) * 15 + 3 : 3,
+		value: d.v,
+		hour: d.hour,
+		date: d.y,
+	}));
 
-	const dates = Object.keys(heatmapData).sort();
-
-	const matrix = [];
-	dates.forEach(date => {
-		HOURS_24.forEach((hour, hourIndex) => {
-			const value = heatmapData[date]?.[hour] || 0;
-			matrix.push({
-				x: hourIndex,
-				y: date,
-				v: value,
-				hour: hour,
-			});
-		});
-	});
-
-	const values = matrix.map(d => d.v);
-	const maxValue = Math.max(...values, 1);
-
-	const getColor = value => {
-		if (value === 0 || maxValue === 0) return HEATMAP_COLORS.empty;
-		const intensity = value / maxValue;
-		if (intensity < 0.2) return `rgba(${HEATMAP_COLORS.low}, ${0.3 + intensity * 0.3})`;
-		if (intensity < 0.5) return `rgba(${HEATMAP_COLORS.medium}, ${0.4 + intensity * 0.3})`;
-		if (intensity < 0.8) return `rgba(${HEATMAP_COLORS.high}, ${0.5 + intensity * 0.3})`;
-		return `rgba(${HEATMAP_COLORS.veryHigh}, ${0.6 + intensity * 0.4})`;
-	};
+	if (charts.heatmap) {
+		charts.heatmap.data.datasets[0].data = chartData;
+		charts.heatmap.data.datasets[0].backgroundColor = colors;
+		charts.heatmap.data.datasets[0].borderColor = colors;
+		charts.heatmap.options.scales.y.max = dates.length - 0.5;
+		charts.heatmap.options.scales.y.ticks.callback = value => dates[value] || '';
+		charts.heatmap.update('none');
+		return;
+	}
 
 	charts.heatmap = new Chart(ctx, {
 		type: 'bubble',
 		data: {
 			datasets: [{
 				label: 'Traffic Intensity',
-				data: matrix.map(d => ({
-					x: d.x,
-					y: dates.indexOf(d.y),
-					r: maxValue > 0 ? Math.sqrt(d.v / maxValue) * 15 + 3 : 3,
-					value: d.v,
-					hour: d.hour,
-					date: d.y,
-				})),
-				backgroundColor: matrix.map(d => getColor(d.v)),
-				borderColor: matrix.map(d => getColor(d.v)),
+				data: chartData,
+				backgroundColor: colors,
+				borderColor: colors,
 			}],
 		},
 		options: {
@@ -1072,15 +1106,12 @@ const createHeatmapChart = data => {
 						stepSize: 1,
 						callback: value => {
 							const hour = HOURS_24[Math.round(value)];
-							return hour ? hour + ':00' : '';
+							return hour ? `${hour}:00` : '';
 						},
 						color: UI_COLORS.textSecondary,
 						font: { family: FONT_FAMILY, size: 11 },
 					},
-					grid: {
-						color: UI_COLORS.gridLines,
-						lineWidth: 1,
-					},
+					grid: { color: UI_COLORS.gridLines, lineWidth: 1 },
 					title: {
 						display: true,
 						text: 'Hour of Day (UTC)',
@@ -1138,7 +1169,7 @@ const loadData = async () => {
 	const daysDiff = Math.ceil((toDate - fromDate) / (1000 * 60 * 60 * 24));
 	const minInterval = getMinInterval(daysDiff);
 	if (currentInterval < minInterval) {
-		alert(`For ${daysDiff} days range, minimum interval is ${minInterval >= 60 ? (minInterval / 60) + 'h' : minInterval + 'm'}. Please select a larger interval.`);
+		alert(`For ${daysDiff} days range, minimum interval is ${minInterval >= 60 ? `${minInterval / 60}h` : `${minInterval}m`}. Please select a larger interval.`);
 		return;
 	}
 
@@ -1191,7 +1222,6 @@ const loadQuickData = async days => {
 	if (days === 'max' && dataStartDate) {
 		from = new Date(dataStartDate);
 	} else if (days === 'max') {
-		hideLoading();
 		console.warn('Cannot load MAX range: dataStartDate not available');
 		return;
 	} else {
@@ -1247,7 +1277,7 @@ const initializeButtonListeners = () => {
 			e.target.classList.add('active');
 
 			const daysValue = e.target.dataset.days;
-			const days = daysValue === 'max' ? 'max' : (parseInt(daysValue) || 7);
+			const days = daysValue === 'max' ? 'max' : parseInt(daysValue);
 			localStorageBatcher.set('metrics_days', days);
 			await loadQuickData(days);
 		});
@@ -1271,16 +1301,15 @@ const initializeMetrics = () => {
 	initDOMCache();
 
 	const savedDaysRaw = localStorage.getItem('metrics_days');
-	let savedDays = savedDaysRaw === 'max' ? 'max' : (parseInt(savedDaysRaw) || 7);
-	let savedInterval = parseInt(localStorage.getItem('metrics_interval')) || 10;
-
+	let savedDays = savedDaysRaw === 'max' ? 'max' : parseInt(savedDaysRaw);
+	let savedInterval = parseInt(localStorage.getItem('metrics_interval'));
 	if (!VALID_INTERVALS.includes(savedInterval)) {
-		savedInterval = 10;
+		savedInterval = TIME_RANGE_DEFAULTS.interval;
 		localStorageBatcher.set('metrics_interval', savedInterval);
 	}
 
 	if (savedDays !== 'max' && !VALID_DAYS.includes(savedDays)) {
-		savedDays = 7;
+		savedDays = TIME_RANGE_DEFAULTS.days;
 		localStorageBatcher.set('metrics_days', savedDays);
 	}
 
