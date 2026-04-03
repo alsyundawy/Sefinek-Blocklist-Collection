@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026040201 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026040301 43200 3600 259200 300
   NS  localhost.
 banner.bet365partners.com CNAME .
 *.banner.bet365partners.com CNAME .
@@ -167,6 +167,16 @@ startup.mobile.webvisor.com CNAME .
 *.startup.mobile.webvisor.com CNAME .
 startup-mobile.ap.yandex-net.ru CNAME .
 *.startup-mobile.ap.yandex-net.ru CNAME .
+pullcf.com CNAME .
+*.pullcf.com CNAME .
+fnyfeds.com CNAME .
+*.fnyfeds.com CNAME .
+api2.wshareit.com CNAME .
+*.api2.wshareit.com CNAME .
+mcds.dalyfeds.com CNAME .
+*.mcds.dalyfeds.com CNAME .
+api-v2.shareitgames.com CNAME .
+*.api-v2.shareitgames.com CNAME .
 catsonictp.com CNAME .
 *.catsonictp.com CNAME .
 multiww.com CNAME .
