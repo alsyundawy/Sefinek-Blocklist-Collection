@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026033101 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026040301 43200 3600 259200 300
   NS  localhost.
 101com.com CNAME .
 *.101com.com CNAME .
@@ -861,8 +861,6 @@ ads.guardian.co.uk CNAME .
 *.ads.guardian.co.uk CNAME .
 ads.guardianunlimited.co.uk CNAME .
 *.ads.guardianunlimited.co.uk CNAME .
-ads.guru3d.com CNAME .
-*.ads.guru3d.com CNAME .
 ads.hbv.de CNAME .
 *.ads.hbv.de CNAME .
 ads.hearstmags.com CNAME .
@@ -1209,8 +1207,6 @@ ads2.hsoub.com CNAME .
 *.ads2.hsoub.com CNAME .
 ads2.virtual-nights.com CNAME .
 *.ads2.virtual-nights.com CNAME .
-ads2.webdrive.no CNAME .
-*.ads2.webdrive.no CNAME .
 ads2.xnet.cz CNAME .
 *.ads2.xnet.cz CNAME .
 ads2004.treiberupdate.de CNAME .
@@ -1553,8 +1549,6 @@ advertipros.com CNAME .
 *.advertipros.com CNAME .
 advertise.com CNAME .
 *.advertise.com CNAME .
-advertiseireland.com CNAME .
-*.advertiseireland.com CNAME .
 advertiserurl.com CNAME .
 *.advertiserurl.com CNAME .
 advertising.com CNAME .
@@ -5201,6 +5195,8 @@ pub.chez.com CNAME .
 *.pub.chez.com CNAME .
 pub.club-internet.fr CNAME .
 *.pub.club-internet.fr CNAME .
+pub.hardware.fr CNAME .
+*.pub.hardware.fr CNAME .
 pub.network CNAME .
 *.pub.network CNAME .
 pub.realmedia.fr CNAME .
