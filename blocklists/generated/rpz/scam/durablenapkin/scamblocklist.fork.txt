@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026040301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026040401 43200 3600 259200 300
   NS  localhost.
 1000fapvids.online CNAME .
 *.1000fapvids.online CNAME .
@@ -119,6 +119,8 @@ allstarshirt.com CNAME .
 *.allstarshirt.com CNAME .
 allupdatenow.com CNAME .
 *.allupdatenow.com CNAME .
+store.allupdatenow.com CNAME .
+*.store.allupdatenow.com CNAME .
 altruetech.com CNAME .
 *.altruetech.com CNAME .
 altwi-zgs.com CNAME .
@@ -133,8 +135,6 @@ store.anacondanz.com CNAME .
 *.store.anacondanz.com CNAME .
 animeshoppers.com CNAME .
 *.animeshoppers.com CNAME .
-store.animeshoppers.com CNAME .
-*.store.animeshoppers.com CNAME .
 anydebrid.com CNAME .
 *.anydebrid.com CNAME .
 aoptee.com CNAME .
@@ -339,8 +339,6 @@ bsntowoff.com CNAME .
 *.bsntowoff.com CNAME .
 btc9339.com CNAME .
 *.btc9339.com CNAME .
-store.btc9339.com CNAME .
-*.store.btc9339.com CNAME .
 buddhakind.com CNAME .
 *.buddhakind.com CNAME .
 store.buddhakind.com CNAME .
@@ -571,10 +569,6 @@ dogparadiseshop.com CNAME .
 *.dogparadiseshop.com CNAME .
 dogparadisestore.com CNAME .
 *.dogparadisestore.com CNAME .
-doh-gov.com CNAME .
-*.doh-gov.com CNAME .
-store.doh-gov.com CNAME .
-*.store.doh-gov.com CNAME .
 doh-gov.ph CNAME .
 *.doh-gov.ph CNAME .
 store.doh-gov.ph CNAME .
@@ -733,8 +727,6 @@ familystore.com CNAME .
 *.familystore.com CNAME .
 fapst.com CNAME .
 *.fapst.com CNAME .
-farmer-love.us CNAME .
-*.farmer-love.us CNAME .
 faunugraipt.com CNAME .
 *.faunugraipt.com CNAME .
 store.faunugraipt.com CNAME .
@@ -749,6 +741,8 @@ store.faze2.com CNAME .
 *.store.faze2.com CNAME .
 faze3.com CNAME .
 *.faze3.com CNAME .
+store.faze3.com CNAME .
+*.store.faze3.com CNAME .
 faze4.com CNAME .
 *.faze4.com CNAME .
 faze47.com CNAME .
@@ -839,8 +833,6 @@ folkrbvi.pages.dev CNAME .
 *.folkrbvi.pages.dev CNAME .
 store.folkrbvi.pages.dev CNAME .
 *.store.folkrbvi.pages.dev CNAME .
-food-network.fwh.is CNAME .
-*.food-network.fwh.is CNAME .
 freebitcoin.pages.dev CNAME .
 *.freebitcoin.pages.dev CNAME .
 store.freebitcoin.pages.dev CNAME .
@@ -1179,8 +1171,6 @@ store.keenfootwearsale.com CNAME .
 *.store.keenfootwearsale.com CNAME .
 kesug.com CNAME .
 *.kesug.com CNAME .
-store.kesug.com CNAME .
-*.store.kesug.com CNAME .
 kigurumi-usa.com CNAME .
 *.kigurumi-usa.com CNAME .
 kingcampoutdoors.co.jp CNAME .
@@ -1199,6 +1189,12 @@ kisserine.com CNAME .
 *.kisserine.com CNAME .
 kitchendecor.shop CNAME .
 *.kitchendecor.shop CNAME .
+klasykavod.pl CNAME .
+*.klasykavod.pl CNAME .
+store.klasykavod.pl CNAME .
+*.store.klasykavod.pl CNAME .
+klelnanzeigen-deutch.confirm542351.info CNAME .
+*.klelnanzeigen-deutch.confirm542351.info CNAME .
 kms-pc.com CNAME .
 *.kms-pc.com CNAME .
 kms-tool.com CNAME .
@@ -1429,6 +1425,8 @@ navi12.com CNAME .
 *.navi12.com CNAME .
 store.navi12.com CNAME .
 *.store.navi12.com CNAME .
+store.navi14.com CNAME .
+*.store.navi14.com CNAME .
 navi18.com CNAME .
 *.navi18.com CNAME .
 navi2.com CNAME .
@@ -1493,10 +1491,6 @@ navi4.com CNAME .
 *.navi4.com CNAME .
 store.navi4.com CNAME .
 *.store.navi4.com CNAME .
-navi42.ru CNAME .
-*.navi42.ru CNAME .
-store.navi42.ru CNAME .
-*.store.navi42.ru CNAME .
 navi43.com CNAME .
 *.navi43.com CNAME .
 store.navi43.com CNAME .
@@ -1569,8 +1563,6 @@ store.navi9.com CNAME .
 *.store.navi9.com CNAME .
 navi90.com CNAME .
 *.navi90.com CNAME .
-store.navi95.com CNAME .
-*.store.navi95.com CNAME .
 navi98.com CNAME .
 *.navi98.com CNAME .
 store.navi98.com CNAME .
@@ -1671,6 +1663,10 @@ nofotballshop.com CNAME .
 *.nofotballshop.com CNAME .
 norfotball.com CNAME .
 *.norfotball.com CNAME .
+norgeshoes.com CNAME .
+*.norgeshoes.com CNAME .
+store.norgeshoes.com CNAME .
+*.store.norgeshoes.com CNAME .
 nosdaarte.com CNAME .
 *.nosdaarte.com CNAME .
 notify-user-adjustments.vercel.app CNAME .
@@ -1793,10 +1789,6 @@ perlatoshoe.com CNAME .
 *.perlatoshoe.com CNAME .
 personal84.com CNAME .
 *.personal84.com CNAME .
-petparty.store CNAME .
-*.petparty.store CNAME .
-store.petparty.store CNAME .
-*.store.petparty.store CNAME .
 pharaohstore.com CNAME .
 *.pharaohstore.com CNAME .
 phgliders.com CNAME .
@@ -1955,10 +1947,6 @@ sakuradate.com CNAME .
 *.sakuradate.com CNAME .
 salimusic.com CNAME .
 *.salimusic.com CNAME .
-sanla-tan.net CNAME .
-*.sanla-tan.net CNAME .
-store.sanla-tan.net CNAME .
-*.store.sanla-tan.net CNAME .
 saveeeee.myshopify.com CNAME .
 *.saveeeee.myshopify.com CNAME .
 store.saveeeee.myshopify.com CNAME .
@@ -2411,6 +2399,10 @@ universityofqatarrectorate.godaddysites.com CNAME .
 *.universityofqatarrectorate.godaddysites.com CNAME .
 store.universityofqatarrectorate.godaddysites.com CNAME .
 *.store.universityofqatarrectorate.godaddysites.com CNAME .
+updatesnow.click CNAME .
+*.updatesnow.click CNAME .
+store.updatesnow.click CNAME .
+*.store.updatesnow.click CNAME .
 uplevelreward.com CNAME .
 *.uplevelreward.com CNAME .
 upnews.me CNAME .
