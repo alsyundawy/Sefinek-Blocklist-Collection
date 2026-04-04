@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026040301 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026040401 43200 3600 259200 300
   NS  localhost.
 adeventtracker.spotify.com CNAME .
 *.adeventtracker.spotify.com CNAME .
@@ -207,6 +207,22 @@ int.vlancaa.fun CNAME .
 *.int.vlancaa.fun CNAME .
 tok.vaicore.xyz CNAME .
 *.tok.vaicore.xyz CNAME .
+stats.sdk.banuba.net CNAME .
+*.stats.sdk.banuba.net CNAME .
+report.duetapp.net CNAME .
+*.report.duetapp.net CNAME .
+logretrieve.duetapp.net CNAME .
+*.logretrieve.duetapp.net CNAME .
+metrics.taimi.com CNAME .
+*.metrics.taimi.com CNAME .
+detaillog-global-dual.coolccloud.com CNAME .
+*.detaillog-global-dual.coolccloud.com CNAME .
+analytics.prod.tophat.withbuddies.com CNAME .
+*.analytics.prod.tophat.withbuddies.com CNAME .
+beacon.ztgame.com CNAME .
+*.beacon.ztgame.com CNAME .
+api-log-upload.wenext.technology CNAME .
+*.api-log-upload.wenext.technology CNAME .
 events-noneu.truecaller.com CNAME .
 *.events-noneu.truecaller.com CNAME .
 profiler-collector.dalyfeds.com CNAME .
