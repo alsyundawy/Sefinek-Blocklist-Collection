@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026040501 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026040601 43200 3600 259200 300
   NS  localhost.
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
@@ -16365,6 +16365,8 @@ cfa.fidelity.com CNAME .
 *.cfa.fidelity.com CNAME .
 cfaexam.quantresear.ch CNAME .
 *.cfaexam.quantresear.ch CNAME .
+cfapi.upstackdata.io CNAME .
+*.cfapi.upstackdata.io CNAME .
 cfb.8it.me CNAME .
 *.cfb.8it.me CNAME .
 cfpwood.actonservice.com CNAME .
@@ -24441,6 +24443,8 @@ error-analytics-sessions-production.shopifysvc.com CNAME .
 *.error-analytics-sessions-production.shopifysvc.com CNAME .
 error-collector.ted.com CNAME .
 *.error-collector.ted.com CNAME .
+error-tracker.pages.dev CNAME .
+*.error-tracker.pages.dev CNAME .
 error.videonow.ru CNAME .
 *.error.videonow.ru CNAME .
 errorreports.couponcabin.com CNAME .
