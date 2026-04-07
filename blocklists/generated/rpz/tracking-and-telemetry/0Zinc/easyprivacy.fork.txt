@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026040601 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026040701 43200 3600 259200 300
   NS  localhost.
 00px.net CNAME .
 *.00px.net CNAME .
@@ -6171,6 +6171,8 @@ metrics.audius.co CNAME .
 *.metrics.audius.co CNAME .
 metrics.camsoda.com CNAME .
 *.metrics.camsoda.com CNAME .
+metrics.documentfoundation.org CNAME .
+*.metrics.documentfoundation.org CNAME .
 metrics.freemake.com CNAME .
 *.metrics.freemake.com CNAME .
 metrics.hackerrank.com CNAME .
