@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026090517 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026090607 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: ShadowWhisperer Tracking Blocklist
-; Entries: 116,538 domains
+; Entries: 116,556 domains
 ; Source: https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: September 5, 2026 at 5:04 PM UTC | 2026-09-05T17:04:15.440Z
+; Last updated: September 6, 2026 at 7:30 AM UTC | 2026-09-06T07:30:04.699Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -838,6 +838,8 @@ $TTL 300
 *.4d93007.com CNAME .
 4danalytics.ch CNAME .
 *.4danalytics.ch CNAME .
+4dex.tech CNAME .
+*.4dex.tech CNAME .
 4gyqr.r.ah.d.sendibm5.com CNAME .
 *.4gyqr.r.ah.d.sendibm5.com CNAME .
 4jaehnfqizyx.controlconceptsusa.com CNAME .
@@ -6296,6 +6298,8 @@ advisory.benisab.se CNAME .
 *.advisory.benisab.se CNAME .
 advisory.thehackettgroup.com CNAME .
 *.advisory.thehackettgroup.com CNAME .
+advncd.st CNAME .
+*.advncd.st CNAME .
 advnn.laurageller.com CNAME .
 *.advnn.laurageller.com CNAME .
 adv.skinbodysaude.com CNAME .
@@ -26472,6 +26476,8 @@ analytics.rule88.nl CNAME .
 *.analytics.rule88.nl CNAME .
 analytics.rumzucker.at CNAME .
 *.analytics.rumzucker.at CNAME .
+analytics.runcloud.io CNAME .
+*.analytics.runcloud.io CNAME .
 analytics.rundholzprofi.de CNAME .
 *.analytics.rundholzprofi.de CNAME .
 analytics.rune-kocher.de CNAME .
@@ -32092,6 +32098,8 @@ analytics.xtst.de CNAME .
 *.analytics.xtst.de CNAME .
 analytics.xubium.net CNAME .
 *.analytics.xubium.net CNAME .
+analytics.xweather.com CNAME .
+*.analytics.xweather.com CNAME .
 analytics.xwiki.org CNAME .
 *.analytics.xwiki.org CNAME .
 analytics.xwm.app CNAME .
@@ -35770,6 +35778,8 @@ assets.professionalpensions.com CNAME .
 *.assets.professionalpensions.com CNAME .
 assets.ryanair.com CNAME .
 *.assets.ryanair.com CNAME .
+assets.snosites.com CNAME .
+*.assets.snosites.com CNAME .
 assets.sp.chip.de CNAME .
 *.assets.sp.chip.de CNAME .
 assets.sp.focus.de CNAME .
@@ -49762,6 +49772,8 @@ cxcwhu.wantedind.com CNAME .
 *.cxcwhu.wantedind.com CNAME .
 cxense.com CNAME .
 *.cxense.com CNAME .
+cxevents.jewelml.io CNAME .
+*.cxevents.jewelml.io CNAME .
 cxm.roller.app CNAME .
 *.cxm.roller.app CNAME .
 cxwik3.cxpass.net CNAME .
@@ -56362,6 +56374,8 @@ data.transactionsdemo.hoodoo.digital CNAME .
 *.data.transactionsdemo.hoodoo.digital CNAME .
 data.trans.nationalvision.com CNAME .
 *.data.trans.nationalvision.com CNAME .
+data.travelzoo.com CNAME .
+*.data.travelzoo.com CNAME .
 data.traverse.teamnorthwoods.com CNAME .
 *.data.traverse.teamnorthwoods.com CNAME .
 data.t.retrium.com CNAME .
@@ -56954,6 +56968,8 @@ dc.sanook.com CNAME .
 *.dc.sanook.com CNAME .
 dcs.audi.com CNAME .
 *.dcs.audi.com CNAME .
+dc.secure.ehc.com CNAME .
+*.dc.secure.ehc.com CNAME .
 dc.services.visualstudio.com CNAME .
 *.dc.services.visualstudio.com CNAME .
 dcs.felissimo.co.jp CNAME .
@@ -62258,6 +62274,8 @@ engage.whittierdailynews.com CNAME .
 *.engage.whittierdailynews.com CNAME .
 engage.willitsnews.com CNAME .
 *.engage.willitsnews.com CNAME .
+engage-x.io CNAME .
+*.engage-x.io CNAME .
 eng.ca.bebelelo.com CNAME .
 *.eng.ca.bebelelo.com CNAME .
 e-n-g-e-l-07.lioni.info CNAME .
@@ -75854,6 +75872,8 @@ heat-map.co CNAME .
 *.heat-map.co CNAME .
 heatmap.com CNAME .
 *.heatmap.com CNAME .
+heatmapcore.com CNAME .
+*.heatmapcore.com CNAME .
 heatmap.emma.tools CNAME .
 *.heatmap.emma.tools CNAME .
 heatmap-events-collector.instapage.com CNAME .
@@ -112858,6 +112878,8 @@ mkdhb.ramybrook.com CNAME .
 *.mkdhb.ramybrook.com CNAME .
 mkhxhr.kint.kr CNAME .
 *.mkhxhr.kint.kr CNAME .
+mkj87f.com CNAME .
+*.mkj87f.com CNAME .
 mkjv3trk.com CNAME .
 *.mkjv3trk.com CNAME .
 mkkol3trk.com CNAME .
@@ -127774,6 +127796,8 @@ pagesense-collect.zoho.eu CNAME .
 *.pagesense-collect.zoho.eu CNAME .
 pagesense-collect.zoho.in CNAME .
 *.pagesense-collect.zoho.in CNAME .
+pagesense-hb-collect.zoho.in CNAME .
+*.pagesense-hb-collect.zoho.in CNAME .
 pagesense.io CNAME .
 *.pagesense.io CNAME .
 pages.guest.princess.com CNAME .
@@ -140302,6 +140326,8 @@ plausible.dmalaminos.com CNAME .
 *.plausible.dmalaminos.com CNAME .
 plausible.docker-box.richardwillis.info CNAME .
 *.plausible.docker-box.richardwillis.info CNAME .
+plausible.docuseal.tech CNAME .
+*.plausible.docuseal.tech CNAME .
 plausible.dofaaweb.com CNAME .
 *.plausible.dofaaweb.com CNAME .
 plausible.dok.lonestone.io CNAME .
@@ -143338,6 +143364,8 @@ product.akiflow.com CNAME .
 *.product.akiflow.com CNAME .
 productboard.com CNAME .
 *.productboard.com CNAME .
+productcustomizer.com CNAME .
+*.productcustomizer.com CNAME .
 product.dji.com CNAME .
 *.product.dji.com CNAME .
 producter.co CNAME .
@@ -147434,6 +147462,8 @@ r.institut-paris-region.fr CNAME .
 *.r.institut-paris-region.fr CNAME .
 rio.cdn.chegg.com CNAME .
 *.rio.cdn.chegg.com CNAME .
+rio-tech.com CNAME .
+*.rio-tech.com CNAME .
 r.ip-1.sib.doctolib.fr CNAME .
 *.r.ip-1.sib.doctolib.fr CNAME .
 r.ip-2.sib.doctolib.fr CNAME .
@@ -175738,6 +175768,8 @@ spider.scottw.com CNAME .
 *.spider.scottw.com CNAME .
 spider.storiesofchang.com CNAME .
 *.spider.storiesofchang.com CNAME .
+spiffy.ai CNAME .
+*.spiffy.ai CNAME .
 spiffymachine.com CNAME .
 *.spiffymachine.com CNAME .
 spiffypixel.com CNAME .
@@ -206524,6 +206556,8 @@ stats.snld.ca CNAME .
 *.stats.snld.ca CNAME .
 stats.snorkelfar.se CNAME .
 *.stats.snorkelfar.se CNAME .
+stats.snosites.com CNAME .
+*.stats.snosites.com CNAME .
 stats.snuffland.de CNAME .
 *.stats.snuffland.de CNAME .
 stats.sobi.pro CNAME .
@@ -230596,6 +230630,8 @@ woopra.com CNAME .
 *.woopra.com CNAME .
 woorank.com CNAME .
 *.woorank.com CNAME .
+woosmap.com CNAME .
+*.woosmap.com CNAME .
 wootric.com CNAME .
 *.wootric.com CNAME .
 wooview.io CNAME .
