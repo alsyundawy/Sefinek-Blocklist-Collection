@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026090619 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026090707 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: ShadowWhisperer Tracking Blocklist
-; Entries: 116,571 domains
+; Entries: 116,575 domains
 ; Source: https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: September 6, 2026 at 7:47 PM UTC | 2026-09-06T19:47:59.654Z
+; Last updated: September 7, 2026 at 7:43 AM UTC | 2026-09-07T07:43:31.920Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -48932,6 +48932,8 @@ crm-cdn.aspireglobal.com CNAME .
 *.crm-cdn.aspireglobal.com CNAME .
 crmdialer.com CNAME .
 *.crmdialer.com CNAME .
+crm-hit-tracker.simpleviewinc.com CNAME .
+*.crm-hit-tracker.simpleviewinc.com CNAME .
 crmit.com CNAME .
 *.crmit.com CNAME .
 crm.mandmdirect.com CNAME .
@@ -68874,6 +68876,8 @@ gostats.ru CNAME .
 *.gostats.ru CNAME .
 gostats.vn CNAME .
 *.gostats.vn CNAME .
+gosupersonic.ai CNAME .
+*.gosupersonic.ai CNAME .
 gotham.deeweb.fr CNAME .
 *.gotham.deeweb.fr CNAME .
 go.themadhatterco.net CNAME .
@@ -148502,6 +148506,8 @@ r.nws.antiq.com CNAME .
 *.r.nws.antiq.com CNAME .
 ro20trk.com CNAME .
 *.ro20trk.com CNAME .
+ro3zau15.moen.com CNAME .
+*.ro3zau15.moen.com CNAME .
 road.baroma.asia CNAME .
 *.road.baroma.asia CNAME .
 road.heys.com CNAME .
@@ -200380,6 +200386,8 @@ stats.hd-cms.io CNAME .
 *.stats.hd-cms.io CNAME .
 stats.hdr.fr CNAME .
 *.stats.hdr.fr CNAME .
+stats.hdsplus.co CNAME .
+*.stats.hdsplus.co CNAME .
 stats.he-1.de CNAME .
 *.stats.he-1.de CNAME .
 stats.headlander.com CNAME .
