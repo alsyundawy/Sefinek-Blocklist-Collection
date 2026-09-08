@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026090807 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026090818 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: ShadowWhisperer Tracking Blocklist
-; Entries: 116,810 domains
+; Entries: 116,816 domains
 ; Source: https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: September 8, 2026 at 7:36 AM UTC | 2026-09-08T07:36:18.727Z
+; Last updated: September 8, 2026 at 6:15 PM UTC | 2026-09-08T18:15:53.416Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -58384,6 +58384,8 @@ df97trk.com CNAME .
 *.df97trk.com CNAME .
 dfanalytics.dealerfire.com CNAME .
 *.dfanalytics.dealerfire.com CNAME .
+dfanalytics.eu CNAME .
+*.dfanalytics.eu CNAME .
 dfbhbab.r.tsp1-brevo.net CNAME .
 *.dfbhbab.r.tsp1-brevo.net CNAME .
 d.federconsulting.com CNAME .
@@ -135830,6 +135832,8 @@ piwik.oldtimer-ig-osnabrueck.de CNAME .
 *.piwik.oldtimer-ig-osnabrueck.de CNAME .
 piwik.oldtimerservice-vornhagen.de CNAME .
 *.piwik.oldtimerservice-vornhagen.de CNAME .
+piwik.oles.pp.ru CNAME .
+*.piwik.oles.pp.ru CNAME .
 piwik.oligoform.com CNAME .
 *.piwik.oligoform.com CNAME .
 piwik.oliver-gronau.de CNAME .
@@ -142838,6 +142842,8 @@ plusmargin.com CNAME .
 *.plusmargin.com CNAME .
 plus.neurogami.com CNAME .
 *.plus.neurogami.com CNAME .
+p.lustroczynszowe.pl CNAME .
+*.p.lustroczynszowe.pl CNAME .
 pluto.kunze.tech CNAME .
 *.pluto.kunze.tech CNAME .
 pl.wob.fr CNAME .
@@ -144586,6 +144592,8 @@ pwcdauseo-zone.cnstrc.com CNAME .
 *.pwcdauseo-zone.cnstrc.com CNAME .
 p.wctrax.com CNAME .
 *.p.wctrax.com CNAME .
+p.wenext.dev CNAME .
+*.p.wenext.dev CNAME .
 p.wepfont.com CNAME .
 *.p.wepfont.com CNAME .
 pwfwng.doncarlosresort.com CNAME .
@@ -147142,6 +147150,8 @@ report.alhalalcosmetics.de CNAME .
 *.report.alhalalcosmetics.de CNAME .
 report-api.alireviews.io CNAME .
 *.report-api.alireviews.io CNAME .
+report.bansa.co.kr CNAME .
+*.report.bansa.co.kr CNAME .
 reportbuilder.net CNAME .
 *.reportbuilder.net CNAME .
 report.cloud.tenda.com.cn CNAME .
@@ -159804,6 +159814,8 @@ servidor.veteasy.com.br CNAME .
 *.servidor.veteasy.com.br CNAME .
 servidor.vivianeguerreiro.com.br CNAME .
 *.servidor.vivianeguerreiro.com.br CNAME .
+servishlavka.cz CNAME .
+*.servishlavka.cz CNAME .
 serv.livingbookpress.com CNAME .
 *.serv.livingbookpress.com CNAME .
 serv.marcelemachado.com.br CNAME .
