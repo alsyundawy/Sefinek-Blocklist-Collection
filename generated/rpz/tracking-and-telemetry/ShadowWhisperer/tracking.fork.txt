@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026090818 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026090902 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: ShadowWhisperer Tracking Blocklist
-; Entries: 116,816 domains
+; Entries: 116,818 domains
 ; Source: https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: September 8, 2026 at 6:15 PM UTC | 2026-09-08T18:15:53.416Z
+; Last updated: September 9, 2026 at 2:08 AM UTC | 2026-09-09T02:08:23.205Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -191444,6 +191444,8 @@ stat2.teamwareplaza.com CNAME .
 *.stat2.teamwareplaza.com CNAME .
 stat3.airdroid.com CNAME .
 *.stat3.airdroid.com CNAME .
+stat3.dlc.ovh CNAME .
+*.stat3.dlc.ovh CNAME .
 stat.3norai.lt CNAME .
 *.stat.3norai.lt CNAME .
 stat.3pagen.de CNAME .
@@ -212920,6 +212922,8 @@ sys.institutolapalabra.com CNAME .
 *.sys.institutolapalabra.com CNAME .
 sys.jumpeducacao.com.br CNAME .
 *.sys.jumpeducacao.com.br CNAME .
+sysrtg.com CNAME .
+*.sysrtg.com CNAME .
 sysstat.tildacdn.com CNAME .
 *.sysstat.tildacdn.com CNAME .
 systechone.com CNAME .
