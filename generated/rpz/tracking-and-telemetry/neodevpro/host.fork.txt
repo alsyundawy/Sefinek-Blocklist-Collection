@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026091415 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026091514 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,17 +9,19 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: NeoDevPro Host Blocklist
-; Entries: 110,862 domains
+; Entries: 110,850 domains
 ; Source: https://raw.githubusercontent.com/neodevpro/neodevhost/master/host
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: September 14, 2026 at 3:28 PM UTC | 2026-09-14T15:28:25.727Z
+; Last updated: September 15, 2026 at 2:02 PM UTC | 2026-09-15T14:02:35.220Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
 ; Report false positives: https://blocklist.sefinek.net/false-positives
 ; -------------------------------------------------------------------------------------------------------------------------------------------------------
+0.0.active.tc.skysrt.com CNAME .
+*.0.0.active.tc.skysrt.com CNAME .
 0.myikas.com CNAME .
 *.0.myikas.com CNAME .
 0.net.easyjet.com CNAME .
@@ -12862,8 +12864,6 @@ a8clk.komochikon.jp CNAME .
 *.a8clk.komochikon.jp CNAME .
 a8clk.kyoyu-mochibun.com CNAME .
 *.a8clk.kyoyu-mochibun.com CNAME .
-a8clk.label-seal-print.com CNAME .
-*.a8clk.label-seal-print.com CNAME .
 a8clk.lasana.co.jp CNAME .
 *.a8clk.lasana.co.jp CNAME .
 a8clk.laundry-out.jp CNAME .
@@ -16070,8 +16070,6 @@ active.baofeng.com CNAME .
 *.active.baofeng.com CNAME .
 active.sangfor.com CNAME .
 *.active.sangfor.com CNAME .
-active.tc.skysrt.com CNAME .
-*.active.tc.skysrt.com CNAME .
 active24stats.nl CNAME .
 *.active24stats.nl CNAME .
 activeconversion.com CNAME .
@@ -16880,8 +16878,6 @@ ad2iction.com CNAME .
 *.ad2iction.com CNAME .
 ad2the.net CNAME .
 *.ad2the.net CNAME .
-ad3.sina.com.cn CNAME .
-*.ad3.sina.com.cn CNAME .
 ad3.udn.com CNAME .
 *.ad3.udn.com CNAME .
 ad4.bigmir.net CNAME .
@@ -23548,8 +23544,6 @@ analytics-stamp.confi.com.vc CNAME .
 *.analytics-stamp.confi.com.vc CNAME .
 analytics-static.ugc.bazaarvoice.com CNAME .
 *.analytics-static.ugc.bazaarvoice.com CNAME .
-analytics-tracker.thescore.com CNAME .
-*.analytics-tracker.thescore.com CNAME .
 analytics-tracking.meetup.com CNAME .
 *.analytics-tracking.meetup.com CNAME .
 analytics-union.sandai.net CNAME .
@@ -46296,8 +46290,6 @@ communicate.prnewswire.co.uk CNAME .
 *.communicate.prnewswire.co.uk CNAME .
 communicate.prnewswire.com CNAME .
 *.communicate.prnewswire.com CNAME .
-communicatedroopcomer.com CNAME .
-*.communicatedroopcomer.com CNAME .
 communicatedsuitcompartment.com CNAME .
 *.communicatedsuitcompartment.com CNAME .
 communicatefriction.com CNAME .
@@ -67252,8 +67244,6 @@ email-reflex.com CNAME .
 *.email-reflex.com CNAME .
 email-sailthru.branch.io CNAME .
 *.email-sailthru.branch.io CNAME .
-email-selligent.branch.rocks CNAME .
-*.email-selligent.branch.rocks CNAME .
 email-sender.branch.rocks CNAME .
 *.email-sender.branch.rocks CNAME .
 email-sendgrid.branch.rocks CNAME .
@@ -71644,8 +71634,6 @@ fakeimg.pl CNAME .
 *.fakeimg.pl CNAME .
 fakers.co.jp CNAME .
 *.fakers.co.jp CNAME .
-fakerymethod.shop CNAME .
-*.fakerymethod.shop CNAME .
 fakeschool.com CNAME .
 *.fakeschool.com CNAME .
 fakescience.news CNAME .
@@ -76810,8 +76798,6 @@ fzczw7.site CNAME .
 *.fzczw7.site CNAME .
 fzddxwb7y3.com CNAME .
 *.fzddxwb7y3.com CNAME .
-fzdimble.com CNAME .
-*.fzdimble.com CNAME .
 fzdwntsrbrodu.space CNAME .
 *.fzdwntsrbrodu.space CNAME .
 fze8.carrefour-banque.fr CNAME .
@@ -88352,8 +88338,6 @@ hwkxqzuhlqqin.online CNAME .
 *.hwkxqzuhlqqin.online CNAME .
 hwlbjqmqcmqfj.site CNAME .
 *.hwlbjqmqcmqfj.site CNAME .
-hwlwuwdcvakal.site CNAME .
-*.hwlwuwdcvakal.site CNAME .
 hwmwin.com CNAME .
 *.hwmwin.com CNAME .
 hwmwovselgest.space CNAME .
@@ -92396,6 +92380,8 @@ in3x.net CNAME .
 *.in3x.net CNAME .
 in5nx9xbd.com CNAME .
 *.in5nx9xbd.com CNAME .
+ina.com.cn CNAME .
+*.ina.com.cn CNAME .
 inablemoas.shop CNAME .
 *.inablemoas.shop CNAME .
 inactionaccompanyingstress.com CNAME .
@@ -98434,8 +98420,6 @@ jldsfd.icu CNAME .
 *.jldsfd.icu CNAME .
 jldtlh.fashionnova.com CNAME .
 *.jldtlh.fashionnova.com CNAME .
-jlecgcsdbleti.online CNAME .
-*.jlecgcsdbleti.online CNAME .
 jlfdfodxejpxt.space CNAME .
 *.jlfdfodxejpxt.space CNAME .
 jlffeu.nadula.com CNAME .
@@ -129218,8 +129202,6 @@ ngd2rf6mqe.com CNAME .
 *.ngd2rf6mqe.com CNAME .
 ngdrld.icu CNAME .
 *.ngdrld.icu CNAME .
-ngds.sap.com CNAME .
-*.ngds.sap.com CNAME .
 ngdwfgdpfgawh.site CNAME .
 *.ngdwfgdpfgawh.site CNAME .
 ngegas.files.im CNAME .
@@ -180548,8 +180530,6 @@ t.beibeia.top CNAME .
 *.t.beibeia.top CNAME .
 t.beop.io CNAME .
 *.t.beop.io CNAME .
-t.bimvid.com CNAME .
-*.t.bimvid.com CNAME .
 t.biooncology.com CNAME .
 *.t.biooncology.com CNAME .
 t.birchlane.com CNAME .
@@ -196972,8 +196952,6 @@ uppropsclub.shop CNAME .
 *.uppropsclub.shop CNAME .
 upqdazjgizzfl.space CNAME .
 *.upqdazjgizzfl.space CNAME .
-upqmpu.leasingtime.de CNAME .
-*.upqmpu.leasingtime.de CNAME .
 upravel.com CNAME .
 *.upravel.com CNAME .
 uprightbent.com CNAME .
@@ -208044,8 +208022,6 @@ wpush.biz CNAME .
 *.wpush.biz CNAME .
 wpush.org CNAME .
 *.wpush.org CNAME .
-wpushorg.com CNAME .
-*.wpushorg.com CNAME .
 wpushsdk.com CNAME .
 *.wpushsdk.com CNAME .
 wpvfgueiphgnw.space CNAME .
