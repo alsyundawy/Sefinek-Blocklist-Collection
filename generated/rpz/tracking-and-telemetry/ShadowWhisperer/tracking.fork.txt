@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026091502 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026091623 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: ShadowWhisperer Tracking Blocklist
-; Entries: 116,826 domains
+; Entries: 116,827 domains
 ; Source: https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: September 15, 2026 at 2:26 AM UTC | 2026-09-15T02:26:27.927Z
+; Last updated: September 16, 2026 at 11:27 PM UTC | 2026-09-16T23:27:34.078Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -11362,6 +11362,8 @@ analytics.beskidinstruments.com CNAME .
 *.analytics.beskidinstruments.com CNAME .
 analytics.besoft.cat CNAME .
 *.analytics.besoft.cat CNAME .
+analytics.bestfulfill.com CNAME .
+*.analytics.bestfulfill.com CNAME .
 analytics.bestlong.idv.tw CNAME .
 *.analytics.bestlong.idv.tw CNAME .
 analytics.bestreviews.com CNAME .
@@ -39816,6 +39818,8 @@ bsbho.randco.com CNAME .
 *.bsbho.randco.com CNAME .
 bsd.brandschutzdozenten.de CNAME .
 *.bsd.brandschutzdozenten.de CNAME .
+bsg.brave.com CNAME .
+*.bsg.brave.com CNAME .
 bshopboard.pl CNAME .
 *.bshopboard.pl CNAME .
 bshr.ezodn.com CNAME .
@@ -43916,8 +43920,6 @@ clk.flexdirectpath.com CNAME .
 *.clk.flexdirectpath.com CNAME .
 clk.flmsecure.com CNAME .
 *.clk.flmsecure.com CNAME .
-clk.gammaplatform.com CNAME .
-*.clk.gammaplatform.com CNAME .
 clk.glam-print.com CNAME .
 *.clk.glam-print.com CNAME .
 clk.go.com CNAME .
@@ -123210,8 +123212,6 @@ mtm.wis-dom.net CNAME .
 *.mtm.wis-dom.net CNAME .
 mtm.zuczxt.cn CNAME .
 *.mtm.zuczxt.cn CNAME .
-mt.n3fxk.top CNAME .
-*.mt.n3fxk.top CNAME .
 mto3.tgramsearch.com CNAME .
 *.mto3.tgramsearch.com CNAME .
 mto4.tgramsearch.com CNAME .
@@ -142176,8 +142176,6 @@ plausible.standardnotes.com CNAME .
 *.plausible.standardnotes.com CNAME .
 plausible.starliz.com CNAME .
 *.plausible.starliz.com CNAME .
-plausible.statly24.com CNAME .
-*.plausible.statly24.com CNAME .
 plausible.steeltrace.co CNAME .
 *.plausible.steeltrace.co CNAME .
 plausible.steinfluss.app CNAME .
@@ -218962,6 +218960,8 @@ track.clea-mailing.fr CNAME .
 *.track.clea-mailing.fr CNAME .
 track.cloud.schroll-it.de CNAME .
 *.track.cloud.schroll-it.de CNAME .
+track.clubredstag.com CNAME .
+*.track.clubredstag.com CNAME .
 track.cmcassets.com CNAME .
 *.track.cmcassets.com CNAME .
 trackcmp.net CNAME .
@@ -232448,6 +232448,8 @@ xstats.evoload.io CNAME .
 *.xstats.evoload.io CNAME .
 xstats.net CNAME .
 *.xstats.net CNAME .
+xstats.st CNAME .
+*.xstats.st CNAME .
 xstat.top CNAME .
 *.xstat.top CNAME .
 xtatwn.hillbergandberk.com CNAME .
