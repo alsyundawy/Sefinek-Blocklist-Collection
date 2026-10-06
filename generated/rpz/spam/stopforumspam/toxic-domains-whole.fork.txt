@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026100509 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026100601 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: StopForumSpam Toxic Domains
-; Entries: 76,255 domains
+; Entries: 76,256 domains
 ; Source: https://www.stopforumspam.com/downloads/toxic_domains_whole.txt
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: October 5, 2026 at 9:58 AM UTC | 2026-10-05T09:58:54.615Z
+; Last updated: October 6, 2026 at 1:40 AM UTC | 2026-10-06T01:40:02.569Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -146444,6 +146444,8 @@ wo0231.com CNAME .
 *.wo0231.com CNAME .
 wo0233.com CNAME .
 *.wo0233.com CNAME .
+wo8.x7m3b9nsa.my.id CNAME .
+*.wo8.x7m3b9nsa.my.id CNAME .
 wob5hm.siroja.top CNAME .
 *.wob5hm.siroja.top CNAME .
 wobtel.biz CNAME .
