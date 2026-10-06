@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026100609 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026100617 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: StopForumSpam Toxic Domains
-; Entries: 76,307 domains
+; Entries: 76,308 domains
 ; Source: https://www.stopforumspam.com/downloads/toxic_domains_whole.txt
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: October 6, 2026 at 9:40 AM UTC | 2026-10-06T09:40:04.801Z
+; Last updated: October 6, 2026 at 5:38 PM UTC | 2026-10-06T17:38:53.216Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -63380,6 +63380,8 @@ hello.turnonhq.click CNAME .
 *.hello.turnonhq.click CNAME .
 hello.vacly.click CNAME .
 *.hello.vacly.click CNAME .
+hello.wisetransfer.click CNAME .
+*.hello.wisetransfer.click CNAME .
 helloerikaajuicee.store CNAME .
 *.helloerikaajuicee.store CNAME .
 helloerikajuciee.online CNAME .
