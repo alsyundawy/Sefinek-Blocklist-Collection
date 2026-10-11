@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026101103 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026101111 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: RPiList Spam Mails Blocklist
-; Entries: 174,000 domains
+; Entries: 173,999 domains
 ; Source: https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: October 11, 2026 at 3:37 AM UTC | 2026-10-11T03:37:04.161Z
+; Last updated: October 11, 2026 at 11:50 AM UTC | 2026-10-11T11:50:57.178Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -244776,8 +244776,6 @@ obzor-slots.com CNAME .
 *.obzor-slots.com CNAME .
 oc.coronacode.pl CNAME .
 *.oc.coronacode.pl CNAME .
-oc.ionos.de CNAME .
-*.oc.ionos.de CNAME .
 oc09.puckmasterspl.com CNAME .
 *.oc09.puckmasterspl.com CNAME .
 oc105.fusionais.com CNAME .
