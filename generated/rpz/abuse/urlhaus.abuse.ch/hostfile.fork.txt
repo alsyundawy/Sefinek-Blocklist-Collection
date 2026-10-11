@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026101020 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026101100 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -9,12 +9,12 @@ $TTL 300
 ;     |_____/  |______| |_|      |_____| |_| \_| |______| |_|\_\       |____/  |______|  \____/   \_____| |_|\_\ |______| |_____| |_____/     |_|
 ;
 ; Title: URLhaus Malicious Hosts
-; Entries: 397 domains
+; Entries: 398 domains
 ; Source: https://urlhaus.abuse.ch/downloads/hostfile
 ; License: Unknown, check the source
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: October 10, 2026 at 8:55 PM UTC | 2026-10-10T20:55:03.224Z
+; Last updated: October 11, 2026 at 12:01 AM UTC | 2026-10-11T00:01:15.096Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -208,6 +208,8 @@ down.fwqlt.com CNAME .
 *.down.fwqlt.com CNAME .
 down.pcclear.com CNAME .
 *.down.pcclear.com CNAME .
+down.qqfarmer.com.cn CNAME .
+*.down.qqfarmer.com.cn CNAME .
 download.caihong.com CNAME .
 *.download.caihong.com CNAME .
 download.doumaibiji.cn CNAME .
@@ -418,8 +420,6 @@ muaklekcoop.com CNAME .
 *.muaklekcoop.com CNAME .
 muledo.com CNAME .
 *.muledo.com CNAME .
-multiplay.at CNAME .
-*.multiplay.at CNAME .
 munihuacho.gob.pe CNAME .
 *.munihuacho.gob.pe CNAME .
 mysura.it CNAME .
@@ -674,8 +674,8 @@ update.cg100iii.com CNAME .
 *.update.cg100iii.com CNAME .
 uu.v2raynapps.com.cn CNAME .
 *.uu.v2raynapps.com.cn CNAME .
-vdata.asia CNAME .
-*.vdata.asia CNAME .
+vdsina.vg CNAME .
+*.vdsina.vg CNAME .
 veryboys.com CNAME .
 *.veryboys.com CNAME .
 visam.info CNAME .
@@ -702,6 +702,8 @@ windomstatetheater.com CNAME .
 *.windomstatetheater.com CNAME .
 windowsdiagnostics.st CNAME .
 *.windowsdiagnostics.st CNAME .
+wittenhorst.eu CNAME .
+*.wittenhorst.eu CNAME .
 wp.fujeigroup.com CNAME .
 *.wp.fujeigroup.com CNAME .
 www-connect-secure-wellcfargo.sekolahkejarpaket.com CNAME .
