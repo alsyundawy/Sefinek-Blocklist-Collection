@@ -1,5 +1,5 @@
 $TTL 300
-@ SOA localhost. root.localhost. 2026102922 43200 3600 259200 300
+@ SOA localhost. root.localhost. 2026103003 43200 3600 259200 300
   NS  localhost.
 ;       _____   ______   ______   _____   _   _   ______   _  __        ____    _         ____     _____   _  __  _        _____    _____   _______
 ;      / ____| |  ____| |  ____| |_   _| | \ | | |  ____| | |/ /       |  _ \  | |       / __ \   / ____| | |/ / | |      |_   _|  / ____| |__   __|
@@ -10,12 +10,12 @@ $TTL 300
 ;
 ; Title: oisd nsfw
 ; Description: Block. Don't break.
-; Entries: 489,865 domains
+; Entries: 489,884 domains
 ; Source: https://nsfw.oisd.nl/domainswild2 | https://oisd.nl
 ; License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ; Format: RPZ
 ; Expires: 1 day
-; Last updated: October 29, 2026 at 10:17 PM UTC | 2026-10-29T22:17:29.200Z
+; Last updated: October 30, 2026 at 3:31 AM UTC | 2026-10-30T03:31:28.772Z
 ;
 ; This file is part of the Sefinek Blocklist Collection, maintained by Sefinek.
 ; Homepage: https://blocklist.sefinek.net
@@ -21411,8 +21411,12 @@ $TTL 300
 *.4080dyy.com CNAME .
 4080movies.com CNAME .
 *.4080movies.com CNAME .
+4080shipin.com CNAME .
+*.4080shipin.com CNAME .
 4080y.com CNAME .
 *.4080y.com CNAME .
+4080yingshi.com CNAME .
+*.4080yingshi.com CNAME .
 4080yingyuan.com CNAME .
 *.4080yingyuan.com CNAME .
 4080ysj.com CNAME .
@@ -47957,6 +47961,8 @@ aadityakpr.blogspot.com CNAME .
 *.aadityakpr.blogspot.com CNAME .
 aadkita.blogspot.com CNAME .
 *.aadkita.blogspot.com CNAME .
+aads.com.cn CNAME .
+*.aads.com.cn CNAME .
 aadsrr.com CNAME .
 *.aadsrr.com CNAME .
 aadtrucks.com CNAME .
@@ -52847,6 +52853,8 @@ acnmc.com CNAME .
 *.acnmc.com CNAME .
 aco194.top CNAME .
 *.aco194.top CNAME .
+acoc.com.cn CNAME .
+*.acoc.com.cn CNAME .
 acode.live CNAME .
 *.acode.live CNAME .
 acollectionofblackmen.blogspot.com CNAME .
@@ -134663,6 +134671,8 @@ bhyqymv.cn CNAME .
 *.bhyqymv.cn CNAME .
 bhz045.sbs CNAME .
 *.bhz045.sbs CNAME .
+bhzn.com.cn CNAME .
+*.bhzn.com.cn CNAME .
 bi-a-lille.over-blog.com CNAME .
 *.bi-a-lille.over-blog.com CNAME .
 bi-a-piggy.blogspot.com CNAME .
@@ -189539,6 +189549,8 @@ chengguanedu.com CNAME .
 *.chengguanedu.com CNAME .
 chengguodj.com CNAME .
 *.chengguodj.com CNAME .
+chenghaihu.com.cn CNAME .
+*.chenghaihu.com.cn CNAME .
 chenghenaimoban.com CNAME .
 *.chenghenaimoban.com CNAME .
 chenghongdye.com CNAME .
@@ -236101,6 +236113,8 @@ dghuitong.com CNAME .
 *.dghuitong.com CNAME .
 dghunan.cn CNAME .
 *.dghunan.cn CNAME .
+dghydz.com.cn CNAME .
+*.dghydz.com.cn CNAME .
 dgidcac.cn CNAME .
 *.dgidcac.cn CNAME .
 dgita.cn CNAME .
@@ -395229,6 +395243,8 @@ hntkjx.com CNAME .
 *.hntkjx.com CNAME .
 hntongge.com CNAME .
 *.hntongge.com CNAME .
+hntoo.com.cn CNAME .
+*.hntoo.com.cn CNAME .
 hnts.top CNAME .
 *.hnts.top CNAME .
 hntyhr.com CNAME .
@@ -466389,6 +466405,8 @@ kbxxx6.com CNAME .
 *.kbxxx6.com CNAME .
 kbxxx7.com CNAME .
 *.kbxxx7.com CNAME .
+kbyb.com.cn CNAME .
+*.kbyb.com.cn CNAME .
 kbykt.com CNAME .
 *.kbykt.com CNAME .
 kbysz.com CNAME .
@@ -509197,8 +509215,6 @@ love-ahboii15.blogspot.com CNAME .
 *.love-ahboii15.blogspot.com CNAME .
 love-akiba.jp CNAME .
 *.love-akiba.jp CNAME .
-love-babes.com CNAME .
-*.love-babes.com CNAME .
 love-bdsm.de CNAME .
 *.love-bdsm.de CNAME .
 love-bulge.com CNAME .
@@ -534883,6 +534899,8 @@ meisendiaosu.com CNAME .
 *.meisendiaosu.com CNAME .
 meisheyagei.com CNAME .
 *.meisheyagei.com CNAME .
+meishimeike.com.cn CNAME .
+*.meishimeike.com.cn CNAME .
 meishizan.com CNAME .
 *.meishizan.com CNAME .
 meishuozhubao.com CNAME .
@@ -578631,6 +578649,8 @@ newbokepofficial.website CNAME .
 *.newbokepofficial.website CNAME .
 newbokepofficial.xyz CNAME .
 *.newbokepofficial.xyz CNAME .
+newbokepresmi.site CNAME .
+*.newbokepresmi.site CNAME .
 newbokepterbaru.blogspot.com CNAME .
 *.newbokepterbaru.blogspot.com CNAME .
 newboys.biz CNAME .
@@ -585157,6 +585177,8 @@ nnuqox.com.cn CNAME .
 *.nnuqox.com.cn CNAME .
 nnutceducn.com CNAME .
 *.nnutceducn.com CNAME .
+nnv5fgd.cn CNAME .
+*.nnv5fgd.cn CNAME .
 nnvcd.com CNAME .
 *.nnvcd.com CNAME .
 nnvun.com CNAME .
@@ -587287,6 +587309,8 @@ npdpschool.com CNAME .
 *.npdpschool.com CNAME .
 npfuvideos.blogspot.com CNAME .
 *.npfuvideos.blogspot.com CNAME .
+npfyty.com.cn CNAME .
+*.npfyty.com.cn CNAME .
 npgb355.com CNAME .
 *.npgb355.com CNAME .
 npgw.com.cn CNAME .
@@ -607933,6 +607957,8 @@ oxgcux.com.cn CNAME .
 *.oxgcux.com.cn CNAME .
 oxhamster.com CNAME .
 *.oxhamster.com CNAME .
+oxheyfirstschool.com CNAME .
+*.oxheyfirstschool.com CNAME .
 oxifxy.com.cn CNAME .
 *.oxifxy.com.cn CNAME .
 oxin168.com.cn CNAME .
@@ -690561,6 +690587,8 @@ pssconnect.com.br CNAME .
 *.pssconnect.com.br CNAME .
 pssd8.com CNAME .
 *.pssd8.com CNAME .
+pssl.com.cn CNAME .
+*.pssl.com.cn CNAME .
 psslg.blogspot.com CNAME .
 *.psslg.blogspot.com CNAME .
 pstgimj.cn CNAME .
@@ -715273,6 +715301,8 @@ rmp435.sbs CNAME .
 *.rmp435.sbs CNAME .
 rmpfegkbl.cc CNAME .
 *.rmpfegkbl.cc CNAME .
+rmpp.com.cn CNAME .
+*.rmpp.com.cn CNAME .
 rms-communications.co.uk CNAME .
 *.rms-communications.co.uk CNAME .
 rmsexl.xyz CNAME .
@@ -845957,6 +845987,8 @@ tiantangweb.net CNAME .
 *.tiantangweb.net CNAME .
 tiantangxiju.com CNAME .
 *.tiantangxiju.com CNAME .
+tiantangyingpian.com CNAME .
+*.tiantangyingpian.com CNAME .
 tiantangyingshiju.com CNAME .
 *.tiantangyingshiju.com CNAME .
 tiantangyss.com CNAME .
@@ -862977,6 +863009,8 @@ ttiktok-sexxhot.pages.dev CNAME .
 *.ttiktok-sexxhot.pages.dev CNAME .
 ttireland.com CNAME .
 *.ttireland.com CNAME .
+ttja.com.cn CNAME .
+*.ttja.com.cn CNAME .
 ttjdown.cc CNAME .
 *.ttjdown.cc CNAME .
 ttjjfx.com CNAME .
@@ -913219,6 +913253,8 @@ wps769.sbs CNAME .
 *.wps769.sbs CNAME .
 wpseed.com CNAME .
 *.wpseed.com CNAME .
+wpsp.com.cn CNAME .
+*.wpsp.com.cn CNAME .
 wpsupercache.org CNAME .
 *.wpsupercache.org CNAME .
 wpt-games.itch.io CNAME .
@@ -965721,6 +965757,8 @@ ystbrieuc.free.fr CNAME .
 *.ystbrieuc.free.fr CNAME .
 ysteducation.com CNAME .
 *.ysteducation.com CNAME .
+ystl.com.cn CNAME .
+*.ystl.com.cn CNAME .
 ystol.com CNAME .
 *.ystol.com CNAME .
 ystpxdj.cn CNAME .
